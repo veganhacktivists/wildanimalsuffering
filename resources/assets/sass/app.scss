@@ -1,4 +1,66 @@
 body {
-    // background-image: url('../../../public/images/background.svg');
-    background-image: url('../images/background.svg');
+    margin: 0px;
+    color: whitesmoke;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+
+svg {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.wrapper, section {
+    width: 100%;
+    height: 100vh;
+}
+
+.shared {
+    flex-grow: 1;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wild-animal-suffering, .eight-billion {
+    height: 100%;
+    width: 100%;
+}
+
+.wild-animal-suffering {
+    background: url('../images/savannah.svg') center/cover no-repeat;
+}
+
+.elephants {
+    background: url('../images/elephants.svg') center/cover no-repeat;
+    min-height: 20rem;
+}
+
+.eight-billion {
+    background: url('../images/abyss.svg') center/cover no-repeat;
+}
+
+.earth-image-light {
+    background: url('../images/earth-light.svg');
 }
