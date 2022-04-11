@@ -1,19 +1,53 @@
 body {
     margin: 0px;
     color: whitesmoke;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
 }
-body::-webkit-scrollbar {
-    display: none;
+
+.container {
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+.container::-webkit-scrollbar {
+    width: 0px; /* For Chrome, Safari, and Opera */
+}
+
+.container {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-align: start;
+}
+
+#up-arrow {
+
+}
+
+#down-arrow {
+    background: url('../images/down-arrow.svg') center/cover no-repeat;
+}
+
+.content {
+    margin: 1rem;
 }
 
 svg {
     max-width: 100%;
     max-height: 100%;
-}
-
-.wrapper, section {
-    width: 100%;
-    height: 100vh;
 }
 
 .shared {
@@ -23,25 +57,27 @@ svg {
 .content {
     display: flex;
     flex-direction: row;
+    height: 100%;
+    flex-grow: 1;
 }
 
 .row {
+    flex: 1 1 0px;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-self: center;
 }
 
 .col {
+    flex: 1 1 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-self: center;
+    height: 100%;
 }
 
-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 .wild-animal-suffering, .eight-billion {
     height: 100%;
@@ -49,16 +85,21 @@ section {
 }
 
 .wild-animal-suffering {
-    background: url('../images/savannah.svg') center/cover no-repeat;
+    background: url('../images/savanna.jpg') center/cover no-repeat;
 }
 
 .elephants {
-    background: url('../images/elephants.svg') center/cover no-repeat;
-    min-height: 20rem;
+    background: url('../images/elephants.png') center/cover no-repeat;
+    
+    //TODO: Needs responsivness help
+    background-size:     contain;
+    background-repeat:   no-repeat;
+    background-position: center center;
+    height: 100%;
 }
 
 .eight-billion {
-    background: url('../images/abyss.svg') center/cover no-repeat;
+    background: url('../images/abyss.jpg') center/cover no-repeat;
 }
 
 .earth-image-light {
