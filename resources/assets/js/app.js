@@ -1,12 +1,10 @@
-// var firstsec = document.getElementById('f');
-// var secondsec = document.getElementById('s');
-// var lastScrollTop = 0;
-// window.onscroll = function () {
-//     var st = window.pageYOffset || document.documentElement.scrollTop;
-//     if (st > lastScrollTop) {
-//         secondsec.scrollIntoView({ behavior: "smooth" });
-//     } else {
-//         firstsec.scrollIntoView({ behavior: "smooth" });
-//     }
-//     lastScrollTop = st <= 0 ? 0 : st;
-// };
+(() => {
+
+    const addText = (id, key, language = "en") => {
+        if (!(id && key)) { console.error('Must provide id and key'); return; }
+
+        let node = document.getElementById(key);
+        let text = document.createTextNode(id);
+        node.appendChild(text);
+    }
+})()

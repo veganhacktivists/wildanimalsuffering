@@ -1,7 +1,7 @@
 # wildanimalsuffering
 
 ## Running Locally
-1. `npm run watch`
+1. `yarn watch`
 2. `cd public`
 3. `python3 -m http.server 8000`
 
