@@ -14,6 +14,7 @@ let mix = require('webpack-mix');
 mix
     .setPublicPath('public/')
     .js('resources/assets/js/app.js', 'public/js/')
+    .js('resources/assets/js/translations.js', 'public/js/')
     .sass('resources/assets/sass/app.scss', 'public/css/');
     // .sourceMaps()
     // .browserSync({ server: 'dist', proxy: null });
