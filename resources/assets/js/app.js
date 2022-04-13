@@ -2,6 +2,8 @@ import { translations } from './translations';
 
 (() => {
 
+    console.log('test...');
+
     const addText = (element, language = "en") => {
         const { translateId } = element.dataset;
         if (!translateId) { console.error('data-translate-id elements must have an attribute value'); return; }
