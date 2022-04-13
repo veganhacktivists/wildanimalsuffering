@@ -34,7 +34,7 @@ mix
 // mix.browserSync('my-site.test');
 // mix.combine(files, destination);
 // mix.babel(files, destination); <-- Identical to mix.combine(), but also includes Babel compilation.
-mix.copy('resources/assets/translations', 'public/translations');
+// mix.copy('resources/assets/translations', 'public/translations');
 // mix.minify(file);
 // mix.sourceMaps(); // Enable sourcemaps
 // mix.version(); // Enable versioning.
