@@ -2,24 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-.scrollsnap-y {
-    scrollbar-width: none; /* For Firefox */
-    -ms-overflow-style: none; /* For Internet Explorer and Edge */
-}
-
-.scrollsnap-y::-webkit-scrollbar {
-    width: 0px; /* For Chrome, Safari, and Opera */
-}
-
-.scrollsnap-y {
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-    scroll-behavior: smooth;
-}
-
 section {
     @apply flex content-center justify-center h-screen w-screen h-full w-full;
     scroll-snap-align: start;
+}
+
+.heading {
+    @apply text-4xl;
 }
 
 .full-screen {
@@ -28,7 +17,7 @@ section {
 
 .half-screen {
     @apply flex flex-col justify-center flex-1 self-center md:w-full md:h-full md:w-1/2;
-    @apply m-8;
+    @apply m-6;
 }
 
 svg {
@@ -51,22 +40,37 @@ svg {
     background: url('../images/savanna.jpg') center/cover no-repeat;
 }
 
+@screen md {
+    .wild-animal-suffering {
+        background: url('../images/savanna-md.jpg') center/cover no-repeat;
+    }
+}
+
+
 .elephants {
     background: url('../images/elephants.png') center/contain no-repeat;
 }
 
-.eight-billion {
+.abyss {
     background: url('../images/abyss.jpg') center/cover no-repeat;
 }
 
-.earth-image-light {
+.earth-image {
     background: url('../images/earth.png') center/contain no-repeat;
 }
 
-.comparing-numbers {
-    background: url('../images/abyss.jpg') center/cover no-repeat;
+
+.scrollsnap-y {
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
 }
 
-.earth-image-dark {
-    background: url('../images/earth.png') center/contain no-repeat;
+.scrollsnap-y::-webkit-scrollbar {
+    width: 0px; /* For Chrome, Safari, and Opera */
+}
+
+.scrollsnap-y {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
 }

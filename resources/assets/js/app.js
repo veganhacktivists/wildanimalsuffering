@@ -1,3 +1,4 @@
+//Note: If this ever comes from an untrusted source, you have to sanitize the input
 import { translations } from './translations';
 
 (() => {
@@ -11,8 +12,7 @@ import { translations } from './translations';
         const textToAdd = translations[language][translateId];
         if (!translateId) { console.error(`no translation provided for ${translateId} in ${language}`); return; }
 
-        let text = document.createTextNode(textToAdd);
-        element.appendChild(text);
+        element.innerHTML = textToAdd;
     };
 
     const loadText = () => {
