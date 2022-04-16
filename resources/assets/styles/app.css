@@ -30,6 +30,10 @@ svg {
     @apply max-w-full max-h-full;
 }
 
+section > div > div {
+    @apply m-8;
+}
+
 #up-arrow {
 
 }
@@ -47,6 +51,10 @@ svg {
 }
 
 .eight-billion {
+    background: url('../images/abyss.jpg') center/cover no-repeat;
+}
+
+.comparing-numbers {
     background: url('../images/abyss.jpg') center/cover no-repeat;
 }
 
