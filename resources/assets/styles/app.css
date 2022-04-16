@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    color: whitesmoke;
-}
-
 .scrollsnap-y {
     scrollbar-width: none; /* For Firefox */
     -ms-overflow-style: none; /* For Internet Explorer and Edge */
@@ -26,12 +22,21 @@ section {
     scroll-snap-align: start;
 }
 
+.full-screen {
+    @apply flex flex-col md:flex-row w-full h-full flex-grow;
+}
+
+.half-screen {
+    @apply flex flex-col justify-center flex-1 self-center md:w-full md:h-full md:w-1/2;
+    @apply m-8;
+}
+
 svg {
     @apply max-w-full max-h-full;
 }
 
-section > div > div {
-    @apply m-8;
+.accent {
+    color: #85C5C8;
 }
 
 #up-arrow {
@@ -54,10 +59,14 @@ section > div > div {
     background: url('../images/abyss.jpg') center/cover no-repeat;
 }
 
+.earth-image-light {
+    background: url('../images/earth.png') center/contain no-repeat;
+}
+
 .comparing-numbers {
     background: url('../images/abyss.jpg') center/cover no-repeat;
 }
 
-.earth-image-light {
-    background: url('../images/earth-light.svg');
+.earth-image-dark {
+    background: url('../images/earth.png') center/contain no-repeat;
 }

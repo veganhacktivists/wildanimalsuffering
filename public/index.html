@@ -8,20 +8,26 @@
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link href="css/app.css" rel="stylesheet">
 </head>
-<body class="m-0 overflow-hidden h-screen w-screen">
+<body class="m-0 overflow-hidden h-screen w-screen text-gray-100">
 
     <div id="up-arrow">
         
     </div>
     <div class="absolute h-screen w-screen scrollsnap-y">
         <section class="wild-animal-suffering">
-            <div class="flex flex-row h-full flex-grow">
-                <div class="flex flex-col justify-center flex-1 self-center h-full w-1/2">
+            <div class="full-screen">
+                <div class="half-screen">
+                    <div class="justify-center text-gray-900 md:hidden">
+                        <h1 data-translate-id="wild-animal-suffering-header" class="text-4xl"></h1>
+                        <h3>...and why it matters</h3>
+                    </div>
                     <div class="h-full elephants"></div>
                 </div>
-                <div class="flex flex-col justify-center flex-1 self-center h-full w-1/2">
-                    <h1 data-translate-id="wild-animal-suffering-header"></h1>
-                    <h3>...and why it matters</h3>
+                <div class="half-screen">
+                    <div class="hidden md:block">
+                        <h1 data-translate-id="wild-animal-suffering-header"></h1>
+                        <h3>...and why it matters</h3>
+                    </div>
                     <div class="subheading">
                         <p data-translate-id="idealise">
                         </p>
@@ -38,17 +44,20 @@
             </div>
         </section>
         <section class="eight-billion">
-            <div class="flex flex-row h-full flex-grow">
-                <div class="flex flex-col justify-center flex-1 self-center h-full w-1/2">
-                    <h1>There are roughly 8 billion humans on planet Earth.</h1>
+            <div class="full-screen">
+                <div class="half-screen">
+                    <h1>There are roughly <span class="accent">8 billion humans</span> on planet Earth.</h1>
                 </div>
-                <div class="flex flex-col justify-center flex-1 self-center h-full center w-1/2">
-                    <div class="earth-image-light"></div>
+                <div class="half-screen">
+                    <div class="h-full earth-image-light"></div>
                 </div>
             </div>
         </section>
         <section class="comparing-numbers">
-            <div class="flex flex-row h-full flex-grow">
+            <div class="half-screen">
+            </div>
+            <div class="half-screen">
+                <div class="h-full earth-image-dark"></div>
             </div>
         </section>
     </div>
