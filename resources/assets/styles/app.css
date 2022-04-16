@@ -3,38 +3,31 @@
 @tailwind utilities;
 
 body {
-    margin: 0px;
     color: whitesmoke;
-    overflow: hidden;
-    height: 100vh;
-    width: 100vw;
 }
 
-.container {
+.scrollsnap-y {
     scrollbar-width: none; /* For Firefox */
     -ms-overflow-style: none; /* For Internet Explorer and Edge */
 }
 
-.container::-webkit-scrollbar {
+.scrollsnap-y::-webkit-scrollbar {
     width: 0px; /* For Chrome, Safari, and Opera */
 }
 
-.container {
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
+.scrollsnap-y {
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
     scroll-behavior: smooth;
 }
 
 section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100vw;
+    @apply flex content-center justify-center h-screen w-screen h-full w-full;
     scroll-snap-align: start;
+}
+
+svg {
+    @apply max-w-full max-h-full;
 }
 
 #up-arrow {
@@ -45,60 +38,12 @@ section {
     background: url('../images/down-arrow.svg') center/cover no-repeat;
 }
 
-.content {
-    margin: 1rem;
-}
-
-svg {
-    max-width: 100%;
-    max-height: 100%;
-}
-
-.shared {
-    flex-grow: 1;
-}
-
-.content {
-    display: flex;
-    flex-direction: row;
-    height: 100%;
-    flex-grow: 1;
-}
-
-.row {
-    flex: 1 1 0px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-self: center;
-}
-
-.col {
-    flex: 1 1 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-self: center;
-    height: 100%;
-}
-
-
-.wild-animal-suffering, .eight-billion {
-    height: 100%;
-    width: 100%;
-}
-
 .wild-animal-suffering {
     background: url('../images/savanna.jpg') center/cover no-repeat;
 }
 
 .elephants {
-    background: url('../images/elephants.png') center/cover no-repeat;
-    
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-    height: 100%;
+    background: url('../images/elephants.png') center/contain no-repeat;
 }
 
 .eight-billion {
