@@ -1,4 +1,4 @@
-let mix = require('webpack-mix');
+let mix = require('laravel-mix');
 
 /*
  |--------------------------------------------------------------------------
@@ -17,7 +17,8 @@ mix
         'resources/assets/js/app.js', 
         'resources/assets/js/translations.js'],
     'public/js/app.js')
-    .sass('resources/assets/sass/app.scss', 'public/css/');
+    .postCss("resources/assets/styles/app.css", "public/css", [require("tailwindcss")]);
+    // .sass('resources/assets/sass/app.css', 'public/css/');
     // .sourceMaps()
     // .browserSync({ server: 'dist', proxy: null });
 
@@ -29,7 +30,7 @@ mix
 // mix.coffee(src, output); <-- Identical to mix.js(), but registers CoffeeScript compilation.
 // mix.ts(src, output); <-- TypeScript support. Requires tsconfig.json to exist in the same folder as webpack.mix.js
 // mix.extract(vendorLibs);
-// mix.sass('resources/assets/sass/app.scss', 'dist/assets/');
+// mix.sass('resources/assets/sass/app.css', 'dist/assets/');
 // mix.less(src, output);
 // mix.stylus(src, output);
 // mix.postCss(src, output, [require('postcss-some-plugin')()]);

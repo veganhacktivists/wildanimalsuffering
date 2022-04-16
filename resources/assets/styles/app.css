@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
     margin: 0px;
     color: whitesmoke;
@@ -91,9 +95,8 @@ svg {
 .elephants {
     background: url('../images/elephants.png') center/cover no-repeat;
     
-    //TODO: Needs responsivness help
-    background-size:     contain;
-    background-repeat:   no-repeat;
+    background-size: contain;
+    background-repeat: no-repeat;
     background-position: center center;
     height: 100%;
 }
