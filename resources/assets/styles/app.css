@@ -60,6 +60,39 @@ svg {
 }
 
 
+.even-worse {
+    background: url('../images/sand-bg-color.jpg') center/cover no-repeat;
+}
+
+.population-dynamics {
+    background: url('../images/dirt-road.jpg') center/cover no-repeat;
+}
+
+.videos {
+    background: url('../images/sky.jpg') center/cover no-repeat;
+}
+
+.common-objections {
+    background: url('../images/sand-bg-color.jpg') center/cover no-repeat;
+}
+
+.other-resources {
+    background: url('../images/sand-bg-color.jpg') center/cover no-repeat;
+}
+
+.how-you-can-help {
+    background: url('../images/forest-bg-color.jpg') center/cover no-repeat;
+}
+
+.organisations {
+    background: url('../images/mud-bg-color.jpg') center/cover no-repeat;
+}
+
+.together-we-can {
+    background: url('../images/in-the-woods.jpg') center/cover no-repeat;
+}
+
+
 .scrollsnap-y {
     scrollbar-width: none; /* For Firefox */
     -ms-overflow-style: none; /* For Internet Explorer and Edge */
