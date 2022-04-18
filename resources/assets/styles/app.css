@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --blue: #85C5C8;
+    --green: #B0CB83;
+    --orange: #C79D5E;
+    --pink: #D68A9C;
+    --purple: #A89CF6;
+}
+
 section {
     @apply flex content-center justify-center h-screen w-screen h-full w-full;
     scroll-snap-align: start;
@@ -13,11 +21,76 @@ section {
 
 .full-screen {
     @apply flex flex-col md:flex-row w-full h-full flex-grow;
+    @apply md:mx-20;
 }
 
 .half-screen {
-    @apply flex flex-col justify-center flex-1 self-center md:w-full md:h-full md:w-1/2;
+    @apply flex flex-col justify-center flex-1 self-center h-1/2 md:h-full;
     @apply m-6;
+}
+
+.half-screen:nth-child(1) {
+    @apply flex-grow-0 md:min-w-[25%] md:mx-20;
+}
+.half-screen:nth-child(2) {
+    @apply flex-grow md:h-full;
+}
+#centered-squares {
+    @apply grid self-center absolute w-[40%] h-[60%];
+}
+
+/* TODO: should really figure out how to make this generic and use the number in the tailwind names */
+.square-2s {
+    @apply grid-cols-2 grid-rows-2 gap-16;
+}
+.square-2s > div {
+    @apply rounded-lg;
+}
+.square-5s {
+    @apply grid-cols-5 grid-rows-5 gap-6 rounded-md;
+}
+.square-5s > div {
+    @apply rounded-md;
+}
+.square-10s {
+    grid-template-columns: repeat(10, minmax(0, 1fr));
+    grid-template-rows: repeat(10, minmax(0, 1fr));
+    @apply gap-2;
+}
+.square-10s > div {
+    @apply rounded-sm;
+}
+.square-30s {
+    grid-template-columns: repeat(30, minmax(0, 1fr));
+    grid-template-rows: repeat(30, minmax(0, 1fr));
+    @apply gap-1
+}
+.square-30s > div {
+    border-radius: 1px;
+}
+.square-50s {
+    grid-template-columns: repeat(50, minmax(0, 1fr));
+    grid-template-rows: repeat(50, minmax(0, 1fr));
+    gap: 1px 1px;
+}
+.square-50s > div {
+    border-radius: 1px;
+}
+
+.blue-square {
+    background-color: var(--blue);
+}
+.green-square {
+    background-color: var(--green);
+}
+.orange-square {
+    background-color: var(--orange);
+}
+.pink-square {
+    background-color: var(--pink);
+}
+.purple-square {
+    background-color: var(--purple);
 }
 
 svg {
@@ -25,7 +98,7 @@ svg {
 }
 
 .accent {
-    color: #85C5C8;
+    color: var(--blue);
 }
 
 #up-arrow {

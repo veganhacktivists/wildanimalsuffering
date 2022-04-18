@@ -18,7 +18,7 @@ mix
         'resources/assets/js/translations.js'],
     'public/js/app.js')
     .postCss("resources/assets/styles/app.css", "public/css", [require("tailwindcss")]);
-    // .sass('resources/assets/sass/app.css', 'public/css/');
+    // .sass('resources/assets/styles/app.scss', 'public/css', [require("tailwindcss")]);
     // .sourceMaps()
     // .browserSync({ server: 'dist', proxy: null });
 
