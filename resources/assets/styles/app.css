@@ -39,6 +39,11 @@ section {
     @apply grid self-center absolute h-[40%] w-[80%] md:w-[40%] md:h-[60%];
 }
 
+div[class$='-square'] {
+    aspect-ratio: 1/1;
+    align-self: center;
+}
+
 /* TODO: should really figure out how to make this generic and use the number in the tailwind names */
 .square-2s {
     @apply grid-cols-2 grid-rows-2 gap-16;
