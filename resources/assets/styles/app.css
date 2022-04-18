@@ -36,7 +36,7 @@ section {
     @apply flex-grow md:h-full;
 }
 #centered-squares {
-    @apply grid self-center absolute w-[40%] h-[60%];
+    @apply grid self-center absolute h-[40%] w-[80%] md:w-[40%] md:h-[60%];
 }
 
 /* TODO: should really figure out how to make this generic and use the number in the tailwind names */
