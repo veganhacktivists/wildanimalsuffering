@@ -3,11 +3,17 @@
 @tailwind utilities;
 
 :root {
+    --white: #FFF;
     --blue: #85C5C8;
     --green: #B0CB83;
     --orange: #C79D5E;
     --pink: #D68A9C;
     --purple: #A89CF6;
+}
+
+body {
+    @apply m-0 overflow-hidden h-screen w-screen;
+    color: var(--white);
 }
 
 section {
@@ -20,13 +26,13 @@ section {
 }
 
 .full-screen {
-    @apply flex flex-col md:flex-row w-full h-full flex-grow;
+    @apply flex flex-col md:flex-row w-full h-full flex-grow z-10;
     @apply md:mx-20;
 }
 
 .half-screen {
-    @apply flex flex-col justify-center flex-1 self-center h-1/2 md:h-full;
-    @apply m-6;
+    @apply flex flex-col justify-center flex-1 self-center h-1/2 m-8;
+    @apply md:h-full;
 }
 
 .half-screen:nth-child(1) {
@@ -36,7 +42,8 @@ section {
     @apply flex-grow md:h-full;
 }
 #centered-squares {
-    @apply grid self-center absolute h-[40%] w-[80%] md:w-[40%] md:h-[60%];
+    @apply grid self-center absolute h-[40%] w-[80%];
+    @apply md:w-[40%] md:h-[60%];
 }
 
 div[class$='-square'] {
@@ -110,6 +117,10 @@ svg {
 
 }
 
+#elephant-image-container {
+    @apply flex-grow;
+}
+
 #down-arrow {
     background: url('../images/down-arrow.svg') center/cover no-repeat;
 }
@@ -168,6 +179,18 @@ svg {
 
 .together-we-can {
     background: url('../images/in-the-woods.jpg') center/cover no-repeat;
+}
+
+#page-indicators {
+    @apply hidden h-screen w-screen flex flex-col justify-center items-end;
+    @apply md:flex;
+}
+
+.page-indicator-dot {
+    @apply h-3 w-3 inline-block border-2 rounded-full mx-4 my-2;
+}
+.page-indicator-dot.filled {
+    background: var(--white);
 }
 
 

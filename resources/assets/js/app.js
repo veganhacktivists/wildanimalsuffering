@@ -54,9 +54,13 @@ import { translations } from './translations';
 
     };
 
-    document.addEventListener("click", function () {
+    document.querySelector(".scrollsnap-y").addEventListener("click", function () {
         animalStatsIndex = (animalStatsIndex + 1) % squares.length;
         loadAnimalTextStats();
+    });
+
+    document.addEventListener("scroll", function (event) {
+        console.log('event=', event);
     });
 
     const loadAnimalTextStats = () => {
