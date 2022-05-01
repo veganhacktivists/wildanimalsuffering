@@ -2984,7 +2984,7 @@ create-hmac@^1.1.0, create-hmac@^1.1.4, create-hmac@^1.1.7:
 
 cross-env@^7.0.3:
   version "7.0.3"
-  resolved "https://registry.yarnpkg.com/cross-env/-/cross-env-7.0.3.tgz#865264b29677dc015ba8418918965dd232fc54cf"
+  resolved "https://registry.npmjs.org/cross-env/-/cross-env-7.0.3.tgz"
   integrity sha512-+/HKd6EgcQCJGh2PSjZuUitQBQynKor4wrFbRg4DtAgS1aWO+gU52xpH7M9ScGgXSYmAVS9bIJ8EzuaGw0oNAw==
   dependencies:
     cross-spawn "^7.0.1"
@@ -5636,7 +5636,7 @@ klona@^2.0.5:
 
 laravel-mix@^6.0.43:
   version "6.0.43"
-  resolved "https://registry.yarnpkg.com/laravel-mix/-/laravel-mix-6.0.43.tgz#6a9d67419e891f5075fc08bfff47770bf1f00d8a"
+  resolved "https://registry.npmjs.org/laravel-mix/-/laravel-mix-6.0.43.tgz"
   integrity sha512-SOO+C1aOpVSAUs30DYc6k/e0QJxfyD42aav4IKJtE5UZKw9ROWcVzkVoek2J475jNeNnl7GkoLAC27gejZsQ8g==
   dependencies:
     "@babel/core" "^7.15.8"
@@ -5802,9 +5802,14 @@ lodash.uniq@^4.5.0:
   resolved "https://registry.npmjs.org/lodash.uniq/-/lodash.uniq-4.5.0.tgz"
   integrity sha1-0CJTc662Uq3BvILklFM5qEJ1R3M=
 
-lodash@^4, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.20, lodash@^4.17.21, lodash@^4.17.5:
+lodash@^4, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.20, lodash@^4.17.5:
   version "4.17.21"
   resolved "https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz"
+  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
+
+lodash@^4.17.21:
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
 loglevel@^1.6.8:
@@ -7012,18 +7017,9 @@ postcss-loader@^3.0.0:
     postcss-load-config "^2.0.0"
     schema-utils "^1.0.0"
 
-postcss-loader@^6.2.0:
+postcss-loader@^6.2.0, postcss-loader@^6.2.1:
   version "6.2.1"
   resolved "https://registry.npmjs.org/postcss-loader/-/postcss-loader-6.2.1.tgz"
-  integrity sha512-WbbYpmAaKcux/P66bZ40bpWsBucjx/TTgVVzRZ9yUO8yQfVBlameJ0ZGVaPfH64hNSBh63a+ICP5nqOpBA0w+Q==
-  dependencies:
-    cosmiconfig "^7.0.0"
-    klona "^2.0.5"
-    semver "^7.3.5"
-
-postcss-loader@^6.2.1:
-  version "6.2.1"
-  resolved "https://registry.yarnpkg.com/postcss-loader/-/postcss-loader-6.2.1.tgz#0895f7346b1702103d30fdc66e4d494a93c008ef"
   integrity sha512-WbbYpmAaKcux/P66bZ40bpWsBucjx/TTgVVzRZ9yUO8yQfVBlameJ0ZGVaPfH64hNSBh63a+ICP5nqOpBA0w+Q==
   dependencies:
     cosmiconfig "^7.0.0"
@@ -7490,18 +7486,9 @@ postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.27, postcss@^7.0.32, postcss@^7.0.3
     picocolors "^0.2.1"
     source-map "^0.6.1"
 
-postcss@^8.2.15:
+postcss@^8.2.15, postcss@^8.4.12:
   version "8.4.12"
   resolved "https://registry.npmjs.org/postcss/-/postcss-8.4.12.tgz"
-  integrity sha512-lg6eITwYe9v6Hr5CncVbK70SoioNQIq81nsaG86ev5hAidQvmOeETBqs7jm43K2F5/Ley3ytDtriImV6TpNiSg==
-  dependencies:
-    nanoid "^3.3.1"
-    picocolors "^1.0.0"
-    source-map-js "^1.0.2"
-
-postcss@^8.4.12:
-  version "8.4.12"
-  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.12.tgz#1e7de78733b28970fa4743f7da6f3763648b1905"
   integrity sha512-lg6eITwYe9v6Hr5CncVbK70SoioNQIq81nsaG86ev5hAidQvmOeETBqs7jm43K2F5/Ley3ytDtriImV6TpNiSg==
   dependencies:
     nanoid "^3.3.1"
@@ -8851,7 +8838,7 @@ symbol-observable@1.0.1:
 
 tailwindcss@^3.0.24:
   version "3.0.24"
-  resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-3.0.24.tgz#22e31e801a44a78a1d9a81ecc52e13b69d85704d"
+  resolved "https://registry.npmjs.org/tailwindcss/-/tailwindcss-3.0.24.tgz"
   integrity sha512-H3uMmZNWzG6aqmg9q07ZIRNIawoiEcNFKDfL+YzOPuPsXuDXxJxB9icqzLgdzKNwjG3SAro2h9SYav8ewXNgig==
   dependencies:
     arg "^5.0.1"

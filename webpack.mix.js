@@ -30,7 +30,6 @@ mix
 // mix.coffee(src, output); <-- Identical to mix.js(), but registers CoffeeScript compilation.
 // mix.ts(src, output); <-- TypeScript support. Requires tsconfig.json to exist in the same folder as webpack.mix.js
 // mix.extract(vendorLibs);
-// mix.sass('resources/assets/sass/app.css', 'dist/assets/');
 // mix.less(src, output);
 // mix.stylus(src, output);
 // mix.postCss(src, output, [require('postcss-some-plugin')()]);

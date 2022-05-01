@@ -208,3 +208,7 @@ svg {
     overflow-y: scroll;
     scroll-behavior: smooth;
 }
+
+.scrollsnap-x {
+    overflow-y: hidden;
+}
