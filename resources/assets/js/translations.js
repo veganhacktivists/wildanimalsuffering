@@ -15,7 +15,9 @@ const en = {
     "animal-stats-earthworms": "10,000-10<sup>6</sup> earthworms",
     "animal-stats-terrestrial-arthropods": "600,000-7*10<sup>8</sup> arthropods",
     "at-any-moment": "in existence at any moment",
-    "vast-majority": "This means that the vast majority of individuals are wild animals. The scale is truly mind boggling."
+    "vast-majority": "This means that the vast majority of individuals are",
+    "wild-animals": "wild animals",
+    "mind-boggling": "The scale is truly mind boggling."
     
 };
 

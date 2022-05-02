@@ -66,14 +66,8 @@ const DOWN = 1;
         return animalStatsIndex === (squares.length - 1);
     };
 
-    // document.querySelector(".animal-stats").addEventListener("click", function () {
-    //     modAnimalStat();
-    // });
-
     const modAnimalStat = () => {
-        console.log('modAnimalStats - animalStatsIndex=', animalStatsIndex);
         animalStatsIndex = (animalStatsIndex+1) % squares.length;
-        console.log('modAnimalStats - animalStatsIndex=', animalStatsIndex);
     };
 
     const updateAnimalStats = () => {
@@ -111,9 +105,6 @@ const DOWN = 1;
         const isLastAnimalStatScreen = isLastAnimalStat();
         const direction = delta > 0 ? UP: DOWN;
 
-        console.log('wheel - isDeviceMobile=', isDeviceMobile);
-        console.log('wheel - isLastAnimalStatScreen=', isLastAnimalStatScreen);
-
 
         if (!isLastAnimalStatScreen) {
 
@@ -129,12 +120,9 @@ const DOWN = 1;
     }, { passive: false });
 
     document.querySelector(".animal-stats").addEventListener("touchstart", function (event) {
-        console.log('touchstart...');
         //if is mobile and last of the animal stats isn't loaded, load the next animal stat
         const isDeviceMobile = isMobile();
         const isLastAnimalStatScreen = isLastAnimalStat();
-        console.log('touchstart - isDeviceMobile=', isDeviceMobile);
-        console.log('touchstart - isLastAnimalStatScreen=', isLastAnimalStatScreen);
 
         if (isDeviceMobile && !isLastAnimalStatScreen) {
             
