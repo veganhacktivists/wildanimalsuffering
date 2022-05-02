@@ -39,4 +39,13 @@ const throttle = (callback, time) => {
   }, time);
 };
 
-export { isInViewport, isMobile, throttle };
+// https://www.freecodecamp.org/news/javascript-debounce-example/
+const debounce = (func, timeout = 500) => {
+    let timer;
+    return (...args) => {
+        clearTimeout(timer);
+        timer = setTimeout(() => { func.apply(this, args); }, timeout);
+    };
+};
+
+export { isInViewport, isMobile, throttle, debounce };

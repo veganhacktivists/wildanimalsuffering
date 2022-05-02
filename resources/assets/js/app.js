@@ -1,6 +1,6 @@
 //Note: If this ever comes from an untrusted source, you have to sanitize the input
 import { translations } from './translations';
-import { isInViewport, isMobile, throttle } from './utils';
+import { isInViewport, isMobile, throttle, debounce } from './utils';
 
 const UP = -1;
 const DOWN = 1;
@@ -63,7 +63,7 @@ const DOWN = 1;
     };
 
     const isLastAnimalStat = () => {
-        return animalStatsIndex === (squares.length - 2);
+        return animalStatsIndex === (squares.length - 1);
     };
 
     // document.querySelector(".animal-stats").addEventListener("click", function () {
@@ -71,17 +71,33 @@ const DOWN = 1;
     // });
 
     const modAnimalStat = () => {
+        console.log('modAnimalStats - animalStatsIndex=', animalStatsIndex);
         animalStatsIndex = (animalStatsIndex+1) % squares.length;
         console.log('modAnimalStats - animalStatsIndex=', animalStatsIndex);
     };
 
     const updateAnimalStats = () => {
 
-        const animalStatsElements = document.querySelectorAll("p.animal-stat");
-        animalStatsElements.forEach((element) => {
-            element.classList.add("hidden");
-        });
-        animalStatsElements[animalStatsIndex].classList.remove("hidden");
+        const domesticStatsElement = document.querySelector("div.domestic-stats-container");
+        const wildStatsElement = document.querySelector("div.wild-stats-container");
+        const wildAnimalStatsElements = document.querySelectorAll("p.animal-stat");
+
+        //show domesticated; hide wild
+        if (animalStatsIndex === 0) {
+            wildStatsElement.classList.add("hidden");
+            domesticStatsElement.classList.remove("hidden");
+        }
+
+        //show wild; hide domesticated; show specific wild
+        if (animalStatsIndex !== 0) {
+            domesticStatsElement.classList.add("hidden");
+            wildStatsElement.classList.remove("hidden");
+            wildAnimalStatsElements.forEach((element) => {
+                element.classList.add("hidden");
+            });
+            wildAnimalStatsElements[animalStatsIndex - 1].classList.remove("hidden");
+        }
+
     };
 
     const isAnimalStatScreen = () => {
@@ -103,12 +119,12 @@ const DOWN = 1;
 
             event.preventDefault();
             event.stopPropagation();
-            updateAnimalStatsOnMouseEvent();
-            // throttle(updateAnimalStatsOnMouseEvent, 500, {leading: false});
+            throttle(updateAnimalStatsOnMouseEvent, 500);
             return false; // handled by the touchstart event
         }
-
-
+        if (isLastAnimalStatScreen) {
+            throttle(updateAnimalStatsOnMouseEvent, 500);
+        }
 
     }, { passive: false });
 
@@ -117,15 +133,18 @@ const DOWN = 1;
         //if is mobile and last of the animal stats isn't loaded, load the next animal stat
         const isDeviceMobile = isMobile();
         const isLastAnimalStatScreen = isLastAnimalStat();
+        console.log('touchstart - isDeviceMobile=', isDeviceMobile);
+        console.log('touchstart - isLastAnimalStatScreen=', isLastAnimalStatScreen);
 
         if (isDeviceMobile && !isLastAnimalStatScreen) {
             
             event.preventDefault();
             event.stopPropagation();
-            throttle(() => {
-                updateAnimalStatsOnMouseEvent(event);
-            }, 500);
+            throttle(updateAnimalStatsOnMouseEvent, 500);
             return false;
+        }
+        if (isLastAnimalStatScreen) {
+            throttle(updateAnimalStatsOnMouseEvent, 500);
         }
 
     }, { passive: false });
@@ -133,12 +152,13 @@ const DOWN = 1;
     
     const updateAnimalStatsOnMouseEvent = (event) => {
 
-        throttle(modAnimalStat, 500);
-        // modAnimalStat();
+        const isLastAnimalStatScreen = isLastAnimalStat();
+
+        modAnimalStat();
         loadAnimalTextStats();
-        updateSectionInViewport();
+        if (isLastAnimalStatScreen) { updateSectionInViewport(); }
         updateAnimalStats();
-        updatePageIndicatorDots();
+        if (isLastAnimalStatScreen) { updatePageIndicatorDots(); }
     };
 
     const updateSectionInViewport = () => {
