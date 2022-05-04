@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
 
 :root {
     --white: #FFF;
@@ -14,6 +15,7 @@
 body {
     @apply m-0 overflow-hidden h-screen w-screen;
     color: var(--white);
+    font-family: 'Patua One';
 }
 
 .scrollable {
@@ -23,10 +25,6 @@ body {
 section, .scrollable-container {
     @apply flex content-center h-screen w-screen h-full w-full /*justify-center*/;
     scroll-snap-align: start;
-}
-
-.heading {
-    @apply text-4xl;
 }
 
 .full-screen {
@@ -118,9 +116,12 @@ svg {
     @apply max-w-full max-h-full;
 }
 
-.accent {
-    color: var(--blue);
-}
+.accent { color: var(--blue); }
+.accent-blue { color: var(--blue); }
+.accent-green { color: var(--green); }
+.accent-orange { color: var(--orange); }
+.accent-pink { color: var(--pink); }
+.accent-purple { color: var(--purple); }
 
 #up-arrow {
 

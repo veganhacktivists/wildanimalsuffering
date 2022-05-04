@@ -151,6 +151,10 @@ import { registerTouchStart, getDirection, UP, DOWN } from './mouse';
             throttle(updateAnimalStatsOnMouseEvent, 500);
             return false;
         }
+        if (movingPastAnimalStats) {
+            //reset the screen back to mod-0
+            throttle(updateAnimalStatsOnMouseEvent, 2000);
+        }
 
     }, { passive: false });
     
