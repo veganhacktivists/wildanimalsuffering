@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
 
 :root {
     --white: #FFF;
@@ -13,9 +14,16 @@
 }
 
 body {
-    @apply m-0 overflow-hidden h-screen w-screen;
+    @apply m-0 overflow-hidden h-screen w-screen text-sm;
+    @apply md:text-base;
     color: var(--white);
     font-family: 'Patua One';
+}
+
+p {
+    @apply text-sm;
+    @apply md:text-base;
+    font-family: 'Noto Serif', serif;
 }
 
 .scrollable {
@@ -54,9 +62,15 @@ div[class$='-square'] {
 }
 
 /* couldn't get the tailwind theme to extend :( */
+.h-screen-70vh { height: 10vh; }
+.h-screen-70vh { height: 20vh; }
 .h-screen-30vh { height: 30vh; }
+.h-screen-70vh { height: 40vh; }
 .h-screen-50vh { height: 50vh; }
+.h-screen-70vh { height: 60vh; }
 .h-screen-70vh { height: 70vh; }
+.h-screen-70vh { height: 80vh; }
+.h-screen-70vh { height: 90vh; }
 
 /* TODO: should really figure out how to make this generic and use the number in the tailwind names */
 .square-2s {
