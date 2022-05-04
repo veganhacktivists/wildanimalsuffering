@@ -1,9 +1,7 @@
 //Note: If this ever comes from an untrusted source, you have to sanitize the input
 import { translations } from './translations';
 import { isInViewport, isMobile, throttle, debounce } from './utils';
-
-const UP = -1;
-const DOWN = 1;
+import { registerTouchStart, getDirection, UP, DOWN } from './mouse';
 
 (() => {
 
@@ -66,6 +64,10 @@ const DOWN = 1;
         return animalStatsIndex === (squares.length - 1);
     };
 
+    const isFirstAnimalStat = () => {
+        return animalStatsIndex === 0;
+    };
+
     const modAnimalStat = () => {
         animalStatsIndex = (animalStatsIndex+1) % squares.length;
     };
@@ -94,45 +96,60 @@ const DOWN = 1;
 
     };
 
-    const isAnimalStatScreen = () => {
-        return sectionInViewport?.element?.className?.includes('animal-stats');
+    const canMovePastWildAnimalStats = (event) => {
+
+        const isLastAnimalStatScreen = isLastAnimalStat();
+        const isFirstAnimalStatScreen = isFirstAnimalStat();
+        const direction = getDirection(event);
+
+        return (isLastAnimalStatScreen && direction === DOWN) || (isFirstAnimalStatScreen && direction === UP);
     };
 
-    document.querySelector(".animal-stats").addEventListener("wheel", function (event, delta) {
+    document.querySelector(".animal-stats").addEventListener("wheel", function (event) {
 
         //if is mobile and last of the animal stats isn't loaded, don't load the next screen
         const isDeviceMobile = isMobile();
-        const isLastAnimalStatScreen = isLastAnimalStat();
-        const direction = delta > 0 ? UP: DOWN;
+        const movingPastAnimalStats = canMovePastWildAnimalStats(event);
 
+        if (isDeviceMobile) { return false; }
 
-        if (!isLastAnimalStatScreen) {
+        if (!movingPastAnimalStats) {
+            throttle(updateAnimalStatsOnMouseEvent, 500);
+        }
+        if (movingPastAnimalStats) {
 
             event.preventDefault();
             event.stopPropagation();
             throttle(updateAnimalStatsOnMouseEvent, 500);
             return false; // handled by the touchstart event
         }
-        if (isLastAnimalStatScreen) {
-            throttle(updateAnimalStatsOnMouseEvent, 500);
-        }
 
     }, { passive: false });
 
     document.querySelector(".animal-stats").addEventListener("touchstart", function (event) {
+
+        const movingPastAnimalStats = canMovePastWildAnimalStats(event);
+        if (!movingPastAnimalStats) {
+            event.preventDefault();
+            event.stopPropagation();
+            return false;
+        }
+
+    }, { passive: false });
+
+
+    document.querySelector(".animal-stats").addEventListener("touchmove", function (event) {
         //if is mobile and last of the animal stats isn't loaded, load the next animal stat
         const isDeviceMobile = isMobile();
-        const isLastAnimalStatScreen = isLastAnimalStat();
+        const movingPastAnimalStats = canMovePastWildAnimalStats(event);
 
-        if (isDeviceMobile && !isLastAnimalStatScreen) {
-            
+        if (!isDeviceMobile) { return false; }
+
+        if (!movingPastAnimalStats) {
             event.preventDefault();
             event.stopPropagation();
             throttle(updateAnimalStatsOnMouseEvent, 500);
             return false;
-        }
-        if (isLastAnimalStatScreen) {
-            throttle(updateAnimalStatsOnMouseEvent, 500);
         }
 
     }, { passive: false });

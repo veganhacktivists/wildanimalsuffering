@@ -48,4 +48,5 @@ const debounce = (func, timeout = 500) => {
     };
 };
 
+
 export { isInViewport, isMobile, throttle, debounce };

@@ -1,4 +1,5 @@
 let mix = require('laravel-mix');
+const tailwindcss = require('tailwindcss');
 
 /*
  |--------------------------------------------------------------------------
@@ -16,8 +17,14 @@ mix
     .js([
         'resources/assets/js/app.js', 
         'resources/assets/js/translations.js'],
-    'public/js/app.js')
-    .postCss("resources/assets/styles/app.css", "public/css", [require("tailwindcss")]);
+        'public/js/app.js')
+    .babelConfig({
+        plugins: [
+            "@babel/plugin-proposal-optional-chaining"
+        ]
+    })
+    .postCss("resources/assets/styles/app.css", "public/css", {}, [require("tailwindcss")]);
+    // .postCss("resources/assets/styles/app.css", "public/css", {}, [tailwindcss("./tailwind.config.js")]);
     // .sass('resources/assets/styles/app.scss', 'public/css', [require("tailwindcss")]);
     // .sourceMaps()
     // .browserSync({ server: 'dist', proxy: null });

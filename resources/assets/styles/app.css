@@ -16,8 +16,12 @@ body {
     color: var(--white);
 }
 
-section {
-    @apply flex content-center justify-center h-screen w-screen h-full w-full;
+.scrollable {
+    scroll-snap-align: start;
+}
+
+section, .scrollable-container {
+    @apply flex content-center h-screen w-screen h-full w-full /*justify-center*/;
     scroll-snap-align: start;
 }
 
@@ -30,26 +34,31 @@ section {
     @apply md:mx-20;
 }
 
-.half-screen {
-    @apply flex flex-col justify-center flex-1 self-center h-1/2 m-8;
+.split-screen {
+    @apply flex flex-col flex-1 self-center p-8;
     @apply md:h-full;
 }
 
-.half-screen:nth-child(1) {
+.split-screen:nth-child(1) {
     @apply flex-grow-0 md:min-w-[25%] md:mx-20;
 }
-.half-screen:nth-child(2) {
+.split-screen:nth-child(2) {
     @apply flex-grow md:h-full;
 }
 #centered-squares {
-    @apply grid self-center absolute h-[40%] w-[80%];
-    @apply md:w-[40%] md:h-[60%];
+    @apply grid self-center w-[80%];
+    @apply md:h-[60%];
 }
 
 div[class$='-square'] {
     aspect-ratio: 1/1;
     align-self: center;
 }
+
+/* couldn't get the tailwind theme to extend :( */
+.h-screen-30vh { height: 30vh; }
+.h-screen-50vh { height: 50vh; }
+.h-screen-70vh { height: 70vh; }
 
 /* TODO: should really figure out how to make this generic and use the number in the tailwind names */
 .square-2s {
@@ -141,11 +150,7 @@ svg {
 }
 
 .abyss {
-    background: url('../images/abyss.jpg') center/cover no-repeat;
-}
-
-.earth-image {
-    background: url('../images/earth.png') center/contain no-repeat;
+    background: url('../images/earth.png') center/contain no-repeat, url('../images/abyss.jpg') center/cover no-repeat;
 }
 
 
