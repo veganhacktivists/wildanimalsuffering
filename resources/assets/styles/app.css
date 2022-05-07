@@ -11,6 +11,7 @@
     --orange: #C79D5E;
     --pink: #D68A9C;
     --purple: #A89CF6;
+    --navy: #273037;
 }
 
 body {
@@ -136,6 +137,7 @@ svg {
 .accent-orange { color: var(--orange); }
 .accent-pink { color: var(--pink); }
 .accent-purple { color: var(--purple); }
+.navy { color: var(--navy); }
 
 #up-arrow {
 
@@ -198,7 +200,38 @@ svg {
 }
 
 .together-we-can {
-    background: url('../images/in-the-woods.jpg') center/cover no-repeat;
+    background: url('../images/in-the-woods.jpg') top/cover no-repeat;
+}
+
+.bears {
+    background: url('../images/bears.png') bottom/contain no-repeat;
+}
+
+/* even worse.. */
+.suffer-image > div {
+    height: 4rem;
+    aspect-ratio: 2;   
+}
+.suffer-thirst-image {
+    background: url('../images/suffer/starving-dog.png') center/cover no-repeat;
+}
+.suffer-predation-image {
+    background: url('../images/suffer/predation.png') center/cover no-repeat;
+}
+.suffer-disease-image {
+    background: url('../images/suffer/parasite.png') center/cover no-repeat;
+}
+.suffer-harmful-weather-image {
+    background: url('../images/suffer/harmful-weather.png') center/cover no-repeat;
+}
+.suffer-natural-disasters-image {
+    background: url('../images/suffer/fires.png') center/cover no-repeat;
+}
+.suffer-accidents-image {
+    background: url('../images/suffer/tire-tracks.png') center/cover no-repeat;
+}
+.suffer-anthropogenic-harms-image {
+    background: url('../images/suffer/fish-hook.png') center/cover no-repeat;
 }
 
 #page-indicators {

@@ -17,7 +17,21 @@ const en = {
     "at-any-moment": "in existence at any moment",
     "vast-majority": "This means that the vast majority of individuals are",
     "wild-animals": "wild animals",
-    "mind-boggling": "The scale is truly mind boggling."
+    "mind-boggling": "The scale is truly mind boggling.",
+    "even-worse": "Even worse, wild animals suffer in terrible ways",
+    "thirst-and-starvation": "Thirst & starvation",
+    "predation": "Predation",
+    "disease-and-parasitism": "Disease & parasitism",
+    "harmful-weather": "Harmful weather conditions",
+    "natural-disasters": "Natural disasters",
+    "accidents": "Accidents",
+    "anthropogenic-harms": "Anthropogenic harms (e.g. fishing)",
+    "and-much-more": "...and much more",
+
+
+    "together-we-can": "Together, we can make life better for wild animals.",
+    "together-we-can-p": "Diam tincidunt aliquet mauris lorem egestas scelerisque ac risus. Neque nibh tellus elementum vulputate auctor. Mauris convallis arcu amet, sollicitudin gravida gravida platea. Velit rhoncus pellentesque feugiat aenean tincidunt. Diam tincidunt aliquet mauris lorem egestas scelerisque ac risus. Neque nibh tellus elementum vulputate auctor. Mauris convallis arcu amet, sollicitudin gravida gravida platea.",
+    "thank-you": "Thank you."
     
 };
 
