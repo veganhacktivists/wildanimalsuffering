@@ -13,6 +13,10 @@ import { registerTouchStart, registerMouseHandlers, getDirection, UP, DOWN } fro
     };
     let screenIndex = 0;
 
+    const downArrow = document.getElementById("next-section-down");
+    const sideArrow = document.getElementById("next-section-side");
+    const abyssContainer = document.getElementById("abyss-container");
+
     const screenContentElements = document.querySelectorAll(".screen-content");
     const squares = [
         { key: "farmedAnimals", numberOnASide: 2, color: "blue" },
@@ -56,7 +60,7 @@ import { registerTouchStart, registerMouseHandlers, getDirection, UP, DOWN } fro
         const squaresContainer = document.getElementById("centered-squares");
         removeChildren(squaresContainer);
         squaresContainer.className = `square-${numberOnASide}s`;
-        for (let index = 0; index < numberOnASide*numberOnASide; index++) {
+        for (let index = 0; index < numberOnASide * numberOnASide; index++) {
             const element = document.createElement("div");
             element.className = `${color}-square`;
             squaresContainer.appendChild(element);
@@ -68,19 +72,15 @@ import { registerTouchStart, registerMouseHandlers, getDirection, UP, DOWN } fro
         return animalStatsIndex === (squares.length - 1);
     };
 
-    const isFirstAnimalStat = () => {
-        return animalStatsIndex === 0;
-    };
-
     const modAnimalStat = () => {
-        animalStatsIndex = (animalStatsIndex+1) % squares.length;
+        animalStatsIndex = (animalStatsIndex + 1) % squares.length;
     };
 
     const updateAnimalStats = () => {
 
         const domesticStatsElement = document.querySelector("div.domestic-stats-container");
         const wildStatsElement = document.querySelector("div.wild-stats-container");
-        const wildAnimalStatsElements = document.querySelectorAll("p.animal-stat");
+        const wildAnimalStatsElements = document.querySelectorAll(".animal-stat");
 
         //show domesticated; hide wild
         if (animalStatsIndex === 0) {
@@ -92,78 +92,16 @@ import { registerTouchStart, registerMouseHandlers, getDirection, UP, DOWN } fro
         if (animalStatsIndex !== 0) {
             domesticStatsElement.classList.add("hidden");
             wildStatsElement.classList.remove("hidden");
-            wildAnimalStatsElements.forEach((element) => {
-                element.classList.add("hidden");
-            });
+            // wildAnimalStatsElements.forEach((element) => {
+            //     element.classList.add("hidden");
+            // });
             wildAnimalStatsElements[animalStatsIndex - 1].classList.remove("hidden");
         }
 
     };
 
-    const canMovePastWildAnimalStats = (event) => {
-
-        const isLastAnimalStatScreen = isLastAnimalStat();
-        const isFirstAnimalStatScreen = isFirstAnimalStat();
-        const direction = getDirection(event);
-
-        return (isLastAnimalStatScreen && direction === DOWN) || (isFirstAnimalStatScreen && direction === UP);
-    };
-
-    document.querySelector(".animal-stats").addEventListener("wheel", function (event) {
-
-        //if is mobile and last of the animal stats isn't loaded, don't load the next screen
-        const isDeviceMobile = isMobile();
-        const movingPastAnimalStats = canMovePastWildAnimalStats(event);
-
-        if (isDeviceMobile) { return false; }
-
-        if (!movingPastAnimalStats) {
-            throttle(updateAnimalStatsOnMouseEvent, 500);
-        }
-        if (movingPastAnimalStats) {
-
-            event.preventDefault();
-            event.stopPropagation();
-            throttle(updateAnimalStatsOnMouseEvent, 500);
-            return false; // handled by the touchstart event
-        }
-
-    }, { passive: false });
-
-    document.querySelector(".animal-stats").addEventListener("touchstart", function (event) {
-
-        const movingPastAnimalStats = canMovePastWildAnimalStats(event);
-        if (!movingPastAnimalStats) {
-            event.preventDefault();
-            event.stopPropagation();
-            return false;
-        }
-
-    }, { passive: false });
-
-
-    document.querySelector(".animal-stats").addEventListener("touchmove", function (event) {
-        //if is mobile and last of the animal stats isn't loaded, load the next animal stat
-        const isDeviceMobile = isMobile();
-        const movingPastAnimalStats = canMovePastWildAnimalStats(event);
-
-        if (!isDeviceMobile) { return false; }
-
-        if (!movingPastAnimalStats) {
-            event.preventDefault();
-            event.stopPropagation();
-            throttle(updateAnimalStatsOnMouseEvent, 500);
-            return false;
-        }
-        if (movingPastAnimalStats) {
-            //reset the screen back to mod-0
-            throttle(updateAnimalStatsOnMouseEvent, 2000);
-        }
-
-    }, { passive: false });
     
-    
-    const updateAnimalStatsOnMouseEvent = (event) => {
+    const updateAnimalStatsOnMouseEvent = () => {
 
         const isLastAnimalStatScreen = isLastAnimalStat();
 
@@ -198,7 +136,40 @@ import { registerTouchStart, registerMouseHandlers, getDirection, UP, DOWN } fro
         updateAnimalStats();
     };
 
+    const updateBackgroundOpacity = () => {
+        const screen = screenContentElements[screenIndex];
+        const isAnimalStatsScreen = screen.id === "animal-stats-screen";
+        if (isAnimalStatsScreen) {
+            abyssContainer.classList.add("abyss-darkened");
+            abyssContainer.classList.remove("abyss");
+        } else {
+            abyssContainer.classList.remove("abyss-darkened");
+            abyssContainer.classList.add("abyss");
+        }
+        
+    };
+
     const handleDownClick = (event) => {
+        goToNextSection();
+        updateArrowVisibility();
+        updateBackgroundOpacity();
+    };
+
+    const updateArrowVisibility = () => {
+        const screen = screenContentElements[screenIndex];
+        const isLastAnimalStatScreen = isLastAnimalStat();
+        const isAnimalStatsScreen = screen.id === "animal-stats-screen";
+        if (isAnimalStatsScreen && !isLastAnimalStatScreen) {
+            downArrow.classList.add("hidden");
+            sideArrow.classList.remove("hidden");
+        } else {
+            downArrow.classList.remove("hidden");
+            sideArrow.classList.add("hidden");
+        }
+    };
+
+    const goToNextSection = () => {
+
         screenIndex = (screenIndex + 1) % screenContentElements.length;
         const nextScreenId = screenContentElements[screenIndex].id;
         document.getElementById(nextScreenId).scrollIntoView({ behavior: "smooth" });
@@ -207,12 +178,19 @@ import { registerTouchStart, registerMouseHandlers, getDirection, UP, DOWN } fro
         history.replaceState(null, null, location + '#' + nextScreenId);
     };
 
-    const registerDownClickHandler = () => {
-        document.getElementById("next-section").addEventListener("click", handleDownClick);
+    const handleSideClick = () => {
+        updateAnimalStatsOnMouseEvent();
+        updateArrowVisibility();
+        updateBackgroundOpacity();
+    };
+
+    const registerArrowClickHandlers = () => {
+        document.getElementById("next-section-down").addEventListener("click", handleDownClick);
+        document.getElementById("next-section-side").addEventListener("click", handleSideClick);
     };
 
     const registerClickHandlers = () => {
-        registerDownClickHandler();
+        registerArrowClickHandlers();
     };
 
     const init = async () => {
