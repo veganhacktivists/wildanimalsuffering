@@ -8,6 +8,18 @@ const isMobile = () => {
     return window.innerWidth < parseInt(fullConfig.theme.screens.md);
 };
 
+// const getNextScreenContentElement = (currentElement, screenContentElements) => {
+
+//     const currentIndex = [...screenContentElements].findIndex((sectionElement, index) => {
+//         return (sectionElement === currentElement);
+//     });
+
+//     if (currentIndex === screenContentElements.length) { return currentIndex; }
+    
+//     return screenContentElements[currentIndex + 1];
+
+// };
+
 // https://www.javascripttutorial.net/dom/css/check-if-an-element-is-visible-in-the-viewport/
 const isInViewport = (el) => {
     const rect = el.getBoundingClientRect();

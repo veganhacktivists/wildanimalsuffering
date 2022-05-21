@@ -1,15 +1,19 @@
 //Note: If this ever comes from an untrusted source, you have to sanitize the input
 import { translations } from './translations';
 import { isInViewport, isMobile, throttle, debounce } from './utils';
-import { registerTouchStart, getDirection, UP, DOWN } from './mouse';
+import { registerTouchStart, registerMouseHandlers, getDirection, UP, DOWN } from './mouse';
 
 (() => {
 
     let animalStatsIndex = 0;
+
     let sectionInViewport = {
         element: null,
         index: null
     };
+    let screenIndex = 0;
+
+    const screenContentElements = document.querySelectorAll(".screen-content");
     const squares = [
         { key: "farmedAnimals", numberOnASide: 2, color: "blue" },
         { key: "wildBirds", numberOnASide: 5, color: "blue" },
@@ -171,13 +175,12 @@ import { registerTouchStart, getDirection, UP, DOWN } from './mouse';
     };
 
     const updateSectionInViewport = () => {
-        const sectionElements = document.querySelectorAll("section");
-        const index = [...sectionElements].findIndex((sectionElement, index) => {
+        const index = [...screenContentElements].findIndex((sectionElement, index) => {
             return isInViewport(sectionElement);
         });
         sectionInViewport = {
             index,
-            element: sectionElements[index]
+            element: screenContentElements[index]
         };
     };
 
@@ -195,10 +198,30 @@ import { registerTouchStart, getDirection, UP, DOWN } from './mouse';
         updateAnimalStats();
     };
 
+    const handleDownClick = (event) => {
+        screenIndex = (screenIndex + 1) % screenContentElements.length;
+        const nextScreenId = screenContentElements[screenIndex].id;
+        document.getElementById(nextScreenId).scrollIntoView({ behavior: "smooth" });
+
+        const location = window.location.toString().split('#')[0];
+        history.replaceState(null, null, location + '#' + nextScreenId);
+    };
+
+    const registerDownClickHandler = () => {
+        document.getElementById("next-section").addEventListener("click", handleDownClick);
+    };
+
+    const registerClickHandlers = () => {
+        registerDownClickHandler();
+    };
+
     const init = async () => {
 
+        registerClickHandlers();
+        registerMouseHandlers(screenContentElements);
         loadText();
         loadAnimalTextStats();
+
     };
 
     init();

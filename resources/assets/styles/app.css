@@ -1,30 +1,65 @@
+@import '../fonts/theboldfont.css';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&family=Poppins&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
 
 :root {
     --white: #FFF;
     --blue: #85C5C8;
     --green: #B0CB83;
-    --orange: #C79D5E;
+    --orange: #D8B36D;
     --pink: #D68A9C;
     --purple: #A89CF6;
-    --navy: #273037;
+    --navy: #1A3439;
+    --brown: #4E4534;
+    --sand: #A39D8B
 }
 
 body {
-    @apply m-0 overflow-hidden h-screen w-screen text-sm;
-    @apply md:text-base;
+    @apply m-0 overflow-hidden h-screen w-screen text-sm font-light;
+    @apply md:text-xl md:font-light;
     color: var(--white);
-    font-family: 'Patua One';
+    font-family: 'Poppins';
+}
+
+h1 { @apply text-7xl; @apply font-bold; }
+h2 { @apply text-5xl; @apply font-bold; }
+h3 { @apply text-4xl; @apply font-bold; }
+h4 { @apply text-2xl; @apply font-bold; }
+h5 { @apply text-sm; @apply font-bold; }
+h6 { @apply text-xs; }
+
+.blue { color: var(--blue); }
+.green { color: var(--green); }
+.orange { color: var(--orange); }
+.pink { color: var(--pink); }
+.purple { color: var(--purple); }
+.navy { color: var(--navy); }
+.brown { color: var(--brow); }
+.sand { color: var(--sand); }
+
+h1, h2, h3, h4, h5, h6 {
+    @apply uppercase;
+    font-family: 'The Bold Font';
+    letter-spacing: 0.01em;
 }
 
 p {
     @apply text-sm;
     @apply md:text-base;
-    font-family: 'Noto Serif', serif;
+}
+
+.screen-content {
+    /* screen-content is always full screen for both mobile and web */
+    @apply h-screen w-screen;
+}
+
+.badge {
+    background-color: var(--orange);
+    color: var(--navy);
+    @apply rounded-full px-4 py-1;
 }
 
 .scrollable {
@@ -36,9 +71,17 @@ section, .scrollable-container {
     scroll-snap-align: start;
 }
 
+.flex-center {
+    @apply flex flex-col justify-center items-center;
+}
+
 .full-screen {
-    @apply flex flex-col md:flex-row w-full h-full flex-grow z-10;
-    @apply md:mx-20;
+    @apply flex flex-col md:flex-row flex-grow z-10;
+    /* @apply md:mx-20; */
+}
+
+.split-screen-padding {
+    @apply p-8;
 }
 
 .split-screen {
@@ -63,15 +106,27 @@ div[class$='-square'] {
 }
 
 /* couldn't get the tailwind theme to extend :( */
-.h-screen-70vh { height: 10vh; }
-.h-screen-70vh { height: 20vh; }
-.h-screen-30vh { height: 30vh; }
-.h-screen-70vh { height: 40vh; }
-.h-screen-50vh { height: 50vh; }
-.h-screen-70vh { height: 60vh; }
-.h-screen-70vh { height: 70vh; }
-.h-screen-70vh { height: 80vh; }
-.h-screen-70vh { height: 90vh; }
+@layer utilities {
+    .hw-screen { height: 100vh; width: 100vw; }
+    .h-screen-10vh { height: 10vh; }
+    .h-screen-20vh { height: 20vh; }
+    .h-screen-30vh { height: 30vh; }
+    .h-screen-40vh { height: 40vh; }
+    .h-screen-50vh { height: 50vh; }
+    .h-screen-60vh { height: 60vh; }
+    .h-screen-70vh { height: 70vh; }
+    .h-screen-80vh { height: 80vh; }
+    .h-screen-90vh { height: 90vh; }
+    .w-screen-10vw { width: 10vw; }
+    .w-screen-20vw { width: 20vw; }
+    .w-screen-30vw { width: 30vw; }
+    .w-screen-40vw { width: 40vw; }
+    .w-screen-50vw { width: 50vw; }
+    .w-screen-60vw { width: 60vw; }
+    .w-screen-70vw { width: 70vw; }
+    .w-screen-80vw { width: 80vw; }
+    .w-screen-90vw { width: 90vw; }
+}
 
 /* TODO: should really figure out how to make this generic and use the number in the tailwind names */
 .square-2s {
@@ -131,14 +186,6 @@ svg {
     @apply max-w-full max-h-full;
 }
 
-.accent { color: var(--blue); }
-.accent-blue { color: var(--blue); }
-.accent-green { color: var(--green); }
-.accent-orange { color: var(--orange); }
-.accent-pink { color: var(--pink); }
-.accent-purple { color: var(--purple); }
-.navy { color: var(--navy); }
-
 #up-arrow {
 
 }
@@ -147,8 +194,13 @@ svg {
     @apply flex-grow;
 }
 
-#down-arrow {
-    background: url('../images/down-arrow.svg') center/cover no-repeat;
+.down-container {
+    @apply justify-center w-screen flex flex-col items-center bottom-0 z-10;
+}
+
+#next-section {
+    @apply w-8 h-1/2;
+    background: url('../images/down-arrows.svg') center/cover no-repeat;
 }
 
 .wild-animal-suffering {
@@ -167,7 +219,12 @@ svg {
 }
 
 .abyss {
-    background: url('../images/earth.png') center/contain no-repeat, url('../images/abyss.jpg') center/cover no-repeat;
+    background: url('../images/wild-animal-stats/earth.png') right center/50% no-repeat, url('../images/wild-animal-stats/abyss.jpg') center/cover no-repeat;
+}
+
+
+.human-icon {
+    background: url('../images/wild-animal-stats/human.png') center/contain no-repeat;
 }
 
 
@@ -176,7 +233,14 @@ svg {
 }
 
 .population-dynamics {
-    background: url('../images/dirt-road.jpg') center/cover no-repeat;
+    background:
+        url('../images/population-dynamics/top-left-grass.png') top left/auto no-repeat,
+        url('../images/population-dynamics/bottom-right-grass.png') bottom right/auto no-repeat,
+        url('../images/population-dynamics/dirt-road.jpg') center/cover no-repeat;
+}
+
+.population-dynamics-duck {
+    background: url('../images/population-dynamics/duck.png') center right/auto no-repeat;
 }
 
 .videos {

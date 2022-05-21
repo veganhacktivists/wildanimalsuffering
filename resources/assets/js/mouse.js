@@ -11,5 +11,12 @@ const getDirection = (e) => {
     return yPosEnd - yPosStart ? UP : DOWN;
 };
 
+const listenToScrollChanges = () => {
+    
+};
 
-export { registerTouchStart, getDirection, UP, DOWN };
+const registerMouseHandlers = () => {
+};
+
+
+export { registerTouchStart, getDirection, registerMouseHandlers, UP, DOWN };

@@ -13,80 +13,91 @@
     <div id="up-arrow">
         
     </div>
-    <div class="absolute h-screen w-screen scrollsnap-y">
-        <section class="wild-animal-suffering">
-            <div class="full-screen">
-                <div id="elephant-image-container" class="split-screen h-screen-50vh">
-                    <div class="justify-center navy md:hidden">
-                        <h1 data-translate-id="wild-animal-suffering-header" class="text-4xl"></h1>
-                        <h3 data-translate-id="why-it-matters"></h3>
+    <div class="absolute h-screen scrollsnap-y">
+        <section id="wild-animal-suffering-screen" class="screen-content wild-animal-suffering">
+            <div class="h-screen flex flex-col justify-start">
+                <div class="h-screen-70vh flex flex-col md:flex-row md:pt-16">
+                    <div id="elephant-image-container" class="split-screen h-screen-50vh">
+                        <div class="justify-center md:hidden">
+                            <h1 data-translate-id="wild-animal-suffering-header"></h1>
+                            <h3 class="orange" data-translate-id="why-it-matters"></h3>
+                        </div>
+                        <div class="h-full elephants"></div>
                     </div>
-                    <div class="h-full elephants"></div>
+                    <div class="split-screen h-screen-30vh">
+                        <div class="hidden md:block">
+                            <h1 data-translate-id="wild-animal-suffering-header"></h1>
+                            <h3 class="orange" data-translate-id="why-it-matters"></h3>
+                        </div>
+                        <div class="subheading flex flex-row pt-4">
+                            <div class="pr-4">
+                                <p data-translate-id="idealise"></p>
+                            </div>
+                            <div class="pl-4">
+                                <p data-translate-id="relief"></p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="split-screen h-screen-40vh">
-                    <div class="hidden md:block">
-                        <h1 data-translate-id="wild-animal-suffering-header"></h1>
-                        <h3 data-translate-id="why-it-matters"></h3>
-                    </div>
-                    <div class="subheading">
-                        <p data-translate-id="idealise"></p>
-                        <br>
-                        <p data-translate-id="relief"></p>
-                        <br>
-                        <br>
-                        <p><b data-translate-id="scroll-down"></b></p>
+
+                <div class="h-screen-10vh p-4 md:p-10">
+                    <div class="text-center">
+                        <h5 class="pb-4" data-translate-id="it-matters"></h5>
+                        <span class="badge capitalize" data-translate-id="begin-learning"></span>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="abyss h-screen w-screen scrollsnap-y flex-col earth-image full-screen">
-                <div class="scrollable h-screen">
-                    <div class="split-screen h-screen-50vh text-center">
-                        <h1 data-translate-id="human-population" class="text-3xl"></h1>
+        <section class="abyss scrollsnap-y flex-col hw-screen">
+                <div id="human-population-screen" class="screen-content flex scrollable h-screen">
+                    <div class="h-screen-50vh md:h-screen md:w-screen-50vw text-center split-screen-padding flex-center">
+                        <h1 data-translate-id="human-population"></h1>
                     </div>
-                    <div class="split-screen h-screen-50vh"></div>
+                    <div class="h-screen-50vh md:h-screen md:w-screen-50vw split-screen-padding flex-center">
+                        <div class="human-icon h-1/4 w-1/4"></div>
+                    </div>
                 </div>
-                <div class="scrollable h-screen animal-stats">
-                    <div class="split-screen h-screen-30vh">
+                <div id="animal-stats-screen" class="screen-content scrollable h-screen animal-stats">
+                    <div class="h-screen-30vh">
 
                         <div class="domestic-stats-container">
-                            <h1 data-translate-id="for-every-human" class="text-3xl"></h1>
+                            <h1 data-translate-id="for-every-human"></h1>
                         </div>
                         <div class="wild-stats-container">
-                            <p class="text-2xl" data-translate-id="in-the-wild"></p>
-                            <div class="text-2xl">
-                                <p class="animal-stat text-2xl accent-blue" data-translate-id="animal-stats-birds"></p>
-                                <p class="animal-stat text-2xl accent-blue" data-translate-id="animal-stats-wild-mammals"></p>
-                                <p class="animal-stat text-2xl accent-green" data-translate-id="animal-stats-reptiles"></p>
-                                <p class="animal-stat text-2xl accent-green" data-translate-id="animal-stats-amphibians"></p>
-                                <p class="animal-stat text-2xl accent-orange" data-translate-id="animal-stats-fish"></p>
-                                <p class="animal-stat text-2xl accent-pink" data-translate-id="animal-stats-earthworms"></p>
-                                <p class="animal-stat text-2xl accent-purple" data-translate-id="animal-stats-terrestrial-arthropods"></p>
+                            <h4 data-translate-id="in-the-wild"></h4>
+                            <div>
+                                <h4 class="animal-stat blue" data-translate-id="animal-stats-birds"></h4>
+                                <h4 class="animal-stat blue" data-translate-id="animal-stats-wild-mammals"></h4>
+                                <h4 class="animal-stat green" data-translate-id="animal-stats-reptiles"></h4>
+                                <h4 class="animal-stat green" data-translate-id="animal-stats-amphibians"></h4>
+                                <h4 class="animal-stat orange" data-translate-id="animal-stats-fish"></h4>
+                                <h4 class="animal-stat pink" data-translate-id="animal-stats-earthworms"></h4>
+                                <h4 class="animal-stat purple" data-translate-id="animal-stats-terrestrial-arthropods"></h4>
                             </div>
-                            <p class="text-2xl" data-translate-id="at-any-moment"></p>
+                            <h4 data-translate-id="at-any-moment"></h4>
                         </div>
 
                     </div>
-                    <div class="split-screen h-screen-70vh">
+                    <div class="h-screen-70vh">
                         <div id="centered-squares">
                         </div>
                     </div>
                 </div>
-                <div class="scrollable h-screen">
-                    <div class="split-screen h-screen-50vh text-center justify-start">
-                        <p data-translate-id="vast-majority" class="text-3xl"></p>
+                <div id="vast-majority-screen" class="screen-content scrollable h-screen">
+                    <div class="h-screen-50vh text-center justify-start">
+                        <p data-translate-id="vast-majority"></p>
                         <br>
                         <h1><span data-translate-id="wild-animals" class="text-3xl accent"></span>.</h1>
                     </div>
-                    <div class="split-screen h-screen-50vh justify-center">
+                    <div class="h-screen-50vh justify-center">
                         <p data-translate-id="mind-boggling" class="text-3xl pt-16"></p>
                     </div>
                 </div>
         </section>
-        <section class="even-worse navy">
-            <div class="full-screen">
+        <section id="even-worse-screen" class="screen-content even-worse navy">
+            <div class="full-screen w-full h-full">
                 <div class="split-screen h-screen-50vh">
-                    <h1 class="text-3xl"><span data-translate-id="even-worse"></span>:</h1>
+                    <h1><span data-translate-id="even-worse"></span>:</h1>
                 </div>
                 <div class="split-screen h-screen-50vh w-full">
                     <div class="flex flex-wrap flex-row justify-center text-center">
@@ -119,62 +130,63 @@
                             <p data-translate-id="anthropogenic-harms"></p>
                         </div>
                         <div class="suffer-image w-1/2 py-4 px-2">
-                            <h2 data-translate-id="and-much-more" class="text-3xl"></h2>
+                            <h2 data-translate-id="and-much-more"></h2>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="population-dynamics">
-            <div class="full-screen">
+        <section id="population-dynamics-screen" class="population-dynamics screen-content">
+            <div class="full-screen w-full h-full">
+                <div class="split-screen h-screen-50vh">
+                </div>
+                <div class="split-screen h-screen-50vh w-full">
+                    <div class="population-dynamics-duck w-80 h-80 md:flex md:flex-row md:flex-end md:w-full"></div>
+                </div>
+            </div>
+        </section>
+        <section id="videos-screen" class="videos screen-content">
+            <div class="full-screen w-full h-full">
                 <div class="split-screen h-screen-50vh">
                 </div>
                 <div class="split-screen h-screen-50vh w-full">
                 </div>
             </div>
         </section>
-        <section class="videos">
-            <div class="full-screen">
+        <section id="common-objections-screen" class="common-objections screen-content">
+            <div class="full-screen w-full h-full">
                 <div class="split-screen h-screen-50vh">
                 </div>
                 <div class="split-screen h-screen-50vh w-full">
                 </div>
             </div>
         </section>
-        <section class="common-objections">
-            <div class="full-screen">
+        <section id="how-you-can-help-screen" class="how-you-can-help screen-content">
+            <div class="full-screen w-full h-full">
                 <div class="split-screen h-screen-50vh">
                 </div>
                 <div class="split-screen h-screen-50vh w-full">
                 </div>
             </div>
         </section>
-        <section class="how-you-can-help">
-            <div class="full-screen">
+        <section id="organisations-screen" class="organisations screen-content">
+            <div class="full-screen w-full h-full">
                 <div class="split-screen h-screen-50vh">
                 </div>
                 <div class="split-screen h-screen-50vh w-full">
                 </div>
             </div>
         </section>
-        <section class="organisations">
-            <div class="full-screen">
+        <section id="other-resources-screen" class="other-resources screen-content">
+            <div class="full-screen w-full h-full">
                 <div class="split-screen h-screen-50vh">
                 </div>
                 <div class="split-screen h-screen-50vh w-full">
                 </div>
             </div>
         </section>
-        <section class="other-resources">
-            <div class="full-screen">
-                <div class="split-screen h-screen-50vh">
-                </div>
-                <div class="split-screen h-screen-50vh w-full">
-                </div>
-            </div>
-        </section>
-        <section class="together-we-can">
-            <div class="full-screen">
+        <section id="together-we-can-screen" class="together-we-can screen-content">
+            <div class="full-screen w-full h-full">
                 <div class="split-screen h-screen-50vh mt-10">
                     <h2 class="mr-8" data-translate-id="together-we-can"></h2>
                     <br>
@@ -187,10 +199,11 @@
             </div>
         </section>
     </div>
-    <div id="down-arrow" class="fixed">
-        
+
+    <div class="fixed down-container h-screen-20vh">
+        <div id="next-section"></div>
     </div>
-    <div id="page-indicators" class="fixed">
+    <!-- <div id="page-indicators" class="fixed">
         <div class="page-indicator-dot filled"></div>
         <div class="page-indicator-dot"></div>
         <div class="page-indicator-dot"></div>
@@ -202,7 +215,7 @@
         <div class="page-indicator-dot"></div>
         <div class="page-indicator-dot"></div>
         <div class="page-indicator-dot"></div>
-    </div>
+    </div> -->
     <script src="js/app.js"></script>
 </body>
 </html>
