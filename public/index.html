@@ -63,19 +63,19 @@
             <div id="animal-stats-screen" class="screen-content scrollable animal-stats flex">
 
                 <!-- web: left side; mobile: top -->
-                <div class="h-screen-30vh md:h-screen md:w-screen-50vw flex-center split-screen-padding ">
+                <div class="h-screen-30vh md:h-screen md:w-screen-50vw flex-center split-screen-padding flex">
 
-                    <div class="flex-center flex-col justify-around h-full text-left">
+                    <div class="flex-center flex-col justify-around h-full text-left flex-grow">
                         <div class="domestic-stats-container">
                             <h1 class="" data-translate-id="for-every-human"></h1>
                             <h4 class=" py-4" data-translate-id="thats-a-lot"></h4>
                         </div>
-                        <div class="wild-stats-container hidden">
-                            <div class="humans">
+                        <div class="wild-stats-container hidden flex md:justify-between md:flex-col md:w-full md:h-5/6">
+                            <div id="humans" class="humans">
                                 <p data-translate-id="in-the-wild"></p>
                                 <p data-translate-id="for-every-human-between"></p>
                             </div>
-                            <div class="non-human-animals hidden">
+                            <div id="non-human-animals" class="non-human-animals hidden">
                                 <h4 class="animal-stat blue" data-translate-id="animal-stats-birds"></h4>
                                 <h4 class="animal-stat hidden blue" data-translate-id="animal-stats-wild-mammals"></h4>
                                 <h4 class="animal-stat hidden green" data-translate-id="animal-stats-reptiles"></h4>
@@ -83,12 +83,15 @@
                                 <h4 class="animal-stat hidden orange" data-translate-id="animal-stats-fish"></h4>
                                 <h4 class="animal-stat hidden pink" data-translate-id="animal-stats-earthworms"></h4>
                                 <h4 class="animal-stat hidden purple" data-translate-id="animal-stats-terrestrial-arthropods"></h4>
-
-                                <div>
-                                    <p data-translate-id="at-any-moment"></p>
-                                    <p data-translate-id="vast-majority"></p>
-                                    <p data-translate-id="wild-animals"></p>
-                                    <p data-translate-id="mind-boggling"></p>
+                            </div>
+                            <div>
+                                <p data-translate-id="at-any-moment"></p>
+                                <p data-translate-id="vast-majority"></p>
+                                <p data-translate-id="wild-animals"></p>
+                                <p data-translate-id="mind-boggling"></p>
+                                <div class="py-4">
+                                    <p data-translate-id="number-of-individuals"></p>
+                                    <div class="legend"></div>
                                 </div>
                             </div>
                         </div>

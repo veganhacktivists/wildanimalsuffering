@@ -22,6 +22,7 @@ const en = {
     "vast-majority": "This means that the vast majority of individuals are",
     "wild-animals": "wild animals",
     "mind-boggling": "The scale is truly mind boggling.",
+    "number-of-individuals": "Number of individuals",
     "even-worse": "Even worse, wild animals suffer in terrible ways",
     "thirst-and-starvation": "Thirst & starvation",
     "predation": "Predation",

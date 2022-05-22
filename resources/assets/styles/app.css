@@ -96,8 +96,18 @@ section, .scrollable-container {
     @apply flex-grow md:h-full;
 }
 #centered-squares {
-    @apply grid self-center w-[80%];
+    @apply grid self-center w-[70%];
     @apply md:h-[60%];
+}
+
+.stat-highlight {
+    @apply text-5xl;
+}
+
+.legend {
+    background: url('../images/wild-animal-stats/legend.svg') center/cover no-repeat;
+    width: 80%;
+    aspect-ratio: 15;
 }
 
 div[class$='-square'] {

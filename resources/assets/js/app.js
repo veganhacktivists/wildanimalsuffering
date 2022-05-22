@@ -83,19 +83,23 @@ import { registerTouchStart, registerMouseHandlers, getDirection, UP, DOWN } fro
         const wildAnimalStatsElements = document.querySelectorAll(".animal-stat");
 
         //show domesticated; hide wild
-        if (animalStatsIndex === 0) {
-            wildStatsElement.classList.add("hidden");
-            domesticStatsElement.classList.remove("hidden");
-        }
+        // if (animalStatsIndex === 0) {
+        //     wildStatsElement.classList.add("hidden");
+        //     domesticStatsElement.classList.remove("hidden");
+        // }
 
         //show wild; hide domesticated; show specific wild
         if (animalStatsIndex !== 0) {
             domesticStatsElement.classList.add("hidden");
             wildStatsElement.classList.remove("hidden");
-            // wildAnimalStatsElements.forEach((element) => {
-            //     element.classList.add("hidden");
-            // });
+            wildAnimalStatsElements.forEach((element, i) => {
+                // element.classList.add("hidden");
+                element.classList.remove("stat-highlight");
+                element.classList.remove(squares[animalStatsIndex - 1].color);
+            });
             wildAnimalStatsElements[animalStatsIndex - 1].classList.remove("hidden");
+            wildAnimalStatsElements[animalStatsIndex - 1].classList.add("stat-highlight");
+            wildAnimalStatsElements[animalStatsIndex - 1].classList.add(squares[animalStatsIndex].color);
         }
 
     };
@@ -104,6 +108,8 @@ import { registerTouchStart, registerMouseHandlers, getDirection, UP, DOWN } fro
     const updateAnimalStatsOnMouseEvent = () => {
 
         const isLastAnimalStatScreen = isLastAnimalStat();
+
+        document.getElementById("non-human-animals").classList.remove("hidden");
 
         modAnimalStat();
         loadAnimalTextStats();
