@@ -16,14 +16,14 @@
         <section id="wild-animal-suffering-screen" class="screen-content wild-animal-suffering">
             <div class="h-screen flex flex-col justify-start">
                 <div class="h-screen-70vh flex flex-col md:flex-row md:pt-16">
-                    <div id="elephant-image-container" class="split-screen h-screen-50vh">
+                    <div id="elephant-image-container" class="split-screen flex-col h-screen-50vh">
                         <div class="justify-center md:hidden">
                             <h1 data-translate-id="wild-animal-suffering-header"></h1>
                             <h3 class="orange" data-translate-id="why-it-matters"></h3>
                         </div>
                         <div class="h-full elephants"></div>
                     </div>
-                    <div class="split-screen h-screen-30vh">
+                    <div class="split-screen flex-col h-screen-30vh">
                         <div class="hidden md:block">
                             <h1 data-translate-id="wild-animal-suffering-header"></h1>
                             <h3 class="orange" data-translate-id="why-it-matters"></h3>
@@ -113,10 +113,10 @@
         </section>
         <section id="even-worse-screen" class="screen-content even-worse white">
             <div class="full-screen w-full h-full flex flex-col">
-                <div class="split-screen w-full text-center">
+                <div class="split-screen flex-col w-full text-center">
                     <h1><span data-translate-id="even-worse"></span>:</h1>
                 </div>
-                <div class="split-screen w-full">
+                <div class="split-screen flex-col w-full">
                     <div class="flex flex-wrap flex-row justify-center text-center">
                         <div class="suffer-image-container w-full pt-4">
                             <div class="suffer-image suffer-thirst-image"></div>
@@ -151,11 +151,23 @@
             </div>
         </section>
         <section id="population-dynamics-screen" class="population-dynamics screen-content">
-            <div class="full-screen w-full h-full">
-                <div class="split-screen h-screen-50vh">
+            <div class="full-screen flex-col w-full h-full">
+                <div class="py-16 flex justify-center split-screen flex-col h-screen-50vh w-full text-center items-center">
+                    <h1 class="md:w-[75%]" data-translate-id="population-dynamics"></h1>
+                    <p class="md:w-[40%]" data-translate-id="tend-to-have-a-lot-of-children"></p>
                 </div>
-                <div class="split-screen h-screen-50vh w-full">
-                    <div class="population-dynamics-duck w-80 h-80 md:flex md:flex-row md:flex-end md:w-full"></div>
+                <div class="split-screen h-screen-50vh w-full flex-col relative">
+                    <div class="population-dynamics-duck w-80 h-1/2 md:flex md:flex-row md:flex-end md:w-full"></div>
+                    <div class="baby-duck-01"></div>
+                    <div class="baby-duck-02"></div>
+                    <div class="baby-duck-03"></div>
+                    <div class="baby-duck-04"></div>
+                    <div class="baby-duck-05"></div>
+                    <div class="baby-duck-06"></div>
+                    <div class="baby-duck-07"></div>
+                    <div class="baby-duck-08"></div>
+                    <div class="baby-duck-09"></div>
+                    <div class="baby-duck-10"></div>
                 </div>
             </div>
         </section>

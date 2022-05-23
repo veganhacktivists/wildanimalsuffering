@@ -92,7 +92,7 @@ section, .scrollable-container {
 }
 
 .split-screen {
-    @apply flex flex-col flex-1 self-center p-8;
+    @apply flex flex-1 self-center;
     @apply md:h-full;
 }
 
@@ -272,7 +272,7 @@ svg {
 }
 
 .population-dynamics-duck {
-    background: url('../images/population-dynamics/duck.png') center right/auto no-repeat;
+    background: url('../images/population-dynamics/duck.png') center right/contain no-repeat;
 }
 
 .videos {
@@ -336,6 +336,24 @@ svg {
 .suffer-anthropogenic-harms-image {
     background: url('../images/suffer/fish-hook.png') center/contain no-repeat;
 }
+
+/* population dynamics */
+[class^='baby-duck-'] {
+    background: url('../images/population-dynamics/chick.png') center/contain no-repeat;
+    @apply absolute w-1/6;
+    aspect-ratio: 1;
+    
+}
+.baby-duck-01 { left: 10%; bottom: 0%; }
+.baby-duck-02 { left: 10%; bottom: 30%; }
+.baby-duck-03 { left: 35%; bottom: 35%; }
+.baby-duck-04 { left: 45%; bottom: 60%; }
+.baby-duck-05 { left: 60%; bottom: 60%; }
+.baby-duck-06 { left: 45%; bottom: 20%; }
+.baby-duck-07 { left: 5%; bottom: 20%; }
+.baby-duck-08 { left: 60%; bottom: 35%; }
+.baby-duck-09 { left: 20%; bottom: 60%; }
+.baby-duck-10 { left: 65%; bottom: 10%; }
 
 #page-indicators {
     @apply hidden h-screen w-screen flex flex-col justify-center items-end;

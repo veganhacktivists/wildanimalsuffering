@@ -32,6 +32,8 @@ const en = {
     "accidents": "Accidents",
     "anthropogenic-harms": "Anthropogenic harms (e.g. fishing)",
     "and-much-more": "...and much more",
+    "population-dynamics": "Population Dynamics",
+    "tend-to-have-a-lot-of-children": "Wild animals tend to have a lot of children, and for populations to remain stable, on average each parent can only have 2 children that reach adulthood. This means that most animals die young.",
 
 
     "together-we-can": "Together, we can make life better for wild animals.",
