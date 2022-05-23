@@ -29,6 +29,22 @@ import { registerTouchStart, registerMouseHandlers, getDirection, UP, DOWN } fro
         { key: "arthropods", numberOnASide: 50, color: "purple" },
     ];
 
+
+
+    window.addEventListener('load', function () {
+        init();
+    });
+
+    const init = async () => {
+
+        registerClickHandlers();
+        registerMouseHandlers(screenContentElements);
+        loadText();
+        loadAnimalTextStats();
+        goToSection();
+
+    };
+
     const addText = (element, language = "en") => {
         const { translateId } = element.dataset;
         if (!translateId) { console.error('data-translate-id elements must have an attribute value'); return; }
@@ -102,6 +118,12 @@ import { registerTouchStart, registerMouseHandlers, getDirection, UP, DOWN } fro
             wildAnimalStatsElements[animalStatsIndex - 1].classList.add(squares[animalStatsIndex].color);
         }
 
+    };
+
+    const goToSection = () => {
+        if (!window.location.hash) { return; }
+        
+        document.getElementById(window.location.hash?.substring(1)).scrollIntoView({ behavior: "smooth" });
     };
 
     
@@ -199,16 +221,6 @@ import { registerTouchStart, registerMouseHandlers, getDirection, UP, DOWN } fro
         registerArrowClickHandlers();
     };
 
-    const init = async () => {
-
-        registerClickHandlers();
-        registerMouseHandlers(screenContentElements);
-        loadText();
-        loadAnimalTextStats();
-
-    };
-
-    init();
 
 
 })();

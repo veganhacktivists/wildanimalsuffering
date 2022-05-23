@@ -1,4 +1,5 @@
-@import '../fonts/theboldfont.css';
+@import '../fonts/the-bold-font.css';
+/* @import url('https://db.onlinewebfonts.com/c/a1e62992c2000401c04c1b6e042516c0?family=The+Bold+Font'); */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif&family=Poppins&display=swap');
 
 @tailwind base;
@@ -7,19 +8,34 @@
 
 :root {
     --white: #FFF;
+    --oat: #DAD7CE;
     --blue: #85C5C8;
+    --purple: #A89CF6;
+    --pink: #D68A9C;
+    --navy: #1A3439;
     --green: #B0CB83;
     --orange: #D8B36D;
-    --pink: #D68A9C;
-    --purple: #A89CF6;
-    --navy: #1A3439;
+    --sand: #A39D8B;
     --brown: #4E4534;
-    --sand: #A39D8B
+}
+
+.blue { color: var(--blue); }
+.green { color: var(--green); }
+.orange { color: var(--orange); }
+.pink { color: var(--pink); }
+.purple { color: var(--purple); }
+.navy { color: var(--navy); }
+.brown { color: var(--brow); }
+.sand { color: var(--sand); }
+.oat { color: var(--oat); }
+
+html {
+    font-size: 1.5vmin;
 }
 
 body {
-    @apply m-0 overflow-hidden h-screen w-screen text-sm font-light;
-    @apply md:text-xl md:font-light;
+    @apply m-0 overflow-hidden h-screen w-screen font-light;
+    @apply md:font-light;
     color: var(--white);
     font-family: 'Poppins';
 }
@@ -30,15 +46,6 @@ h3 { @apply text-4xl; @apply font-bold; }
 h4 { @apply text-2xl; @apply font-bold; }
 h5 { @apply text-sm; @apply font-bold; }
 h6 { @apply text-xs; }
-
-.blue { color: var(--blue); }
-.green { color: var(--green); }
-.orange { color: var(--orange); }
-.pink { color: var(--pink); }
-.purple { color: var(--purple); }
-.navy { color: var(--navy); }
-.brown { color: var(--brow); }
-.sand { color: var(--sand); }
 
 h1, h2, h3, h4, h5, h6 {
     @apply uppercase;
@@ -76,7 +83,7 @@ section, .scrollable-container {
 }
 
 .full-screen {
-    @apply flex flex-col md:flex-row flex-grow z-10;
+    @apply flex flex-grow;
     /* @apply md:mx-20; */
 }
 
@@ -97,7 +104,7 @@ section, .scrollable-container {
 }
 #centered-squares {
     @apply grid self-center w-[70%];
-    @apply md:h-[60%];
+    /* @apply md:h-[60%]; */
 }
 
 .stat-highlight {
@@ -165,15 +172,15 @@ div[class$='-square'] {
     @apply gap-1
 }
 .square-30s > div {
-    border-radius: 1px;
+    @apply rounded-sm;
 }
 .square-50s {
     grid-template-columns: repeat(50, minmax(0, 1fr));
     grid-template-rows: repeat(50, minmax(0, 1fr));
-    gap: 1px 1px;
+    gap: 0.0625rem 0.0625rem;
 }
 .square-50s > div {
-    border-radius: 1px;
+    @apply rounded-sm;
 }
 
 .blue-square {
@@ -297,30 +304,37 @@ svg {
 }
 
 /* even worse.. */
-.suffer-image > div {
-    height: 4rem;
-    aspect-ratio: 2;   
+.suffer-image-container {
+    @apply border rounded-md m-4;
+    max-width: 20vw;
+}
+.suffer-image {
+    @apply text-center;
+    aspect-ratio: 2;
+}
+.suffer-text {
+    background: rgba(255, 255, 255, 0.25);
 }
 .suffer-thirst-image {
-    background: url('../images/suffer/starving-dog.png') center/cover no-repeat;
+    background: url('../images/suffer/starving-dog.png') center/contain no-repeat;
 }
 .suffer-predation-image {
-    background: url('../images/suffer/predation.png') center/cover no-repeat;
+    background: url('../images/suffer/predation.png') center/contain no-repeat;
 }
 .suffer-disease-image {
-    background: url('../images/suffer/parasite.png') center/cover no-repeat;
+    background: url('../images/suffer/parasite.png') center/contain no-repeat;
 }
 .suffer-harmful-weather-image {
-    background: url('../images/suffer/harmful-weather.png') center/cover no-repeat;
+    background: url('../images/suffer/harmful-weather.png') center/contain no-repeat;
 }
 .suffer-natural-disasters-image {
-    background: url('../images/suffer/fires.png') center/cover no-repeat;
+    background: url('../images/suffer/fires.png') center/contain no-repeat;
 }
 .suffer-accidents-image {
-    background: url('../images/suffer/tire-tracks.png') center/cover no-repeat;
+    background: url('../images/suffer/tire-tracks.png') center/contain no-repeat;
 }
 .suffer-anthropogenic-harms-image {
-    background: url('../images/suffer/fish-hook.png') center/cover no-repeat;
+    background: url('../images/suffer/fish-hook.png') center/contain no-repeat;
 }
 
 #page-indicators {
@@ -342,7 +356,7 @@ svg {
 }
 
 .scrollsnap-y::-webkit-scrollbar {
-    width: 0px; /* For Chrome, Safari, and Opera */
+    width: 0rem; /* For Chrome, Safari, and Opera */
 }
 
 .scrollsnap-y {
