@@ -34,7 +34,8 @@ const en = {
     "and-much-more": "...and much more",
     "population-dynamics": "Population Dynamics",
     "tend-to-have-a-lot-of-children": "Wild animals tend to have a lot of children, and for populations to remain stable, on average each parent can only have 2 children that reach adulthood. This means that most animals die young.",
-
+    "videos-you-might-like": "Videos you might like",
+    "video-caption": "Wild animal suffering is about harms to the wellbeing of animals living in the wild. This is frequently confused with the ways species, populations of animals, or ecosystems can be affected. These are entities, not individuals who can feel and suffer. In this video, you'll hear about the meanings of \"wild animal suffering\" and related terms.",
 
     "together-we-can": "Together, we can make life better for wild animals.",
     "together-we-can-p": "Diam tincidunt aliquet mauris lorem egestas scelerisque ac risus. Neque nibh tellus elementum vulputate auctor. Mauris convallis arcu amet, sollicitudin gravida gravida platea. Velit rhoncus pellentesque feugiat aenean tincidunt. Diam tincidunt aliquet mauris lorem egestas scelerisque ac risus. Neque nibh tellus elementum vulputate auctor. Mauris convallis arcu amet, sollicitudin gravida gravida platea.",

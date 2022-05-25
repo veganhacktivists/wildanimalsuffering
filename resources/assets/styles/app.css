@@ -275,10 +275,6 @@ svg {
     background: url('../images/population-dynamics/duck.png') center right/contain no-repeat;
 }
 
-.videos {
-    background: url('../images/sky.jpg') center/cover no-repeat;
-}
-
 .common-objections {
     background: url('../images/sand-bg-color.jpg') center/cover no-repeat;
 }
@@ -365,6 +361,26 @@ svg {
 }
 .page-indicator-dot.filled {
     background: var(--white);
+}
+
+/* videos you might like */
+.videos {
+    background:
+        url('../images/videos-you-might-like/iceberg.png') top left/auto no-repeat,
+        url('../images/videos-you-might-like/penguins.png') bottom right/auto no-repeat,
+        url('../images/sky.jpg') center/cover no-repeat;
+}
+.main-video-container iframe {
+    @apply rounded-md;
+    aspect-ratio: 1.777;
+    box-shadow: 0rem 0rem 2.12500rem 0rem var(--white);
+}
+.video-thumbnail-container > * {
+    @apply p-4;
+}
+.video-thumbnail-container iframe {
+    @apply rounded-lg;
+    box-shadow: 0rem 0rem 1rem 0rem var(--white);
 }
 
 
