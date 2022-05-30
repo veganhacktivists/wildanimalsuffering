@@ -36,6 +36,16 @@ const en = {
     "tend-to-have-a-lot-of-children": "Wild animals tend to have a lot of children, and for populations to remain stable, on average each parent can only have 2 children that reach adulthood. This means that most animals die young.",
     "videos-you-might-like": "Videos you might like",
     "video-caption": "Wild animal suffering is about harms to the wellbeing of animals living in the wild. This is frequently confused with the ways species, populations of animals, or ecosystems can be affected. These are entities, not individuals who can feel and suffer. In this video, you'll hear about the meanings of \"wild animal suffering\" and related terms.",
+    "common-objections": "common objections to helping wild animals",
+    "its-not-ours": "it's not our responsibility",
+    "personally-responsible": "People sometimes argue that we are not personally responsible for the suffering of wild animals, so we shouldn’t be very concerned about it. However, the reason to help them is that they need our help, not because we caused their situation. We can see that this argument would also apply to humans in distant places suffering from natural causes, such as earthquakes or hurricanes. If we think we should help humans in those cases and care about their wellbeing as sentient beings, then it follows that we should help animals living in the wild as well.",
+
+    "how-you-can-help": "how can you help?",
+    "raise-awareness": "raise awareness",
+    "donate-to-charities": "donate to effective charities",
+    "become-a-researcher": "become a researcher",
+    "check-out-this-resource": "You can also check out this amazing resource to learn more about other ways you can volunteer to help reduce wild animal suffering.",
+    "view-volunteer-opportunities": "view volunteer opportunities",
 
     "together-we-can": "Together, we can make life better for wild animals.",
     "together-we-can-p": "Diam tincidunt aliquet mauris lorem egestas scelerisque ac risus. Neque nibh tellus elementum vulputate auctor. Mauris convallis arcu amet, sollicitudin gravida gravida platea. Velit rhoncus pellentesque feugiat aenean tincidunt. Diam tincidunt aliquet mauris lorem egestas scelerisque ac risus. Neque nibh tellus elementum vulputate auctor. Mauris convallis arcu amet, sollicitudin gravida gravida platea.",

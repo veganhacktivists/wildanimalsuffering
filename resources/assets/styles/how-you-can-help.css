@@ -1,4 +1,21 @@
 /* how-you-can-help */
 .how-you-can-help {
-    background: url('../images/how-you-can-help/forest-bg-color.jpg') center/cover no-repeat;
+    background:
+        url('../images/how-you-can-help/mice.png') bottom left/auto no-repeat,
+        url('../images/how-you-can-help/ant-hill.png') bottom center/contain no-repeat,
+        url('../images/how-you-can-help/forest-bg-color.jpg') center/cover no-repeat;
+}
+.help-box-container {
+    @apply p-10;
+}
+
+.help-box {
+    background:
+        url('../images/how-you-can-help/leaves.png') center/cover no-repeat,
+        rgba(175, 175, 175, 0.8) center/cover no-repeat;
+    @apply p-4 rounded-lg text-left;
+    width: 12rem;
+    height: 12rem;
+    border: solid 0.0625rem var(--white);
+    box-shadow: 0rem 0rem 1.5625rem 0rem var(--white);
 }
