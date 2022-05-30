@@ -23,7 +23,10 @@ mix
             "@babel/plugin-proposal-optional-chaining"
         ]
     })
-    .postCss("resources/assets/styles/app.css", "public/css", {}, [require("tailwindcss")]);
+    .postCss([
+        "resources/assets/styles/app.css",
+        "resources/assets/styles/why-it-matters.css"
+    ], "public/css", {}, [require("tailwindcss")]);
     // .postCss("resources/assets/styles/app.css", "public/css", {}, [tailwindcss("./tailwind.config.js")]);
     // .sass('resources/assets/styles/app.scss', 'public/css', [require("tailwindcss")]);
     // .sourceMaps()
