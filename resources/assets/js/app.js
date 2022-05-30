@@ -41,7 +41,7 @@ import { registerTouchStart, registerMouseHandlers, getDirection, UP, DOWN } fro
         registerMouseHandlers(screenContentElements);
         loadText();
         loadAnimalTextStats();
-        goToSection();
+        goToUrlHashSection();
 
     };
 
@@ -120,42 +120,25 @@ import { registerTouchStart, registerMouseHandlers, getDirection, UP, DOWN } fro
 
     };
 
-    const goToSection = () => {
+    const goToUrlHashSection = () => {
         if (!window.location.hash) { return; }
-        
-        document.getElementById(window.location.hash?.substring(1)).scrollIntoView({ behavior: "smooth" });
+        const screenId = window.location.hash?.substring(1);
+        document.getElementById(screenId).scrollIntoView({ behavior: "smooth" });
+        updateScreenIndex(screenId);
+
     };
 
+    const updateScreenIndex = (screenId) => {
+        screenIndex = [...screenContentElements].map((e) => e.id).indexOf(screenId);
+    };
     
     const updateAnimalStatsOnMouseEvent = () => {
-
-        const isLastAnimalStatScreen = isLastAnimalStat();
 
         document.getElementById("non-human-animals").classList.remove("hidden");
 
         modAnimalStat();
         loadAnimalTextStats();
-        if (isLastAnimalStatScreen) { updateSectionInViewport(); }
         updateAnimalStats();
-        if (isLastAnimalStatScreen) { updatePageIndicatorDots(); }
-    };
-
-    const updateSectionInViewport = () => {
-        const index = [...screenContentElements].findIndex((sectionElement, index) => {
-            return isInViewport(sectionElement);
-        });
-        sectionInViewport = {
-            index,
-            element: screenContentElements[index]
-        };
-    };
-
-    const updatePageIndicatorDots = () => {
-
-        const pageIndicatorDots = document.querySelectorAll(".page-indicator-dot");
-        pageIndicatorDots.forEach((dotElement, i) => {
-            dotElement.className = `page-indicator-dot ${sectionInViewport.index === i ? 'filled' : ''}`;
-        });
     };
 
     const loadAnimalTextStats = () => {

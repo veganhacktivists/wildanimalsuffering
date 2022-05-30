@@ -6,6 +6,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import './why-it-matters.css';
+
 :root {
     --white: #FFF;
     --oat: #DAD7CE;
@@ -237,33 +239,28 @@ svg {
     }
 }
 
-
-.elephants {
-    background: url('../images/elephants.png') center/contain no-repeat;
-}
-
+/* wild animal stats screen */
 .abyss {
     background:
         url('../images/wild-animal-stats/earth.png') right center/50% no-repeat,
         url('../images/wild-animal-stats/abyss.jpg') center/cover no-repeat;
 }
-
 .abyss-darkened {
     background:
         linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ),
         url('../images/wild-animal-stats/earth.png') right center/50% no-repeat,
         url('../images/wild-animal-stats/abyss.jpg') center/cover no-repeat;
 }
-
 .human-icon {
     background: url('../images/wild-animal-stats/human.png') center/contain no-repeat;
 }
 
-
+/* even-worse screen */
 .even-worse {
     background: url('../images/sand-bg-color.jpg') center/cover no-repeat;
 }
 
+/* population dynamics screen */
 .population-dynamics {
     background:
         url('../images/population-dynamics/top-left-grass.png') top left/auto no-repeat,
@@ -333,7 +330,7 @@ svg {
     background: url('../images/suffer/fish-hook.png') center/contain no-repeat;
 }
 
-/* population dynamics */
+/* population dynamics screen */
 [class^='baby-duck-'] {
     background: url('../images/population-dynamics/chick.png') center/contain no-repeat;
     @apply absolute w-1/6;
@@ -363,7 +360,7 @@ svg {
     background: var(--white);
 }
 
-/* videos you might like */
+/* videos you might like screen */
 .videos {
     background:
         url('../images/videos-you-might-like/iceberg.png') top left/auto no-repeat,
