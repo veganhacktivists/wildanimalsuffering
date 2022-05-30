@@ -1,4 +1,15 @@
 /* why it matters screen */
+.wild-animal-suffering {
+    background: url('../images/why-it-matters/savanna.jpg') center/cover no-repeat;
+}
+@screen md {
+    .wild-animal-suffering {
+        background: url('../images/why-it-matters/savanna-md.jpg') center/cover no-repeat;
+    }
+}
+#elephant-image-container {
+    @apply flex-grow;
+}
 .elephants {
     background: url('../images/why-it-matters/elephants.png') center/contain no-repeat;
 }

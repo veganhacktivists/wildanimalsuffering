@@ -6,7 +6,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@import './common-objections.css';
+@import './even-worse.css';
+@import './how-you-can-help.css';
+@import './organisations.css';
+@import './other-resources.css';
+@import './population-dynamics.css';
+@import './together-we-can.css';
+@import './videos-you-might-like.css';
 @import './why-it-matters.css';
+@import './wild-animal-stats.css';
 
 :root {
     --white: #FFF;
@@ -104,25 +113,6 @@ section, .scrollable-container {
 .split-screen:nth-child(2) {
     @apply flex-grow md:h-full;
 }
-#centered-squares {
-    @apply grid self-center w-[70%];
-    /* @apply md:h-[60%]; */
-}
-
-.stat-highlight {
-    @apply text-5xl;
-}
-
-.legend {
-    background: url('../images/wild-animal-stats/legend.svg') center/cover no-repeat;
-    width: 80%;
-    aspect-ratio: 15;
-}
-
-div[class$='-square'] {
-    aspect-ratio: 1/1;
-    align-self: center;
-}
 
 /* couldn't get the tailwind theme to extend :( */
 @layer utilities {
@@ -147,70 +137,8 @@ div[class$='-square'] {
     .w-screen-90vw { width: 90vw; }
 }
 
-/* TODO: should really figure out how to make this generic and use the number in the tailwind names */
-.square-2s {
-    @apply grid-cols-2 grid-rows-2 gap-16;
-}
-.square-2s > div {
-    @apply rounded-lg;
-}
-.square-5s {
-    @apply grid-cols-5 grid-rows-5 gap-6 rounded-md;
-}
-.square-5s > div {
-    @apply rounded-md;
-}
-.square-10s {
-    grid-template-columns: repeat(10, minmax(0, 1fr));
-    grid-template-rows: repeat(10, minmax(0, 1fr));
-    @apply gap-2;
-}
-.square-10s > div {
-    @apply rounded-sm;
-}
-.square-30s {
-    grid-template-columns: repeat(30, minmax(0, 1fr));
-    grid-template-rows: repeat(30, minmax(0, 1fr));
-    @apply gap-1
-}
-.square-30s > div {
-    @apply rounded-sm;
-}
-.square-50s {
-    grid-template-columns: repeat(50, minmax(0, 1fr));
-    grid-template-rows: repeat(50, minmax(0, 1fr));
-    gap: 0.0625rem 0.0625rem;
-}
-.square-50s > div {
-    @apply rounded-sm;
-}
-
-.blue-square {
-    background-color: var(--blue);
-}
-.green-square {
-    background-color: var(--green);
-}
-.orange-square {
-    background-color: var(--orange);
-}
-.pink-square {
-    background-color: var(--pink);
-}
-.purple-square {
-    background-color: var(--purple);
-}
-
-svg {
-    @apply max-w-full max-h-full;
-}
-
 #up-arrow {
 
-}
-
-#elephant-image-container {
-    @apply flex-grow;
 }
 
 .down-container {
@@ -229,125 +157,6 @@ svg {
     background: url('../images/arrows-side.svg') center/cover no-repeat;
 }
 
-.wild-animal-suffering {
-    background: url('../images/savanna.jpg') center/cover no-repeat;
-}
-
-@screen md {
-    .wild-animal-suffering {
-        background: url('../images/savanna-md.jpg') center/cover no-repeat;
-    }
-}
-
-/* wild animal stats screen */
-.abyss {
-    background:
-        url('../images/wild-animal-stats/earth.png') right center/50% no-repeat,
-        url('../images/wild-animal-stats/abyss.jpg') center/cover no-repeat;
-}
-.abyss-darkened {
-    background:
-        linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ),
-        url('../images/wild-animal-stats/earth.png') right center/50% no-repeat,
-        url('../images/wild-animal-stats/abyss.jpg') center/cover no-repeat;
-}
-.human-icon {
-    background: url('../images/wild-animal-stats/human.png') center/contain no-repeat;
-}
-
-/* even-worse screen */
-.even-worse {
-    background: url('../images/sand-bg-color.jpg') center/cover no-repeat;
-}
-
-/* population dynamics screen */
-.population-dynamics {
-    background:
-        url('../images/population-dynamics/top-left-grass.png') top left/auto no-repeat,
-        url('../images/population-dynamics/bottom-right-grass.png') bottom right/auto no-repeat,
-        url('../images/population-dynamics/dirt-road.jpg') center/cover no-repeat;
-}
-
-.population-dynamics-duck {
-    background: url('../images/population-dynamics/duck.png') center right/contain no-repeat;
-}
-
-.common-objections {
-    background: url('../images/sand-bg-color.jpg') center/cover no-repeat;
-}
-
-.other-resources {
-    background: url('../images/sand-bg-color.jpg') center/cover no-repeat;
-}
-
-.how-you-can-help {
-    background: url('../images/forest-bg-color.jpg') center/cover no-repeat;
-}
-
-.organisations {
-    background: url('../images/mud-bg-color.jpg') center/cover no-repeat;
-}
-
-.together-we-can {
-    background: url('../images/in-the-woods.jpg') top/cover no-repeat;
-}
-
-.bears {
-    background: url('../images/bears.png') bottom/contain no-repeat;
-}
-
-/* even worse.. */
-.suffer-image-container {
-    @apply border rounded-md m-4;
-    max-width: 20vw;
-}
-.suffer-image {
-    @apply text-center;
-    aspect-ratio: 2;
-}
-.suffer-text {
-    background: rgba(255, 255, 255, 0.25);
-}
-.suffer-thirst-image {
-    background: url('../images/suffer/starving-dog.png') center/contain no-repeat;
-}
-.suffer-predation-image {
-    background: url('../images/suffer/predation.png') center/contain no-repeat;
-}
-.suffer-disease-image {
-    background: url('../images/suffer/parasite.png') center/contain no-repeat;
-}
-.suffer-harmful-weather-image {
-    background: url('../images/suffer/harmful-weather.png') center/contain no-repeat;
-}
-.suffer-natural-disasters-image {
-    background: url('../images/suffer/fires.png') center/contain no-repeat;
-}
-.suffer-accidents-image {
-    background: url('../images/suffer/tire-tracks.png') center/contain no-repeat;
-}
-.suffer-anthropogenic-harms-image {
-    background: url('../images/suffer/fish-hook.png') center/contain no-repeat;
-}
-
-/* population dynamics screen */
-[class^='baby-duck-'] {
-    background: url('../images/population-dynamics/chick.png') center/contain no-repeat;
-    @apply absolute w-1/6;
-    aspect-ratio: 1;
-    
-}
-.baby-duck-01 { left: 10%; bottom: 0%; }
-.baby-duck-02 { left: 10%; bottom: 30%; }
-.baby-duck-03 { left: 35%; bottom: 35%; }
-.baby-duck-04 { left: 45%; bottom: 60%; }
-.baby-duck-05 { left: 60%; bottom: 60%; }
-.baby-duck-06 { left: 45%; bottom: 20%; }
-.baby-duck-07 { left: 5%; bottom: 20%; }
-.baby-duck-08 { left: 60%; bottom: 35%; }
-.baby-duck-09 { left: 20%; bottom: 60%; }
-.baby-duck-10 { left: 65%; bottom: 10%; }
-
 #page-indicators {
     @apply hidden h-screen w-screen flex flex-col justify-center items-end;
     @apply md:flex;
@@ -358,26 +167,6 @@ svg {
 }
 .page-indicator-dot.filled {
     background: var(--white);
-}
-
-/* videos you might like screen */
-.videos {
-    background:
-        url('../images/videos-you-might-like/iceberg.png') top left/auto no-repeat,
-        url('../images/videos-you-might-like/penguins.png') bottom right/auto no-repeat,
-        url('../images/sky.jpg') center/cover no-repeat;
-}
-.main-video-container iframe {
-    @apply rounded-md;
-    aspect-ratio: 1.777;
-    box-shadow: 0rem 0rem 2.12500rem 0rem var(--white);
-}
-.video-thumbnail-container > * {
-    @apply p-4;
-}
-.video-thumbnail-container iframe {
-    @apply rounded-lg;
-    box-shadow: 0rem 0rem 1rem 0rem var(--white);
 }
 
 

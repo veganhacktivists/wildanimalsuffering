@@ -24,7 +24,16 @@ mix
         ]
     })
     .postCss("resources/assets/styles/app.css", "public/css", {}, [require("tailwindcss")])
-    .postCss("resources/assets/styles/why-it-matters.css", "public/css", {}, [require("tailwindcss")]);
+    .postCss("resources/assets/styles/population-dynamics.css", "public/css", {}, [require("tailwindcss")])
+    .postCss("resources/assets/styles/common-objections.css", "public/css", {}, [require("tailwindcss")])
+    .postCss("resources/assets/styles/together-we-can.css", "public/css", {}, [require("tailwindcss")])
+    .postCss("resources/assets/styles/even-worse.css", "public/css", {}, [require("tailwindcss")])
+    .postCss("resources/assets/styles/videos-you-might-like.css", "public/css", {}, [require("tailwindcss")])
+    .postCss("resources/assets/styles/how-you-can-help.css", "public/css", {}, [require("tailwindcss")])
+    .postCss("resources/assets/styles/why-it-matters.css", "public/css", {}, [require("tailwindcss")])
+    .postCss("resources/assets/styles/organisations.css", "public/css", {}, [require("tailwindcss")])
+    .postCss("resources/assets/styles/wild-animal-stats.css", "public/css", {}, [require("tailwindcss")])
+    .postCss("resources/assets/styles/other-resources.css", "public/css", {}, [require("tailwindcss")])
     // .postCss("resources/assets/styles/app.css", "public/css", {}, [tailwindcss("./tailwind.config.js")]);
     // .sass('resources/assets/styles/app.scss', 'public/css', [require("tailwindcss")]);
     // .sourceMaps()
