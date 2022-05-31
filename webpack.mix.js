@@ -8,12 +8,7 @@ mix
             rules: [
                 {
                     test: /\.(jsx|js)$/,
-                    // loader: 'eslint-loader',
-                    // enforce: 'pre',
-                    exclude: /(node_modules)/,
-                    // options: {
-                    //     formatter: require('eslint-friendly-formatter')
-                    // }
+                    exclude: /(node_modules)/
                 }
             ]
         },

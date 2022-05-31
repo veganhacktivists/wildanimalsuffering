@@ -1,6 +1,93 @@
+import { useState } from 'react';
+
 import './wild-animal-stats.css';
 
 const WildAnimalStats = () => {
+
+    const [animalStatsIndex, setAnimalStatsIndex] = useState(0);
+    const [showHumans, setShowHumans] = useState(true);
+    const squares = [
+        { key: "farmedAnimals", numberOnASide: 2, color: "blue" },
+        { key: "wildBirds", numberOnASide: 5, color: "blue" },
+        { key: "wildAnimals", numberOnASide: 10, color: "blue" },
+        { key: "reptiles", numberOnASide: 10, color: "green" },
+        { key: "amphibians", numberOnASide: 10, color: "green" },
+        { key: "fish", numberOnASide: 10, color: "orange" },
+        { key: "earthworms", numberOnASide: 30, color: "pink" },
+        { key: "arthropods", numberOnASide: 50, color: "purple" },
+    ];
+    const squareData = squares[animalStatsIndex];
+
+
+    // TODO: Rewrite this using react
+
+    const Squares = ({ numberOnASide, color = "blue", icons }) => {
+        const numberOfSquares = Math.pow(numberOnASide, 2);
+        return (
+            <div id="centered-squares" className={`square-${numberOnASide}s`}>
+                {Array.from(Array(numberOfSquares).keys()).map((i) => {
+                    return <div key={`square-${i}`} className={`${color}-square`}></div>;
+                })}
+            </div>
+        );
+    };
+
+    const modAnimalStat = () => {
+        const newValue = (animalStatsIndex + 1) % squares.length
+        setAnimalStatsIndex(newValue);
+    };
+
+    const updateAnimalStats = () => {
+
+        const domesticStatsElement = document.querySelector("div.domestic-stats-container");
+        const wildStatsElement = document.querySelector("div.wild-stats-container");
+        const wildAnimalStatsElements = document.querySelectorAll(".animal-stat");
+
+        //show wild; hide domesticated; show specific wild
+        if (animalStatsIndex !== 0) {
+            domesticStatsElement.classList.add("hidden");
+            wildStatsElement.classList.remove("hidden");
+            wildAnimalStatsElements.forEach((element, i) => {
+                // element.classList.add("hidden");
+                element.classList.remove("stat-highlight");
+                element.classList.remove(squares[animalStatsIndex - 1].color);
+            });
+            wildAnimalStatsElements[animalStatsIndex - 1].classList.remove("hidden");
+            wildAnimalStatsElements[animalStatsIndex - 1].classList.add("stat-highlight");
+            wildAnimalStatsElements[animalStatsIndex - 1].classList.add(squares[animalStatsIndex].color);
+        }
+
+    };
+
+    const loadAnimalTextStats = () => {
+        // addSquares(squareData.numberOnASide, squareData.color);
+        updateAnimalStats();
+    };
+
+    const isLastAnimalStat = () => {
+        return animalStatsIndex === (squares.length - 1);
+    };
+
+    const updateAnimalStatsOnMouseEvent = () => {
+
+        // document.getElementById("non-human-animals").classList.remove("hidden");
+        setShowHumans(false);
+
+        modAnimalStat();
+        loadAnimalTextStats();
+        updateAnimalStats();
+    };
+
+    const isLastAnimalStatScreen = isLastAnimalStat();
+
+    const handleSideClick = () => {
+        updateAnimalStatsOnMouseEvent();
+        // updateArrowVisibility();
+        updateBackgroundOpacity();
+    };
+
+    // TODO: Rewrite with react
+    loadAnimalTextStats();
 
     return (
         <>
@@ -28,11 +115,11 @@ const WildAnimalStats = () => {
                                 <h4 className=" py-4" data-translate-id="thats-a-lot"></h4>
                             </div>
                             <div className="wild-stats-container hidden flex md:justify-between md:flex-col md:w-full md:h-5/6">
-                                <div id="humans" className="humans">
+                                {showHumans ? <div id="humans" className="humans">
                                     <p data-translate-id="in-the-wild"></p>
                                     <p data-translate-id="for-every-human-between"></p>
-                                </div>
-                                <div id="non-human-animals" className="non-human-animals hidden">
+                                </div> : null}
+                                {!showHumans ? <div className="non-human-animals hidden">
                                     <h4 className="animal-stat blue" data-translate-id="animal-stats-birds"></h4>
                                     <h4 className="animal-stat hidden blue" data-translate-id="animal-stats-wild-mammals"></h4>
                                     <h4 className="animal-stat hidden green" data-translate-id="animal-stats-reptiles"></h4>
@@ -40,7 +127,7 @@ const WildAnimalStats = () => {
                                     <h4 className="animal-stat hidden orange" data-translate-id="animal-stats-fish"></h4>
                                     <h4 className="animal-stat hidden pink" data-translate-id="animal-stats-earthworms"></h4>
                                     <h4 className="animal-stat hidden purple" data-translate-id="animal-stats-terrestrial-arthropods"></h4>
-                                </div>
+                                </div> : null}
                                 <div>
                                     <p data-translate-id="at-any-moment"></p>
                                     <p data-translate-id="vast-majority"></p>
@@ -57,8 +144,7 @@ const WildAnimalStats = () => {
                     </div>
                     {/* web: right side; mobile: bottom */}
                     <div className="h-screen-70vh md:h-screen md:w-screen-50vw p-24 flex-center flex-col">
-                        <div id="centered-squares">
-                        </div>
+                        <Squares numberOnASide={squareData.numberOnASide} color={squareData.color}/>
                     </div>
                 </div>
                 {/* <div id="vast-majority-screen" className="screen-content scrollable h-screen">
@@ -68,6 +154,12 @@ const WildAnimalStats = () => {
                     </div>
                 </div> */}
             </section>
+            {isLastAnimalStatScreen ?
+                <div className="fixed side-container w-screen-10vw">
+                    <div className="arrow" onClick={handleSideClick}></div>
+                </div> :
+                null
+            }
         </>
     );
 

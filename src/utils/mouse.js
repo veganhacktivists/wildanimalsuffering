@@ -13,19 +13,14 @@ const getDirection = (e) => {
 
 const listenToScrollChanges = () => {
 
+    // const canMovePastWildAnimalStats = (event) => {
 
-    const isFirstAnimalStat = () => {
-        return animalStatsIndex === 0;
-    };
+    //     const isLastAnimalStatScreen = isLastAnimalStat();
+    //     const isFirstAnimalStatScreen = isFirstAnimalStat();
+    //     const direction = getDirection(event);
 
-    const canMovePastWildAnimalStats = (event) => {
-
-        const isLastAnimalStatScreen = isLastAnimalStat();
-        const isFirstAnimalStatScreen = isFirstAnimalStat();
-        const direction = getDirection(event);
-
-        return (isLastAnimalStatScreen && direction === DOWN) || (isFirstAnimalStatScreen && direction === UP);
-    };    
+    //     return (isLastAnimalStatScreen && direction === DOWN) || (isFirstAnimalStatScreen && direction === UP);
+    // };    
 
     const handleWheel = (event) => {
 
