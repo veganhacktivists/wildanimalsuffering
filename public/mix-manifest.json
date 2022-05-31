@@ -1,14 +1,4 @@
 {
-    "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css",
-    "/css/even-worse.css": "/css/even-worse.css",
-    "/css/together-we-can.css": "/css/together-we-can.css",
-    "/css/common-objections.css": "/css/common-objections.css",
-    "/css/population-dynamics.css": "/css/population-dynamics.css",
-    "/css/other-resources.css": "/css/other-resources.css",
-    "/css/wild-animal-stats.css": "/css/wild-animal-stats.css",
-    "/css/organisations.css": "/css/organisations.css",
-    "/css/why-it-matters.css": "/css/why-it-matters.css",
-    "/css/how-you-can-help.css": "/css/how-you-can-help.css",
-    "/css/videos-you-might-like.css": "/css/videos-you-might-like.css"
+    "/index.js": "/index.js?id=ccc9b03a7ca09414cca64f2058c22e83",
+    "/index.css": "/index.css?id=4dc15a79fa02867c9834eaf5df9cd4a0"
 }

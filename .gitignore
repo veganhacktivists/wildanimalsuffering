@@ -1,4 +1,6 @@
 node_modules
-public/js
-public/css
+public/index.js
+public/index.css
 public/translations
+public/images
+public/fonts
