@@ -4,6 +4,7 @@
   "description": "Wild animal suffering and why it matters",
   "main": "index.js",
   "scripts": {
+    "start": "npm run watch",
     "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
     "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --env=production --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
@@ -20,6 +21,7 @@
     "eslint": "^8.16.0",
     "eslint-friendly-formatter": "^4.0.1",
     "eslint-loader": "^4.0.2",
+    "eslint-plugin-react": "^7.30.0",
     "html-webpack-plugin": "^4.5.2",
     "laravel-mix": "^6.0.43",
     "postcss": "^8.4.14",

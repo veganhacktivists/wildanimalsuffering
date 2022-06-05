@@ -1,0 +1,55 @@
+import { useContext, useEffect } from 'react';
+import { CommonObjections } from '../common-objections';
+import { EvenWorse } from '../even-worse';
+import { HowYouCanHelp } from '../how-you-can-help';
+import { Organisations } from '../organisations';
+import { OtherResources } from '../other-resources';
+import { PopulationDynamics } from '../population-dynamics';
+import { Context } from '../state';
+import { TogetherWeCan } from '../together-we-can';
+import { VideosYouMightLike } from '../videos-you-might-like';
+import { WhyItMatters } from '../why-it-matters';
+import { WildAnimalStats } from '../wild-animal-stats';
+
+const SectionsContainer = () => {
+
+	const [ state, dispatch ] = useContext(Context);
+
+	useEffect(() => {
+		const screenContentElements = document.querySelectorAll('.screen-content');
+		dispatch({ type: 'REGISTER_SCREEN_CONTENT_ELEMENTS', payload: { screenContentElements } });
+	}, []);
+
+	useEffect(() => {
+		document.getElementById(state.screenId)?.scrollIntoView({ behavior: 'smooth' });
+		const location = window.location.toString().split('#')[0];
+		history.replaceState(null, null, location + '#' + state.screenId);
+	}, [state.screenId]);
+    
+	useEffect(() => {
+		if (!window.location.hash) { return; }
+        
+		const screenId = window.location.hash?.substring(1);
+		dispatch({ type: 'GO_TO_SCREEN_BY_ID', payload: screenId });
+	}, []);
+    
+
+	return (
+		<>
+			<div className="absolute h-screen scrollsnap-y">
+				<WhyItMatters />
+				<WildAnimalStats />
+				{/* <EvenWorse />
+				<PopulationDynamics />
+				<VideosYouMightLike />
+				<CommonObjections />
+				<HowYouCanHelp />
+				<Organisations />
+				<OtherResources />
+				<TogetherWeCan /> */}
+			</div>
+		</>
+	);
+};
+
+export { SectionsContainer };

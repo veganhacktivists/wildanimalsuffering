@@ -1,0 +1,19 @@
+#up-arrow {
+
+}
+
+.down-container {
+    @apply justify-center w-screen flex flex-col items-center bottom-0 z-10;
+}
+.side-container {
+    @apply justify-center h-screen flex flex-row items-center right-0 z-10;
+}
+
+#next-section-down {
+    @apply w-8 h-1/2;
+    background: url('../../assets/images/arrows-down.svg') center/cover no-repeat;
+}
+#next-section-side {
+    @apply w-1/2 h-8;
+    background: url('../../assets/images/arrows-side.svg') center/cover no-repeat;
+}
