@@ -7,12 +7,11 @@ import { SectionsContainer } from './sections-container';
 import { PageNavigator } from './page-navigator';
 
 const App = () => {
-    
 	return (
 		<>
 			<ContextProvider>
-				<SectionsContainer/>
-				{/* <PageNavigator direction="down" /> */}
+				<SectionsContainer />
+				<PageNavigator direction='down' />
 			</ContextProvider>
 		</>
 	);

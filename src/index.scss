@@ -7,153 +7,237 @@
 @tailwind utilities;
 
 :root {
-    --white: #FFF;
-    --oat: #DAD7CE;
-    --blue: #85C5C8;
-    --purple: #A89CF6;
-    --pink: #D68A9C;
-    --navy: #1A3439;
-    --green: #B0CB83;
-    --orange: #D8B36D;
-    --sand: #A39D8B;
-    --brown: #4E4534;
+	--white: #fff;
+	--oat: #dad7ce;
+	--blue: #85c5c8;
+	--purple: #a89cf6;
+	--pink: #d68a9c;
+	--navy: #1a3439;
+	--green: #b0cb83;
+	--orange: #d8b36d;
+	--sand: #a39d8b;
+	--brown: #4e4534;
 }
 
-.blue { color: var(--blue); }
-.green { color: var(--green); }
-.orange { color: var(--orange); }
-.pink { color: var(--pink); }
-.purple { color: var(--purple); }
-.navy { color: var(--navy); }
-.brown { color: var(--brown); }
-.sand { color: var(--sand); }
-.oat { color: var(--oat); }
+.blue {
+	color: var(--blue);
+}
+.green {
+	color: var(--green);
+}
+.orange {
+	color: var(--orange);
+}
+.pink {
+	color: var(--pink);
+}
+.purple {
+	color: var(--purple);
+}
+.navy {
+	color: var(--navy);
+}
+.brown {
+	color: var(--brown);
+}
+.sand {
+	color: var(--sand);
+}
+.oat {
+	color: var(--oat);
+}
 
 html {
-    font-size: 1.5vmin;
+	font-size: 1.5vmin;
 }
 
 body {
-    @apply m-0 overflow-hidden h-screen w-screen font-light;
-    @apply md:font-light;
-    color: var(--white);
-    font-family: 'Poppins';
+	@apply m-0 overflow-hidden h-screen w-screen font-light;
+	@apply md:font-light;
+	color: var(--white);
+	font-family: 'Poppins';
 }
 
-h1 { @apply text-7xl; @apply font-bold; }
-h2 { @apply text-5xl; @apply font-bold; }
-h3 { @apply text-4xl; @apply font-bold; }
-h4 { @apply text-2xl; @apply font-bold; }
-h5 { @apply text-sm; @apply font-bold; }
-h6 { @apply text-xs; }
+#app {
+	justify-content: center;
+	display: flex;
+}
 
-h1, h2, h3, h4, h5, h6 {
-    @apply uppercase;
-    font-family: 'The Bold Font';
-    letter-spacing: 0.01em;
+h1 {
+	@apply text-7xl;
+	@apply font-bold;
+}
+h2 {
+	@apply text-5xl;
+	@apply font-bold;
+}
+h3 {
+	@apply text-4xl;
+	@apply font-bold;
+}
+h4 {
+	@apply text-2xl;
+	@apply font-bold;
+}
+h5 {
+	@apply text-sm;
+	@apply font-bold;
+}
+h6 {
+	@apply text-xs;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	@apply uppercase;
+	font-family: 'The Bold Font';
+	letter-spacing: 0.01em;
 }
 
 p {
-    @apply text-sm;
-    @apply md:text-base;
+	@apply text-sm;
+	@apply md:text-base;
 }
 
 .screen-content {
-    /* screen-content is always full screen for both mobile and web */
-    @apply h-screen w-screen;
+	/* screen-content is always full screen for both mobile and web */
+	@apply h-screen w-screen;
 }
 
 .badge {
-    background-color: var(--orange);
-    color: var(--navy);
-    @apply rounded-full px-4 py-1;
+	background-color: var(--orange);
+	color: var(--navy);
+	@apply rounded-full px-4 py-1;
 }
 
 .scrollable {
-    scroll-snap-align: start;
+	scroll-snap-align: start;
 }
 
-section, .scrollable-container {
-    @apply flex content-center h-screen w-screen h-full w-full /*justify-center*/;
-    scroll-snap-align: start;
+section,
+.scrollable-container {
+	@apply flex content-center h-screen w-screen h-full w-full /*justify-center*/;
+	scroll-snap-align: start;
 }
 
 .flex-center {
-    @apply flex justify-center items-center;
+	@apply flex justify-center items-center;
 }
 
 .full-screen {
-    @apply flex flex-grow;
-    /* @apply md:mx-20; */
+	@apply flex flex-grow;
+	/* @apply md:mx-20; */
 }
 
 .split-screen-padding {
-    @apply p-8;
+	@apply p-8;
 }
 
 .split-screen {
-    @apply flex flex-1 self-center;
-    @apply md:h-full;
+	@apply flex flex-1 self-center;
+	@apply md:h-full;
 }
 
 .split-screen:nth-child(1) {
-    @apply flex-grow-0 md:min-w-[25%] md:mx-20;
+	@apply flex-grow-0 md:min-w-[25%] md:mx-20;
 }
 .split-screen:nth-child(2) {
-    @apply flex-grow md:h-full;
+	@apply flex-grow md:h-full;
 }
 
 /* couldn't get the tailwind theme to extend :( */
 @layer utilities {
-    .hw-screen { height: 100vh; width: 100vw; }
-    .h-screen-10vh { height: 10vh; }
-    .h-screen-20vh { height: 20vh; }
-    .h-screen-30vh { height: 30vh; }
-    .h-screen-40vh { height: 40vh; }
-    .h-screen-50vh { height: 50vh; }
-    .h-screen-60vh { height: 60vh; }
-    .h-screen-70vh { height: 70vh; }
-    .h-screen-80vh { height: 80vh; }
-    .h-screen-90vh { height: 90vh; }
-    .w-screen-10vw { width: 10vw; }
-    .w-screen-20vw { width: 20vw; }
-    .w-screen-30vw { width: 30vw; }
-    .w-screen-40vw { width: 40vw; }
-    .w-screen-50vw { width: 50vw; }
-    .w-screen-60vw { width: 60vw; }
-    .w-screen-70vw { width: 70vw; }
-    .w-screen-80vw { width: 80vw; }
-    .w-screen-90vw { width: 90vw; }
+	.hw-screen {
+		height: 100vh;
+		width: 100vw;
+	}
+	.h-screen-10vh {
+		height: 10vh;
+	}
+	.h-screen-20vh {
+		height: 20vh;
+	}
+	.h-screen-30vh {
+		height: 30vh;
+	}
+	.h-screen-40vh {
+		height: 40vh;
+	}
+	.h-screen-50vh {
+		height: 50vh;
+	}
+	.h-screen-60vh {
+		height: 60vh;
+	}
+	.h-screen-70vh {
+		height: 70vh;
+	}
+	.h-screen-80vh {
+		height: 80vh;
+	}
+	.h-screen-90vh {
+		height: 90vh;
+	}
+	.w-screen-10vw {
+		width: 10vw;
+	}
+	.w-screen-20vw {
+		width: 20vw;
+	}
+	.w-screen-30vw {
+		width: 30vw;
+	}
+	.w-screen-40vw {
+		width: 40vw;
+	}
+	.w-screen-50vw {
+		width: 50vw;
+	}
+	.w-screen-60vw {
+		width: 60vw;
+	}
+	.w-screen-70vw {
+		width: 70vw;
+	}
+	.w-screen-80vw {
+		width: 80vw;
+	}
+	.w-screen-90vw {
+		width: 90vw;
+	}
 }
 
-#page-indicators {
-    @apply hidden h-screen w-screen flex flex-col justify-center items-end;
-    @apply md:flex;
-}
+// #page-indicators {
+// 	@apply hidden h-screen w-screen flex flex-col justify-center items-end;
+// 	@apply md:flex;
+// }
 
 .page-indicator-dot {
-    @apply h-3 w-3 inline-block border-2 rounded-full mx-4 my-2;
+	@apply h-3 w-3 inline-block border-2 rounded-full mx-4 my-2;
 }
 .page-indicator-dot.filled {
-    background: var(--white);
+	background: var(--white);
 }
 
-
 .scrollsnap-y {
-    scrollbar-width: none; /* For Firefox */
-    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+	scrollbar-width: none; /* For Firefox */
+	-ms-overflow-style: none; /* For Internet Explorer and Edge */
 }
 
 .scrollsnap-y::-webkit-scrollbar {
-    width: 0rem; /* For Chrome, Safari, and Opera */
+	width: 0rem; /* For Chrome, Safari, and Opera */
 }
 
 .scrollsnap-y {
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-    scroll-behavior: smooth;
+	scroll-snap-type: y mandatory;
+	overflow-y: scroll;
+	scroll-behavior: smooth;
 }
 
 .scrollsnap-x {
-    overflow-y: hidden;
+	overflow-y: hidden;
 }

@@ -12,41 +12,49 @@ import { WhyItMatters } from '../why-it-matters';
 import { WildAnimalStats } from '../wild-animal-stats';
 
 const SectionsContainer = () => {
-
-	const [ state, dispatch ] = useContext(Context);
+	const [state, dispatch] = useContext(Context);
 
 	useEffect(() => {
-		const screenContentElements = document.querySelectorAll('.screen-content');
-		dispatch({ type: 'REGISTER_SCREEN_CONTENT_ELEMENTS', payload: { screenContentElements } });
+		const screenContentElements =
+			document.querySelectorAll('.screen-content');
+		dispatch({
+			type: 'REGISTER_SCREEN_CONTENT_ELEMENTS',
+			payload: { screenContentElements },
+		});
 	}, []);
 
 	useEffect(() => {
-		document.getElementById(state.screenId)?.scrollIntoView({ behavior: 'smooth' });
-		const location = window.location.toString().split('#')[0];
-		history.replaceState(null, null, location + '#' + state.screenId);
+		if (state.screenId) {
+			document
+				.getElementById(state.screenId)
+				.scrollIntoView({ behavior: 'smooth' });
+			const location = window.location.toString().split('#')[0];
+			history.replaceState(null, null, location + '#' + state.screenId);
+		}
 	}, [state.screenId]);
-    
+
 	useEffect(() => {
-		if (!window.location.hash) { return; }
-        
+		if (!window.location.hash) {
+			return;
+		}
+
 		const screenId = window.location.hash?.substring(1);
 		dispatch({ type: 'GO_TO_SCREEN_BY_ID', payload: screenId });
 	}, []);
-    
 
 	return (
 		<>
-			<div className="absolute h-screen scrollsnap-y">
+			<div className='absolute scrollsnap-y'>
 				<WhyItMatters />
 				<WildAnimalStats />
-				{/* <EvenWorse />
+				<EvenWorse />
 				<PopulationDynamics />
 				<VideosYouMightLike />
 				<CommonObjections />
 				<HowYouCanHelp />
 				<Organisations />
 				<OtherResources />
-				<TogetherWeCan /> */}
+				<TogetherWeCan />
 			</div>
 		</>
 	);
