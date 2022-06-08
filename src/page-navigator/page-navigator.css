@@ -2,19 +2,19 @@
 }
 
 .down-container {
-	@apply justify-center w-screen flex flex-col items-center bottom-0 m-8 z-10;
+	@apply justify-center w-screen flex flex-col items-center bottom-0 my-8 z-10;
 }
 .side-container {
-	@apply justify-center h-screen flex flex-row items-center right-0 m-8 z-10;
+	@apply justify-center h-screen flex flex-row items-center right-0 mx-8 z-10;
 }
 
 #next-section-down {
 	@apply w-8 h-[10%];
-	background: url('../../assets/images/arrows-down.svg') center/cover
+	background: url('../../assets/images/arrows-down.svg') center/contain
 		no-repeat;
 }
 #next-section-side {
 	@apply w-[10%] h-8 inset-y-2/4;
-	background: url('../../assets/images/arrows-side.svg') center/cover
+	background: url('../../assets/images/arrows-side.svg') center/contain
 		no-repeat;
 }

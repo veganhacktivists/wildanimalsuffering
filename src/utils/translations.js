@@ -17,7 +17,7 @@ const en = {
 	'animal-stats-amphibians': '10-10,000 amphibians',
 	'animal-stats-fish': '1,000-100,000 fish',
 	'animal-stats-earthworms': '10,000-10<sup>6</sup> earthworms',
-	'animal-stats-terrestrial-arthropods': '600,000-7*10<sup>8</sup> arthropods',
+	'animal-stats-arthropods': '600,000-7*10<sup>8</sup> arthropods',
 	'at-any-moment': '...in existence at any moment',
 	'vast-majority': 'This means that the vast majority of individuals are',
 	'wild-animals': 'wild animals',

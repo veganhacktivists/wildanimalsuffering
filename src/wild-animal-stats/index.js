@@ -12,7 +12,6 @@ const WildAnimalStats = () => {
 	const { screenIndex, abyssOverlay } = state;
 	const [showHumans, setShowHumans] = useState(true);
     
-    
 	const stats = [
 		{ key: 'farmedAnimals', numberOnASide: 2, color: 'blue'},
 		{
@@ -79,6 +78,23 @@ const WildAnimalStats = () => {
 			</div>
 		);
 	};
+    
+	const StatsContainer = () => {
+		return stats.filter((statItem, index) => animalStatIndex >= index)
+			.map((statItem, index) => {
+				return (
+					<h4
+						key={`animal-stat-${statItem.key}`}
+						className={`animal-stat ${statItem.color} ${
+							animalStatIndex === index ? 'stat-highlight' : ''
+						}`}
+						dangerouslySetInnerHTML={{
+							__html: lang[statItem.languageKey],
+						}}>
+					</h4>
+				);
+			});
+	};
 
 	return (
 		<>
@@ -130,19 +146,7 @@ const WildAnimalStats = () => {
 									) : null}
 									{showHumans ? (
 										<div className="non-human-animals">
-											{stats.filter((statItem, index) => animalStatIndex >= index)
-												.map((statItem, index) => {
-													return (
-														<h4
-															key={`animal-stat-${statItem.key}`}
-															className={`animal-stat ${statItem.color} ${
-																animalStatIndex === index ? 'stat-highlight' : ''
-															}`}
-														>
-															{lang[statItem.languageKey]}
-														</h4>
-													);
-												})}
+											<StatsContainer />
 										</div>
 									) : null}
 									<div>

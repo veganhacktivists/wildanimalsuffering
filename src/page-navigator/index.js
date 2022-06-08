@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import { Context } from '../state';
+import { NUMBER_OF_ANIMAL_STAT_SCREENS } from '../app-constants';
 
 import './page-navigator.css';
 
@@ -12,7 +13,7 @@ const PageNavigator = ({ direction }) => {
 	const [state, dispatch] = useContext(Context);
 	const { isAnimalStatsScreen } = state;
 	const isLastAnimalStatScreen =
-		state.animalStatsIndex === state.squares?.length - 1;
+		state.animalStatIndex === (NUMBER_OF_ANIMAL_STAT_SCREENS - 1);
 	const shouldShowDownArrow = (!state.isAnimalStatsScreen || isLastAnimalStatScreen);
 
 	const handleClick = (event) => {
@@ -25,6 +26,9 @@ const PageNavigator = ({ direction }) => {
     
 	const showDown = (direction === 'down' && shouldShowDownArrow);
 	const showSide = direction === 'side' && isAnimalStatsScreen && !isLastAnimalStatScreen;
+    
+	console.log('isLastAnimalStatScreen=', isLastAnimalStatScreen);
+	console.log('showSide=', showSide);
     
 	return showDown || showSide ? (
 		<div

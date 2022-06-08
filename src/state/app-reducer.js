@@ -22,17 +22,27 @@ const reducer = (state, action) => {
 			isAnimalStatsScreen,
 			abyssOverlay: state.isAnimalStatsScreen ? true : false,
 			animalStatIndex: 0,
+			isForEveryHumanBufferScreen: true
 		};
 	}
 	case 'NEXT_ANIMAL_STAT': {
-		const isAnimalStatsScreen = getIsAnimalStatsScreen(state.screenIndex);
+		const isCurrentScreenAnimalStatsScreen = getIsAnimalStatsScreen(state.screenIndex);
+		console.log('state.animalStatIndex=', state.animalStatIndex);
+		
+		let animalStatIndex = 0;
+		if (state.isForEveryHumanBufferScreen) {
+			animalStatIndex = 0;
+		} else {
+			animalStatIndex = isCurrentScreenAnimalStatsScreen
+				? (state.animalStatIndex + 1) % NUMBER_OF_ANIMAL_STAT_SCREENS
+				: 0;
+		}
 		return {
 			...state,
-			isAnimalStatsScreen,
+			isAnimalStatsScreen: true,
 			abyssOverlay: true,
-			animalStatIndex: isAnimalStatsScreen
-				? (state.animalStatIndex + 1) % NUMBER_OF_ANIMAL_STAT_SCREENS
-				: 0,
+			animalStatIndex,
+			isForEveryHumanBufferScreen: false
 		};
 	}
 	case 'GO_TO_SCREEN_BY_ID': {
@@ -48,6 +58,7 @@ const reducer = (state, action) => {
 			isAnimalStatsScreen,
 			abyssOverlay: false,
 			animalStatIndex: 0,
+			isForEveryHumanBufferScreen: true
 		};
 	}
 	case 'CHANGE_LANGUAGE': {

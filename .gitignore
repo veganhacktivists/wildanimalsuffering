@@ -1,6 +1,4 @@
 node_modules
-public/index.js
-public/index.css
-public/translations
-public/images
-public/fonts
+public
+!public/index.html
+!public/mix-manifest.json
