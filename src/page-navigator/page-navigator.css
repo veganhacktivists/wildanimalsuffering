@@ -14,7 +14,7 @@
 		no-repeat;
 }
 #next-section-side {
-	@apply w-[10%] h-8;
+	@apply w-[10%] h-8 inset-y-2/4;
 	background: url('../../assets/images/arrows-side.svg') center/cover
 		no-repeat;
 }

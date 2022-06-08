@@ -13,15 +13,15 @@ const reducer = (state, action) => {
 			screenContentElements: [...action.payload.screenContentElements],
 		};
 	case 'NEXT_SCREEN': {
-		const isAnimalStatsScreen = getIsAnimalStatsScreen(state.screenIndex);
 		const screenIndex = getNextScreenIndex(state);
+		const isAnimalStatsScreen = getIsAnimalStatsScreen(screenIndex);
 		return {
 			...state,
 			screenIndex,
 			screenId: state.screenContentElements.map((e) => e.id)[screenIndex],
 			isAnimalStatsScreen,
 			abyssOverlay: state.isAnimalStatsScreen ? true : false,
-			animalStatIndex: isAnimalStatsScreen ? state.animalStatIndex + 1 : 0,
+			animalStatIndex: 0,
 		};
 	}
 	case 'NEXT_ANIMAL_STAT': {

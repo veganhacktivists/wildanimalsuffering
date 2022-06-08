@@ -10,16 +10,12 @@ const PageNavigator = ({ direction }) => {
 		return null;
 	}
 	const [state, dispatch] = useContext(Context);
-
+	const { isAnimalStatsScreen } = state;
 	const isLastAnimalStatScreen =
 		state.animalStatsIndex === state.squares?.length - 1;
 	const shouldShowDownArrow = (!state.isAnimalStatsScreen || isLastAnimalStatScreen);
 
-	console.log('state=', state);
-	console.log('shouldShowDownArrow=', shouldShowDownArrow);
-
 	const handleClick = (event) => {
-		console.log('handling...');
 		goToNextSection();
 	};
     
@@ -27,13 +23,16 @@ const PageNavigator = ({ direction }) => {
 		dispatch({ type: direction === 'down' ? 'NEXT_SCREEN' : 'NEXT_ANIMAL_STAT' });
 	};
     
-	return shouldShowDownArrow || isLastAnimalStatScreen ? (
+	const showDown = (direction === 'down' && shouldShowDownArrow);
+	const showSide = direction === 'side' && isAnimalStatsScreen && !isLastAnimalStatScreen;
+    
+	return showDown || showSide ? (
 		<div
 			id={`next-section-${direction}`}
 			className={
 				direction === 'down'
 					? 'fixed down-container h-screen-20vh'
-					: 'fixed side-container w-screen-10vw'
+					: 'fixed side-container w-screen-5vw'
 			}
 			onClick={handleClick}
 		>

@@ -59,10 +59,10 @@ const WildAnimalStats = () => {
 		},
 	];
 	const squareData = stats[animalStatIndex];
-	console.log('animalStatIndex=', animalStatIndex);
-	console.log('squareData=', squareData);
     
 	const isLastAnimalStatScreen = animalStatIndex === stats.length - 1;
+    
+	console.log('animalStatIndex=', animalStatIndex);
 
 	const Squares = ({ numberOnASide, color = 'blue' }) => {
 		const numberOfSquares = Math.pow(numberOnASide, 2);
@@ -128,20 +128,21 @@ const WildAnimalStats = () => {
 											<p>{lang['for-every-human-between']}</p>
 										</div>
 									) : null}
-									{!showHumans ? (
+									{showHumans ? (
 										<div className="non-human-animals">
-											{stats.map((statItem, index) => {
-												return (
-													<h4
-														key={`animal-stat-${statItem.key}`}
-														className={`animal-stat ${statItem.color} ${
-															animalStatIndex === index ? 'stat-highlight' : ''
-														}`}
-													>
-														{lang[statItem.languageKey]}
-													</h4>
-												);
-											})}
+											{stats.filter((statItem, index) => animalStatIndex >= index)
+												.map((statItem, index) => {
+													return (
+														<h4
+															key={`animal-stat-${statItem.key}`}
+															className={`animal-stat ${statItem.color} ${
+																animalStatIndex === index ? 'stat-highlight' : ''
+															}`}
+														>
+															{lang[statItem.languageKey]}
+														</h4>
+													);
+												})}
 										</div>
 									) : null}
 									<div>
@@ -166,14 +167,8 @@ const WildAnimalStats = () => {
 						/>
 					</div>
 				</div>
-				{/* <div id="vast-majority-screen" className="screen-content scrollable h-screen">
-                    <div className="h-screen-50vh text-center justify-start">
-                        <p>{lang['in-the-wild']}</p>
-                        <p>{lang['for-every-human-between']}</p>
-                    </div>
-                </div> */}
+				<PageNavigator direction="side" />
 			</section>
-			<PageNavigator direction="side" />
 		</>
 	);
 };
