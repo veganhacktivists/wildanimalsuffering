@@ -4,33 +4,42 @@ import { Context } from '../state';
 import './page-navigator.css';
 
 const PageNavigator = ({ direction }) => {
+
+	if (!(direction === 'down' || direction === 'side')) {
+		console.warn('PageNavigator must have a direction of either up or side');
+		return null;
+	}
 	const [state, dispatch] = useContext(Context);
 
 	const isLastAnimalStatScreen =
 		state.animalStatsIndex === state.squares?.length - 1;
-	const isDownArrowHidden =
-		state.isAnimalStatsScreen && !isLastAnimalStatScreen;
+	const shouldShowDownArrow = (!state.isAnimalStatsScreen || isLastAnimalStatScreen);
 
 	console.log('state=', state);
+	console.log('shouldShowDownArrow=', shouldShowDownArrow);
 
-	const handleDownClick = (event) => {
+	const handleClick = (event) => {
 		console.log('handling...');
 		goToNextSection();
 	};
-
+    
 	const goToNextSection = () => {
-		dispatch({ type: 'NEXT_SCREEN' });
+		dispatch({ type: direction === 'down' ? 'NEXT_SCREEN' : 'NEXT_ANIMAL_STAT' });
 	};
-
-	return isDownArrowHidden ? null : (
+    
+	return shouldShowDownArrow || isLastAnimalStatScreen ? (
 		<div
-			id='next-section-down'
-			className='fixed down-container h-screen-20vh'
-			onClick={handleDownClick}
+			id={`next-section-${direction}`}
+			className={
+				direction === 'down'
+					? 'fixed down-container h-screen-20vh'
+					: 'fixed side-container w-screen-10vw'
+			}
+			onClick={handleClick}
 		>
-			<div className='arrow'></div>
+			<div className="arrow"></div>
 		</div>
-	);
+	) : null;
 };
 
 export { PageNavigator };

@@ -11,7 +11,7 @@ const App = () => {
 		<>
 			<ContextProvider>
 				<SectionsContainer />
-				<PageNavigator direction='down' />
+				<PageNavigator direction="down"/>
 			</ContextProvider>
 		</>
 	);

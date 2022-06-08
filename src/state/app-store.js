@@ -5,6 +5,7 @@ import { translations } from '../utils/translations';
 
 const initialState = {
 	screenIndex: 0,
+	animalStatIndex: 0,
 	abyssOverlay: false,
 	locale: 'en',
 	translations
