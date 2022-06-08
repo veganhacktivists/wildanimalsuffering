@@ -2,3 +2,4 @@ node_modules
 public
 !public/index.html
 !public/mix-manifest.json
+!public/manifest.json
