@@ -1,0 +1,19 @@
+{
+    "name": "Wild Animal Suffering",
+    "short_name": "Wild Animal Suffering",
+    "theme_color": "#28323a",
+    "background_color": "#b7b2a0",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "/",
+    "icons": [{
+        "src": "/images/icons/android-chrome-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+    }, {
+        "src": "/images/icons/android-chrome-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+        
+    }]
+}
