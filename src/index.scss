@@ -105,7 +105,7 @@ p {
 
 .screen-content {
 	/* screen-content is always full screen for both mobile and web */
-	@apply h-screen w-screen;
+	@apply h-screen w-screen p-8;
 }
 
 .badge {
@@ -212,6 +212,10 @@ section,
 	.w-screen-90vw {
 		width: 90vw;
 	}
+}
+
+.aspect-square {
+    aspect-ratio: 1;
 }
 
 // #page-indicators {

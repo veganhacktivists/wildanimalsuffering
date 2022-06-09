@@ -2,3 +2,7 @@
 .organisations {
     background: url('../../assets/images/organisations/mud-bg-color.jpg') center/cover no-repeat;
 }
+
+.wild-animal-initiative {
+    background: url('../../assets/images/organisations/wild-animal-initiative.png') center/contain no-repeat;
+}

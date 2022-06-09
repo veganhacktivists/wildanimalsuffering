@@ -40,13 +40,36 @@ const en = {
 	'its-not-ours': 'it\'s not our responsibility',
 	'personally-responsible': 'People sometimes argue that we are not personally responsible for the suffering of wild animals, so we shouldn’t be very concerned about it. However, the reason to help them is that they need our help, not because we caused their situation. We can see that this argument would also apply to humans in distant places suffering from natural causes, such as earthquakes or hurricanes. If we think we should help humans in those cases and care about their wellbeing as sentient beings, then it follows that we should help animals living in the wild as well.',
 
+	/* how you can help */
 	'how-you-can-help': 'how can you help?',
 	'raise-awareness': 'raise awareness',
 	'donate-to-charities': 'donate to effective charities',
 	'become-a-researcher': 'become a researcher',
 	'check-out-this-resource': 'You can also check out this amazing resource to learn more about other ways you can volunteer to help reduce wild animal suffering.',
 	'view-volunteer-opportunities': 'view volunteer opportunities',
+    
+	/* organisations working on... */
+	'organsations-title': 'organisations working on wild animal suffering',
+	'wild-animal-initiative': 'wild animal initiative',
+	'wild-animal-initiative-description': 'Wild Animal Initiative (WAI) currently operates in the U.S., where they work to strengthen the animal advocacy movement through creating an academic field dedicated to wild animal welfare.',
+	'animal-ethics': 'animal ethics',
+	'animal-ethics-description': 'Animal Ethics aims to achieve a shift in attitudes towards nonhuman animals. Their vision is a world where sentient beings are given full moral consideration.',
+	'rethinking-priorities': 'rethinking priorities',
+	'rethinking-priorities-text': 'Rethink Priorities is a research organization that conducts critical research to inform policymakers and major foundations about how to best help people and nonhuman animals in both the present and the long-term future.',
+	'rethinking-priorities-2': 'rethinking priorities',
+	'rethinking-priorities-2-text': 'Rethink Priorities is a research organization that conducts critical research to inform policymakers and major foundations about how to best help people and nonhuman animals in both the present and the long-term future.',
+	'visit-site': 'visit site',
+	'donate': 'donate',
+	'volunteer': 'volunteer',
 
+	/* other resources */
+	'other-resources': 'other resources you might like',
+	'books': 'book',
+	'websites': 'websites',
+	'blogs': 'blogs',
+	'podcasts': 'podcasts',
+
+	/* together we can */
 	'together-we-can': 'Together, we can make life better for wild animals.',
 	'together-we-can-p': 'Diam tincidunt aliquet mauris lorem egestas scelerisque ac risus. Neque nibh tellus elementum vulputate auctor. Mauris convallis arcu amet, sollicitudin gravida gravida platea. Velit rhoncus pellentesque feugiat aenean tincidunt. Diam tincidunt aliquet mauris lorem egestas scelerisque ac risus. Neque nibh tellus elementum vulputate auctor. Mauris convallis arcu amet, sollicitudin gravida gravida platea.',
 	'thank-you': 'Thank you.'
