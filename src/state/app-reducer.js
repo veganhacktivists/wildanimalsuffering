@@ -27,7 +27,6 @@ const reducer = (state, action) => {
 	}
 	case 'NEXT_ANIMAL_STAT': {
 		const isCurrentScreenAnimalStatsScreen = getIsAnimalStatsScreen(state.screenIndex);
-		console.log('state.animalStatIndex=', state.animalStatIndex);
 		
 		let animalStatIndex = 0;
 		if (state.isForEveryHumanBufferScreen) {
@@ -89,7 +88,7 @@ const getNextScreenIndex = (state) => {
 };
 
 const getScreenIndexById = (screenContentElements, screenId) => {
-	return screenContentElements.indexOf(screenId);
+	return screenContentElements.map((e) => e.id).indexOf(screenId);
 };
 
 export { reducer };

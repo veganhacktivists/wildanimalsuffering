@@ -39,8 +39,8 @@ const SectionsContainer = () => {
 		}
 
 		const screenId = window.location.hash?.substring(1);
-		dispatch({ type: 'GO_TO_SCREEN_BY_ID', payload: screenId });
-	}, []);
+		dispatch({ type: 'GO_TO_SCREEN_BY_ID', payload: {screenId} });
+	}, [window.location.hash]);
 
 	return (
 		<>

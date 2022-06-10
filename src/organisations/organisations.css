@@ -1,8 +1,19 @@
 /* organisations */
 .organisations {
-    background: url('../../assets/images/organisations/mud-bg-color.jpg') center/cover no-repeat;
+    background:
+        url('../../assets/images/organisations/tree-and-owl.png') left/contain no-repeat,
+        url('../../assets/images/organisations/frog.png') bottom right/20vw no-repeat,
+        url('../../assets/images/organisations/mud-bg-color.jpg') center/cover no-repeat;
 }
 
 .wild-animal-initiative {
     background: url('../../assets/images/organisations/wild-animal-initiative.png') center/contain no-repeat;
+}
+
+.animal-ethics {
+    background: url('../../assets/images/organisations/animal-ethics.png') center/contain no-repeat;
+}
+
+.rethinking-priorities {
+    background: url('../../assets/images/organisations/rethinking-priorities.png') center/contain no-repeat;
 }

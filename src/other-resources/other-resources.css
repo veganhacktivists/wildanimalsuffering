@@ -2,3 +2,8 @@
 .other-resources {
     background: url('../../assets/images/other-resources/sand-bg-color.jpg') center/cover no-repeat;
 }
+
+.resource-type-heading {
+    @apply h-40;
+    background: url('../../assets/images/other-resources/title-bar-background.png') center/auto no-repeat;
+}

@@ -60,8 +60,6 @@ const WildAnimalStats = () => {
 	const squareData = stats[animalStatIndex];
     
 	const isLastAnimalStatScreen = animalStatIndex === stats.length - 1;
-    
-	console.log('animalStatIndex=', animalStatIndex);
 
 	const Squares = ({ numberOnASide, color = 'blue' }) => {
 		const numberOfSquares = Math.pow(numberOnASide, 2);

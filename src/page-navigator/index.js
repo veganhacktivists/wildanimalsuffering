@@ -11,11 +11,11 @@ const PageNavigator = ({ direction }) => {
 		return null;
 	}
 	const [state, dispatch] = useContext(Context);
-	const { isAnimalStatsScreen } = state;
+	const { isAnimalStatsScreen, screenIndex, screenContentElements } = state;
 	const isLastAnimalStatScreen =
-		state.animalStatIndex === (NUMBER_OF_ANIMAL_STAT_SCREENS - 1);
-	const shouldShowDownArrow = (!state.isAnimalStatsScreen || isLastAnimalStatScreen);
-
+        state.animalStatIndex === (NUMBER_OF_ANIMAL_STAT_SCREENS - 1);
+	const isLastScreen = (screenIndex === screenContentElements?.length - 1);
+	const shouldShowDownArrow = (!state.isAnimalStatsScreen || isLastAnimalStatScreen) && !isLastScreen;
 	const handleClick = (event) => {
 		goToNextSection();
 	};
@@ -26,9 +26,6 @@ const PageNavigator = ({ direction }) => {
     
 	const showDown = (direction === 'down' && shouldShowDownArrow);
 	const showSide = direction === 'side' && isAnimalStatsScreen && !isLastAnimalStatScreen;
-    
-	console.log('isLastAnimalStatScreen=', isLastAnimalStatScreen);
-	console.log('showSide=', showSide);
     
 	return showDown || showSide ? (
 		<div
