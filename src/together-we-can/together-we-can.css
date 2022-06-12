@@ -2,6 +2,11 @@
 .together-we-can {
     background: url('../../assets/images/together-we-can/in-the-woods.jpg') top/cover no-repeat;
 }
+@screen md {
+    .together-we-can {
+        background: url('../../assets/images/together-we-can/in-the-woods-md.jpg') top/cover no-repeat;
+    }
+}
 .bears {
     background: url('../../assets/images/why-it-matters/bears.png') bottom/contain no-repeat;
 }

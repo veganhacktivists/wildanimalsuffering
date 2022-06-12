@@ -13,14 +13,14 @@ const TogetherWeCan = () => {
 		<>
 			<section id="together-we-can-screen" className="together-we-can screen-content">
 				<div className="full-screen flex-col w-full h-full">
-					{/* <div className="py-16 pr-10 flex justify-left split-screen flex-col h-screen-50vh w-[50%] text-center items-center">
+					<div className="py-16 pr-10 flex flex-col h-screen-50vh w-[50%] self-start">
 						<h2>{lang['together-we-can']}</h2>
 						<p>{lang['together-we-can-description-01']}</p>
 						<br />
 						<p>{lang['together-we-can-description-02']}</p>
 						<br />
-						<p>{lang['thank-you']}</p>
-					</div> */}
+						<h3 className='orange'>{lang['thank-you']}.</h3>
+					</div>
 				</div>
 			</section>
 		</>
