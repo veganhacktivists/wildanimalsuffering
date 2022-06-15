@@ -7,6 +7,7 @@ import { SectionsContainer } from './sections-container';
 import { PageNavigator } from './page-navigator';
 
 const App = () => {
+	console.log('hey...');
 	return (
 		<>
 			<ContextProvider>
