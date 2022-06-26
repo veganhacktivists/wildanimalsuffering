@@ -12,16 +12,36 @@ const Organisations = () => {
     
 	const organisations = [{
 		languageKey: 'wild-animal-initiative',
-		iconKey: 'wild-animal-initiative'
+		iconKey: 'wild-animal-initiative',
+		links: {
+			visit: 'https://www.wildanimalinitiative.org/',
+			donate: 'https://www.wildanimalinitiative.org/donate/',
+			volunteer: 'https://www.wildanimalinitiative.org/join/'
+		}
 	}, {
 		languageKey: 'animal-ethics',
-		iconKey: 'animal-ethics'
+		iconKey: 'animal-ethics',
+		links: {
+			visit: 'https://www.animal-ethics.org/',
+			donate: 'https://www.animal-ethics.org/support-us/',
+			volunteer: 'https://www.animal-ethics.org/what-you-can-do/'
+		}
 	}, {
-		languageKey: 'rethinking-priorities',
-		iconKey: 'rethinking-priorities'
+		languageKey: 'rethink-priorities',
+		iconKey: 'rethink-priorities',
+		links: {
+			visit: 'https://rethinkpriorities.org/',
+			donate: 'https://rethinkpriorities.org/donate/',
+			volunteer: ''
+		}
 	}, {
-		languageKey: 'rethinking-priorities-2',
-		iconKey: 'rethinking-priorities'
+		languageKey: 'rethink-priorities-2',
+		iconKey: 'rethink-priorities',
+		links: {
+			visit: 'https://rethinkpriorities.org/',
+			donate: 'https://rethinkpriorities.org/donate/',
+			volunteer: ''
+		}
 	}];
 
 	return (

@@ -54,10 +54,10 @@ const en = {
 	'wild-animal-initiative-description': 'Wild Animal Initiative (WAI) currently operates in the U.S., where they work to strengthen the animal advocacy movement through creating an academic field dedicated to wild animal welfare.',
 	'animal-ethics': 'animal ethics',
 	'animal-ethics-description': 'Animal Ethics aims to achieve a shift in attitudes towards nonhuman animals. Their vision is a world where sentient beings are given full moral consideration.',
-	'rethinking-priorities': 'rethinking priorities',
-	'rethinking-priorities-description': 'Rethink Priorities is a research organization that conducts critical research to inform policymakers and major foundations about how to best help people and nonhuman animals in both the present and the long-term future.',
-	'rethinking-priorities-2': 'rethinking priorities',
-	'rethinking-priorities-2-description': 'Rethink Priorities is a research organization that conducts critical research to inform policymakers and major foundations about how to best help people and nonhuman animals in both the present and the long-term future.',
+	'rethink-priorities': 'rethink priorities',
+	'rethink-priorities-description': 'Rethink Priorities is a research organization that conducts critical research to inform policymakers and major foundations about how to best help people and nonhuman animals in both the present and the long-term future.',
+	'rethink-priorities-2': 'rethink priorities',
+	'rethink-priorities-2-description': 'Rethink Priorities is a research organization that conducts critical research to inform policymakers and major foundations about how to best help people and nonhuman animals in both the present and the long-term future.',
 	'visit-site': 'visit site',
 	'donate': 'donate',
 	'volunteer': 'volunteer',
@@ -71,9 +71,23 @@ const en = {
 
 	/* together we can */
 	'together-we-can': 'Together, we can make life better for wild animals.',
-    'together-we-can-description-01': 'In recent years, there has been growing moral concern for animals. Thankfully, it is now rare to find a person who feels indifferent towards animal suffering. We know suffering feels bad to us. But we also know that suffering feels bad for a dog or a cat. And we also know that suffering feels bad for a pig, a chicken or a fish. Suffering feels bad for anyone who feels it, regardless of their species or their location. When you put yourselves into the perspective of the one who suffers, it doesn’t matter whether they are in a house, a farm, or a forest. Their suffering matters. It matters to them. And it should matter to us.',
-    'together-we-can-description-02': 'If it matters to you, then we encourage you to join us in our mission to make life better for wild animals. There is much to learn about the situation of wild animals. This page is just an introduction to the issue. In truth, it is very sad that so many animals are desperately in need of help right now. But luckily, humans like you have the opportunity to make a difference. We hope you choose to take it.',
-    'thank-you': 'thank you'
+	'together-we-can-description-01': 'In recent years, there has been growing moral concern for animals. Thankfully, it is now rare to find a person who feels indifferent towards animal suffering. We know suffering feels bad to us. But we also know that suffering feels bad for a dog or a cat. And we also know that suffering feels bad for a pig, a chicken or a fish. Suffering feels bad for anyone who feels it, regardless of their species or their location. When you put yourselves into the perspective of the one who suffers, it doesn’t matter whether they are in a house, a farm, or a forest. Their suffering matters. It matters to them. And it should matter to us.',
+	'together-we-can-description-02': 'If it matters to you, then we encourage you to join us in our mission to make life better for wild animals. There is much to learn about the situation of wild animals. This page is just an introduction to the issue. In truth, it is very sad that so many animals are desperately in need of help right now. But luckily, humans like you have the opportunity to make a difference. We hope you choose to take it.',
+	'thank-you': 'thank you',
+	'consider-support': 'Please consider supporting us on Patreon!',
+    'free-to-use': 'This free-to-use service wouldn’t be possible without your support. Thank you!',
+    'support-us': 'Support Us',
+	'credits-heading': 'Credits and sources',
+	'credits-01': 'Mauris convallis arcu amet, sollicitudin gravida gravida platea.',
+	'credits-02': 'Velit rhoncus pellentesque feugiat aenean tincidunt. Diam tincidunt aliquet mauris lorem.',
+	'credits-03': 'Egestas scelerisque ac risus. Neque nibh tellus elementum vulputate auctor',
+	'credits-04': 'Arcu amet, sollicitudin gravida gravida platea. ',
+	'credits-05': 'Rrhoncus pellentesque feugiat aenean tincidunt',
+	'credits-06': 'Diam tincidunt aliquet mauris lorem egestas scelerisque ac risus',
+	'credits-07': 'Neque nibh tellus elementum vulputate auctor.',
+    'credits-08': 'Mauris convallis arcu amet, sollicitudin gravida gravida platea.',
+    'footer-copywrite': '© 2022 Vegan Hacktivists. All rights reserved.'
+
     
 };
 

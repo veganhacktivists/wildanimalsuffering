@@ -8,5 +8,8 @@
     }
 }
 .bears {
-    background: url('../../assets/images/why-it-matters/bears.png') bottom/contain no-repeat;
+    aspect-ratio: 1;
+    background:
+        url('../../assets/images/together-we-can/momma.png') bottom/contain no-repeat,
+        url('../../assets/images/together-we-can/pups.png') bottom/contain no-repeat;;
 }

@@ -46,7 +46,7 @@ const WhyItMatters = () => {
 				<div className='h-screen-10vh p-4 md:p-10'>
 					<div className='text-center'>
 						<h5 className='pb-4'>{lang['it-matters']}</h5>
-						<span className='badge capitalize'>
+						<span className='badge uppercase'>
 							{lang['begin-learning']}
 						</span>
 					</div>
