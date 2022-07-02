@@ -20,20 +20,20 @@ const VideosYouMightLike = () => {
 						<div className="flex flex-row">
 							<div className="main-video-container split-screen-padding md:w-2/3 flex flex-col justify-center items-center flex-grow-1">
 								<div className="w-full h-full flex-grow-1">
-									<iframe className="h-full m-auto" src="https://www.youtube.com/embed/1Dp6gObE9eA" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+									{/* <iframe className="h-full m-auto" src="https://www.youtube.com/embed/1Dp6gObE9eA" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe> */}
 								</div>
 								{/* putting padding here to get the width to match that of the video is pretty hacky :( */}
 								<p className="py-2 text-center">{lang['video-caption']}</p>
 							</div>
 							<div className="video-thumbnail-container split-screen-padding md:w-1/3 flex flex-col justify-center flex-grow-0">
 								<div>
-									<iframe src="https://www.youtube.com/embed/yMtwbur0ylo" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+									{/* <iframe src="https://www.youtube.com/embed/yMtwbur0ylo" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe> */}
 								</div>
 								<div>
-									<iframe src="https://www.youtube.com/embed/OYJi9zLBjaI" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+									{/* <iframe src="https://www.youtube.com/embed/OYJi9zLBjaI" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe> */}
 								</div>
 								<div>
-									<iframe src="https://www.youtube.com/embed/1VYYHLH990A" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+									{/* <iframe src="https://www.youtube.com/embed/1VYYHLH990A" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe> */}
 								</div>
 							</div>
 						</div>

@@ -1,0 +1,4 @@
+.even-worse-dialog-content {
+    @apply h-full;
+    background: url('../../assets/images/even-worse/sand-bg-color.jpg') center/cover no-repeat;
+}

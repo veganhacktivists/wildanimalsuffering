@@ -24,8 +24,10 @@ const PageNavigator = ({ direction }) => {
 		dispatch({ type: direction === 'down' ? 'NEXT_SCREEN' : 'NEXT_ANIMAL_STAT' });
 	};
     
-	const showDown = (direction === 'down' && shouldShowDownArrow);
-	const showSide = direction === 'side' && isAnimalStatsScreen && !isLastAnimalStatScreen;
+	const isDialogOpen = state.openDialogs?.size > 0;
+	const showDown = (direction === 'down' && shouldShowDownArrow && !isDialogOpen);
+	const showSide = direction === 'side' && isAnimalStatsScreen && !isLastAnimalStatScreen && !isDialogOpen;
+    
     
 	return showDown || showSide ? (
 		<div

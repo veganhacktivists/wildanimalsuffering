@@ -1,0 +1,14 @@
+.was-overlay {
+    background-color: var(--overlay);
+    @apply h-screen w-screen fixed inset-0;
+}
+
+.was-dialog-content {
+    @apply fixed z-10 inset-1/2 -translate-x-1/2 -translate-y-1/2 p-5 h-screen-80vh;
+    min-width: 30vw;
+    max-width: 90vw;
+    
+    & > div {
+        @apply rounded-2xl
+    }
+}

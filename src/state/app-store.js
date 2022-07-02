@@ -8,7 +8,8 @@ const initialState = {
 	animalStatIndex: 0,
 	abyssOverlay: false,
 	locale: 'en',
-	translations
+	translations,
+	openDialogs: new Set()
 };
 
 export const Context = createContext(initialState);

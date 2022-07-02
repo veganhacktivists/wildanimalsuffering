@@ -60,6 +60,16 @@ const reducer = (state, action) => {
 			isForEveryHumanBufferScreen: true
 		};
 	}
+	case 'DIALOG_OPEN_CHANGE':
+		if (action.payload.isOpen && action.payload?.dialogId) {
+			state.openDialogs.add(action.payload.dialogId);
+		} else {
+			state.openDialogs.delete(action.payload.dialogId);
+		}
+		return {
+			...state,
+			openDialogs: new Set(state.openDialogs)
+		};
 	case 'CHANGE_LANGUAGE': {
 		if (!translations[action.payload.locale]) {
 			console.warn(
