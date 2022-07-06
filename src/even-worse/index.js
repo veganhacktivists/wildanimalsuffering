@@ -5,18 +5,44 @@ import { EvenWorseDialogContent } from './even-worse-dialog-content';
 
 import './even-worse.css';
 
+const DialogTrigger = ({dialogKey, onClick}) => {
+
+	const [state, dispatch] = useContext(Context);
+	const { translations, locale } = state;
+	const lang = translations[locale];
+
+	return (
+		<WasDialogTrigger onClick={onClick} key={`dialog-trigger-${dialogKey}`} asChild>
+			<div className="suffer-image-container w-full pt-4 flex flex-col">
+				<div className={`suffer-image suffer-image-${dialogKey}`}></div>
+				<div className="suffer-text p-2 flex-grow">{lang[dialogKey]}</div>
+			</div>
+		</WasDialogTrigger>
+	);
+};
+
 const EvenWorse = () => {
 
 	const [state, dispatch] = useContext(Context);
 	const { translations, locale } = state;
 	const lang = translations[locale];
-	const [selectedDialog, setSelectedDialog] = useState(null);
+	const [selectedDialogIndex, setSelectedDialogIndex] = useState(null);
     
-	const onDialogTriggerClick = (triggerId) => {
-		setSelectedDialog(triggerId);
+	const onDialogTriggerClick = ({selectedIndex}) => {
+		setSelectedDialogIndex(selectedIndex);
 	};
     
-	console.log('state=', state);
+	const dialogBoxKeys = [
+		'thirst-and-starvation', 'predation', 'disease-and-parasitism', 'harmful-weather', 'natural-disasters', 'accidents', 'anthropogenic-harms'
+	];
+	const selectedDialog = dialogBoxKeys[selectedDialogIndex];
+    
+	const onNavigationClick = ({ direction }) => {
+		const increment = direction === 'LEFT' ? -1 : 1;
+		const n = dialogBoxKeys.length;
+		const newIndex = (((selectedDialogIndex + increment) % n) + n ) % n;
+		setSelectedDialogIndex(newIndex);
+	};
     
 	return (
 		<>
@@ -27,42 +53,19 @@ const EvenWorse = () => {
 					</div>
 					<WasDialog dialogId='even-worse'>
 						<WasDialogContent>
-							<EvenWorseDialogContent selectedDialog={selectedDialog} />
+							<EvenWorseDialogContent onNavigationClick={onNavigationClick} selectedDialog={selectedDialog} />
 						</WasDialogContent>
 						<div className="split-screen flex-col w-full">
 							<div className="flex flex-wrap flex-row justify-center text-center">
-								<WasDialogTrigger asChild onClick={() => onDialogTriggerClick('thirst-and-starvation')}>
-									<div className="suffer-image-container w-full pt-4">
-										<div className="suffer-image suffer-thirst-image"></div>
-										<div className="suffer-text p-2">{lang['thirst-and-starvation']}</div>
-									</div>
-								</WasDialogTrigger>
-								<WasDialogTrigger asChild selector="predation">
-									<div className="suffer-image-container w-full pt-4">
-										<div className="suffer-image suffer-predation-image"></div>
-										<div className="suffer-text p-2">{lang['predation']}</div>
-									</div>
-								</WasDialogTrigger>
-								<div className="suffer-image-container w-full pt-4">
-									<div className="suffer-image suffer-disease-image"></div>
-									<div className="suffer-text p-2">{lang['disease-and-parasitism']}</div>
-								</div>
-								<div className="suffer-image-container w-full pt-4">
-									<div className="suffer-image suffer-harmful-weather-image"></div>
-									<div className="suffer-text p-2">{lang['harmful-weather']}</div>
-								</div>
-								<div className="suffer-image-container w-full pt-4">
-									<div className="suffer-image suffer-natural-disasters-image"></div>
-									<div className="suffer-text p-2">{lang['natural-disasters']}</div>
-								</div>
-								<div className="suffer-image-container w-full pt-4">
-									<div className="suffer-image suffer-accidents-image"></div>
-									<div className="suffer-text p-2">{lang['accidents']}</div>
-								</div>
-								<div className="suffer-image-container w-full pt-4">
-									<div className="suffer-image suffer-anthropogenic-harms-image"></div>
-									<div className="suffer-text p-2">{lang['anthropogenic-harms']}</div>
-								</div>
+								{dialogBoxKeys.map((dialogKey, index) => {
+									return (
+										<DialogTrigger
+											key={dialogKey}
+											dialogKey={dialogKey}
+											onClick={() => onDialogTriggerClick({selectedIndex: index})}
+										/>
+									);
+								})}
 							</div>
 						</div>
 					</WasDialog>

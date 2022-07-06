@@ -25,10 +25,10 @@ const WasDialog = ({ children, ...props }) => {
 const WasDialogContent = forwardRef(
 	({ children, ...props }, forwardedRef) => (
 		<Content className="was-dialog-content" {...props} ref={forwardedRef}>
-			{children}
-			<Close>
-				x
+			<Close asChild className='absolute top-4 right-4 h-4 w-4'>
+				<span className="close-icon h-4 w-4"></span>
 			</Close>
+			{children}
 		</Content>
 	)
 );

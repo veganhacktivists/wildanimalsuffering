@@ -23,14 +23,30 @@ const en = {
 	'wild-animals': 'wild animals',
 	'mind-boggling': 'The scale is truly mind boggling.',
 	'number-of-individuals': 'Number of individuals',
+    
+	/* even worse */
 	'even-worse': 'Even worse, wild animals suffer in terrible ways',
 	'thirst-and-starvation': 'Thirst & starvation',
+	'thirst-and-starvation-description': `Starvation is a common cause of death for animals who survive to old age. Food scarcity is worsened by the simultaneous occurrence of hunger and predation. Thirst is another major contributor to high mortality rates in wild animals. The combination of thirst and starvation accelerates the process of dehydration that culminates in death. Many animals who live in arid conditions continue to eat as a survival strategy because there are some fluids in food. This allows animals to remain alive for longer.
+    Without the availability of water directly or indirectly through food, many animals do not survive harsh climates.`,
 	'predation': 'Predation',
+	'predation-description': `Starvation is a common cause of death for animals who survive to old age. Food scarcity is worsened by the simultaneous occurrence of hunger and predation. Thirst is another major contributor to high mortality rates in wild animals. The combination of thirst and starvation accelerates the process of dehydration that culminates in death. Many animals who live in arid conditions continue to eat as a survival strategy because there are some fluids in food. This allows animals to remain alive for longer.
+    Without the availability of water directly or indirectly through food, many animals do not survive harsh climates.`,
 	'disease-and-parasitism': 'Disease & parasitism',
+	'disease-and-parasitism-description': `Starvation is a common cause of death for animals who survive to old age. Food scarcity is worsened by the simultaneous occurrence of hunger and predation. Thirst is another major contributor to high mortality rates in wild animals. The combination of thirst and starvation accelerates the process of dehydration that culminates in death. Many animals who live in arid conditions continue to eat as a survival strategy because there are some fluids in food. This allows animals to remain alive for longer.
+    Without the availability of water directly or indirectly through food, many animals do not survive harsh climates.`,
 	'harmful-weather': 'Harmful weather conditions',
+	'harmful-weather-description': `Starvation is a common cause of death for animals who survive to old age. Food scarcity is worsened by the simultaneous occurrence of hunger and predation. Thirst is another major contributor to high mortality rates in wild animals. The combination of thirst and starvation accelerates the process of dehydration that culminates in death. Many animals who live in arid conditions continue to eat as a survival strategy because there are some fluids in food. This allows animals to remain alive for longer.
+    Without the availability of water directly or indirectly through food, many animals do not survive harsh climates.`,
 	'natural-disasters': 'Natural disasters',
+	'natural-disasters-description': `Starvation is a common cause of death for animals who survive to old age. Food scarcity is worsened by the simultaneous occurrence of hunger and predation. Thirst is another major contributor to high mortality rates in wild animals. The combination of thirst and starvation accelerates the process of dehydration that culminates in death. Many animals who live in arid conditions continue to eat as a survival strategy because there are some fluids in food. This allows animals to remain alive for longer.
+    Without the availability of water directly or indirectly through food, many animals do not survive harsh climates.`,
 	'accidents': 'Accidents',
+	'accidents-description': `Starvation is a common cause of death for animals who survive to old age. Food scarcity is worsened by the simultaneous occurrence of hunger and predation. Thirst is another major contributor to high mortality rates in wild animals. The combination of thirst and starvation accelerates the process of dehydration that culminates in death. Many animals who live in arid conditions continue to eat as a survival strategy because there are some fluids in food. This allows animals to remain alive for longer.
+    Without the availability of water directly or indirectly through food, many animals do not survive harsh climates.`,
 	'anthropogenic-harms': 'Anthropogenic harms (e.g. fishing)',
+	'anthropogenic-harms-description': `Starvation is a common cause of death for animals who survive to old age. Food scarcity is worsened by the simultaneous occurrence of hunger and predation. Thirst is another major contributor to high mortality rates in wild animals. The combination of thirst and starvation accelerates the process of dehydration that culminates in death. Many animals who live in arid conditions continue to eat as a survival strategy because there are some fluids in food. This allows animals to remain alive for longer.
+    Without the availability of water directly or indirectly through food, many animals do not survive harsh climates.`,
 	'and-much-more': '...and much more',
 	'population-dynamics': 'Population Dynamics',
 	'tend-to-have-a-lot-of-children': 'Wild animals tend to have a lot of children, and for populations to remain stable, on average each parent can only have 2 children that reach adulthood. This means that most animals die young.',
@@ -39,6 +55,8 @@ const en = {
 	'common-objections': 'common objections to helping wild animals',
 	'its-not-ours': 'it\'s not our responsibility',
 	'personally-responsible': 'People sometimes argue that we are not personally responsible for the suffering of wild animals, so we shouldn’t be very concerned about it. However, the reason to help them is that they need our help, not because we caused their situation. We can see that this argument would also apply to humans in distant places suffering from natural causes, such as earthquakes or hurricanes. If we think we should help humans in those cases and care about their wellbeing as sentient beings, then it follows that we should help animals living in the wild as well.',
+    
+	/* even worse dialog content */
 
 	/* how you can help */
 	'how-you-can-help': 'how can you help?',
@@ -75,8 +93,8 @@ const en = {
 	'together-we-can-description-02': 'If it matters to you, then we encourage you to join us in our mission to make life better for wild animals. There is much to learn about the situation of wild animals. This page is just an introduction to the issue. In truth, it is very sad that so many animals are desperately in need of help right now. But luckily, humans like you have the opportunity to make a difference. We hope you choose to take it.',
 	'thank-you': 'thank you',
 	'consider-support': 'Please consider supporting us on Patreon!',
-    'free-to-use': 'This free-to-use service wouldn’t be possible without your support. Thank you!',
-    'support-us': 'Support Us',
+	'free-to-use': 'This free-to-use service wouldn’t be possible without your support. Thank you!',
+	'support-us': 'Support Us',
 	'credits-heading': 'Credits and sources',
 	'credits-01': 'Mauris convallis arcu amet, sollicitudin gravida gravida platea.',
 	'credits-02': 'Velit rhoncus pellentesque feugiat aenean tincidunt. Diam tincidunt aliquet mauris lorem.',
@@ -85,8 +103,8 @@ const en = {
 	'credits-05': 'Rrhoncus pellentesque feugiat aenean tincidunt',
 	'credits-06': 'Diam tincidunt aliquet mauris lorem egestas scelerisque ac risus',
 	'credits-07': 'Neque nibh tellus elementum vulputate auctor.',
-    'credits-08': 'Mauris convallis arcu amet, sollicitudin gravida gravida platea.',
-    'footer-copywrite': '© 2022 Vegan Hacktivists. All rights reserved.'
+	'credits-08': 'Mauris convallis arcu amet, sollicitudin gravida gravida platea.',
+	'footer-copywrite': '© 2022 Vegan Hacktivists. All rights reserved.'
 
     
 };

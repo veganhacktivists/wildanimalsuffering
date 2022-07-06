@@ -12,7 +12,7 @@
 	--blue: #85c5c8;
 	--purple: #a89cf6;
 	--pink: #d68a9c;
-	--navy: #1a3439;
+	--dark-gray: #1a3439;
 	--green: #b0cb83;
 	--orange: #d8b36d;
 	--sand: #a39d8b;
@@ -35,8 +35,8 @@
 .purple {
 	color: var(--purple);
 }
-.navy {
-	color: var(--navy);
+.dark-gray {
+	color: var(--dark-gray);
 }
 .brown {
 	color: var(--brown);
@@ -111,7 +111,7 @@ p {
 
 .badge {
 	background-color: var(--orange);
-	color: var(--navy);
+	color: var(--dark-gray);
 	@apply rounded-full px-4 py-1 inline-flex flex-col justify-center;
 }
 
@@ -255,4 +255,8 @@ section,
     background-color: rgba(255, 255, 255, 0.1);
     margin: -2rem;
     width: calc(100% + 4rem);
+}
+
+.close-icon {
+    background: url('../assets/images/logo.png');
 }

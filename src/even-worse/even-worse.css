@@ -13,24 +13,24 @@
 .suffer-text {
     background: rgba(255, 255, 255, 0.25);
 }
-.suffer-thirst-image {
+.suffer-image-thirst-and-starvation {
     background: url('../../assets/images/even-worse/starving-dog.png') center/contain no-repeat;
 }
-.suffer-predation-image {
+.suffer-image-predation {
     background: url('../../assets/images/even-worse/predation.png') center/contain no-repeat;
 }
-.suffer-disease-image {
+.suffer-image-disease-and-parasitism {
     background: url('../../assets/images/even-worse/parasite.png') center/contain no-repeat;
 }
-.suffer-harmful-weather-image {
+.suffer-image-harmful-weather {
     background: url('../../assets/images/even-worse/harmful-weather.png') center/contain no-repeat;
 }
-.suffer-natural-disasters-image {
+.suffer-image-natural-disasters {
     background: url('../../assets/images/even-worse/fires.png') center/contain no-repeat;
 }
-.suffer-accidents-image {
+.suffer-image-accidents {
     background: url('../../assets/images/even-worse/tire-tracks.png') center/contain no-repeat;
 }
-.suffer-anthropogenic-harms-image {
+.suffer-image-anthropogenic-harms {
     background: url('../../assets/images/even-worse/fish-hook.png') center/contain no-repeat;
 }
