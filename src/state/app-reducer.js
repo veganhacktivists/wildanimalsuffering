@@ -64,6 +64,7 @@ const reducer = (state, action) => {
 		if (action.payload.isOpen && action.payload?.dialogId) {
 			state.openDialogs.add(action.payload.dialogId);
 		} else {
+			console.log(`deleting ${action.payload.dialogId}. state.openDialogs=`, state.openDialogs);
 			state.openDialogs.delete(action.payload.dialogId);
 		}
 		return {
@@ -76,7 +77,9 @@ const reducer = (state, action) => {
 				`No translations provided for ${locale}... Defaulting to ${DEFAULT_LANGUAGE_KEY}`
 			);
 		}
-		const locale = action.payload.locale || 'en';
+		const locale = (action.payload.locale && translations[action.payload.locale]) ?
+			action.payload.locale :
+			'en';
 		return {
 			...state,
 			locale,

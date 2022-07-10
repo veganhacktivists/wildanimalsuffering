@@ -2,7 +2,8 @@
     "env": {
         "browser": true,
         "es2021": true,
-        "amd": true
+        "amd": true,
+        "jest/globals": true
     },
     "extends": [
         "eslint:recommended",
@@ -16,7 +17,7 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react", "jest"
     ],
     "rules": {
         "indent": [
@@ -38,6 +39,18 @@
         "comma-dangle": "off",
         "no-unused-vars": "off",
         "react/prop-types": "off",
-        "react/react-in-jsx-scope": "off"
+        "react/react-in-jsx-scope": "off",
+        /* testing rules */
+        "jest/no-identical-title": "error",
+        "jest/valid-expect": "error"
+    },
+    "settings": {
+        "jest": {
+            "globalAliases": {
+                "describe": ["context"],
+                "fdescribe": ["fcontext"],
+                "xdescribe": ["xcontext"]
+            }
+        }
     }
 }

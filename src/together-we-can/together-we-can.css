@@ -2,6 +2,9 @@
 .together-we-can {
     background: url('../../assets/images/together-we-can/in-the-woods.jpg') top/cover no-repeat;
 }
+.patreon-logo {
+    background: url('../../assets/images/together-we-can/patreon.svg') top/cover no-repeat;
+}
 @screen md {
     .together-we-can {
         background: url('../../assets/images/together-we-can/in-the-woods-md.jpg') top/cover no-repeat;

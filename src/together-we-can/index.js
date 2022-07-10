@@ -23,10 +23,13 @@ const TogetherWeCan = () => {
 						<br />
 						<h3 className='orange'>{lang['thank-you']}.</h3>
 					</div>
-					<div className="flex flex-row justify-around p-5 lighten-strip">
-						<div className="flex-col">
-							<h5>{lang['consider-support']}</h5>
-							<div className='text-sm'>{lang['free-to-use']}</div>
+					<div className="flex flex-row justify-evenly p-5 lighten-strip">
+						<div className="flex flex-row">
+							<div className="patreon-logo h-full aspect-square"></div>
+							<div className="flex-col mx-4">
+								<h5>{lang['consider-support']}</h5>
+								<div className='text-sm'>{lang['free-to-use']}</div>
+							</div>
 						</div>
 						<span className="badge uppercase">{lang['support-us']}</span> 
 					</div>
