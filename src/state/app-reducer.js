@@ -1,9 +1,5 @@
-import { translations } from '../utils/translations';
-import {
-	ANIMAL_STATS_SCREEN_INDEX,
-	DEFAULT_LANGUAGE_KEY,
-	NUMBER_OF_ANIMAL_STAT_SCREENS,
-} from '../app-constants';
+import {translations} from '../utils/translations';
+import {ANIMAL_STATS_SCREEN_INDEX, DEFAULT_LANGUAGE_KEY, NUMBER_OF_ANIMAL_STAT_SCREENS} from '../app-constants';
 
 const reducer = (state, action) => {
 	switch (action.type) {
@@ -12,19 +8,37 @@ const reducer = (state, action) => {
 			...state,
 			screenContentElements: [...action.payload.screenContentElements],
 		};
+
 	case 'NEXT_SCREEN': {
 		const screenIndex = getNextScreenIndex(state);
 		const isAnimalStatsScreen = getIsAnimalStatsScreen(screenIndex);
+
 		return {
 			...state,
 			screenIndex,
 			screenId: state.screenContentElements.map((e) => e.id)[screenIndex],
 			isAnimalStatsScreen,
-			abyssOverlay: state.isAnimalStatsScreen ? true : false,
+			abyssOverlay: !!state.isAnimalStatsScreen,
 			animalStatIndex: 0,
 			isForEveryHumanBufferScreen: true
 		};
 	}
+
+	case 'PREV_SCREEN': {
+		const screenIndex = getPrevScreenIndex(state);
+		const isAnimalStatsScreen = getIsAnimalStatsScreen(screenIndex);
+
+		return {
+			...state,
+			screenIndex,
+			screenId: state.screenContentElements.map((e) => e.id)[screenIndex],
+			isAnimalStatsScreen,
+			abyssOverlay: !!state.isAnimalStatsScreen,
+			animalStatIndex: 0,
+			isForEveryHumanBufferScreen: true
+		};
+	}
+
 	case 'NEXT_ANIMAL_STAT': {
 		const isCurrentScreenAnimalStatsScreen = getIsAnimalStatsScreen(state.screenIndex);
 		
@@ -33,7 +47,7 @@ const reducer = (state, action) => {
 			animalStatIndex = 0;
 		} else {
 			animalStatIndex = isCurrentScreenAnimalStatsScreen
-				? (state.animalStatIndex + 1) % NUMBER_OF_ANIMAL_STAT_SCREENS
+				? Math.min(NUMBER_OF_ANIMAL_STAT_SCREENS - 1, state.animalStatIndex + 1)
 				: 0;
 		}
 		return {
@@ -44,6 +58,17 @@ const reducer = (state, action) => {
 			isForEveryHumanBufferScreen: false
 		};
 	}
+
+	case 'PREV_ANIMAL_STAT': {
+		return {
+			...state,
+			isAnimalStatsScreen: true,
+			abyssOverlay: true,
+			animalStatIndex: Math.max(0, state.animalStatIndex - 1),
+			isForEveryHumanBufferScreen: false
+		};
+	}
+
 	case 'GO_TO_SCREEN_BY_ID': {
 		const screenIndex = getScreenIndexById(
 			state.screenContentElements,
@@ -60,7 +85,8 @@ const reducer = (state, action) => {
 			isForEveryHumanBufferScreen: true
 		};
 	}
-	case 'DIALOG_OPEN_CHANGE':
+
+	case 'DIALOG_OPEN_CHANGE': {
 		if (action.payload.isOpen && action.payload?.dialogId) {
 			state.openDialogs.add(action.payload.dialogId);
 		} else {
@@ -71,6 +97,8 @@ const reducer = (state, action) => {
 			...state,
 			openDialogs: new Set(state.openDialogs)
 		};
+	}
+
 	case 'CHANGE_LANGUAGE': {
 		if (!translations[action.payload.locale]) {
 			console.warn(
@@ -85,6 +113,7 @@ const reducer = (state, action) => {
 			locale,
 		};
 	}
+
 	default:
 		return state;
 	}
@@ -96,8 +125,14 @@ const getIsAnimalStatsScreen = (screenIndex) => {
 
 const getNextScreenIndex = (state) => {
 	const { screenIndex, screenContentElements } = state;
-	const nextScreenIndex = (screenIndex + 1) % screenContentElements.length;
-	return nextScreenIndex;
+
+	return Math.min(screenContentElements.length - 1, screenIndex + 1);
+};
+
+const getPrevScreenIndex = (state) => {
+	const { screenIndex } = state;
+
+	return Math.max(0, screenIndex - 1);
 };
 
 const getScreenIndexById = (screenContentElements, screenId) => {

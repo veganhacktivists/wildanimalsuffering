@@ -2,6 +2,7 @@ import { useContext, useEffect } from 'react';
 import { CommonObjections } from '../common-objections';
 import { EvenWorse } from '../even-worse';
 import { HowYouCanHelp } from '../how-you-can-help';
+import { HumanPopulation } from '../human-population';
 import { Organisations } from '../organisations';
 import { OtherResources } from '../other-resources';
 import { PopulationDynamics } from '../population-dynamics';
@@ -46,6 +47,7 @@ const SectionsContainer = () => {
 		<>
 			<div className='absolute scrollsnap-y'>
 				<WhyItMatters />
+				<HumanPopulation />
 				<WildAnimalStats />
 				<EvenWorse />
 				<PopulationDynamics />
