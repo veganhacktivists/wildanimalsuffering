@@ -237,7 +237,7 @@ section,
 }
 
 .scrollsnap-y::-webkit-scrollbar {
-	width: 0rem; /* For Chrome, Safari, and Opera */
+	width: 0; /* For Chrome, Safari, and Opera */
 }
 
 .scrollsnap-y {
@@ -250,7 +250,6 @@ section,
 	overflow-y: hidden;
 }
 
-
 .lighten-strip {
     background-color: rgba(255, 255, 255, 0.1);
     margin: -2rem;
@@ -260,3 +259,15 @@ section,
 .close-icon {
     background: url('../assets/images/logo.png');
 }
+
+.abyss {
+	background:
+		url('../assets/images/wild-animal-stats/earth.png') right center/50% no-repeat,
+		url('../assets/images/wild-animal-stats/abyss.jpg') center/cover no-repeat;
+	}
+.abyss-darkened {
+	background:
+		linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ),
+		url('../assets/images/wild-animal-stats/earth.png') right center/50% no-repeat,
+		url('../assets/images/wild-animal-stats/abyss.jpg') center/cover no-repeat;
+	}

@@ -1,16 +1,16 @@
-import { useContext, useState, Fragment } from 'react';
+import { useContext, useState } from 'react';
 import { PageNavigator } from '../page-navigator';
 import { Context } from '../state';
 
 import './wild-animal-stats.css';
 
 const WildAnimalStats = () => {
-	const [state, dispatch] = useContext(Context);
+	const [state] = useContext(Context);
 	const { translations, locale, animalStatIndex } = state;
 	const lang = translations[locale];
 
-	const { screenIndex, abyssOverlay } = state;
-	const [showHumans, setShowHumans] = useState(true);
+	const { abyssOverlay } = state;
+	const [showHumans] = useState(true);
     
 	const stats = [
 		{ key: 'farmedAnimals', numberOnASide: 2, color: 'blue'},
@@ -59,8 +59,6 @@ const WildAnimalStats = () => {
 	];
 	const squareData = stats[animalStatIndex];
     
-	const isLastAnimalStatScreen = animalStatIndex === stats.length - 1;
-
 	const Squares = ({ numberOnASide, color = 'blue' }) => {
 		const numberOfSquares = Math.pow(numberOnASide, 2);
 		return (
@@ -100,23 +98,8 @@ const WildAnimalStats = () => {
 				id="abyss-container"
 				className={`${
 					abyssOverlay ? 'abyss-darkened' : 'abyss'
-				} scrollsnap-y flex-col hw-screen`}
+				} scrollsnap-y flex-col hw-screen overflow-hidden`}
 			>
-				<div
-					id="human-population-screen"
-					className="screen-content flex scrollable"
-				>
-					<div className="h-screen-50vh md:h-screen md:w-screen-50vw split-screen-padding flex-center">
-						<h1
-							dangerouslySetInnerHTML={{
-								__html: lang['human-population'],
-							}}
-						></h1>
-					</div>
-					<div className="h-screen-50vh md:h-screen md:w-screen-50vw split-screen-padding flex-center">
-						<div className="human-icon h-1/4 w-1/4"></div>
-					</div>
-				</div>
 				<div
 					id="animal-stats-screen"
 					className="screen-content scrollable animal-stats flex"
