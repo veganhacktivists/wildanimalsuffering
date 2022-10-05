@@ -19,10 +19,9 @@ module.exports = {
 			},
 			backgroundImage: {
 				logo: 'url("../assets/images/logo.png")',
-				'icon-close': 'url("../assets/images/close.svg")',
 			},
 			fontFamily: {
-				heavy: ['The Bold Font'],
+				brand: ['The Bold Font'],
 			},
 		},
 	},

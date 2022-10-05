@@ -18,7 +18,7 @@ const MobileMenu = () => {
 		return (
 			<div className="md:hidden fixed h-screen w-screen bg-white z-40 text-menu-front-dark overflow-scroll">
 				<div className="flex justify-between p-16">
-					<div className="text-menu-front-dark uppercase text-8xl font-heavy">
+					<div className="text-menu-front-dark uppercase text-8xl font-brand">
 						Wild Animal Suffering
 					</div>
 					<button
@@ -36,12 +36,15 @@ const MobileMenu = () => {
 						(element, index) =>
 							element.dataset.name && (
 								<button
-									className={`text-left text-menu-front-light text-7xl p-16 hover:bg-menu-back-light ${
+									className={`relative text-left text-menu-front-light text-7xl p-16 hover:bg-menu-back-light ${
 										element.id == state.screenId && 'bg-menu-back-light'
 									}`}
 									key={index}
 									onClick={() => navigate(element.id)}
 								>
+									{element.id == state.screenId && (
+										<div className="absolute bg-menu-front-dark top-10 right-10 w-10 h-10 rounded-full"></div>
+									)}
 									{element.dataset.name}
 								</button>
 							)
