@@ -4,7 +4,7 @@ import { Context } from '../state';
 import './mobile-menu.css';
 
 const MobileMenu = () => {
-	const [open, setOpen] = useState(true);
+	const [open, setOpen] = useState(false);
 	const [state, dispatch] = useContext(Context);
 	const { translations, locale } = state;
 	const lang = translations[locale];
