@@ -11,13 +11,13 @@ import { TogetherWeCan } from '../together-we-can';
 import { VideosYouMightLike } from '../videos-you-might-like';
 import { WhyItMatters } from '../why-it-matters';
 import { WildAnimalStats } from '../wild-animal-stats';
+import { MobileMenu } from '../mobile-menu';
 
 const SectionsContainer = () => {
 	const [state, dispatch] = useContext(Context);
 
 	useEffect(() => {
-		const screenContentElements =
-			document.querySelectorAll('.screen-content');
+		const screenContentElements = document.querySelectorAll('.screen-content');
 		dispatch({
 			type: 'REGISTER_SCREEN_CONTENT_ELEMENTS',
 			payload: { screenContentElements },
@@ -40,12 +40,13 @@ const SectionsContainer = () => {
 		}
 
 		const screenId = window.location.hash?.substring(1);
-		dispatch({ type: 'GO_TO_SCREEN_BY_ID', payload: {screenId} });
+		dispatch({ type: 'GO_TO_SCREEN_BY_ID', payload: { screenId } });
 	}, [window.location.hash]);
 
 	return (
 		<>
-			<div className='absolute scrollsnap-y'>
+			<MobileMenu />
+			<div className="absolute scrollsnap-y">
 				<WhyItMatters />
 				<HumanPopulation />
 				<WildAnimalStats />

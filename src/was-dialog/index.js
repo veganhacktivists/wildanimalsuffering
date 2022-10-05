@@ -4,15 +4,12 @@ import { Root, Overlay, Content, Close, Trigger } from '@radix-ui/react-dialog';
 import { Context } from '../state';
 import './was-dialog.scss';
 
-
 const WasDialog = ({ children, ...props }) => {
-
 	const [state, dispatch] = useContext(Context);
 	const { dialogId } = props;
 
-
 	const wasDialogOnOpenChange = (isOpen) => {
-		dispatch({ type: 'DIALOG_OPEN_CHANGE', payload: {isOpen, dialogId} });        
+		dispatch({ type: 'DIALOG_OPEN_CHANGE', payload: { isOpen, dialogId } });
 	};
 
 	return (
@@ -22,16 +19,14 @@ const WasDialog = ({ children, ...props }) => {
 		</Root>
 	);
 };
-const WasDialogContent = forwardRef(
-	({ children, ...props }, forwardedRef) => (
-		<Content className="was-dialog-content" {...props} ref={forwardedRef}>
-			<Close asChild className='absolute top-4 right-4 h-4 w-4'>
-				<span className="close-icon h-4 w-4"></span>
-			</Close>
-			{children}
-		</Content>
-	)
-);
+const WasDialogContent = forwardRef(({ children, ...props }, forwardedRef) => (
+	<Content className='was-dialog-content' {...props} ref={forwardedRef}>
+		<Close asChild className='absolute top-4 right-4 h-4 w-4'>
+			<span className='bg-logo h-4 w-4'></span>
+		</Close>
+		{children}
+	</Content>
+));
 
 WasDialogContent.displayName = 'WasDialogContent';
 

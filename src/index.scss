@@ -17,7 +17,7 @@
 	--orange: #d8b36d;
 	--sand: #a39d8b;
 	--brown: #4e4534;
-    --overlay: rgba(26, 52, 57, 0.5);  
+	--overlay: rgba(26, 52, 57, 0.5);
 }
 
 .blue {
@@ -216,7 +216,7 @@ section,
 }
 
 .aspect-square {
-    aspect-ratio: 1;
+	aspect-ratio: 1;
 }
 
 // #page-indicators {
@@ -251,23 +251,19 @@ section,
 }
 
 .lighten-strip {
-    background-color: rgba(255, 255, 255, 0.1);
-    margin: -2rem;
-    width: calc(100% + 4rem);
-}
-
-.close-icon {
-    background: url('../assets/images/logo.png');
+	background-color: rgba(255, 255, 255, 0.1);
+	margin: -2rem;
+	width: calc(100% + 4rem);
 }
 
 .abyss {
-	background:
-		url('../assets/images/wild-animal-stats/earth.png') right center/50% no-repeat,
+	background: url('../assets/images/wild-animal-stats/earth.png') right
+			center/50% no-repeat,
 		url('../assets/images/wild-animal-stats/abyss.jpg') center/cover no-repeat;
-	}
+}
 .abyss-darkened {
-	background:
-		linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ),
-		url('../assets/images/wild-animal-stats/earth.png') right center/50% no-repeat,
+	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+		url('../assets/images/wild-animal-stats/earth.png') right center/50%
+			no-repeat,
 		url('../assets/images/wild-animal-stats/abyss.jpg') center/cover no-repeat;
-	}
+}

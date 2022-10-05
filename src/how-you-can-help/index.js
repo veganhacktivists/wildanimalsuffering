@@ -4,14 +4,17 @@ import { Context } from '../state';
 import './how-you-can-help.css';
 
 const HowYouCanHelp = () => {
-
 	const [state, dispatch] = useContext(Context);
 	const { translations, locale } = state;
 	const lang = translations[locale];
 
 	return (
 		<>
-			<section id="how-you-can-help-screen" className="how-you-can-help screen-content">    
+			<section
+				id="how-you-can-help-screen"
+				data-name="How You Can Help"
+				className="how-you-can-help screen-content"
+			>
 				<div className="full-screen flex-col md:w-2/3 h-full">
 					<div className="w-2/3 h-full self-center">
 						<div className="py-16 flex flex-col text-center items-center">
@@ -39,14 +42,15 @@ const HowYouCanHelp = () => {
 								</div>
 							</div>
 							<p className="p-10">{lang['check-out-this-resource']}</p>
-							<span className="badge capitalize">{lang['view-volunteer-opportunities']}</span>
+							<span className="badge capitalize">
+								{lang['view-volunteer-opportunities']}
+							</span>
 						</div>
 					</div>
 				</div>
 			</section>
 		</>
 	);
-
 };
 
 export { HowYouCanHelp };

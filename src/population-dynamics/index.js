@@ -4,18 +4,23 @@ import { Context } from '../state';
 import './population-dynamics.css';
 
 const PopulationDynamics = () => {
-
 	const [state, dispatch] = useContext(Context);
 	const { translations, locale } = state;
 	const lang = translations[locale];
 
 	return (
 		<>
-			<section id="population-dynamics-screen" className="population-dynamics screen-content">
+			<section
+				id="population-dynamics-screen"
+				data-name="Population Dynamics"
+				className="population-dynamics screen-content"
+			>
 				<div className="full-screen flex-col w-full h-full">
 					<div className="py-16 flex justify-center split-screen flex-col h-screen-50vh w-full text-center items-center">
 						<h1 className="md:w-[75%]">{lang['population-dynamics']}</h1>
-						<p className="md:w-[40%]">{lang['tend-to-have-a-lot-of-children']}</p>
+						<p className="md:w-[40%]">
+							{lang['tend-to-have-a-lot-of-children']}
+						</p>
 					</div>
 					<div className="split-screen h-screen-50vh w-full flex-col relative">
 						<div className="population-dynamics-duck w-80 h-1/2 md:flex md:flex-row md:flex-end md:w-full"></div>
@@ -34,7 +39,6 @@ const PopulationDynamics = () => {
 			</section>
 		</>
 	);
-
 };
 
 export { PopulationDynamics };

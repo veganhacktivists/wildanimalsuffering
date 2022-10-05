@@ -1,5 +1,5 @@
-import {useContext} from 'react';
-import {Context} from '../state';
+import { useContext } from 'react';
+import { Context } from '../state';
 
 const HumanPopulation = () => {
 	const [state] = useContext(Context);
@@ -18,6 +18,7 @@ const HumanPopulation = () => {
 			>
 				<div
 					id="human-population-screen"
+					data-name="Scale of Suffering"
 					className="screen-content flex scrollable"
 				>
 					<div className="h-screen-50vh md:h-screen md:w-screen-50vw split-screen-padding flex-center">

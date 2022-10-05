@@ -4,14 +4,17 @@ import { Context } from '../state';
 import './videos-you-might-like.css';
 
 const VideosYouMightLike = () => {
-
 	const [state, dispatch] = useContext(Context);
 	const { translations, locale } = state;
 	const lang = translations[locale];
 
 	return (
 		<>
-			<section id="videos-screen" className="videos screen-content">
+			<section
+				id="videos-screen"
+				data-name="Videos"
+				className="videos screen-content"
+			>
 				<div className="full-screen flex-col w-full h-full">
 					<div className="py-16 flex justify-center split-screen flex-col h-screen-50vh w-full text-center items-center">
 						<h1>{lang['videos-you-might-like']}</h1>
@@ -42,7 +45,6 @@ const VideosYouMightLike = () => {
 			</section>
 		</>
 	);
-
 };
 
 export { VideosYouMightLike };
