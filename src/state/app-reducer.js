@@ -3,12 +3,6 @@ import {ANIMAL_STATS_SCREEN_INDEX, DEFAULT_LANGUAGE_KEY, NUMBER_OF_ANIMAL_STAT_S
 
 const reducer = (state, action) => {
 	switch (action.type) {
-	case 'TOGGLE_MENU':
-		return {
-			...state,
-			inMenu: !state.inMenu,
-		};
-
 	case 'REGISTER_SCREEN_CONTENT_ELEMENTS':
 		return {
 			...state,
