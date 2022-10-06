@@ -16,7 +16,11 @@ const MobileMenu = () => {
 
 	if (open) {
 		return (
-			<div className="md:hidden fixed h-screen w-screen bg-white z-40 text-menu-front-dark overflow-scroll">
+			<div
+				className="md:hidden fixed h-screen w-screen bg-white z-40 text-menu-front-dark overflow-scroll"
+				onWheel={(e) => e.stopPropagation()}
+				onTouchEnd={(e) => e.stopPropagation()}
+			>
 				<div className="flex justify-between p-16">
 					<div className="text-menu-front-dark uppercase text-8xl font-brand">
 						Wild Animal Suffering
