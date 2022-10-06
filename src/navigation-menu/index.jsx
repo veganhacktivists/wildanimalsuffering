@@ -4,7 +4,7 @@ import { Context } from '../state';
 import './navigation-menu.css';
 
 const NavigationMenu = () => {
-	const [open, setOpen] = useState(true);
+	const [open, setOpen] = useState(false);
 	const [state, dispatch] = useContext(Context);
 	const { translations, locale } = state;
 	const lang = translations[locale];
@@ -17,7 +17,7 @@ const NavigationMenu = () => {
 	if (open) {
 		return (
 			<div
-				className="fixed h-screen md:h-auto w-screen md:w-96 md:left-5 md:top-5 md:rounded-xl bg-white z-40 text-menu-front-dark overflow-scroll"
+				className="fixed h-screen md:h-auto w-screen md:w-96 md:left-5 md:top-5 md:rounded-xl bg-white z-40 text-menu-front-dark overflow-auto"
 				onWheel={(e) => e.stopPropagation()}
 				onTouchEnd={(e) => e.stopPropagation()}
 			>
@@ -31,7 +31,7 @@ const NavigationMenu = () => {
 						className="rounded-full border-2 border-menu-back-dark p-2 md:p-1 w-20 h-20 md:w-10 md:h-10 relative shrink-0"
 						onClick={() => setOpen(false)}
 					>
-						<div className="w-[95%] h-full relative">
+						<div className="w-[90%] h-full relative">
 							<div className="bg-menu-back-dark absolute left-1/2 h-full w-[10%] rotate-45"></div>
 							<div className="bg-menu-back-dark absolute left-1/2 h-full w-[10%] -rotate-45"></div>
 						</div>
@@ -49,7 +49,7 @@ const NavigationMenu = () => {
 									onClick={() => navigate(element.id)}
 								>
 									{element.id == state.screenId && (
-										<div className="absolute bg-menu-front-dark top-10 md:top-4 right-10 md:right-4 w-10 h-10 md:w-4 md:h-4 rounded-full"></div>
+										<div className="absolute bg-menu-front-dark top-10 md:top-3 right-10 md:right-3 w-10 h-10 md:w-3 md:h-3 rounded-full"></div>
 									)}
 									{element.dataset.name}
 								</button>
