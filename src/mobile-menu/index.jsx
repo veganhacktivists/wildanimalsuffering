@@ -4,17 +4,18 @@ import { Context } from '../state';
 import './mobile-menu.css';
 
 const MobileMenu = () => {
-	const [open, setOpen] = useState(false);
 	const [state, dispatch] = useContext(Context);
 	const { translations, locale } = state;
 	const lang = translations[locale];
 
+	const menuHandler = () => dispatch({ type: 'TOGGLE_MENU' });
+
 	function navigate(screenId) {
-		setOpen(false);
+		menuHandler();
 		dispatch({ type: 'GO_TO_SCREEN_BY_ID', payload: { screenId } });
 	}
 
-	if (open) {
+	if (state.inMenu) {
 		return (
 			<div className="md:hidden fixed h-screen w-screen bg-white z-40 text-menu-front-dark overflow-scroll">
 				<div className="flex justify-between p-16">
@@ -23,7 +24,7 @@ const MobileMenu = () => {
 					</div>
 					<button
 						className="rounded-full border-2 border-menu-back-dark p-2 w-20 h-20 relative flex-shrink-0"
-						onClick={() => setOpen(false)}
+						onClick={menuHandler}
 					>
 						<div className="close-icon w-full h-full relative">
 							<div className="bg-menu-back-dark absolute left-1/2 h-full w-1.5 rotate-45"></div>
@@ -62,7 +63,7 @@ const MobileMenu = () => {
 		return (
 			<button
 				className="md:hidden fixed top-0 left-0 z-40 p-10"
-				onClick={() => setOpen(true)}
+				onClick={menuHandler}
 			>
 				<div className="h-1.5 w-14 bg-white rounded-full"></div>
 				<div className="h-1.5 w-14 bg-white rounded-full my-3"></div>

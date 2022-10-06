@@ -7,6 +7,8 @@ const WheelNavigator = () => {
 
 	useEffect(() => {
 		const onWheel = (event) => {
+			if (state.inMenu) return;
+
 			if (event.deltaY > 0) {
 				if (canGoDown(state)) {
 					dispatch({ type: 'NEXT_SCREEN' });

@@ -16,6 +16,8 @@ const TouchNavigator = () => {
 		};
 
 		const onTouchEnd = (e) => {
+			if (state.inMenu) return;
+
 			const endX = e.changedTouches[0].pageX;
 			const endY = e.changedTouches[0].pageY;
 
