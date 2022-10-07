@@ -3,6 +3,7 @@ import { SectionsContainer } from './sections-container';
 import { PageNavigator } from './page-navigator';
 import { WheelNavigator } from './wheel-navigator';
 import { TouchNavigator } from './touch-navigator';
+import { BackgroundEffect } from './background-effect';
 
 const App = () => {
 	return (
@@ -12,6 +13,7 @@ const App = () => {
 				<PageNavigator direction="down"/>
 				<WheelNavigator />
 				<TouchNavigator />
+				<BackgroundEffect />
 			</ContextProvider>
 		</>
 	);
