@@ -10548,6 +10548,11 @@ react-is@^16.13.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
+react-rain-animation@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/react-rain-animation/-/react-rain-animation-1.0.4.tgz#cbe4c96d5825211a3cdfba6674d74afc8b2353c9"
+  integrity sha512-D+u59rSiv0GikgnhhgyRN1REwtzuCF8Q5/Bj1d418W+bu/XtJ/sGaYPy3kLbt4LWoVp5dac2ffP8vOZPsoK3tQ==
+
 react-remove-scroll-bar@^2.3.3:
   version "2.3.3"
   resolved "https://registry.yarnpkg.com/react-remove-scroll-bar/-/react-remove-scroll-bar-2.3.3.tgz#e291f71b1bb30f5f67f023765b7435f4b2b2cd94"

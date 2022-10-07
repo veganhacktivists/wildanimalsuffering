@@ -1,0 +1,4 @@
+.drop {
+	background: -moz-linear-gradient(top, rgba(73,108,135,1) 0%, rgba(220,220,220,.5) 100%);
+	background: -webkit-linear-gradient(top, rgba(73,108,135,1) 0%, rgba(220,220,220,.5) 100%);
+}
