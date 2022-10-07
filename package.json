@@ -25,7 +25,7 @@
     "eslint-loader": "^4.0.2",
     "eslint-plugin-jest": "^26.5.3",
     "eslint-plugin-react": "^7.30.0",
-    "html-webpack-plugin": "^4.5.2",
+    "html-webpack-plugin": "^5.5.0",
     "jest": "^28.1.2",
     "jest-environment-jsdom": "^28.1.2",
     "laravel-mix": "^6.0.43",

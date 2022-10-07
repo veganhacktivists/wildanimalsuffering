@@ -3,6 +3,7 @@ let mix = require('laravel-mix');
 require('laravel-mix-workbox');
 
 const tailwindcss = require('tailwindcss');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 mix
 	.setPublicPath('public/')
@@ -15,6 +16,16 @@ mix
 				}
 			]
 		},
+
+		output: {
+			filename: '[name].[contenthash].js'
+		},
+
+		plugins: [
+			new HtmlWebpackPlugin({
+				template: 'src/template.html'
+			})
+		]
 	})
 	.options({
 		hmrOptions: {
