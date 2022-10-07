@@ -8,6 +8,7 @@ const BackgroundEffect = () => {
 	const [state] = useContext(Context);
 
 	switch (state.screenId) {
+	case undefined:
 	case 'wild-animal-suffering-screen':
 		return <FogEffect />;
 	case 'even-worse-screen':
