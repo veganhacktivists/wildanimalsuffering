@@ -23,6 +23,7 @@ describe('sections', () => {
 		expect(reducer(dummyState, action))
 			.toEqual({
 				...dummyState,
+				screenId: action.payload.screenContentElements.map((e) => e.id)[0],
 				screenContentElements: action.payload.screenContentElements
 			});
 	});
