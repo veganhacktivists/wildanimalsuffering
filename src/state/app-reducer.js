@@ -6,6 +6,7 @@ const reducer = (state, action) => {
 	case 'REGISTER_SCREEN_CONTENT_ELEMENTS':
 		return {
 			...state,
+			screenId: [...action.payload.screenContentElements].map((e) => e.id)[0],
 			screenContentElements: [...action.payload.screenContentElements],
 		};
 
