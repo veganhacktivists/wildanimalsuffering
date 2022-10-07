@@ -36,7 +36,6 @@ mix
 			port: 3000,
 		},
 	})
-	.sass('src/index.scss', '/')
 	.options({
 		postCss: [tailwindcss('./tailwind.config.js')],
 	})
