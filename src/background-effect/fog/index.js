@@ -2,7 +2,7 @@ import './fog.css';
 
 const FogEffect = () => {
 	return (
-		<div className="relative w-screen h-screen">
+		<div className="fixed w-screen h-screen">
 			<div id="foglayer_01" className="fog">
 				<div className="image01"></div>
 				<div className="image02"></div>
