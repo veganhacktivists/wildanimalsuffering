@@ -5,17 +5,9 @@ import './rainfall.css';
 
 const RainfallEffect = () => {
 	return (
-		<>
-			<div
-				style={{
-					position: 'fixed',
-					width: '100vw',
-					height: '100vh',
-				}}
-			>
-				<Rainfall numDrops="75" />
-			</div>
-		</>
+		<div className="fixed w-screen h-screen">
+			<Rainfall numDrops="75" />
+		</div>
 	);
 };
 
