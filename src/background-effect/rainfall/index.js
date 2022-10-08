@@ -5,9 +5,7 @@ import './rainfall.css';
 
 const RainfallEffect = () => {
 	return (
-		<div className="fixed w-screen h-screen">
-			<Rainfall numDrops="75" />
-		</div>
+		<Rainfall numDrops="75" />
 	);
 };
 

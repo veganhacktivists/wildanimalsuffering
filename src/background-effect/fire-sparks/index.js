@@ -41,7 +41,7 @@ const FireSparksEffect = () => {
 	});
 
 	return (
-		<div id="particles-js" className="fixed w-screen h-screen"></div>
+		<div id="particles-js"></div>
 	);
 };
 
