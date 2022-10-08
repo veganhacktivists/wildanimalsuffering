@@ -11,17 +11,17 @@ const CommonObjections = () => {
 	const [panelsOpen, setPanelsOpen] = useState([true, false, false, false]);
     
 	const panels = [{
-		header: 'its-not-ours',
-		description: 'personally-responsible'
+		header: 'its-not-ours'
 	}, {
-		header: 'its-not-ours',
-		description: 'personally-responsible'
+		header: 'we-will-make-it-worse'
 	}, {
-		header: 'its-not-ours',
-		description: 'personally-responsible'
+		header: 'nothing-we-can-do'
 	}, {
-		header: 'its-not-ours',
-		description: 'personally-responsible'
+		header: 'cannot-consent'
+	}, {
+		header: 'too-big-of-a-problem'
+	}, {
+		header: 'factory-farming-first'
 	}];
     
 	const handlePanelClick = (index) => {
@@ -43,7 +43,7 @@ const CommonObjections = () => {
 							<h2> {lang['common-objections']}</h2>
 						</div>
 
-						<div className="split-screen-padding flex flex-col space-between items-center">
+						<div className="split-screen-padding flex flex-col space-between items-center pr-8 h-screen-60vh overflow-y-auto inline-scroll">
 							{panels.map((panel, index) => {
 								const isPanelOpen = panelsOpen[index];
 								const numeric = pad(index + 1, 2);
@@ -54,11 +54,11 @@ const CommonObjections = () => {
 												onClick={() => handlePanelClick(index)}>
 												<h4>
 													<span className="brown the-bold-font pr-4">{numeric}</span>
-													<span className="brown poppins-font"> {lang['its-not-ours']}</span>
+													<span className="brown poppins-font"> {lang[panel.header]}</span>
 												</h4>
 												<span className={`h-3 aspect-2 ${isPanelOpen ? 'arrow-up' : 'arrow-down'}`}></span>
 											</div>
-											<div className={isPanelOpen ? 'flex' : 'hidden'}>{lang['personally-responsible']}</div>
+											<div className={isPanelOpen ? 'flex' : 'hidden'}>{lang[`${panel.header}-description`]}</div>
 										</div>
 									</div>
 								);
