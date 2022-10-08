@@ -30,8 +30,16 @@ const debounce = (func, timeout = 500) => {
 	};
 };
 
+const pad = (n, size) => {
+	let num = n.toString();
+	while (num.length < size) {
+		num = '0' + num;
+	}
+	return num;
+};
 
 export {
+	pad,
 	registerTouchStart, getDirection, registerMouseHandlers, UP, DOWN,
 	isInViewport, isMobile, throttle, debounce
 };
