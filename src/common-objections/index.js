@@ -37,8 +37,8 @@ const CommonObjections = () => {
 				data-name="FAQs"
 				className="common-objections screen-content"
 			>
-				<div className="full-screen flex-col md:w-2/3 h-full">
-					<div className="w-2/3 h-full self-center">
+				<div className="full-screen flex-col md:w-9/12 h-full">
+					<div className="w-9/12 h-full self-center">
 						<div className="py-16 flex flex-col text-center items-center">
 							<h2> {lang['common-objections']}</h2>
 						</div>
