@@ -1,0 +1,24 @@
+/* together-we-can */
+.together-we-can {
+  background: url("../../../assets/images/together-we-can/in-the-woods.jpg")
+    top/cover no-repeat;
+}
+.patreon-logo {
+  background: url("../../../assets/images/together-we-can/patreon.svg")
+    top/cover no-repeat;
+}
+@screen md {
+  .together-we-can {
+    background: url("../../../assets/images/together-we-can/in-the-woods-md.jpg")
+      top/cover no-repeat;
+  }
+}
+.bears {
+  aspect-ratio: 1;
+  background: url("../../../assets/images/together-we-can/momma.png") center
+      right no-repeat,
+    url("../../../assets/images/together-we-can/pups.png") center center
+      no-repeat;
+  background-size: 30%, 30%;
+  background-position-y: 50%, 60%;
+}

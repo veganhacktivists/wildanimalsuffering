@@ -1,0 +1,14 @@
+/* FIXME: DRY */
+.abyss {
+  background: url("../../../assets/images/wild-animal-stats/earth.png") right
+      center/50% no-repeat,
+    url("../../../assets/images/wild-animal-stats/abyss.jpg") center/cover
+      no-repeat;
+}
+.abyss-darkened {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../../../assets/images/wild-animal-stats/earth.png") right center/50%
+      no-repeat,
+    url("../../../assets/images/wild-animal-stats/abyss.jpg") center/cover
+      no-repeat;
+}

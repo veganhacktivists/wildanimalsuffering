@@ -1,0 +1,21 @@
+/* videos you might like screen */
+.videos {
+  background: url("../../../assets/images/videos-you-might-like/iceberg.png")
+      top left/auto no-repeat,
+    url("../../../assets/images/videos-you-might-like/penguins.png") bottom
+      right/auto no-repeat,
+    url("../../../assets/images/videos-you-might-like/sky.jpg") center/cover
+      no-repeat;
+}
+.main-video-container iframe {
+  @apply rounded-md;
+  aspect-ratio: 1.777;
+  box-shadow: 0rem 0rem 2.125rem 0rem var(--white);
+}
+.video-thumbnail-container > * {
+  @apply p-4;
+}
+.video-thumbnail-container iframe {
+  @apply rounded-lg;
+  box-shadow: 0rem 0rem 1rem 0rem var(--white);
+}
