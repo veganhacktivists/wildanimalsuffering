@@ -99,6 +99,13 @@ h6 {
 	letter-spacing: 0.01em;
 }
 
+.the-bold-font {
+	font-family: 'The Bold Font';
+}
+.poppins-font {
+    font-family: 'Poppins';
+}
+
 p {
 	@apply text-sm;
 	@apply md:text-base;
@@ -225,6 +232,9 @@ section,
 
 .aspect-square {
 	aspect-ratio: 1;
+}
+.aspect-2 {
+    aspect-ratio: 2;
 }
 
 // #page-indicators {
