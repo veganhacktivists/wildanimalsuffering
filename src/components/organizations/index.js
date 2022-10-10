@@ -1,0 +1,106 @@
+import { useContext } from "react";
+import { Context } from "../../state";
+import "./organizations.css";
+
+const Organizations = () => {
+  const [state, dispatch] = useContext(Context);
+  const { translations, locale } = state;
+  const lang = translations[locale];
+
+  const imageBasePath = "images/organizations";
+
+  const organizations = [
+    {
+      languageKey: "wild-animal-initiative",
+      iconKey: "wild-animal-initiative",
+      links: {
+        visit: "https://www.wildanimalinitiative.org/",
+        donate: "https://www.wildanimalinitiative.org/donate/",
+        volunteer: "https://www.wildanimalinitiative.org/join/",
+      },
+    },
+    {
+      languageKey: "animal-ethics",
+      iconKey: "animal-ethics",
+      links: {
+        visit: "https://www.animal-ethics.org/",
+        donate: "https://www.animal-ethics.org/support-us/",
+        volunteer: "https://www.animal-ethics.org/what-you-can-do/",
+      },
+    },
+    {
+      languageKey: "rethink-priorities",
+      iconKey: "rethink-priorities",
+      links: {
+        visit: "https://rethinkpriorities.org/",
+        donate: "https://rethinkpriorities.org/donate/",
+        volunteer: "",
+      },
+    },
+    {
+      languageKey: "rethink-priorities-2",
+      iconKey: "rethink-priorities",
+      links: {
+        visit: "https://rethinkpriorities.org/",
+        donate: "https://rethinkpriorities.org/donate/",
+        volunteer: "",
+      },
+    },
+  ];
+
+  return (
+    <>
+      <section
+        id="organizations-screen"
+        data-name="Organizations"
+        className="organizations screen-content"
+      >
+        <div className="full-screen flex-col w-full h-full">
+          <div className="py-16 flex justify-center split-screen flex-col h-screen-50vh w-[35%] text-center items-center">
+            <h2>{lang["organsations-title"]}</h2>
+          </div>
+          <div className="split-screen h-screen-50vh w-full flex-row relative justify-around flex-wrap">
+            {organizations.map((organization, index) => {
+              return (
+                <div
+                  className="w-1/2 flex justify-center"
+                  key={`${organization.languageKey}-${index}`}
+                >
+                  <div className="w-1/2 flex flex-row h-full">
+                    <div className="flex flex-row p-2">
+                      <div
+                        className={`${organization.iconKey} aspect-square h-20`}
+                      ></div>
+                    </div>
+                    <hr className="orange" />
+                    <div className="flex flex-col">
+                      <h4 className="p-2">
+                        {lang[`${organization.languageKey}`]}
+                      </h4>
+                      <div className="text-justify p-2">
+                        {lang[`${organization.languageKey}-description`]}
+                      </div>
+                      <div className="flex flex-row justify-between p-2">
+                        <span className="badge capitalize brown m-1">
+                          {lang["visit-site"]}
+                        </span>
+                        <span className="badge capitalize sand m-1">
+                          {lang["donate"]}
+                        </span>
+                        <span className="badge capitalize oat m-1">
+                          {lang["volunteer"]}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+    </>
+  );
+};
+
+export { Organizations };

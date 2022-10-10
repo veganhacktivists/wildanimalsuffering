@@ -1,0 +1,16 @@
+.even-worse-dialog-content {
+  @apply h-full;
+  background: url("../../../assets/images/even-worse/sand-bg-color.jpg")
+    center/cover no-repeat;
+}
+#next-dialog-left {
+  @apply w-[10%] h-8;
+  background: url("../../../assets/images/arrows-side.svg") center/contain
+    no-repeat;
+  transform: rotate(180deg);
+}
+#next-dialog-right {
+  @apply w-[10%] h-8;
+  background: url("../../../assets/images/arrows-side.svg") center/contain
+    no-repeat;
+}

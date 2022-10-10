@@ -1,0 +1,24 @@
+/* organizations */
+.organizations {
+  background: url("../../../assets/images/organizations/tree-and-owl.png")
+      left/contain no-repeat,
+    url("../../../assets/images/organizations/frog.png") bottom right/20vw
+      no-repeat,
+    url("../../../assets/images/organizations/mud-bg-color.jpg") center/cover
+      no-repeat;
+}
+
+.wild-animal-initiative {
+  background: url("../../../assets/images/organizations/wild-animal-initiative.png")
+    center/contain no-repeat;
+}
+
+.animal-ethics {
+  background: url("../../../assets/images/organizations/animal-ethics.png")
+    center/contain no-repeat;
+}
+
+.rethink-priorities {
+  background: url("../../../assets/images/organizations/rethink-priorities.png")
+    center/contain no-repeat;
+}
