@@ -8,7 +8,7 @@ const CommonObjections = () => {
 	const [state, dispatch] = useContext(Context);
 	const { translations, locale } = state;
 	const lang = translations[locale];
-	const [panelsOpen, setPanelsOpen] = useState([true, false, false, false]);
+	const [panelIdOpen, setPanelIdOpen] = useState(0);
     
 	const panels = [{
 		header: 'its-not-ours'
@@ -25,9 +25,12 @@ const CommonObjections = () => {
 	}];
     
 	const handlePanelClick = (index) => {
-		let panelsState = [...panelsOpen];
-		panelsState[index] = !panelsState[index];
-		setPanelsOpen(panelsState);
+		if (panelIdOpen === index) {
+			// they clicked on the panel that was already open
+			setPanelIdOpen(null);
+			return;
+		}
+		setPanelIdOpen(index);
 	};
 
 	return (
@@ -45,7 +48,7 @@ const CommonObjections = () => {
 
 						<div className="split-screen-padding flex flex-col space-between items-center pr-8 h-screen-60vh overflow-y-auto inline-scroll">
 							{panels.map((panel, index) => {
-								const isPanelOpen = panelsOpen[index];
+								const isPanelOpen = (panelIdOpen === index);
 								const numeric = pad(index + 1, 2);
 								return (
 									<div key={`${panel.header}-${index}`} className="panel-container">
@@ -58,7 +61,7 @@ const CommonObjections = () => {
 												</h4>
 												<span className={`h-3 aspect-2 ${isPanelOpen ? 'arrow-up' : 'arrow-down'}`}></span>
 											</div>
-											<div className={isPanelOpen ? 'flex' : 'hidden'}>{lang[`${panel.header}-description`]}</div>
+											<div className={`panel-description ${isPanelOpen ? 'flex' : 'hidden'}`}>{lang[`${panel.header}-description`]}</div>
 										</div>
 									</div>
 								);
