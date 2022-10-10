@@ -1,25 +1,38 @@
 /* why it matters screen */
 .wild-animal-suffering {
-    background: url('../../assets/images//why-it-matters/savanna.jpg') center/cover no-repeat;
+	background: url('../../assets/images//why-it-matters/savanna.jpg') 50% -120px /
+		cover no-repeat;
 }
 @screen md {
-    .wild-animal-suffering {
-        background: url('../../assets/images/why-it-matters/savanna-md.jpg') center/cover no-repeat;
-    }
+	.wild-animal-suffering {
+		background: url('../../assets/images/why-it-matters/savanna-md.jpg')
+			center/cover no-repeat;
+	}
 }
 #elephant-image-container {
-    @apply flex-grow;
+	@apply flex-grow;
 }
 .elephants {
-    background: url('../../assets/images/why-it-matters/elephants.png') center/contain no-repeat;
+	background: url('../../assets/images/why-it-matters/elephants.png')
+		center/contain no-repeat;
 }
 .birds-01 {
-    background: url('../../assets/images/why-it-matters/birds-01.svg') top left/contain no-repeat;
-    @apply w-[10%] inset-x-1/4;
-    aspect-ratio: 1;
+	background: url('../../assets/images/why-it-matters/birds-01.svg') top
+		left/contain no-repeat;
+	@apply w-[10%] inset-x-1/4;
+	aspect-ratio: 1;
 }
 .birds-02 {
-    background: url('../../assets/images/why-it-matters/birds-02.svg') top center/contain no-repeat;
-    @apply w-[10%] inset-x-3/4;
-    aspect-ratio: 1;
+	background: url('../../assets/images/why-it-matters/birds-02.svg') top
+		center/contain no-repeat;
+	@apply w-[10%] inset-x-3/4;
+	aspect-ratio: 1;
+}
+
+.bg-orange {
+	background-color: var(--orange);
+}
+
+.border-orange {
+	border-color: var(--orange);
 }

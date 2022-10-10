@@ -112,7 +112,13 @@ p {
 .badge {
 	background-color: var(--orange);
 	color: var(--dark-gray);
-	@apply rounded-full px-4 py-1 inline-flex flex-col justify-center;
+	@apply font-bold text-5xl px-32 py-5 rounded-full inline-flex flex-col justify-center;
+}
+
+@screen md {
+	.badge {
+		@apply text-base px-4 py-1;
+	}
 }
 
 .scrollable {
@@ -134,20 +140,22 @@ section,
 	/* @apply md:mx-20; */
 }
 
-.split-screen-padding {
-	@apply p-8;
-}
+@screen md {
+	.split-screen-padding {
+		@apply p-8;
+	}
 
-.split-screen {
-	@apply flex flex-1 self-center;
-	@apply md:h-full;
-}
+	.split-screen {
+		@apply flex flex-1 self-center;
+		@apply md:h-full;
+	}
 
-.split-screen:nth-child(1) {
-	@apply flex-grow-0 md:min-w-[25%] md:mx-20;
-}
-.split-screen:nth-child(2) {
-	@apply flex-grow md:h-full;
+	.split-screen:nth-child(1) {
+		@apply flex-grow-0 md:min-w-[25%] md:mx-20;
+	}
+	.split-screen:nth-child(2) {
+		@apply flex-grow md:h-full;
+	}
 }
 
 /* couldn't get the tailwind theme to extend :( */
