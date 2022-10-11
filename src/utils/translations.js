@@ -86,11 +86,11 @@ const en = {
 
   /* how you can help */
   "how-you-can-help": "how can you help?",
-  "raise-awareness": "raise awareness",
-  "donate-to-charities": "donate to effective charities",
-  "become-a-researcher": "become a researcher",
+  "raise-awareness": "RAISE AWARENESS",
+  "donate-to-charities": "DONATE TO CHARITIES",
+  "become-a-researcher": "STARTER KIT SIGNUP",
   "check-out-this-resource":
-    "You can also check out this amazing resource to learn more about other ways you can volunteer to help reduce wild animal suffering.",
+    "In addition to the three items above, you can find potential career opportunies here. Are you a researcher? Apply for a grant!",
   "view-volunteer-opportunities": "view volunteer opportunities",
 
   /* organizations working on... */
@@ -125,9 +125,9 @@ const en = {
   "together-we-can-description-02":
     "If it matters to you, then we encourage you to join us in our mission to make life better for wild animals. There is much to learn about the situation of wild animals. This page is just an introduction to the issue. In truth, it is very sad that so many animals are desperately in need of help right now. But luckily, humans like you have the opportunity to make a difference. We hope you choose to take it.",
   "thank-you": "thank you",
-  "consider-support": "Please consider supporting us on Patreon!",
+  "consider-support": "Please consider supporting our work!",
   "free-to-use":
-    "This free-to-use service wouldn't be possible without your support. Thank you!",
+    "This website would not be possible without your support. Thank you!",
   "support-us": "Support Us",
   "credits-heading": "Credits and sources",
   "credits-01":

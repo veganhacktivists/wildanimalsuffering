@@ -77,10 +77,10 @@ const Organizations = () => {
                       <h4 className="p-2">
                         {lang[`${organization.languageKey}`]}
                       </h4>
-                      <div className="text-justify p-2">
+                      <div className="p-2">
                         {lang[`${organization.languageKey}-description`]}
                       </div>
-                      <div className="flex flex-row justify-between p-2">
+                      <div className="flex flex-row p-2">
                         <span className="badge capitalize brown m-1">
                           {lang["visit-site"]}
                         </span>
