@@ -6,8 +6,6 @@ import "./navigation-menu.css";
 const NavigationMenu = () => {
   const [open, setOpen] = useState(false);
   const [state, dispatch] = useContext(Context);
-  const { translations, locale } = state;
-  const lang = translations[locale];
 
   function navigate(screenId) {
     setOpen(false);
