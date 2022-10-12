@@ -3,7 +3,7 @@
 ## Running Locally
 
 1. `yarn`
-2. `yarn start`
+2. `yarn dev`
 
 ## Requirements/Documentation
 
