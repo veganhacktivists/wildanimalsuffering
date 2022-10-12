@@ -1,3 +1,4 @@
+const path = require("path");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
@@ -5,6 +6,15 @@ module.exports = {
   devServer: {
     port: 4000
   },
+  entry: {
+    "app": "./src/index.js"
+  },
+  output: {
+    path: path.resolve(__dirname, './public'),
+    filename: '[name].js',
+    chunkFilename: '[id].[chunkhash].js'
+  },
+  devtool: "source-map",
   module: {
     rules: [
       {
@@ -33,7 +43,4 @@ module.exports = {
     filename: "./index.html"
   }),
 ],
-// externals: {
-//   'react': 'React'
-// },
 };
