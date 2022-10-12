@@ -3,8 +3,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   devServer: {
-    port: 4000,
-    open: true,
+    port: 4000
   },
   module: {
     rules: [
@@ -30,7 +29,7 @@ module.exports = {
       chunkFilename: "styles.css"
     }),
     new HtmlWebPackPlugin({
-    template: "./src/index.html",
+    template: "./public/index.html",
     filename: "./index.html"
   }),
 ],
