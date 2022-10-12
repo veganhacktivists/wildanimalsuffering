@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --watch",
+    "lint:check": "eslint . --ext .js,.jsx --max-warnings=0",
+    "lint:fix": "eslint --fix . --ext .js,.jsx",
     "format": "prettier --write src",
     "start": "webpack-dev-server --mode development",
     "build": "webpack --mode production"

@@ -20,8 +20,10 @@
   },
   "plugins": ["react", "jest"],
   "rules": {
-    "jest/no-identical-title": "error",
-    "jest/valid-expect": "error"
+    "jest/no-identical-title": 2,
+    "jest/valid-expect": 2,
+    "no-unused-vars": 1,
+    "react/prop-types": 0
   },
   "settings": {
     "jest": {
@@ -30,6 +32,9 @@
         "fdescribe": ["fcontext"],
         "xdescribe": ["xcontext"]
       }
+    },
+    "react": {
+      "version": "detect"
     }
   }
 }
