@@ -1,5 +1,2 @@
 node_modules
-public
-!public/index.html
-!public/manifest.json
 coverage
