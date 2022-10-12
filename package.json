@@ -9,7 +9,7 @@
     "lint:fix": "eslint --fix . --ext .js,.jsx",
     "format": "prettier --write src",
     "dev": "webpack-dev-server --mode development",
-    "production": "webpack --mode production"
+    "build": "webpack --mode production"
   },
   "keywords": [],
   "author": "",
