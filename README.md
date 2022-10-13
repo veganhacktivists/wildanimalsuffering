@@ -5,6 +5,8 @@
 1. `yarn`
 2. `yarn dev`
 
+App will run on port 4000
+
 ## Requirements/Documentation
 
 See Google docs [here](https://docs.google.com/document/d/16Dt9BGmaebCM9x1HaT0tzXxOhk6YWF6rf1VIDgBxkjA/edit)
