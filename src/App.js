@@ -8,6 +8,7 @@ import { BackgroundEffect } from "./components/background-effect";
 const App = () => {
   return (
     <>
+      {/* @ts-ignore */}
       <ContextProvider>
         <SectionsContainer />
         {/* <PageNavigator direction="down"/> */}

@@ -2,13 +2,8 @@
 
 ## Running Locally
 
-1. `yarn watch`
-2. `cd public`
-3. `python3 -m http.server 8000`
-
-## Tech Stack
-
-Vanilla JS + [Webpack Mix](https://github.com/devanandb/webpack-mix) + Python for serving content
+1. `yarn`
+2. `yarn dev`
 
 ## Requirements/Documentation
 
