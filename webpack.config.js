@@ -10,9 +10,9 @@ module.exports = {
     app: "./src/index.js",
   },
   output: {
-    path: path.resolve(__dirname, './dist'),
-    filename: '[name].js',
-    chunkFilename: '[id].[chunkhash].js'
+    path: path.resolve(__dirname, "./dist"),
+    filename: "[name].js",
+    chunkFilename: "[id].[chunkhash].js",
   },
   devtool: "source-map",
   module: {
