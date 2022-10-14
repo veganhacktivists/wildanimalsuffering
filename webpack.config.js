@@ -1,5 +1,5 @@
 const path = require("path");
-const HtmlWebPackPlugin = require("html-webpack-plugin");
+const HtmlPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
@@ -28,6 +28,17 @@ module.exports = {
         test: /\.css$/,
         use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
       },
+      {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: "svg-url-loader",
+            options: {
+              limit: 10000,
+            },
+          },
+        ],
+      },
     ],
   },
   plugins: [
@@ -35,9 +46,9 @@ module.exports = {
       filename: "styles.css",
       chunkFilename: "styles.css",
     }),
-    new HtmlWebPackPlugin({
+    new HtmlPlugin({
       template: "./public/index.html",
-      filename: "./index.html",
+      favicon: "./public/icons/favicon.ico",
     }),
   ],
 };
