@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import { Context } from "../../state";
+import ICONS from "../../utils/icons";
 
 import "./navigation-menu.css";
 
@@ -63,7 +64,7 @@ const NavigationMenu = () => {
               rel="noreferrer"
             >
               <img
-                src="images/icons/social/instagram.svg"
+                src={ICONS.INSTAGRAM}
                 alt="Instagram"
                 className="w-28 h-28 md:w-10 md:h-10"
               />
@@ -74,7 +75,7 @@ const NavigationMenu = () => {
               rel="noreferrer"
             >
               <img
-                src="images/icons/social/youtube.svg"
+                src={ICONS.YOUTUBE}
                 alt="YouTube"
                 className="w-28 h-28 md:w-10 md:h-10"
               />
@@ -85,7 +86,7 @@ const NavigationMenu = () => {
               rel="noreferrer"
             >
               <img
-                src="images/icons/social/patreon.svg"
+                src={ICONS.PATREON}
                 alt="Patreon"
                 className="w-28 h-28 md:w-10 md:h-10"
               />
@@ -96,7 +97,7 @@ const NavigationMenu = () => {
               rel="noreferrer"
             >
               <img
-                src="images/icons/social/github.svg"
+                src={ICONS.GITHUB}
                 alt="GitHub"
                 className="w-28 h-28 md:w-10 md:h-10"
               />
