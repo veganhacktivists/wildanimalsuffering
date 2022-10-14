@@ -2,7 +2,7 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx,css}"],
   theme: {
     extend: {
-      height: (theme) => ({
+      height: () => ({
         "h-screen/2": "50vh",
         "h-screen/3": "calc(100vh / 3)",
         "2h-screen/3": "calc(100vh * 2 / 3)",
