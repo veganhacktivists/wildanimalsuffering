@@ -1,5 +1,5 @@
 const path = require("path");
-const HtmlWebPackPlugin = require("html-webpack-plugin");
+const HtmlPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
@@ -35,9 +35,9 @@ module.exports = {
       filename: "styles.css",
       chunkFilename: "styles.css",
     }),
-    new HtmlWebPackPlugin({
+    new HtmlPlugin({
       template: "./public/index.html",
-      filename: "./index.html",
+      favicon: "./public/icons/favicon.ico",
     }),
   ],
 };
