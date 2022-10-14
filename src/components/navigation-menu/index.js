@@ -57,14 +57,50 @@ const NavigationMenu = () => {
         <div className="border-t border-bg-menu-back-light mt-16 md:mt-4 flex flex-col md:flex-row py-16 md:p-8 md:justify-between md:items-center">
           <div className="bg-logo invert bg-contain bg-no-repeat bg-center h-48 md:h-16 mb-16 md:mb-0 aspect-square"></div>
           <div className="text-5xl md:text-3xl text-menu-back-dark text-center flex justify-evenly gap-4">
-            <a href="https://www.instagram.com/veganhacktivists" target="_blank" rel="noreferrer"
-              ><img src="images/icons/social/instagram.svg" alt="Instagram" className="w-28 h-28 md:w-10 md:h-10" /></a>
-            <a href="https://www.youtube.com/c/VeganHacktivists" target="_blank" rel="noreferrer"
-              ><img src="images/icons/social/youtube.svg" alt="YouTube" className="w-28 h-28 md:w-10 md:h-10" /></a>
-            <a href="https://www.patreon.com/veganhacktivists" target="_blank" rel="noreferrer"
-              ><img src="images/icons/social/patreon.svg" alt="Patreon" className="w-28 h-28 md:w-10 md:h-10" /></a>
-            <a href="https://github.com/veganhacktivists" target="_blank" rel="noreferrer"
-              ><img src="images/icons/social/github.svg" alt="GitHub" className="w-28 h-28 md:w-10 md:h-10" /></a>
+            <a
+              href="https://www.instagram.com/veganhacktivists"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                src="images/icons/social/instagram.svg"
+                alt="Instagram"
+                className="w-28 h-28 md:w-10 md:h-10"
+              />
+            </a>
+            <a
+              href="https://www.youtube.com/c/VeganHacktivists"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                src="images/icons/social/youtube.svg"
+                alt="YouTube"
+                className="w-28 h-28 md:w-10 md:h-10"
+              />
+            </a>
+            <a
+              href="https://www.patreon.com/veganhacktivists"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                src="images/icons/social/patreon.svg"
+                alt="Patreon"
+                className="w-28 h-28 md:w-10 md:h-10"
+              />
+            </a>
+            <a
+              href="https://github.com/veganhacktivists"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                src="images/icons/social/github.svg"
+                alt="GitHub"
+                className="w-28 h-28 md:w-10 md:h-10"
+              />
+            </a>
           </div>
         </div>
       </div>

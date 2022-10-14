@@ -9,7 +9,7 @@
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
-    "plugin:react/jsx-runtime"
+    "plugin:prettier/recommended"
   ],
   "parserOptions": {
     "ecmaFeatures": {
@@ -23,7 +23,9 @@
     "jest/no-identical-title": 2,
     "jest/valid-expect": 2,
     "no-unused-vars": 1,
-    "react/prop-types": 0
+    "react/prop-types": 0,
+    "react/react-in-jsx-scope": 0,
+    "prettier/prettier": 1
   },
   "settings": {
     "jest": {
