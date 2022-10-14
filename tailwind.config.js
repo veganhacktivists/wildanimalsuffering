@@ -2,7 +2,7 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx,css}"],
   theme: {
     extend: {
-      height: (theme) => ({
+      height: () => ({
         "h-screen/2": "50vh",
         "h-screen/3": "calc(100vh / 3)",
         "2h-screen/3": "calc(100vh * 2 / 3)",
@@ -16,6 +16,7 @@ module.exports = {
           dark: "#9F9F9F",
           light: "#F4F4F4",
         },
+        khaki: "#c7d3d0",
       },
       backgroundImage: {
         logo: 'url("../assets/images/logo.png")',
