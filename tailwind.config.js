@@ -16,6 +16,7 @@ module.exports = {
           dark: "#9F9F9F",
           light: "#F4F4F4",
         },
+        khaki: "#c7d3d0",
       },
       backgroundImage: {
         logo: 'url("../assets/images/logo.png")',
