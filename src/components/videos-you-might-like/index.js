@@ -32,6 +32,35 @@ const VideosYouMightLike = () => {
     videoPlayers[videoId].playVideo();
   };
 
+  const youtubeVideos = () => {
+    return videos.map((video) => (
+      <YoutubeVideo
+        key={video.id}
+        videoId={video.id}
+        className={classNames("h-[80%]", {
+          hidden: video.id !== currentVideoId,
+        })}
+        onReady={onReady}
+      />
+    ));
+  };
+
+  const videoPreviews = () => {
+    return videos.map((video) => (
+      <VideoPreview
+        key={video.id}
+        video={video}
+        className="h-[31%] p-3 rounded-xl"
+        playBtnWrapperClassName="flex grow items-center mt-12"
+        playBtnClassName="w-12 h-12"
+        titleWrapperClassName="px-2 py-1"
+        authorClassName="text-xs"
+        titleClassName="text-sm"
+        onClick={play}
+      />
+    ));
+  };
+
   return (
     <>
       <section
@@ -46,18 +75,7 @@ const VideosYouMightLike = () => {
 
           <div className="grid grid-cols-12 gap-8 mx-8 xl:mx-32 2xl:mx-96 h-full overflow-hidden p-2">
             <div className="col-span-9 h-full">
-              {videos.map((video) => {
-                return (
-                  <YoutubeVideo
-                    key={video.id}
-                    videoId={video.id}
-                    className={classNames("h-[80%]", {
-                      hidden: video.id !== currentVideoId,
-                    })}
-                    onReady={onReady}
-                  />
-                );
-              })}
+              {youtubeVideos()}
 
               {currentVideoId === null && (
                 <VideoPreview
@@ -125,21 +143,7 @@ const VideosYouMightLike = () => {
                 },
               }}
             >
-              {videos.map((video) => {
-                return (
-                  <VideoPreview
-                    key={video.id}
-                    video={video}
-                    className="h-[31%] p-3 rounded-xl"
-                    playBtnWrapperClassName="flex grow items-center mt-12"
-                    playBtnClassName="w-12 h-12"
-                    titleWrapperClassName="px-2 py-1"
-                    authorClassName="text-xs"
-                    titleClassName="text-sm"
-                    onClick={play}
-                  />
-                );
-              })}
+              {videoPreviews()}
             </Scrollbar>
           </div>
         </div>
