@@ -21,9 +21,12 @@ const VideosYouMightLike = () => {
   };
 
   const stopAll = () => {
-    for (const videoPlayer of Object.values(videoPlayers)) {
-      videoPlayer.stopVideo();
-    }
+    document.querySelectorAll(".ytIFrame").forEach((iframe) => {
+      iframe.contentWindow.postMessage(
+        JSON.stringify({ event: "command", func: "stopVideo" }),
+        "*"
+      );
+    });
   };
 
   const play = (videoId) => {
