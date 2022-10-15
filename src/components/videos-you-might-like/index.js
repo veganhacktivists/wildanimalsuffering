@@ -3,8 +3,8 @@ import { Context } from "../../state";
 import { VerticalScrollbar } from "./vertical-scrollbar";
 import { VideoPreview } from "./video-preview";
 import { YoutubeVideo } from "./youtube-video";
+import { videos } from "./videos";
 import classNames from "classnames";
-import videos from "./videos";
 
 import "./videos-you-might-like.css";
 

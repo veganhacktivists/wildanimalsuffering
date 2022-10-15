@@ -1,4 +1,4 @@
-export default [
+export const videos = [
   {
     id: "XjCp6bUp__M",
     author: "Humane Hancock",
