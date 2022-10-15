@@ -1,8 +1,8 @@
 import { useContext, useState } from "react";
-import { Scrollbar } from "react-scrollbars-custom";
 import { Context } from "../../state";
-import { YoutubeVideo } from "./youtube-video";
+import { VerticalScrollbar } from "./vertical-scrollbar";
 import { VideoPreview } from "./video-preview";
+import { YoutubeVideo } from "./youtube-video";
 import classNames from "classnames";
 import videos from "./videos";
 
@@ -45,6 +45,25 @@ const VideosYouMightLike = () => {
     ));
   };
 
+  const mainVideoPreview = () => {
+    if (currentVideoId !== null) {
+      return null;
+    }
+
+    return (
+      <VideoPreview
+        key={videos[0].id}
+        video={videos[0]}
+        className="h-[80%] p-5 rounded-t-xl"
+        playBtnWrapperClassName="flex grow items-center justify-center mt-12"
+        titleWrapperClassName="px-6 py-3"
+        authorClassName="text-lg"
+        titleClassName="text-xl uppercase"
+        onClick={play}
+      />
+    );
+  };
+
   const videoPreviews = () => {
     return videos.map((video) => (
       <VideoPreview
@@ -77,74 +96,16 @@ const VideosYouMightLike = () => {
             <div className="col-span-9 h-full">
               {youtubeVideos()}
 
-              {currentVideoId === null && (
-                <VideoPreview
-                  key={videos[0].id}
-                  video={videos[0]}
-                  className="h-[80%] p-5 rounded-t-xl"
-                  playBtnWrapperClassName="flex grow items-center justify-center mt-12"
-                  titleWrapperClassName="px-6 py-3"
-                  authorClassName="text-lg"
-                  titleClassName="text-xl uppercase"
-                  onClick={play}
-                />
-              )}
+              {mainVideoPreview()}
 
               <div className="rounded-b-xl bg-khaki text-black h-[20%] p-4 text-lg shadow-[0px_0px_3px_1px_rgba(255,255,255,1)]">
                 {lang["video-caption"]}
               </div>
             </div>
 
-            <Scrollbar
-              className="col-span-3"
-              noScrollX="true"
-              contentProps={{
-                renderer: (props) => {
-                  const { elementRef, ...restProps } = props;
-                  return (
-                    <div
-                      {...restProps}
-                      ref={elementRef}
-                      className="!space-y-6 !p-2"
-                    />
-                  );
-                },
-              }}
-              scrollerProps={{
-                renderer: (props) => {
-                  const { elementRef, ...restProps } = props;
-                  return (
-                    <div {...restProps} ref={elementRef} className="!pr-7" />
-                  );
-                },
-              }}
-              trackYProps={{
-                renderer: (props) => {
-                  const { elementRef, ...restProps } = props;
-                  return (
-                    <div
-                      {...restProps}
-                      ref={elementRef}
-                      className="!bg-white !w-[2px] !overflow-visible"
-                    />
-                  );
-                },
-              }}
-              thumbYProps={{
-                renderer: (props) => {
-                  const { elementRef, ...restProps } = props;
-                  return (
-                    <div
-                      {...restProps}
-                      ref={elementRef}
-                      className="!bg-white !ml-[-4px] !mr-[-4px] !w-auto"
-                    />
-                  );
-                },
-              }}
-            >
+            <VerticalScrollbar className="col-span-3">
               {videoPreviews()}
-            </Scrollbar>
+            </VerticalScrollbar>
           </div>
         </div>
       </section>
