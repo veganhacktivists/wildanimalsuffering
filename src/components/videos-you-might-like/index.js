@@ -1,4 +1,5 @@
 import { useContext, useState } from "react";
+import { Scrollbar } from "react-scrollbars-custom";
 import { Context } from "../../state";
 import { YoutubeVideo } from "./youtube-video";
 import { VideoPreview } from "./video-preview";
@@ -76,7 +77,54 @@ const VideosYouMightLike = () => {
               </div>
             </div>
 
-            <div className="col-span-3 h-full space-y-6 overflow-y-scroll p-2 py-[3px] pr-12">
+            <Scrollbar
+              className="col-span-3"
+              noScrollX="true"
+              contentProps={{
+                renderer: (props) => {
+                  const { elementRef, ...restProps } = props;
+                  return (
+                    <div
+                      {...restProps}
+                      ref={elementRef}
+                      className="!space-y-6 !p-2"
+                    />
+                  );
+                },
+              }}
+              scrollerProps={{
+                renderer: (props) => {
+                  const { elementRef, ...restProps } = props;
+                  return (
+                    <div {...restProps} ref={elementRef} className="!pr-7" />
+                  );
+                },
+              }}
+              trackYProps={{
+                renderer: (props) => {
+                  const { elementRef, ...restProps } = props;
+                  return (
+                    <div
+                      {...restProps}
+                      ref={elementRef}
+                      className="!bg-white !w-[2px] !overflow-visible"
+                    />
+                  );
+                },
+              }}
+              thumbYProps={{
+                renderer: (props) => {
+                  const { elementRef, ...restProps } = props;
+                  return (
+                    <div
+                      {...restProps}
+                      ref={elementRef}
+                      className="!bg-white !ml-[-4px] !mr-[-4px] !w-auto"
+                    />
+                  );
+                },
+              }}
+            >
               {videos.map((video) => {
                 return (
                   <VideoPreview
@@ -92,7 +140,7 @@ const VideosYouMightLike = () => {
                   />
                 );
               })}
-            </div>
+            </Scrollbar>
           </div>
         </div>
       </section>
