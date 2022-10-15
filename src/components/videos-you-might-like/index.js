@@ -1,10 +1,10 @@
 import { useContext, useState } from "react";
 import { Context } from "../../state";
+import { cx } from "../../utils/html";
 import { VerticalScrollbar } from "./vertical-scrollbar";
 import { VideoPreview } from "./video-preview";
 import { YoutubeVideo } from "./youtube-video";
 import { videos } from "./videos";
-import classNames from "classnames";
 
 import "./videos-you-might-like.css";
 
@@ -37,9 +37,7 @@ const VideosYouMightLike = () => {
       <YoutubeVideo
         key={video.id}
         videoId={video.id}
-        className={classNames("h-[80%]", {
-          hidden: video.id !== currentVideoId,
-        })}
+        className={cx("h-[80%]", video.id !== currentVideoId && "hidden")}
         onReady={onReady}
       />
     ));
