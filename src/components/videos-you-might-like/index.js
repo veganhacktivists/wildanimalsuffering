@@ -32,7 +32,7 @@ const VideosYouMightLike = () => {
   const play = (videoId) => {
     setCurrentVideoId(videoId);
     stopAll();
-    videoPlayers[videoId].playVideo();
+    videoPlayers[videoId]?.playVideo();
   };
 
   const youtubeVideos = () => {
