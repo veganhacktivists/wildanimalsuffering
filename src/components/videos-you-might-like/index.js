@@ -16,17 +16,17 @@ const VideosYouMightLike = () => {
   const [videoPlayers, setVideoPlayers] = useState({});
   const [currentVideoId, setCurrentVideoId] = useState(null);
 
-  const onReady = function (videoId, event) {
+  const onReady = (videoId, event) => {
     setVideoPlayers({ ...videoPlayers, [videoId]: event.target });
   };
 
-  const stopAll = function () {
+  const stopAll = () => {
     for (const videoPlayer of Object.values(videoPlayers)) {
       videoPlayer.stopVideo();
     }
   };
 
-  const play = function (videoId) {
+  const play = (videoId) => {
     setCurrentVideoId(videoId);
     stopAll();
     videoPlayers[videoId].playVideo();
