@@ -9,6 +9,9 @@ const YoutubeVideo = ({ videoId, onReady, className }) => {
       opts={{
         height: null,
         width: null,
+        playerVars: {
+          origin: window.location.origin,
+        },
       }}
       onReady={(event) => onReady(videoId, event)}
     />
