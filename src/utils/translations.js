@@ -7,8 +7,7 @@ const en = {
     "When we suffer, we seek relief. For animals, their suffering doesn't become any less pleasant because they live in the wild, and pain feels the same for them, regardless of whether or not humans are the cause of it. The suffering of wild animals matters. It matters to them, and it should matter to us.",
   "it-matters":
     "The suffering of wild animals matters. It matters to them, and it should matter to us.",
-  "scroll-down": "Scroll down to begin learning!",
-  "begin-learning": "Begin learning",
+  "scroll-down": "Scroll Down to Begin",
   "human-population":
     'There are roughly <span className="blue">8 billion humans</span> on planet Earth.',
   "for-every-human":
