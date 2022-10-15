@@ -13,7 +13,6 @@ const VideoPreview = ({
 }) => {
   return (
     <div
-      key={video.id}
       className={classNames(
         "flex flex-col bg-center bg-cover shadow-[0px_0px_3px_1px_rgba(255,255,255,1)] cursor-pointer relative z-10",
         className

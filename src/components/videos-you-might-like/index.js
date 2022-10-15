@@ -52,7 +52,6 @@ const VideosYouMightLike = () => {
 
     return (
       <VideoPreview
-        key={videos[0].id}
         video={videos[0]}
         className="h-[80%] p-5 rounded-t-xl"
         playBtnWrapperClassName="flex grow items-center justify-center mt-12"
