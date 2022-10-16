@@ -1,5 +1,5 @@
-import classNames from "classnames";
 import ICONS from "../../utils/icons";
+import { cx } from "../../utils/html";
 
 const VideoPreview = ({
   video,
@@ -13,8 +13,7 @@ const VideoPreview = ({
 }) => {
   return (
     <div
-      key={video.id}
-      className={classNames(
+      className={cx(
         "flex flex-col bg-center bg-cover shadow-[0px_0px_3px_1px_rgba(255,255,255,1)] cursor-pointer relative z-10",
         className
       )}
@@ -30,17 +29,16 @@ const VideoPreview = ({
       </div>
 
       <div
-        className={classNames(
+        className={cx(
           "self-start bg-slate-900/80 rounded-xl",
           titleWrapperClassName
         )}
       >
-        <div className={classNames("mt-auto", authorClassName)}>
+        <div className={cx("mt-auto", authorClassName)}>
           {video.author} - {video.duration}
         </div>
-        <div className={classNames("font-bold", titleClassName)}>
-          {video.title}
-        </div>
+
+        <div className={cx("font-bold", titleClassName)}>{video.title}</div>
       </div>
     </div>
   );

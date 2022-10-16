@@ -45,13 +45,13 @@
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^0.1.7",
-    "classnames": "^2.3.2",
     "lodash": "^4.17.21",
     "mini-css-extract-plugin": "^2.6.1",
     "particles.js": "^2.0.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-rain-animation": "^1.0.4",
+    "react-scrollbars-custom": "^4.1.1",
     "react-snowfall": "^1.2.1",
     "react-youtube": "^10.0.0"
   }
