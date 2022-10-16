@@ -81,35 +81,33 @@ const VideosYouMightLike = () => {
   };
 
   return (
-    <>
-      <section
-        id="videos-screen"
-        data-name="Videos"
-        className="videos screen-content box-border !pb-32"
-      >
-        <div className="full-screen flex-col w-full h-full">
-          <div className="py-16 flex justify-center split-screen flex-col h-screen-50vh w-full text-center items-center">
-            <h1>{lang["videos-you-might-like"]}</h1>
-          </div>
-
-          <div className="grid grid-cols-12 gap-8 mx-8 xl:mx-32 2xl:mx-96 h-full overflow-hidden p-2">
-            <div className="col-span-9 h-full">
-              {youtubeVideos()}
-
-              {mainVideoPreview()}
-
-              <div className="rounded-b-xl bg-khaki text-black h-[20%] p-4 text-lg shadow-[0px_0px_3px_1px_rgba(255,255,255,1)]">
-                {lang["video-caption"]}
-              </div>
-            </div>
-
-            <VerticalScrollbar className="col-span-3">
-              {videoPreviews()}
-            </VerticalScrollbar>
-          </div>
+    <section
+      id="videos-screen"
+      data-name="Videos"
+      className="videos screen-content box-border !pb-32"
+    >
+      <div className="full-screen flex-col w-full h-full">
+        <div className="py-16 flex justify-center split-screen flex-col h-screen-50vh w-full text-center items-center">
+          <h1>{lang["videos-you-might-like"]}</h1>
         </div>
-      </section>
-    </>
+
+        <div className="grid grid-cols-12 gap-8 mx-8 xl:mx-32 2xl:mx-96 h-full overflow-hidden p-2">
+          <div className="col-span-9 h-full">
+            {youtubeVideos()}
+
+            {mainVideoPreview()}
+
+            <div className="rounded-b-xl bg-khaki text-black h-[20%] p-4 text-lg shadow-[0px_0px_3px_1px_rgba(255,255,255,1)]">
+              {lang["video-caption"]}
+            </div>
+          </div>
+
+          <VerticalScrollbar className="col-span-3">
+            {videoPreviews()}
+          </VerticalScrollbar>
+        </div>
+      </div>
+    </section>
   );
 };
 
