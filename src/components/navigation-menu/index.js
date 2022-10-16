@@ -109,9 +109,9 @@ const NavigationMenu = () => {
   } else {
     return (
       <button onClick={() => setOpen(true)}>
-        <div className="h-1.5 w-14 rounded-full bg-white md:bg-black"></div>
-        <div className="my-3 h-1.5 w-14 rounded-full bg-white md:bg-black"></div>
-        <div className="h-1.5 w-14 rounded-full bg-white md:bg-black"></div>
+        <div className="h-[2.5px] w-[30px] bg-white md:bg-black rounded-full"></div>
+        <div className="h-[2.5px] w-[30px] bg-white md:bg-black rounded-full my-[7px]"></div>
+        <div className="h-[2.5px] w-[30px] bg-white md:bg-black rounded-full"></div>
       </button>
     );
   }
