@@ -5,9 +5,14 @@ const Header = () => (
     <NavigationMenu />
     {/* Placeholder for Language Picker */}
     <div className="ml-16 text-2xl text-darkGray font-bold">En</div>
-    <div className="ml-16 text-2xl text-darkGray font-light">
-      Illustrations by Kate Rodman
-    </div>
+    <a
+      className="underline ml-16 text-2xl text-darkGray"
+      href="https://katerodman.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <span className="font-light">Illustrations by </span>Kate Rodman
+    </a>
   </div>
 );
 
