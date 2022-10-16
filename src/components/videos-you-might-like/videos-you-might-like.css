@@ -1,5 +1,6 @@
 .videos {
-	background: url("../../../assets/images/videos-you-might-like/iceberg.png") top left/auto no-repeat,
-	url("../../../assets/images/videos-you-might-like/penguins.png") bottom right/auto no-repeat,
-	url("../../../assets/images/videos-you-might-like/sky.jpg") center/cover no-repeat;
+	background:
+		url("../../../assets/images/videos-you-might-like/iceberg.png") top left/auto no-repeat,
+		url("../../../assets/images/videos-you-might-like/penguins.png") bottom right/auto no-repeat,
+		url("../../../assets/images/videos-you-might-like/sky.jpg") center/cover no-repeat;
 }
