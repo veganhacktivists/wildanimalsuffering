@@ -11,7 +11,7 @@ import { TogetherWeCan } from "../together-we-can";
 import { VideosYouMightLike } from "../videos-you-might-like";
 import { WhyItMatters } from "../why-it-matters";
 import { WildAnimalStats } from "../wild-animal-stats";
-import { NavigationMenu } from "../navigation-menu";
+import { Header } from "../header";
 
 const SectionsContainer = () => {
   const [, dispatch] = useContext(Context);
@@ -45,7 +45,7 @@ const SectionsContainer = () => {
 
   return (
     <>
-      <NavigationMenu />
+      <Header />
       <div className="scrollsnap-y">
         <WhyItMatters />
         <HumanPopulation />
