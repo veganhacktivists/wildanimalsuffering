@@ -1,10 +1,11 @@
 import { useContext } from "react";
 import { Context } from "../../state";
-
+// @ts-ignore
+import arrowsDown from "../../../assets/images/arrows-down.svg";
 import "./why-it-matters.css";
 
 const WhyItMatters = () => {
-  const [state, dispatch] = useContext(Context);
+  const [state] = useContext(Context);
   const { translations, locale } = state;
   const lang = translations[locale];
 
@@ -17,7 +18,8 @@ const WhyItMatters = () => {
       <div className="h-screen flex flex-col justify-start">
         <div className="birds-01 absolute"></div>
         <div className="birds-02 absolute"></div>
-        <div className="h-56 w-56 mb-28 bg-logo bg-contain bg-no-repeat bg-center self-center md:hidden"></div>
+        <div className="hidden md:block bg-logo absolute top-0 right-0 mt-9 mr-9 invert bg-contain bg-no-repeat h-36 md:h-32 aspect-square"></div>
+        <div className="md:hidden h-56 w-56 mb-28 bg-logo bg-contain bg-no-repeat bg-center self-center"></div>
         <div className="h-screen-70vh flex flex-col-reverse md:flex-row md:pt-16">
           <div
             id="elephant-image-container"
@@ -46,13 +48,13 @@ const WhyItMatters = () => {
             </div>
           </div>
         </div>
-
         <div className="h-screen-10vh p-4 md:p-10 -mt-48 md:mt-0">
           <div className="text-center">
             <h5 className="pb-8 px-20 text-5xl md:text-base">
               {lang["it-matters"]}
             </h5>
-            <span className="badge uppercase">{lang["begin-learning"]}</span>
+            <span className="badge uppercase">{lang["scroll-down"]}</span>
+            <img className="mx-auto mt-10 h-[50px]" src={arrowsDown} />
           </div>
         </div>
       </div>
