@@ -21,7 +21,7 @@ const VideosYouMightLike = () => {
   };
 
   const stopAll = () => {
-    document.querySelectorAll(".ytIFrame").forEach((iframe) => {
+    document.querySelectorAll(".yt-iframe").forEach((iframe) => {
       iframe.contentWindow.postMessage(
         JSON.stringify({ event: "command", func: "stopVideo" }),
         "*"
@@ -40,7 +40,7 @@ const VideosYouMightLike = () => {
       <YoutubeVideo
         key={video.id}
         videoId={video.id}
-        className={cx("h-[80%]", video.id !== currentVideoId && "hidden")}
+        className={cx("h-4/5", video.id !== currentVideoId && "hidden")}
         onReady={onReady}
       />
     ));
@@ -54,7 +54,7 @@ const VideosYouMightLike = () => {
     return (
       <VideoPreview
         video={videos[0]}
-        className="h-[80%] p-5 rounded-t-xl"
+        className="h-4/5 p-5 rounded-t-xl"
         playBtnWrapperClassName="flex grow items-center justify-center mt-12"
         titleWrapperClassName="px-6 py-3"
         authorClassName="text-lg"
@@ -69,8 +69,8 @@ const VideosYouMightLike = () => {
       <VideoPreview
         key={video.id}
         video={video}
-        className="h-[31%] p-3 rounded-xl"
-        playBtnWrapperClassName="flex grow items-center mt-12"
+        className="p-3 rounded-xl"
+        playBtnWrapperClassName="flex grow items-center mt-12 mb-4"
         playBtnClassName="w-12 h-12"
         titleWrapperClassName="px-2 py-1"
         authorClassName="text-xs"
@@ -97,7 +97,7 @@ const VideosYouMightLike = () => {
 
             {mainVideoPreview()}
 
-            <div className="rounded-b-xl bg-khaki text-black h-[20%] p-4 text-lg shadow-[0px_0px_3px_1px_rgba(255,255,255,1)]">
+            <div className="rounded-b-xl bg-khaki text-black h-1/5 p-4 text-lg shadow-[0px_0px_3px_1px_rgba(255,255,255,1)]">
               {lang["video-caption"]}
             </div>
           </div>
