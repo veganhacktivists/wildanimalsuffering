@@ -1,12 +1,3 @@
-import {
-  registerTouchStart,
-  getDirection,
-  registerMouseHandlers,
-  UP,
-  DOWN,
-} from "./mouse";
-import { isInViewport, isMobile } from "./screen";
-
 // Lodash's throttle function wasn't working. This does exactly what I want it to.
 // https://webdesign.tutsplus.com/tutorials/javascript-debounce-and-throttle--cms-36783
 let throttlePause;
@@ -46,15 +37,4 @@ const pad = (n, size) => {
   return num;
 };
 
-export {
-  pad,
-  registerTouchStart,
-  getDirection,
-  registerMouseHandlers,
-  UP,
-  DOWN,
-  isInViewport,
-  isMobile,
-  throttle,
-  debounce,
-};
+export { pad, throttle, debounce };

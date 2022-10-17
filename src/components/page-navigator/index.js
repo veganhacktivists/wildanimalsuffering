@@ -39,8 +39,8 @@ const PageNavigator = ({ direction }) => {
       id={`next-section-${direction}`}
       className={
         direction === "down"
-          ? "cursor-pointer fixed down-container h-screen-20vh"
-          : "cursor-pointer fixed side-container w-screen-5vw"
+          ? "down-container h-screen-20vh fixed cursor-pointer"
+          : "side-container w-screen-5vw fixed cursor-pointer"
       }
       onClick={handleClick}
     >

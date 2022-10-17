@@ -1,12 +1,12 @@
 import { useContext, useState } from "react";
 import { Context } from "../../state";
-import { WasDialog, WasDialogTrigger, WasDialogContent } from "../was-dialog";
+import { WasDialog, WasDialogContent, WasDialogTrigger } from "../was-dialog";
 import { EvenWorseDialogContent } from "./even-worse-dialog-content";
 
 import "./even-worse.css";
 
 const DialogTrigger = ({ dialogKey, onClick }) => {
-  const [state, dispatch] = useContext(Context);
+  const [state] = useContext(Context);
   const { translations, locale } = state;
   const lang = translations[locale];
 
@@ -16,18 +16,15 @@ const DialogTrigger = ({ dialogKey, onClick }) => {
       key={`dialog-trigger-${dialogKey}`}
       asChild
     >
-      <div className="suffer-image-container w-full pt-4 flex flex-col">
+      <div className="suffer-image-container flex w-full flex-col pt-4">
         <div className={`suffer-image suffer-image-${dialogKey}`}></div>
-        <div className="suffer-text p-2 flex-grow">{lang[dialogKey]}</div>
+        <div className="suffer-text flex-grow p-2">{lang[dialogKey]}</div>
       </div>
     </WasDialogTrigger>
   );
 };
 
 const EvenWorse = () => {
-  const [state, dispatch] = useContext(Context);
-  const { translations, locale } = state;
-  const lang = translations[locale];
   const [selectedDialogIndex, setSelectedDialogIndex] = useState(null);
 
   const onDialogTriggerClick = ({ selectedIndex }) => {
@@ -59,8 +56,8 @@ const EvenWorse = () => {
         className="screen-content even-worse white"
       >
         <h2 id="even-worse-screen"></h2>
-        <div className="full-screen w-full h-full flex flex-col">
-          <div className="split-screen flex-col w-full text-center p-16">
+        <div className="full-screen flex h-full w-full flex-col">
+          <div className="split-screen w-full flex-col p-16 text-center">
             <h1>
               <span>Even worse, wild animals suffer in terrible ways</span>:
             </h1>
@@ -72,8 +69,8 @@ const EvenWorse = () => {
                 selectedDialog={selectedDialog}
               />
             </WasDialogContent>
-            <div className="split-screen flex-col w-full">
-              <div className="flex flex-wrap flex-row justify-center text-center">
+            <div className="split-screen w-full flex-col">
+              <div className="flex flex-row flex-wrap justify-center text-center">
                 {dialogBoxKeys.map((dialogKey, index) => {
                   return (
                     <DialogTrigger

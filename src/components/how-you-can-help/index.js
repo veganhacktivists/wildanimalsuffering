@@ -1,13 +1,6 @@
-import { useContext } from "react";
-import { Context } from "../../state";
-
 import "./how-you-can-help.css";
 
 const HowYouCanHelp = () => {
-  const [state, dispatch] = useContext(Context);
-  const { translations, locale } = state;
-  const lang = translations[locale];
-
   return (
     <>
       <section
@@ -15,13 +8,13 @@ const HowYouCanHelp = () => {
         data-name="How You Can Help"
         className="how-you-can-help screen-content"
       >
-        <div className="full-screen flex-col md:w-2/3 h-full">
-          <div className="w-2/3 h-full self-center">
-            <div className="py-16 flex flex-col text-center items-center">
+        <div className="full-screen h-full flex-col md:w-2/3">
+          <div className="h-full w-2/3 self-center">
+            <div className="flex flex-col items-center py-16 text-center">
               <h2>how can you help?</h2>
             </div>
-            <div className="split-screen-padding flex flex-col space-between items-center text-center">
-              <div className="flex flex-row space-around flex-grow">
+            <div className="split-screen-padding space-between flex flex-col items-center text-center">
+              <div className="space-around flex flex-grow flex-row">
                 <div className="help-box-container">
                   <div className="help-box">
                     <h1>1</h1>

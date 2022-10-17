@@ -5,7 +5,7 @@ import { pad } from "../../utils";
 import "./common-objections.css";
 
 const CommonObjections = () => {
-  const [state, dispatch] = useContext(Context);
+  const [state] = useContext(Context);
   const { translations, locale } = state;
   const lang = translations[locale];
   const [panelIdOpen, setPanelIdOpen] = useState(0);
@@ -47,13 +47,13 @@ const CommonObjections = () => {
         data-name="FAQs"
         className="common-objections screen-content"
       >
-        <div className="full-screen flex-col md:w-9/12 h-full">
-          <div className="w-9/12 h-full self-center">
-            <div className="py-16 flex flex-col text-center items-center">
+        <div className="full-screen h-full flex-col md:w-9/12">
+          <div className="h-full w-9/12 self-center">
+            <div className="flex flex-col items-center py-16 text-center">
               <h2> {lang["common-objections"]}</h2>
             </div>
 
-            <div className="split-screen-padding flex flex-col space-between items-center pr-8 h-screen-60vh overflow-y-auto inline-scroll">
+            <div className="split-screen-padding space-between h-screen-60vh inline-scroll flex flex-col items-center overflow-y-auto pr-8">
               {panels.map((panel, index) => {
                 const isPanelOpen = panelIdOpen === index;
                 const numeric = pad(index + 1, 2);
@@ -68,7 +68,7 @@ const CommonObjections = () => {
                       }`}
                     >
                       <div
-                        className="flex heading items-center justify-between"
+                        className="heading flex items-center justify-between"
                         onClick={() => handlePanelClick(index)}
                       >
                         <h4>
@@ -81,7 +81,7 @@ const CommonObjections = () => {
                           </span>
                         </h4>
                         <span
-                          className={`h-3 aspect-2 ${
+                          className={`aspect-2 h-3 ${
                             isPanelOpen ? "arrow-up" : "arrow-down"
                           }`}
                         ></span>

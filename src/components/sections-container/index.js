@@ -14,7 +14,7 @@ import { WildAnimalStats } from "../wild-animal-stats";
 import { NavigationMenu } from "../navigation-menu";
 
 const SectionsContainer = () => {
-  const [state, dispatch] = useContext(Context);
+  const [, dispatch] = useContext(Context);
 
   useEffect(() => {
     const screenContentElements = document.querySelectorAll(".screen-content");

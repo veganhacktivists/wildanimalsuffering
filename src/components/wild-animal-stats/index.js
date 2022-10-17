@@ -94,27 +94,27 @@ const WildAnimalStats = () => {
         id="abyss-container"
         className={`${
           abyssOverlay ? "abyss-darkened" : "abyss"
-        } scrollsnap-y flex-col hw-screen overflow-hidden`}
+        } scrollsnap-y hw-screen flex-col overflow-hidden`}
       >
         <div
           id="animal-stats-screen"
           className="screen-content scrollable animal-stats flex"
         >
           {/* web: left side; mobile: top */}
-          <div className="h-screen-30vh md:h-screen md:w-screen-50vw flex-center split-screen-padding flex">
-            <div className="flex-center flex-col justify-around h-full text-left flex-grow">
+          <div className="h-screen-30vh md:w-screen-50vw flex-center split-screen-padding flex md:h-screen">
+            <div className="flex-center h-full flex-grow flex-col justify-around text-left">
               {animalStatIndex === 0 ? (
                 <div className="domestic-stats-container">
                   <h1>
                     For every human, there are roughly{" "}
                     <span className="blue">3-4 farmed animals</span> being
-                    farmed at any given moment. >
+                    farmed at any given moment.
                   </h1>
-                  <h4 className=" py-4">That's a lot, right?</h4>
+                  <h4 className=" py-4">That&apos;s a lot, right?</h4>
                 </div>
               ) : null}
               {animalStatIndex !== 0 ? (
-                <div className="wild-stats-container flex md:justify-between md:flex-col md:w-full md:h-5/6">
+                <div className="wild-stats-container flex md:h-5/6 md:w-full md:flex-col md:justify-between">
                   {showHumans ? (
                     <div id="humans" className="humans">
                       <p>However... in the wild,</p>
@@ -145,7 +145,7 @@ const WildAnimalStats = () => {
             </div>
           </div>
           {/* web: right side; mobile: bottom */}
-          <div className="h-screen-70vh md:h-screen md:w-screen-50vw p-24 flex-center flex-col">
+          <div className="h-screen-70vh md:w-screen-50vw flex-center flex-col p-24 md:h-screen">
             <Squares
               numberOnASide={squareData.numberOnASide}
               color={squareData.color}
