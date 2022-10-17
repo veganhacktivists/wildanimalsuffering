@@ -26,7 +26,7 @@ const VerticalScrollbar = ({ children, className }) => {
             <div
               {...restProps}
               ref={elementRef}
-              className="!bg-white !w-[2px] !overflow-visible"
+              className="!w-[2px] !overflow-visible !bg-white"
             />
           );
         },
@@ -38,7 +38,7 @@ const VerticalScrollbar = ({ children, className }) => {
             <div
               {...restProps}
               ref={elementRef}
-              className="!bg-white !ml-[-4px] !mr-[-4px] !w-auto"
+              className="!ml-[-4px] !mr-[-4px] !w-auto !bg-white"
             />
           );
         },

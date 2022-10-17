@@ -14,7 +14,7 @@ const VideoPreview = ({
   return (
     <div
       className={cx(
-        "flex flex-col bg-center bg-cover shadow-[0px_0px_3px_1px_rgba(255,255,255,1)] cursor-pointer relative z-10",
+        "relative z-10 flex cursor-pointer flex-col bg-cover bg-center shadow-[0px_0px_3px_1px_rgba(255,255,255,1)]",
         className
       )}
       style={{
@@ -23,14 +23,14 @@ const VideoPreview = ({
       onClick={() => onClick(video.id)}
     >
       <div className={playBtnWrapperClassName}>
-        <div className="bg-slate-900/50 rounded-full">
+        <div className="rounded-full bg-slate-900/50">
           <img src={ICONS.VIDEO_PLAY} alt="Play" className={playBtnClassName} />
         </div>
       </div>
 
       <div
         className={cx(
-          "self-start bg-slate-900/80 rounded-xl",
+          "self-start rounded-xl bg-slate-900/80",
           titleWrapperClassName
         )}
       >

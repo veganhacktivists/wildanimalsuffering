@@ -4,7 +4,7 @@ import { Context } from "../../state";
 import "./even-worse-dialog-content.css";
 
 const EvenWorseDialogContent = ({ selectedDialog, onNavigationClick }) => {
-  const [state, dispatch] = useContext(Context);
+  const [state] = useContext(Context);
   const { translations, locale } = state;
   const lang = translations[locale];
 
@@ -16,7 +16,7 @@ const EvenWorseDialogContent = ({ selectedDialog, onNavigationClick }) => {
     <>
       <div className="even-worse-dialog-content flex flex-grow flex-row">
         <div className={`w-1/2 suffer-image-${selectedDialog}`}></div>
-        <div className="w-1/2 flex flex-col dark-gray self-center">
+        <div className="dark-gray flex w-1/2 flex-col self-center">
           <h2>{lang[selectedDialog]}</h2>
           <p
             className="py-8"
@@ -24,7 +24,7 @@ const EvenWorseDialogContent = ({ selectedDialog, onNavigationClick }) => {
               __html: lang[`${selectedDialog}-description`],
             }}
           ></p>
-          <div className="dialog-navigator w-full flex flex-row justify-between">
+          <div className="dialog-navigator flex w-full flex-row justify-between">
             <div
               id="next-dialog-left"
               className="w-screen-5vw"

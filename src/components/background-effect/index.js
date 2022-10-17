@@ -35,7 +35,7 @@ const BackgroundEffect = () => {
   }
 
   return (
-    <div className="fixed w-screen h-screen pointer-events-none">
+    <div className="pointer-events-none fixed h-screen w-screen">
       <EffectComponent />
     </div>
   );

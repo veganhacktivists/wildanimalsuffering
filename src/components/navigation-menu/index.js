@@ -16,23 +16,23 @@ const NavigationMenu = () => {
   if (open) {
     return (
       <div
-        className="fixed h-screen md:h-auto w-screen md:w-96 md:left-5 md:top-5 md:rounded-xl bg-white z-40 text-menu-front-dark overflow-auto"
+        className="fixed z-40 h-screen w-screen overflow-auto bg-white text-menu-front-dark md:left-5 md:top-5 md:h-auto md:w-96 md:rounded-xl"
         onWheel={(e) => e.stopPropagation()}
         onTouchEnd={(e) => e.stopPropagation()}
       >
         <div className="flex justify-between p-16 md:p-8">
-          <div className="text-menu-front-dark uppercase text-8xl md:text-2xl font-brand">
+          <div className="font-brand text-8xl uppercase text-menu-front-dark md:text-2xl">
             Wild Animal
             <br />
             Suffering
           </div>
           <button
-            className="rounded-full border-2 border-menu-back-dark p-2 md:p-1 w-20 h-20 md:w-10 md:h-10 relative shrink-0"
+            className="relative h-20 w-20 shrink-0 rounded-full border-2 border-menu-back-dark p-2 md:h-10 md:w-10 md:p-1"
             onClick={() => setOpen(false)}
           >
-            <div className="w-[90%] h-full relative">
-              <div className="bg-menu-back-dark absolute left-1/2 h-full w-[10%] rotate-45"></div>
-              <div className="bg-menu-back-dark absolute left-1/2 h-full w-[10%] -rotate-45"></div>
+            <div className="relative h-full w-[90%]">
+              <div className="absolute left-1/2 h-full w-[10%] rotate-45 bg-menu-back-dark"></div>
+              <div className="absolute left-1/2 h-full w-[10%] -rotate-45 bg-menu-back-dark"></div>
             </div>
           </button>
         </div>
@@ -41,23 +41,23 @@ const NavigationMenu = () => {
             (element, index) =>
               element.dataset.name && (
                 <button
-                  className={`relative text-left text-menu-front-light text-7xl md:text-xl p-16 md:p-0 md:py-4 md:px-8 md:rounded-xl hover:bg-menu-back-light ${
+                  className={`relative p-16 text-left text-7xl text-menu-front-light hover:bg-menu-back-light md:rounded-xl md:p-0 md:py-4 md:px-8 md:text-xl ${
                     element.id == state.screenId && "bg-menu-back-light"
                   }`}
                   key={index}
                   onClick={() => navigate(element.id)}
                 >
                   {element.id == state.screenId && (
-                    <div className="absolute bg-menu-front-dark top-10 md:top-3 right-10 md:right-3 w-10 h-10 md:w-3 md:h-3 rounded-full"></div>
+                    <div className="absolute top-10 right-10 h-10 w-10 rounded-full bg-menu-front-dark md:top-3 md:right-3 md:h-3 md:w-3"></div>
                   )}
                   {element.dataset.name}
                 </button>
               )
           )}
         </div>
-        <div className="border-t border-bg-menu-back-light mt-16 md:mt-4 flex flex-col md:flex-row py-16 md:p-8 md:justify-between md:items-center">
-          <div className="bg-logo invert bg-contain bg-no-repeat bg-center h-48 md:h-16 mb-16 md:mb-0 aspect-square"></div>
-          <div className="text-5xl md:text-3xl text-menu-back-dark text-center flex justify-evenly gap-4">
+        <div className="border-bg-menu-back-light mt-16 flex flex-col border-t py-16 md:mt-4 md:flex-row md:items-center md:justify-between md:p-8">
+          <div className="mb-16 aspect-square h-48 bg-logo bg-contain bg-center bg-no-repeat invert md:mb-0 md:h-16"></div>
+          <div className="flex justify-evenly gap-4 text-center text-5xl text-menu-back-dark md:text-3xl">
             <a
               href="https://www.instagram.com/veganhacktivists"
               target="_blank"
@@ -66,7 +66,7 @@ const NavigationMenu = () => {
               <img
                 src={ICONS.INSTAGRAM}
                 alt="Instagram"
-                className="w-28 h-28 md:w-10 md:h-10"
+                className="h-28 w-28 md:h-10 md:w-10"
               />
             </a>
             <a
@@ -77,7 +77,7 @@ const NavigationMenu = () => {
               <img
                 src={ICONS.YOUTUBE}
                 alt="YouTube"
-                className="w-28 h-28 md:w-10 md:h-10"
+                className="h-28 w-28 md:h-10 md:w-10"
               />
             </a>
             <a
@@ -88,7 +88,7 @@ const NavigationMenu = () => {
               <img
                 src={ICONS.PATREON}
                 alt="Patreon"
-                className="w-28 h-28 md:w-10 md:h-10"
+                className="h-28 w-28 md:h-10 md:w-10"
               />
             </a>
             <a
@@ -99,7 +99,7 @@ const NavigationMenu = () => {
               <img
                 src={ICONS.GITHUB}
                 alt="GitHub"
-                className="w-28 h-28 md:w-10 md:h-10"
+                className="h-28 w-28 md:h-10 md:w-10"
               />
             </a>
           </div>
@@ -109,12 +109,12 @@ const NavigationMenu = () => {
   } else {
     return (
       <button
-        className="fixed top-0 left-0 z-40 p-10 md:p-20 shrink-0"
+        className="fixed top-0 left-0 z-40 shrink-0 p-10 md:p-20"
         onClick={() => setOpen(true)}
       >
-        <div className="h-1.5 w-14 bg-white md:bg-black rounded-full"></div>
-        <div className="h-1.5 w-14 bg-white md:bg-black rounded-full my-3"></div>
-        <div className="h-1.5 w-14 bg-white md:bg-black rounded-full"></div>
+        <div className="h-1.5 w-14 rounded-full bg-white md:bg-black"></div>
+        <div className="my-3 h-1.5 w-14 rounded-full bg-white md:bg-black"></div>
+        <div className="h-1.5 w-14 rounded-full bg-white md:bg-black"></div>
       </button>
     );
   }

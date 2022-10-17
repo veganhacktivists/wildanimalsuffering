@@ -1,14 +1,6 @@
-import { useContext } from "react";
-import { Context } from "../../state";
 import "./organizations.css";
 
 const Organizations = () => {
-  const [state, dispatch] = useContext(Context);
-  const { translations, locale } = state;
-  const lang = translations[locale];
-
-  const imageBasePath = "images/organizations";
-
   const organizations = [
     {
       name: "Wild Animal Initiative",
@@ -63,18 +55,18 @@ const Organizations = () => {
         data-name="Organizations"
         className="organizations screen-content"
       >
-        <div className="full-screen flex-col w-full h-full">
-          <div className="py-16 flex justify-center split-screen flex-col h-screen-50vh w-[35%] text-center items-center">
+        <div className="full-screen h-full w-full flex-col">
+          <div className="split-screen h-screen-50vh flex w-[35%] flex-col items-center justify-center py-16 text-center">
             <h2>organizations working on wild animal suffering</h2>
           </div>
-          <div className="split-screen h-screen-50vh w-full flex-row relative justify-around flex-wrap">
+          <div className="split-screen h-screen-50vh relative w-full flex-row flex-wrap justify-around">
             {organizations.map((organization) => {
               return (
                 <div
-                  className="w-1/2 flex justify-center"
+                  className="flex w-1/2 justify-center"
                   key={organization.name}
                 >
-                  <div className="w-1/2 flex flex-row h-full">
+                  <div className="flex h-full w-1/2 flex-row">
                     <div className="flex flex-row p-2">
                       <div
                         className={`${organization.iconKey} aspect-square h-20`}
@@ -85,13 +77,13 @@ const Organizations = () => {
                       <h4 className="p-2">{organization.name}</h4>
                       <div className="p-2">{organization.description}</div>
                       <div className="flex flex-row p-2">
-                        <span className="badge capitalize brown m-1">
+                        <span className="badge brown m-1 capitalize">
                           visit site
                         </span>
-                        <span className="badge capitalize sand m-1">
+                        <span className="badge sand m-1 capitalize">
                           donate
                         </span>
-                        <span className="badge capitalize oat m-1">
+                        <span className="badge oat m-1 capitalize">
                           volunteer
                         </span>
                       </div>
