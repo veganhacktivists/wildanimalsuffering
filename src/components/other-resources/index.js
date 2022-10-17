@@ -32,7 +32,7 @@ const OtherResources = () => {
       >
         <div className="full-screen flex-col w-full h-full">
           <div className="py-16 flex justify-center split-screen flex-col h-screen-50vh w-[35%] text-center items-center">
-            <h2>{lang["other-resources"]}</h2>
+            <h2>other resources you might like</h2>
           </div>
           <div className="split-screen h-screen-50vh w-full flex-row relative justify-around flex-wrap">
             {resources.map((resource, index) => {

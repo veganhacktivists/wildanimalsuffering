@@ -62,7 +62,7 @@ const EvenWorse = () => {
         <div className="full-screen w-full h-full flex flex-col">
           <div className="split-screen flex-col w-full text-center p-16">
             <h1>
-              <span>{lang["even-worse"]}</span>:
+              <span>Even worse, wild animals suffer in terrible ways</span>:
             </h1>
           </div>
           <WasDialog dialogId="even-worse">

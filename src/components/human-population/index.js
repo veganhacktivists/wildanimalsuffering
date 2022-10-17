@@ -22,11 +22,10 @@ const HumanPopulation = () => {
           className="screen-content flex scrollable"
         >
           <div className="h-screen-50vh md:h-screen md:w-screen-50vw split-screen-padding flex-center">
-            <h1
-              dangerouslySetInnerHTML={{
-                __html: lang["human-population"],
-              }}
-            ></h1>
+            <h1>
+              There are roughly <span className="blue">8 billion humans</span>{" "}
+              on planet Earth.
+            </h1>
           </div>
           <div className="h-screen-50vh md:h-screen md:w-screen-50vw split-screen-padding flex-center">
             <div className="human-icon h-1/4 w-1/4"></div>

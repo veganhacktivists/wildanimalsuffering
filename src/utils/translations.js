@@ -1,20 +1,4 @@
 const en = {
-  "wild-animal-suffering-header": "Wild Animal Suffering",
-  "why-it-matters": "...and why it matters",
-  idealize:
-    "We tend to idealize nature and the lives of wild animals, but in reality, their lives can be really tough. They have to deal with harsh weather conditions, hunger, thirst, disease, violence from other animals and more.",
-  relief:
-    "When we suffer, we seek relief. For animals, their suffering doesn't become any less pleasant because they live in the wild, and pain feels the same for them, regardless of whether or not humans are the cause of it. The suffering of wild animals matters. It matters to them, and it should matter to us.",
-  "it-matters":
-    "The suffering of wild animals matters. It matters to them, and it should matter to us.",
-  "scroll-down": "Scroll Down to Begin",
-  "human-population":
-    'There are roughly <span className="blue">8 billion humans</span> on planet Earth.',
-  "for-every-human":
-    'For every human, there are roughly <span className="blue">3-4 farmed animals</span> being farmed at any given moment.',
-  "thats-a-lot": "That's a lot, right?",
-  "in-the-wild": "However... in the wild,",
-  "for-every-human-between": "for every human, there are between",
   "animal-stats-birds": "10-50 wild birds",
   "animal-stats-wild-mammals": "10-100 wild mammals",
   "animal-stats-reptiles": "10-10,000 reptiles",
@@ -22,11 +6,6 @@ const en = {
   "animal-stats-fish": "1,000-100,000 fish",
   "animal-stats-earthworms": "10,000-10<sup>6</sup> earthworms",
   "animal-stats-arthropods": "600,000-7*10<sup>8</sup> arthropods",
-  "at-any-moment": "...in existence at any moment",
-  "vast-majority": "This means that the vast majority of individuals are",
-  "wild-animals": "wild animals",
-  "mind-boggling": "The scale is truly mind boggling.",
-  "number-of-individuals": "Number of individuals",
 
   /* even worse */
   "even-worse": "Even worse, wild animals suffer in terrible ways",
@@ -81,54 +60,12 @@ const en = {
   "factory-farming-first-description":
     "We are sympathetic to the view that most animal advocates should focus most of their attention on farmed animal suffering due to wild animal suffering being less tractable in comparison. However, even if you decide to focus on farmed animal suffering, it is still worthwhile to be aware of the issue of wild animal suffering. One reason for this is because we also need to consider how current and future human actions may worsen the problem of wild animal suffering. For example, it is not uncommon for animal advocates to promote rewilding. Currently, rewilding programmes do not consider the well-being of the individuals that they create, which may actually lead to more animal suffering. In the future, humans may cause astronomically more suffering by spreading ecosystems full of wild animals to additional planets or by creating simulations that contain digital minds. To learn more about the ways in which humans may cause more animal suffering, check out the YouTube video, ‘How a Vegan World Might Contain More Suffering'.",
 
-  /* even worse dialog content */
-
-  /* how you can help */
-  "how-you-can-help": "how can you help?",
-  "raise-awareness": "RAISE AWARENESS",
-  "donate-to-charities": "DONATE TO CHARITIES",
-  "become-a-researcher": "STARTER KIT SIGNUP",
-  "check-out-this-resource":
-    "In addition to the three items above, you can find potential career opportunies here. Are you a researcher? Apply for a grant!",
-  "view-volunteer-opportunities": "view volunteer opportunities",
-
-  /* organizations working on... */
-  "organsations-title": "organizations working on wild animal suffering",
-  "wild-animal-initiative": "wild animal initiative",
-  "wild-animal-initiative-description":
-    "Wild Animal Initiative (WAI) currently operates in the U.S., where they work to strengthen the animal advocacy movement through creating an academic field dedicated to wild animal welfare.",
-  "animal-ethics": "animal ethics",
-  "animal-ethics-description":
-    "Animal Ethics aims to achieve a shift in attitudes towards nonhuman animals. Their vision is a world where sentient beings are given full moral consideration.",
-  "rethink-priorities": "rethink priorities",
-  "rethink-priorities-description":
-    "Rethink Priorities is a research organization that conducts critical research to inform policymakers and major foundations about how to best help people and nonhuman animals in both the present and the long-term future.",
-  "rethink-priorities-2": "rethink priorities",
-  "rethink-priorities-2-description":
-    "Rethink Priorities is a research organization that conducts critical research to inform policymakers and major foundations about how to best help people and nonhuman animals in both the present and the long-term future.",
-  "visit-site": "visit site",
-  donate: "donate",
-  volunteer: "volunteer",
-
   /* other resources */
-  "other-resources": "other resources you might like",
   books: "book",
   websites: "websites",
   blogs: "blogs",
   podcasts: "podcasts",
 
-  /* together we can */
-  "together-we-can": "Together, we can make life better for wild animals.",
-  "together-we-can-description-01":
-    "In recent years, there has been growing moral concern for animals. Thankfully, it is now rare to find a person who feels indifferent towards animal suffering. We know suffering feels bad to us. But we also know that suffering feels bad for a dog or a cat. And we also know that suffering feels bad for a pig, a chicken or a fish. Suffering feels bad for anyone who feels it, regardless of their species or their location. When you put yourselves into the perspective of the one who suffers, it doesn't matter whether they are in a house, a farm, or a forest. Their suffering matters. It matters to them. And it should matter to us.",
-  "together-we-can-description-02":
-    "If it matters to you, then we encourage you to join us in our mission to make life better for wild animals. There is much to learn about the situation of wild animals. This page is just an introduction to the issue. In truth, it is very sad that so many animals are desperately in need of help right now. But luckily, humans like you have the opportunity to make a difference. We hope you choose to take it.",
-  "thank-you": "thank you",
-  "consider-support": "Please consider supporting our work!",
-  "free-to-use":
-    "This website would not be possible without your support. Thank you!",
-  "support-us": "Support Us",
-  "credits-heading": "Credits and sources",
   "credits-01":
     "Mauris convallis arcu amet, sollicitudin gravida gravida platea.",
   "credits-02":
