@@ -37,6 +37,8 @@ const en = {
   "videos-you-might-like": "Videos you might like",
   "video-caption":
     'Wild animal suffering is about harms to the wellbeing of animals living in the wild. This is frequently confused with the ways species, populations of animals, or ecosystems can be affected. These are entities, not individuals who can feel and suffer. In this video, you\'ll hear about the meanings of "wild animal suffering" and related terms.',
+  "video-caption-mobile":
+    "Wild animal suffering is about harms to the wellbeing of animals living in the wild. This is frequently confused with the ways species, populations of animals, or ecosystems can be affected. These are entities, not individuals who can feel and suffer.",
   "common-objections": "common objections to helping wild animals",
   "its-not-ours": "it's not our responsibility",
   "its-not-ours-description":
