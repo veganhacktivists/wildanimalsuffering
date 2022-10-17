@@ -108,11 +108,20 @@ const NavigationMenu = () => {
     );
   } else {
     return (
-      <button onClick={() => setOpen(true)}>
-        <div className="h-[2.5px] w-[30px] bg-white md:bg-black rounded-full"></div>
-        <div className="h-[2.5px] w-[30px] bg-white md:bg-black rounded-full my-[7px]"></div>
-        <div className="h-[2.5px] w-[30px] bg-white md:bg-black rounded-full"></div>
-      </button>
+      <>
+        <img
+          alt="menu"
+          className="md:hidden"
+          onClick={() => setOpen(true)}
+          src={ICONS.MENU_WHITE}
+        />
+        <img
+          alt="menu"
+          className="hidden md:block cursor-pointer"
+          onClick={() => setOpen(true)}
+          src={ICONS.MENU_BLACK}
+        />
+      </>
     );
   }
 };

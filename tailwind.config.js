@@ -17,11 +17,12 @@ module.exports = {
           light: "#F4F4F4",
         },
         khaki: "#c7d3d0",
-        darkGray: "#3F3E3E",
+        gray: {
+          700: "#3F3E3E",
+        },
       },
       backgroundImage: {
         logo: 'url("../assets/images/logo.png")',
-        search: 'url("../assets/icons/search.png")',
       },
       fontFamily: {
         brand: ["The Bold Font"],

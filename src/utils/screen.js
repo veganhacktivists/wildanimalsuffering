@@ -1,11 +1,11 @@
 import resolveConfig from "tailwindcss/resolveConfig";
 import tailwindConfig from "../../tailwind.config.js";
 
-// assumes tailwind md is the only breakpoint
+// Note: 'isMobile'  might not always work well  - for instance, when resizing the browser, or
+// going from portrait to landscape.
 const isMobile = () => {
-  // @ts-ignore
-  const fullConfig = resolveConfig(tailwindConfig);
-  return window.innerWidth < parseInt(fullConfig.theme.screens.md);
+  // const fullConfig = resolveConfig(tailwindConfig);
+  // return window.innerWidth < parseInt(fullConfig.theme.screens.md);
 };
 
 // const getNextScreenContentElement = (currentElement, screenContentElements) => {

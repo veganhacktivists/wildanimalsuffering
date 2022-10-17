@@ -1,31 +1,26 @@
 import { NavigationMenu } from "../navigation-menu";
-import { isMobile } from "../../utils";
+import ICONS from "../../utils/icons";
 
-const Header = () => {
-  return isMobile() ? (
-    <div className="fixed top-0 left-0 z-40 p-10 shrink-0 flex items-center justify-between w-full">
+const Header = () => (
+  <>
+    {/* Mobile */}
+    <div className="md:hidden fixed top-0 left-0 p-10 shrink-0 flex items-center justify-between w-full">
       <NavigationMenu />
-      <div className="flex">
-        {/* Placeholder for Language Picker */}
-        <div className="text-4xl">En</div>
-        <div className="bg-search bg-contain bg-no-repeat bg-center h-[26px] aspect-square color-[#fff] ml-12" />
-      </div>
+      <img alt="search" src={ICONS.SEARCH} />
     </div>
-  ) : (
-    <div className="fixed top-0 left-0 z-40 p-20 shrink-0 flex items-center">
+    {/* Desktop */}
+    <div className="hidden md:flex fixed top-0 left-0 p-20 shrink-0 items-center">
       <NavigationMenu />
-      {/* Placeholder for Language Picker */}
-      <div className="ml-16 text-2xl text-darkGray font-bold">En</div>
       <a
-        className="underline ml-16 text-2xl text-darkGray"
+        className="underline ml-16 text-2xl text-gray-700"
         href="https://katerodman.com/"
         target="_blank"
-        rel="noopener noreferrer"
+        rel="noreferrer"
       >
         <span className="font-light">Illustrations by </span>Kate Rodman
       </a>
     </div>
-  );
-};
+  </>
+);
 
 export { Header };
