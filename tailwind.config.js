@@ -21,6 +21,7 @@ module.exports = {
       },
       backgroundImage: {
         logo: 'url("../assets/images/logo.png")',
+        search: 'url("../assets/icons/search.png")',
       },
       fontFamily: {
         brand: ["The Bold Font"],
