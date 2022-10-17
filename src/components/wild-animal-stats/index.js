@@ -105,20 +105,24 @@ const WildAnimalStats = () => {
             <div className="flex-center flex-col justify-around h-full text-left flex-grow">
               {animalStatIndex === 0 ? (
                 <div className="domestic-stats-container">
-                  <h1
-                    dangerouslySetInnerHTML={{
-                      __html: lang["for-every-human"],
-                    }}
-                  ></h1>
-                  <h4 className=" py-4">{lang["thats-a-lot"]}</h4>
+                  <h1>
+                    For every human, there are roughly{" "}
+                    <span className="blue">3-4 farmed animals</span> being
+                    farmed at any given moment. >
+                  </h1>
+                  <h4 className=" py-4">That's a lot, right?</h4>
                 </div>
               ) : null}
               {animalStatIndex !== 0 ? (
                 <div className="wild-stats-container flex md:justify-between md:flex-col md:w-full md:h-5/6">
                   {showHumans ? (
                     <div id="humans" className="humans">
-                      <p>{lang["in-the-wild"]}</p>
-                      <p>{lang["for-every-human-between"]}</p>
+                      <p>However... in the wild,</p>
+                      <p>
+                        For every human, there are roughly{" "}
+                        <span className="blue">3-4 farmed animals</span> being
+                        farmed at any given moment.
+                      </p>
                     </div>
                   ) : null}
                   {showHumans ? (
@@ -127,12 +131,12 @@ const WildAnimalStats = () => {
                     </div>
                   ) : null}
                   <div>
-                    <p>{lang["at-any-moment"]}</p>
-                    <p>{lang["vast-majority"]}</p>
-                    <p>{lang["wild-animals"]}</p>
-                    <p>{lang["mind-boggling"]}</p>
+                    <p>...in existence at any moment</p>
+                    <p>This means that the vast majority of individuals are</p>
+                    <p>wild animals</p>
+                    <p>The scale is truly mind boggling.</p>
                     <div className="py-4">
-                      <p>{lang["number-of-individuals"]}</p>
+                      <p>Number of individuals</p>
                       <div className="legend"></div>
                     </div>
                   </div>
