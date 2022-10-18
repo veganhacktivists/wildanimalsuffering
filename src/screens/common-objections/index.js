@@ -1,10 +1,7 @@
 import { useState } from "react";
-import { translations } from "../../utils/translations";
-
 import "./common-objections.css";
 
 // FIXME Remove translations for now
-const lang = translations.en;
 const panels = [
   "its-not-ours",
   "we-will-make-it-worse",
@@ -36,7 +33,7 @@ export function CommonObjections() {
         <div className="full-screen h-full flex-col md:w-9/12">
           <div className="h-full w-9/12 self-center">
             <div className="flex flex-col items-center py-16 text-center">
-              <h2>{lang["common-objections"]}</h2>
+              <h2>common objections to helping wild animals</h2>
             </div>
 
             <div className="split-screen-padding space-between h-screen-60vh inline-scroll flex flex-col items-center overflow-y-auto pr-8">
