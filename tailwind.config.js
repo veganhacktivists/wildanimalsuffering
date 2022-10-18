@@ -17,14 +17,18 @@ module.exports = {
           light: "#F4F4F4",
         },
         khaki: "#c7d3d0",
+        blue: {
+          200: "#85c5c8",
+        },
         gray: {
           700: "#3F3E3E",
         },
       },
       backgroundImage: {
-        logo: 'url("../assets/images/logo.png")',
+        abyss: "url('/public/images/population-scale/abyss.jpg')",
       },
       fontFamily: {
+        sans: ["'Noto Serif'"],
         brand: ["The Bold Font"],
       },
     },
