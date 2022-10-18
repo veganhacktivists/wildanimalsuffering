@@ -1,12 +1,8 @@
 import { cx } from "../../utils/cx";
-import { translations } from "../../utils/translations";
 import { VerticalScrollbar } from "./vertical-scrollbar";
 import { VideoPreview } from "./video-preview";
 import { videos } from "./videos";
 import { YoutubeVideo } from "./youtube-video";
-
-// FIXME Remove translations for now
-const lang = translations.en;
 
 export function VideosYouMightLikeDesktop({
   className,

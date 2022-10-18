@@ -1,13 +1,9 @@
 import { useRef, useState } from "react";
 import { cx } from "../../utils/cx";
-import { translations } from "../../utils/translations";
 import { DotNavigation } from "./dot-navigation";
 import { VideoPreviewMobile } from "./video-preview-mobile";
 import { videos } from "./videos";
 import { YoutubeVideo } from "./youtube-video";
-
-// FIXME Remove translations for now
-const lang = translations.en;
 
 export function VideosYouMightLikeMobile({
   className,
