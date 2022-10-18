@@ -28,7 +28,7 @@ module.exports = {
         abyss: "url('/public/images/population-scale/abyss.jpg')",
       },
       fontFamily: {
-        sans: ["'Noto Serif'"],
+        sans: ["Noto Serif"],
         brand: ["The Bold Font"],
       },
     },
