@@ -1,20 +1,31 @@
-import { BackgroundEffect } from "./components/background-effect";
-import { SectionsContainer } from "./components/sections-container";
-import { ContextProvider } from "./state";
+import { Header } from "./components/header";
+import { CommonObjections } from "./screens/common-objections";
+import { EvenWorse } from "./screens/even-worse";
+import { HowYouCanHelp } from "./screens/how-you-can-help";
+import { HumanPopulation } from "./screens/human-population";
+import { Organizations } from "./screens/organizations";
+import { OtherResources } from "./screens/other-resources";
+import { PopulationDynamics } from "./screens/population-dynamics";
+import { TogetherWeCan } from "./screens/together-we-can";
+import { VideosYouMightLike } from "./screens/videos-you-might-like";
+import { WhyItMatters } from "./screens/why-it-matters";
+import { WildAnimalStats } from "./screens/wild-animal-stats";
 
-const App = () => {
+export function App() {
   return (
     <>
-      {/* @ts-ignore */}
-      <ContextProvider>
-        <SectionsContainer />
-        {/* <PageNavigator direction="down"/> */}
-        {/* <WheelNavigator /> */}
-        {/* <TouchNavigator /> */}
-        <BackgroundEffect />
-      </ContextProvider>
+      <Header />
+      <WhyItMatters />
+      <HumanPopulation />
+      <WildAnimalStats />
+      <EvenWorse />
+      <PopulationDynamics />
+      <VideosYouMightLike />
+      <CommonObjections />
+      <HowYouCanHelp />
+      <Organizations />
+      <OtherResources />
+      <TogetherWeCan />
     </>
   );
-};
-
-export { App };
+}
