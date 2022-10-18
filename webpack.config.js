@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   devServer: {
@@ -47,8 +48,11 @@ module.exports = {
       chunkFilename: "styles.css",
     }),
     new HtmlPlugin({
-      template: "./public/index.html",
+      template: "./src/index.html",
       favicon: "./public/icons/favicon.ico",
+    }),
+    new CopyPlugin({
+      patterns: [{ from: "public", to: "." }],
     }),
   ],
 };
