@@ -14,7 +14,7 @@ const WhyItMatters = () => {
           className="absolute top-0 right-0 mt-[38px] mr-[49px] hidden md:block"
           src="/images/logo.svg"
         />
-        <div className="mb-28 h-56 w-56 self-center bg-logo bg-contain bg-center bg-no-repeat md:hidden"></div>
+        <div className="bg-logo mb-28 h-56 w-56 self-center bg-contain bg-center bg-no-repeat md:hidden"></div>
         <div className="h-screen-70vh flex flex-col-reverse md:flex-row md:pt-16">
           <div
             id="elephant-image-container"

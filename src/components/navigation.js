@@ -66,7 +66,7 @@ export function Navigation() {
             <NavigationLink name="Ending Screen" id="ending-screen" />
 
             <div className="border-bg-menu-back-light mt-16 flex flex-col border-t py-16 md:mt-4 md:flex-row md:items-center md:justify-between md:p-8">
-              <div className="mb-16 aspect-square h-48 bg-logo bg-contain bg-center bg-no-repeat invert md:mb-0 md:h-16"></div>
+              <div className="bg-logo mb-16 aspect-square h-48 bg-contain bg-center bg-no-repeat invert md:mb-0 md:h-16"></div>
               <div className="flex justify-evenly gap-4 text-center text-5xl text-menu-back-dark md:text-3xl">
                 <a
                   href="https://www.instagram.com/veganhacktivists"
