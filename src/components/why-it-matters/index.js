@@ -1,6 +1,7 @@
 // @ts-ignore
 import arrowsDown from "../../../assets/images/arrows-down.svg";
 import "./why-it-matters.css";
+import ICONS from "../../utils/icons";
 
 const WhyItMatters = () => {
   return (
@@ -12,8 +13,11 @@ const WhyItMatters = () => {
       <div className="flex h-screen flex-col justify-start">
         <div className="birds-01 absolute"></div>
         <div className="birds-02 absolute"></div>
-        <div className="absolute top-0 right-0 mt-9 mr-9 hidden aspect-square h-36 bg-logo bg-contain bg-no-repeat invert md:block md:h-32"></div>
-        <div className="mb-28 h-56 w-56 self-center bg-logo bg-contain bg-center bg-no-repeat md:hidden"></div>
+        <img
+          className="hidden md:block absolute top-0 right-0 mt-[38px] mr-[49px]"
+          src={ICONS.LOGO_BLACK}
+        />
+        <div className="md:hidden h-56 w-56 mb-28 bg-logo bg-contain bg-no-repeat bg-center self-center"></div>
         <div className="h-screen-70vh flex flex-col-reverse md:flex-row md:pt-16">
           <div
             id="elephant-image-container"
