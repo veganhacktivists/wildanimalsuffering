@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "./common-objections.css";
 
-// FIXME Remove translations for now
 const panels = [
   "its-not-ours",
   "we-will-make-it-worse",
