@@ -2,45 +2,41 @@ import { useState } from "react";
 import { VideosYouMightLikeDesktop } from "./desktop";
 import { VideosYouMightLikeMobile } from "./mobile";
 import "./videos-you-might-like.css";
+import useIsMobile from "../../hooks/is-mobile";
 
 export function VideosYouMightLike() {
-  const [videoPlayers, setVideoPlayers] = useState({});
+  const isMobile = useIsMobile();
+
   const [playingVideoId, setPlayingVideoId] = useState(null);
+  const [activePlayer, setActivePlayer] = useState(null);
 
-  const onReady = (videoId, event) => {
-    setVideoPlayers({ ...videoPlayers, [videoId]: event.target });
+  const play = (event) => {
+    setActivePlayer(event.target);
+
+    // For some reason, without this, it only works the first time (at least on FF)
+    setTimeout(() => {
+      event.target.playVideo();
+    }, 500);
   };
 
-  const stopAll = () => {
-    document.querySelectorAll(".yt-iframe").forEach((iframe) => {
-      // @ts-ignore
-      iframe.contentWindow.postMessage(
-        JSON.stringify({ event: "command", func: "stopVideo" }),
-        "*"
-      );
-    });
+  const stop = () => {
+    activePlayer?.stopVideo();
   };
 
-  const play = (videoId) => {
-    setPlayingVideoId(videoId);
-    stopAll();
-    videoPlayers[videoId]?.playVideo();
-  };
-
-  return (
-    <>
-      <VideosYouMightLikeDesktop
-        className="hidden md:block"
-        playingVideoId={playingVideoId}
-        onReady={onReady}
-        onPlay={play}
-      />
-      <VideosYouMightLikeMobile
-        className="md:hidden"
-        playingVideoId={playingVideoId}
-        onReady={onReady}
-        onPlay={play}
-      />
-    </>
+  return isMobile ? (
+    <VideosYouMightLikeMobile
+      className="md:hidden"
+      playingVideoId={playingVideoId}
+      onPlay={(videoId) => setPlayingVideoId(videoId)}
+      onPlayerReady={play}
+      onNavigate={stop}
+    />
+  ) : (
+    <VideosYouMightLikeDesktop
+      className="hidden md:block"
+      playingVideoId={playingVideoId}
+      onPlay={(videoId) => setPlayingVideoId(videoId)}
+      onPlayerReady={play}
+    />
   );
 }

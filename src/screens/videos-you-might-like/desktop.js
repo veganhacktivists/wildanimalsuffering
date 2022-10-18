@@ -11,7 +11,7 @@ const lang = translations.en;
 export function VideosYouMightLikeDesktop({
   className,
   playingVideoId,
-  onReady,
+  onPlayerReady,
   onPlay,
 }) {
   return (
@@ -27,16 +27,13 @@ export function VideosYouMightLikeDesktop({
 
         <div className="mx-8 grid h-full grid-cols-12 gap-8 overflow-hidden p-2 xl:mx-32 2xl:mx-96">
           <div className="col-span-9 h-full">
-            {videos.map((video) => (
+            {playingVideoId !== null ? (
               <YoutubeVideo
-                key={video.id}
-                videoId={video.id}
-                className={cx("h-4/5", video.id !== playingVideoId && "hidden")}
-                onReady={onReady}
+                videoId={playingVideoId}
+                className="h-4/5"
+                onReady={onPlayerReady}
               />
-            ))}
-
-            {playingVideoId === null ? (
+            ) : (
               <VideoPreview
                 video={videos[0]}
                 className="h-4/5 rounded-t-xl p-5"
@@ -45,9 +42,9 @@ export function VideosYouMightLikeDesktop({
                 titleWrapperClassName="px-6 py-3"
                 authorClassName="text-lg"
                 titleClassName="text-xl uppercase"
-                onClick={onPlay}
+                onClick={() => onPlay}
               />
-            ) : null}
+            )}
 
             <div className="h-1/5 rounded-b-xl bg-khaki p-4 text-lg text-black shadow-[0px_0px_3px_1px_rgba(255,255,255,1)]">
               {lang["video-caption"]}

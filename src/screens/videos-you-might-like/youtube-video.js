@@ -13,7 +13,7 @@ export function YoutubeVideo({ videoId, onReady, className }) {
           origin: window.location.origin,
         },
       }}
-      onReady={(event) => onReady(videoId, event)}
+      onReady={onReady}
     />
   );
 }

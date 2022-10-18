@@ -12,8 +12,9 @@ const lang = translations.en;
 export function VideosYouMightLikeMobile({
   className,
   playingVideoId,
-  onReady,
+  onPlayerReady,
   onPlay,
+  onNavigate,
 }) {
   const [visibleVideoId, setVisibleVideoId] = useState(videos[0].id);
   const videosRef = useRef({});
@@ -48,14 +49,16 @@ export function VideosYouMightLikeMobile({
                 ref={(el) => (videosRef.current[video.id] = el)}
               >
                 <div className="h-2/3">
-                  <YoutubeVideo
-                    videoId={video.id}
-                    className={cx(
-                      "h-full rounded-t-3xl",
-                      video.id !== playingVideoId && "hidden"
-                    )}
-                    onReady={onReady}
-                  />
+                  {playingVideoId === video.id ? (
+                    <YoutubeVideo
+                      videoId={video.id}
+                      className={cx(
+                        "h-full rounded-t-3xl",
+                        video.id !== playingVideoId && "hidden"
+                      )}
+                      onReady={onPlayerReady}
+                    />
+                  ) : null}
 
                   <VideoPreviewMobile
                     video={video}
@@ -85,7 +88,10 @@ export function VideosYouMightLikeMobile({
           className="mx-5 mt-20"
           items={videos.map((video) => video.id)}
           activeItem={visibleVideoId}
-          onNavigate={(videoId) => scrollTo(videoId)}
+          onNavigate={(videoId) => {
+            scrollTo(videoId);
+            onNavigate(videoId);
+          }}
         />
       </div>
     </section>
