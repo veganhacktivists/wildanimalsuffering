@@ -1,13 +1,9 @@
 import { useRef, useState } from "react";
 import { cx } from "../../utils/cx";
-import { translations } from "../../utils/translations";
 import { DotNavigation } from "./dot-navigation";
 import { VideoPreviewMobile } from "./video-preview-mobile";
 import { videos } from "./videos";
 import { YoutubeVideo } from "./youtube-video";
-
-// FIXME Remove translations for now
-const lang = translations.en;
 
 export function VideosYouMightLikeMobile({
   className,
@@ -36,7 +32,7 @@ export function VideosYouMightLikeMobile({
     >
       <div className="full-screen h-full w-full flex-col">
         <div className="split-screen h-screen-20vh flex w-full flex-col items-center justify-center text-center">
-          <h1>{lang["videos-you-might-like"]}</h1>
+          <h1>Videos you might like</h1>
         </div>
 
         <div className="h-2/3">
@@ -74,7 +70,11 @@ export function VideosYouMightLikeMobile({
                 </div>
 
                 <div className="h-1/3 rounded-b-3xl bg-white p-8 text-[14px] text-black">
-                  {lang["video-caption-mobile"]}
+                  Wild animal suffering is about harms to the wellbeing of
+                  animals living in the wild. This is frequently confused with
+                  the ways species, populations of animals, or ecosystems can be
+                  affected. These are entities, not individuals who can feel and
+                  suffer.
                 </div>
               </div>
             ))}
