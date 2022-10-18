@@ -1,25 +1,13 @@
 import { useState } from "react";
 import { Dialog, DialogContent, DialogTrigger } from "../../components/dialog";
-import { translations } from "../../utils/translations";
+import { dialogs } from "./dialogs";
 import { EvenWorseDialogContent } from "./even-worse-dialog-content";
 
 import "./even-worse.css";
 
-// FIXME Remove translations for now
-const lang = translations.en;
-const dialogBoxKeys = [
-  "thirst-and-starvation",
-  "predation",
-  "disease-and-parasitism",
-  "harmful-weather",
-  "natural-disasters",
-  "accidents",
-  "anthropogenic-harms",
-];
-
 export function EvenWorse() {
   const [selectedDialogIndex, setSelectedDialogIndex] = useState(null);
-  const selectedDialog = dialogBoxKeys[selectedDialogIndex];
+  const selectedDialog = dialogs[selectedDialogIndex];
 
   const onDialogTriggerClick = ({ selectedIndex }) => {
     setSelectedDialogIndex(selectedIndex);
@@ -27,7 +15,7 @@ export function EvenWorse() {
 
   const onNavigationClick = ({ direction }) => {
     const increment = direction === "LEFT" ? -1 : 1;
-    const n = dialogBoxKeys.length;
+    const n = dialogs.length;
     const newIndex = (((selectedDialogIndex + increment) % n) + n) % n;
     setSelectedDialogIndex(newIndex);
   };
@@ -55,18 +43,18 @@ export function EvenWorse() {
           </DialogContent>
           <div className="split-screen w-full flex-col">
             <div className="flex flex-row flex-wrap justify-center text-center">
-              {dialogBoxKeys.map((dialogKey, index) => (
+              {dialogs.map((dialog, index) => (
                 <DialogTrigger
-                  key={dialogKey}
+                  key={dialog.title}
                   onClick={() => onDialogTriggerClick({ selectedIndex: index })}
                   asChild
                 >
                   <div className="suffer-image-container flex w-full flex-col pt-4">
                     <div
-                      className={`suffer-image suffer-image-${dialogKey}`}
+                      className={`suffer-image suffer-image-${dialog.id}`}
                     ></div>
                     <div className="suffer-text flex-grow p-2">
-                      {lang[dialogKey]}
+                      {dialog.title}
                     </div>
                   </div>
                 </DialogTrigger>

@@ -1,9 +1,4 @@
-import { translations } from "../../utils/translations";
-
 import "./even-worse-dialog-content.css";
-
-// FIXME Remove translations for now
-const lang = translations.en;
 
 export function EvenWorseDialogContent({ selectedDialog, onNavigationClick }) {
   const handleNavigationClick = ({ direction }) => {
@@ -13,15 +8,15 @@ export function EvenWorseDialogContent({ selectedDialog, onNavigationClick }) {
   return (
     <>
       <div className="even-worse-dialog-content flex flex-grow flex-row">
-        <div className={`w-1/2 suffer-image-${selectedDialog}`}></div>
+        <div className={`w-1/2 suffer-image-${selectedDialog.id}`}></div>
         <div className="dark-gray flex w-1/2 flex-col self-center">
-          <h2>{lang[selectedDialog]}</h2>
+          <h2>{selectedDialog.title}</h2>
           <p
             className="py-8"
             dangerouslySetInnerHTML={{
-              __html: lang[`${selectedDialog}-description`],
+              __html: selectedDialog.description,
             }}
-          ></p>
+          />
           <div className="dialog-navigator flex w-full flex-row justify-between">
             <div
               id="next-dialog-left"

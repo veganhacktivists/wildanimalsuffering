@@ -2,6 +2,18 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { FarmedAnimals } from "./farmed-animals";
 
+/*
+  For Later:
+
+  "animal-stats-birds": "10-50 wild birds",
+  "animal-stats-wild-mammals": "10-100 wild mammals",
+  "animal-stats-reptiles": "10-10,000 reptiles",
+  "animal-stats-amphibians": "10-10,000 amphibians",
+  "animal-stats-fish": "1,000-100,000 fish",
+  "animal-stats-earthworms": "10,000-10<sup>6</sup> earthworms",
+  "animal-stats-arthropods": "600,000-7*10<sup>8</sup> arthropods",
+*/
+
 export function PopulationScale() {
   const scrollRef = useRef(null);
   const { scrollYProgress } = useScroll({
