@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./wild-animal-stats.css";
 
-// FIXME
+// FIXME Display animal stats in correct order.
 const animalStatIndex = 0;
 
 const WildAnimalStats = () => {

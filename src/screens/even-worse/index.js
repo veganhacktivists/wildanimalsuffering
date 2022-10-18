@@ -5,7 +5,7 @@ import { EvenWorseDialogContent } from "./even-worse-dialog-content";
 
 import "./even-worse.css";
 
-// FIXME
+// FIXME Remove translations for now
 const lang = translations.en;
 const dialogBoxKeys = [
   "thirst-and-starvation",
@@ -45,7 +45,7 @@ export function EvenWorse() {
           </h1>
         </div>
         <Dialog dialogId="even-worse">
-          {/* FIXME */}
+          {/* FIXME TypeScript error */}
           {/* @ts-ignore */}
           <DialogContent>
             <EvenWorseDialogContent

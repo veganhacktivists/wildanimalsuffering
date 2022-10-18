@@ -2,7 +2,7 @@ import { translations } from "../../utils/translations";
 
 import "./even-worse-dialog-content.css";
 
-// FIXME
+// FIXME Remove translations for now
 const lang = translations.en;
 
 export function EvenWorseDialogContent({ selectedDialog, onNavigationClick }) {

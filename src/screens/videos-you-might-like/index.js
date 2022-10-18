@@ -1,7 +1,11 @@
 import { useState } from "react";
+import { translations } from "../../utils/translations";
 import { VideosYouMightLikeDesktop } from "./desktop";
 import { VideosYouMightLikeMobile } from "./mobile";
 import "./videos-you-might-like.css";
+
+// FIXME Remove translations for now
+const lang = translations.en;
 
 export function VideosYouMightLike() {
   const [videoPlayers, setVideoPlayers] = useState({});

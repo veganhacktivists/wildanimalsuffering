@@ -3,7 +3,7 @@ import { translations } from "../../utils/translations";
 
 import "./common-objections.css";
 
-// FIXME
+// FIXME Remove translations for now
 const lang = translations.en;
 const panels = [
   "its-not-ours",

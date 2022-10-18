@@ -1,7 +1,7 @@
 import * as RadixDialog from "@radix-ui/react-dialog";
 import { forwardRef } from "react";
 
-// FIXME
+// FIXME Clean up classnames and onOpenChange method.
 export function Dialog({ children, ...props }) {
   return (
     <RadixDialog.Root {...props} onOpenChange={() => {}}>
@@ -11,7 +11,7 @@ export function Dialog({ children, ...props }) {
   );
 }
 
-// FIXME
+// FIXME Typescript errors and clean up styling.
 export const DialogContent = forwardRef(
   // @ts-ignore
   ({ children, ...props }, forwardedRef) => (

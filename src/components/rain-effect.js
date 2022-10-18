@@ -2,7 +2,7 @@ import Rainfall from "react-rain-animation";
 
 import "react-rain-animation/lib/style.css";
 
-// FIXME
+// FIXME inline styles should be replaced with class.
 export function RainfallEffect() {
   return (
     <Rainfall

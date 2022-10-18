@@ -6,7 +6,7 @@ import { NavigationLink } from "./navigation-link";
 import { PatreonIcon } from "./patreon-icon";
 import { YoutubeIcon } from "./youtube-icon";
 
-// FIXME
+// FIXME Make sure styling is conform design.
 export function Navigation() {
   const [open, setOpen] = useState(false);
 

@@ -60,7 +60,7 @@ const WhyItMatters = () => {
               should matter to us.
             </h5>
             <span className="badge uppercase">Scroll Down to Begin</span>
-            {/* FIXME arrows down */}
+            {/* FIXME arrows down button to scroll down */}
           </div>
         </div>
       </div>

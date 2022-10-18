@@ -1,7 +1,7 @@
 import { translations } from "../../utils/translations";
 import "./together-we-can.css";
 
-// FIXME
+// FIXME Remove translations for now
 const lang = translations.en;
 const credits = [
   "credits-01",
