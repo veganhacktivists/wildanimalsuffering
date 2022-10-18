@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   devServer: {
-    port: 4000,
+    port: 3000,
   },
   entry: {
     app: "./src/index.js",
