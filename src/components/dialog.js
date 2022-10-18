@@ -21,7 +21,7 @@ export const DialogContent = forwardRef(
       {...props}
     >
       <RadixDialog.Close asChild className="absolute top-4 right-4 h-4 w-4">
-        <span className="h-4 w-4 bg-logo"></span>
+        <span className="bg-logo h-4 w-4"></span>
       </RadixDialog.Close>
       {children}
     </RadixDialog.Content>
