@@ -51,13 +51,13 @@ export function ScaleOfSuffering() {
           <div>
             <motion.img
               style={{ opacity: earthOpacity }}
-              src="/images/population-scale/earth.png"
+              src="/images/scale-of-suffering/earth.png"
               alt=""
             />
             <motion.img
               style={{ opacity: humanOpacity }}
               className="absolute inset-0 left-1/2 top-1/2 w-1/4 -translate-x-1/2 -translate-y-1/2"
-              src="/images/population-scale/human.png"
+              src="/images/scale-of-suffering/human.png"
               alt=""
             />
             <motion.div

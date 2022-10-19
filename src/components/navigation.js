@@ -25,11 +25,8 @@ export function Navigation() {
 
   return (
     <>
-      <button
-        className="fixed top-0 left-0 shrink-0 cursor-pointer p-10 text-white md:p-20 md:text-black"
-        onClick={() => setOpen(true)}
-      >
-        <MenuIcon size={30} className="cursor-pointer" />
+      <button className="cursor-pointer" onClick={() => setOpen(true)}>
+        <MenuIcon size={24} className="cursor-pointer" />
       </button>
 
       {open && (

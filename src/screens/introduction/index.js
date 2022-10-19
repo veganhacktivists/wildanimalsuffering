@@ -1,67 +1,53 @@
-import "./introduction.css";
-
 export function Introduction() {
   return (
     <section
       id="introduction"
-      data-name="Introduction"
-      className="screen-content wild-animal-suffering"
+      className="min-h-screen bg-savanna-md bg-cover bg-center py-24"
     >
-      <div className="flex h-screen flex-col justify-start">
-        <div className="birds-01 absolute"></div>
-        <div className="birds-02 absolute"></div>
-        <img
-          className="absolute top-0 right-0 mt-[38px] mr-[49px] hidden md:block"
-          src="/images/logo.svg"
-        />
-        <div className="bg-logo mb-28 h-56 w-56 self-center bg-contain bg-center bg-no-repeat md:hidden"></div>
-        <div className="h-screen-70vh flex flex-col-reverse md:flex-row md:pt-16">
-          <div
-            id="elephant-image-container"
-            className="split-screen md:h-screen-50vh h-36 w-full flex-col md:w-auto"
-          >
-            <div className="elephants h-full"></div>
+      <img
+        className="absolute top-0 right-0 m-10 w-20"
+        src="/images/logo.svg"
+        alt="Logo"
+      />
+
+      <div className="mx-auto flex w-full max-w-7xl flex-col px-10">
+        <div className="grid grid-cols-2 gap-10">
+          <div className="p-12 pr-0">
+            <img
+              src="/images/introduction/elephants.png"
+              alt="The illustration of a mother elephant and her young"
+            />
           </div>
-          <div className="split-screen h-screen-30vh flex-col justify-center">
-            <div className="font-brand font-bold uppercase">
-              <div className="text-9xl md:text-7xl">Wild Animal Suffering</div>
-              <div className="orange my-20 text-7xl md:my-0 md:text-3xl">
+          <div className="flex flex-col space-y-10 pt-12">
+            <h1 className="flex max-w-md flex-col space-y-4 font-brand">
+              <span className="text-6xl leading-none text-white">
+                Wild Animal Suffering
+              </span>
+              <span className="text-3xl text-primary">
                 ...and why it matters
-              </div>
-            </div>
-            <div className="subheading flex flex-col rounded-xl bg-black/50 p-10 text-4xl font-light md:flex-row md:bg-transparent md:p-0 md:pt-4 md:text-base">
-              <div className="mb-20 md:mb-0 md:pr-4">
-                <div className="bg-orange mb-5 h-8 w-8 rounded-full md:mb-2 md:h-3 md:w-3"></div>
-                <div>
-                  We tend to idealize nature and the lives of wild animals, but
-                  in reality, their lives can be really tough. They have to deal
-                  with harsh weather conditions, hunger, thirst, disease,
-                  violence from other animals and more.
-                </div>
-              </div>
-              <div className="md:pl-4">
-                <div className="border-orange mb-5 h-8 w-8 rounded-full border md:mb-2 md:h-3 md:w-3"></div>
-                <div>
-                  When we suffer, we seek relief. For animals, their suffering
-                  doesn&apos;t become any less pleasant because they live in the
-                  wild, and pain feels the same for them, regardless of whether
-                  or not humans are the cause of it. The suffering of wild
-                  animals matters. It matters to them, and it should matter to
-                  us.
-                </div>
-              </div>
+              </span>
+            </h1>
+            <div className="grid grid-cols-2 gap-10 text-lg text-white">
+              <p>
+                We tend to idealize nature and the lives of wild animals, but in
+                reality, their lives can be really tough.. They have to deal
+                with harsh weather conditions, hunger, thirst, disease, violence
+                from other animals and more.
+              </p>
+              <p>
+                When we suffer, we seek relief. For animals, their suffering
+                doesn&apos;t become any less unpleasant because they live in the
+                wild, and pain feels the same for them, regardless of whether or
+                not humans are the cause of it.
+              </p>
             </div>
           </div>
         </div>
-        <div className="h-screen-10vh -mt-48 p-4 md:mt-0 md:p-10">
-          <div className="text-center">
-            <h5 className="px-20 pb-8 text-5xl md:text-base">
-              The suffering of wild animals matters. It matters to them, and it
-              should matter to us.
-            </h5>
-            <span className="badge uppercase">Scroll Down to Begin</span>
-            {/* FIXME arrows down button to scroll down */}
-          </div>
+        <div>
+          <p className="text-center text-lg font-bold text-white">
+            The suffering of wild animals matters. It matters to them, and it
+            should matter to us.
+          </p>
         </div>
       </div>
     </section>
