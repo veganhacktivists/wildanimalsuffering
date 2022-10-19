@@ -19,7 +19,7 @@ export function CommonObjections() {
 
   return (
     <section
-      id="common-objections-screen"
+      id="common-objections"
       data-name="FAQs"
       className="common-objections screen-content"
     >

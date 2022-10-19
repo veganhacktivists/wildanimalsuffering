@@ -1,11 +1,11 @@
-import "./other-resources.css";
+import "./resources.css";
 
 const resources = ["books", "websites", "blogs", "podcasts"];
 
-export function OtherResources() {
+export function Resources() {
   return (
     <section
-      id="other-resources-screen"
+      id="resources"
       data-name="Resources"
       className="other-resources screen-content"
     >
@@ -19,11 +19,11 @@ export function OtherResources() {
               <div className="flex w-1/2 justify-center" key={resource}>
                 <div className="flex h-full w-[75%] flex-col">
                   {/* <div className="resource-type-heading aspect-square flex justify-center items-center">
-											{resource}
-										</div>
-										<div className="resource-type-content">
+                      {resource}
+                    </div>
+                    <div className="resource-type-content">
 
-										</div> */}
+                    </div> */}
                 </div>
               </div>
             );

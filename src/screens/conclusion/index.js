@@ -1,9 +1,9 @@
-import "./together-we-can.css";
+import "./conclusion.css";
 
-export function TogetherWeCan() {
+export function Conclusion() {
   return (
     <section
-      id="together-we-can-screen"
+      id="conclusion"
       data-name="Conclusion"
       className="together-we-can screen-content"
     >

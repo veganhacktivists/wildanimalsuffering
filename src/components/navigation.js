@@ -51,19 +51,19 @@ export function Navigation() {
             </button>
           </div>
           <div className="flex flex-col justify-start px-16 md:px-8">
-            <NavigationLink name="Landing Screen" id="landing-screen" />
-            <NavigationLink name="Population Scale" id="population-scale" />
-            <NavigationLink name="Suffering Types" id="suffering-types" />
+            <NavigationLink name="Introduction" id="introduction" />
+            <NavigationLink name="Scale of Suffering" id="scale-of-suffering" />
+            <NavigationLink name="Types of Suffering" id="types-of-suffering" />
             <NavigationLink
               name="Population Dynamics"
               id="population-dynamics"
             />
-            <NavigationLink name="Recommended Videos" id="recommended-videos" />
+            <NavigationLink name="Videos" id="videos" />
             <NavigationLink name="Common Objections" id="common-objections" />
-            <NavigationLink name="How to help" id="how-to-help" />
-            <NavigationLink name="WAS Organizations" id="was-organizations" />
-            <NavigationLink name="Other resources" id="other-resources" />
-            <NavigationLink name="Ending Screen" id="ending-screen" />
+            <NavigationLink name="How to Help" id="how-to-help" />
+            <NavigationLink name="Organizations" id="organizations" />
+            <NavigationLink name="Resources" id="resources" />
+            <NavigationLink name="Conclusion" id="conclusion" />
 
             <div className="border-bg-menu-back-light mt-16 flex flex-col border-t py-16 md:mt-4 md:flex-row md:items-center md:justify-between md:p-8">
               <div className="bg-logo mb-16 aspect-square h-48 bg-contain bg-center bg-no-repeat invert md:mb-0 md:h-16"></div>

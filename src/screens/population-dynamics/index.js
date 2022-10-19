@@ -3,7 +3,7 @@ import "./population-dynamics.css";
 export function PopulationDynamics() {
   return (
     <section
-      id="population-dynamics-screen"
+      id="population-dynamics"
       data-name="Population Dynamics"
       className="population-dynamics screen-content"
     >

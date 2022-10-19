@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { VideosYouMightLikeDesktop } from "./desktop";
-import { VideosYouMightLikeMobile } from "./mobile";
-import "./videos-you-might-like.css";
+import { VideosDesktop } from "./desktop";
+import { VideosMobile } from "./mobile";
+import "./videos.css";
 
-export function VideosYouMightLike() {
+export function Videos() {
   const [videoPlayers, setVideoPlayers] = useState({});
   const [playingVideoId, setPlayingVideoId] = useState(null);
 
@@ -29,13 +29,13 @@ export function VideosYouMightLike() {
 
   return (
     <>
-      <VideosYouMightLikeDesktop
+      <VideosDesktop
         className="hidden md:block"
         playingVideoId={playingVideoId}
         onReady={onReady}
         onPlay={play}
       />
-      <VideosYouMightLikeMobile
+      <VideosMobile
         className="md:hidden"
         playingVideoId={playingVideoId}
         onReady={onReady}

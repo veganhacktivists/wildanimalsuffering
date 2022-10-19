@@ -51,7 +51,7 @@ const Organizations = () => {
   return (
     <>
       <section
-        id="organizations-screen"
+        id="organizations"
         data-name="Organizations"
         className="organizations screen-content"
       >

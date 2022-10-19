@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { Dialog, DialogContent, DialogTrigger } from "../../components/dialog";
 import { dialogs } from "./dialogs";
-import { EvenWorseDialogContent } from "./even-worse-dialog-content";
+import { TypesOfSufferingDialogContent } from "./types-of-suffering-dialog-content";
 
-import "./even-worse.css";
+import "./types-of-suffering.css";
 
-export function EvenWorse() {
+export function TypesOfSuffering() {
   const [selectedDialogIndex, setSelectedDialogIndex] = useState(null);
   const selectedDialog = dialogs[selectedDialogIndex];
 
@@ -25,7 +25,7 @@ export function EvenWorse() {
       data-name="Types of Suffering"
       className="screen-content even-worse white"
     >
-      <h2 id="even-worse-screen"></h2>
+      <h2 id="types-of-suffering"></h2>
       <div className="full-screen flex h-full w-full flex-col">
         <div className="split-screen w-full flex-col p-16 text-center">
           <h1>
@@ -36,7 +36,7 @@ export function EvenWorse() {
           {/* FIXME TypeScript error */}
           {/* @ts-ignore */}
           <DialogContent>
-            <EvenWorseDialogContent
+            <TypesOfSufferingDialogContent
               onNavigationClick={onNavigationClick}
               selectedDialog={selectedDialog}
             />

@@ -65,7 +65,7 @@ const WildAnimalStats = () => {
         className="abyss scrollsnap-y hw-screen flex-col overflow-hidden"
       >
         <div
-          id="animal-stats-screen"
+          id="wild-animal-stats"
           className="screen-content scrollable animal-stats flex"
         >
           {/* web: left side; mobile: top */}

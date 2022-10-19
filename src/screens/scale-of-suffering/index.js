@@ -14,7 +14,7 @@ import { FarmedAnimals } from "./farmed-animals";
   "animal-stats-arthropods": "600,000-7*10<sup>8</sup> arthropods",
 */
 
-export function PopulationScale() {
+export function ScaleOfSuffering() {
   const scrollRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: scrollRef,
@@ -25,7 +25,11 @@ export function PopulationScale() {
   const animalsOpacity = useTransform(scrollYProgress, [0.75, 1], [0, 1]);
 
   return (
-    <div ref={scrollRef} className="min-h-screen w-full bg-abyss bg-cover">
+    <section
+      id="scale-of-suffering"
+      ref={scrollRef}
+      className="min-h-screen w-full bg-abyss bg-cover"
+    >
       <div className="mx-auto grid min-h-screen w-full max-w-7xl grid-cols-2 gap-10 px-10">
         <div className="flex flex-col">
           <div className="grid h-screen place-items-center">
@@ -65,6 +69,6 @@ export function PopulationScale() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

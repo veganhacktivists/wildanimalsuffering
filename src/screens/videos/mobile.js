@@ -5,12 +5,7 @@ import { VideoPreviewMobile } from "./video-preview-mobile";
 import { videos } from "./videos";
 import { YoutubeVideo } from "./youtube-video";
 
-export function VideosYouMightLikeMobile({
-  className,
-  playingVideoId,
-  onReady,
-  onPlay,
-}) {
+export function VideosMobile({ className, playingVideoId, onReady, onPlay }) {
   const [visibleVideoId, setVisibleVideoId] = useState(videos[0].id);
   const videosRef = useRef({});
 
@@ -26,7 +21,7 @@ export function VideosYouMightLikeMobile({
 
   return (
     <section
-      id="videos-screen"
+      id="videos"
       data-name="Videos"
       className={cx("videos screen-content box-border", className)}
     >

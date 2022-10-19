@@ -1,9 +1,9 @@
-import "./why-it-matters.css";
+import "./introduction.css";
 
-const WhyItMatters = () => {
+export function Introduction() {
   return (
     <section
-      id="wild-animal-suffering-screen"
+      id="introduction"
       data-name="Introduction"
       className="screen-content wild-animal-suffering"
     >
@@ -66,6 +66,4 @@ const WhyItMatters = () => {
       </div>
     </section>
   );
-};
-
-export { WhyItMatters };
+}
