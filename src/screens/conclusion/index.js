@@ -2,11 +2,7 @@ import "./conclusion.css";
 
 export function Conclusion() {
   return (
-    <section
-      id="conclusion"
-      data-name="Conclusion"
-      className="together-we-can screen-content"
-    >
+    <section id="conclusion" className="together-we-can screen-content">
       <div className="full-screen bears h-full w-full flex-col justify-between">
         <div className="h-screen-50vh flex w-[100%] flex-col self-start py-16 pr-10 lg:w-[75%] 2xl:w-[50%]">
           <h2>Together, we can make life better for wild animals.</h2>

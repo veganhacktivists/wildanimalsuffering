@@ -4,11 +4,7 @@ const resources = ["books", "websites", "blogs", "podcasts"];
 
 export function Resources() {
   return (
-    <section
-      id="resources"
-      data-name="Resources"
-      className="other-resources screen-content"
-    >
+    <section id="resources" className="other-resources screen-content">
       <div className="full-screen h-full w-full flex-col">
         <div className="split-screen h-screen-50vh flex w-[35%] flex-col items-center justify-center py-16 text-center">
           <h2>other resources you might like</h2>

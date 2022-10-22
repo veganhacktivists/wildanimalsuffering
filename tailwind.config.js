@@ -29,6 +29,8 @@ module.exports = {
       },
       backgroundImage: {
         abyss: "url('/public/images/scale-of-suffering/abyss.jpg')",
+        "dirt-road": "url('/public/images/population-dynamics/dirt-road.jpg')",
+        sand: "url('/public/images/types-of-suffering/sand-bg-color.jpg')",
         savanna: "url('/public/images/introduction/savanna.jpg')",
         "savanna-md": "url('/public/images/introduction/savanna-md.jpg')",
       },

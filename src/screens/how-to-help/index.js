@@ -2,11 +2,7 @@ import "./how-to-help.css";
 
 export function HowToHelp() {
   return (
-    <section
-      id="how-to-help"
-      data-name="How You Can Help"
-      className="how-you-can-help screen-content"
-    >
+    <section id="how-to-help" className="how-you-can-help screen-content">
       <div className="full-screen h-full flex-col md:w-2/3">
         <div className="h-full w-2/3 self-center">
           <div className="flex flex-col items-center py-16 text-center">

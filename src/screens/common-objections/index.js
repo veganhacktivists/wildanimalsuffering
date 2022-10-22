@@ -20,7 +20,6 @@ export function CommonObjections() {
   return (
     <section
       id="common-objections"
-      data-name="FAQs"
       className="common-objections screen-content"
     >
       <div className="full-screen h-full flex-col md:w-9/12">

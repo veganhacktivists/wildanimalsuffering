@@ -8,7 +8,6 @@ export function VideosDesktop({ className, playingVideoId, onReady, onPlay }) {
   return (
     <section
       id="videos"
-      data-name="Videos"
       className={cx("videos screen-content box-border !pb-32", className)}
     >
       <div className="full-screen h-full w-full flex-col">
