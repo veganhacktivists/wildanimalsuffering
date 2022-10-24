@@ -4,16 +4,10 @@ import { VideoPreview } from "./video-preview";
 import { videos } from "./videos";
 import { YoutubeVideo } from "./youtube-video";
 
-export function VideosYouMightLikeDesktop({
-  className,
-  playingVideoId,
-  onReady,
-  onPlay,
-}) {
+export function VideosDesktop({ className, playingVideoId, onReady, onPlay }) {
   return (
     <section
-      id="videos-screen"
-      data-name="Videos"
+      id="videos"
       className={cx("videos screen-content box-border !pb-32", className)}
     >
       <div className="full-screen h-full w-full flex-col">
@@ -50,8 +44,8 @@ export function VideosYouMightLikeDesktop({
               living in the wild. This is frequently confused with the ways
               species, populations of animals, or ecosystems can be affected.
               These are entities, not individuals who can feel and suffer. In
-              this video, you\'ll hear about the meanings of "wild animal
-              suffering" and related terms.
+              this video, you&apos;ll hear about the meanings of &quot;wild
+              animal suffering&quot; and related terms.
             </div>
           </div>
 

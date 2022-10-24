@@ -50,11 +50,7 @@ const Organizations = () => {
 
   return (
     <>
-      <section
-        id="organizations-screen"
-        data-name="Organizations"
-        className="organizations screen-content"
-      >
+      <section id="organizations" className="organizations screen-content">
         <div className="full-screen h-full w-full flex-col">
           <div className="split-screen h-screen-50vh flex w-[35%] flex-col items-center justify-center py-16 text-center">
             <h2>organizations working on wild animal suffering</h2>

@@ -20,15 +20,22 @@ module.exports = {
         blue: {
           200: "#85c5c8",
         },
+        primary: {
+          DEFAULT: "#d8b36d",
+        },
         gray: {
           700: "#3F3E3E",
         },
       },
       backgroundImage: {
-        abyss: "url('/public/images/population-scale/abyss.jpg')",
+        abyss: "url('/public/images/scale-of-suffering/abyss.jpg')",
+        "dirt-road": "url('/public/images/population-dynamics/dirt-road.jpg')",
+        sand: "url('/public/images/types-of-suffering/sand-bg-color.jpg')",
+        savanna: "url('/public/images/introduction/savanna.jpg')",
+        "savanna-md": "url('/public/images/introduction/savanna-md.jpg')",
       },
       fontFamily: {
-        sans: ["Noto Serif"],
+        sans: ["Noto Serif", "sans-serif"],
         brand: ["The Bold Font"],
       },
     },

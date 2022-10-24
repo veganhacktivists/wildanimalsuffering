@@ -1,29 +1,29 @@
 import { Header } from "./components/header";
 import { CommonObjections } from "./screens/common-objections";
-import { EvenWorse } from "./screens/even-worse";
-import { HowYouCanHelp } from "./screens/how-you-can-help";
+import { Conclusion } from "./screens/conclusion";
+import { HowToHelp } from "./screens/how-to-help";
+import { Introduction } from "./screens/introduction";
 import { Organizations } from "./screens/organizations";
-import { OtherResources } from "./screens/other-resources";
 import { PopulationDynamics } from "./screens/population-dynamics";
-import { PopulationScale } from "./screens/population-scale";
-import { TogetherWeCan } from "./screens/together-we-can";
-import { VideosYouMightLike } from "./screens/videos-you-might-like";
-import { WhyItMatters } from "./screens/why-it-matters";
+import { Resources } from "./screens/resources";
+import { ScaleOfSuffering } from "./screens/scale-of-suffering";
+import { TypesOfSuffering } from "./screens/types-of-suffering";
+import { Videos } from "./screens/videos";
 
 export function App() {
   return (
     <>
       <Header />
-      <WhyItMatters />
-      <PopulationScale />
-      <EvenWorse />
+      <Introduction />
+      <ScaleOfSuffering />
+      <TypesOfSuffering />
       <PopulationDynamics />
-      <VideosYouMightLike />
+      <Videos />
       <CommonObjections />
-      <HowYouCanHelp />
+      <HowToHelp />
       <Organizations />
-      <OtherResources />
-      <TogetherWeCan />
+      <Resources />
+      <Conclusion />
     </>
   );
 }
