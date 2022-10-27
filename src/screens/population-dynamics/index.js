@@ -86,8 +86,8 @@ export function PopulationDynamics() {
           alt=""
         />
       </div>
-      <div className="relative mx-auto flex w-full max-w-7xl flex-col px-10">
-        <div className="grid grid-cols-4">
+      <div className="relative mx-auto flex w-full max-w-7xl flex-1 flex-col px-10">
+        <div className="grid flex-1 grid-cols-4">
           <div className="col-span-2 col-start-2 flex h-full flex-col space-y-10">
             <h2 className="text-center font-brand text-4xl text-white">
               Population Dynamics
