@@ -1,26 +1,8 @@
-import { translations } from "../../utils/translations";
-import "./together-we-can.css";
+import "./conclusion.css";
 
-// FIXME Remove translations for now
-const lang = translations.en;
-const credits = [
-  "credits-01",
-  "credits-02",
-  "credits-03",
-  "credits-04",
-  "credits-05",
-  "credits-06",
-  "credits-07",
-  "credits-08",
-];
-
-export function TogetherWeCan() {
+export function Conclusion() {
   return (
-    <section
-      id="together-we-can-screen"
-      data-name="Conclusion"
-      className="together-we-can screen-content"
-    >
+    <section id="conclusion" className="together-we-can screen-content">
       <div className="full-screen bears h-full w-full flex-col justify-between">
         <div className="h-screen-50vh flex w-[100%] flex-col self-start py-16 pr-10 lg:w-[75%] 2xl:w-[50%]">
           <h2>Together, we can make life better for wild animals.</h2>
@@ -65,9 +47,26 @@ export function TogetherWeCan() {
         <div className="flex flex-row">
           <h5 className="px-20">Credits and sources</h5>
           <div>
-            {credits.map((creditKey) => (
-              <p key={creditKey}>{lang[creditKey]}</p>
-            ))}
+            <p>
+              Mauris convallis arcu amet, sollicitudin gravida gravida platea.
+            </p>
+            <p>
+              Velit rhoncus pellentesque feugiat aenean tincidunt. Diam
+              tincidunt aliquet mauris lorem.
+            </p>
+            <p>
+              Egestas scelerisque ac risus. Neque nibh tellus elementum
+              vulputate auctor
+            </p>
+            <p>Arcu amet, sollicitudin gravida gravida platea.</p>
+            <p>Rrhoncus pellentesque feugiat aenean tincidunt</p>
+            <p>
+              Diam tincidunt aliquet mauris lorem egestas scelerisque ac risus
+            </p>
+            <p>Neque nibh tellus elementum vulputate auctor.</p>
+            <p>
+              Mauris convallis arcu amet, sollicitudin gravida gravida platea.
+            </p>
           </div>
         </div>
       </div>

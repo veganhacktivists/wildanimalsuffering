@@ -13,43 +13,36 @@ const WildAnimalStats = () => {
       key: "wildBirds",
       numberOnASide: 5,
       color: "blue",
-      languageKey: "animal-stats-birds",
     },
     {
       key: "wildAnimals",
       numberOnASide: 10,
       color: "blue",
-      languageKey: "animal-stats-wild-mammals",
     },
     {
       key: "reptiles",
       numberOnASide: 10,
       color: "green",
-      languageKey: "animal-stats-reptiles",
     },
     {
       key: "amphibians",
       numberOnASide: 10,
       color: "green",
-      languageKey: "animal-stats-amphibians",
     },
     {
       key: "fish",
       numberOnASide: 10,
       color: "orange",
-      languageKey: "animal-stats-fish",
     },
     {
       key: "earthworms",
       numberOnASide: 30,
       color: "pink",
-      languageKey: "animal-stats-earthworms",
     },
     {
       key: "arthropods",
       numberOnASide: 50,
       color: "purple",
-      languageKey: "animal-stats-arthropods",
     },
   ];
   const squareData = stats[animalStatIndex];
@@ -72,7 +65,7 @@ const WildAnimalStats = () => {
         className="abyss scrollsnap-y hw-screen flex-col overflow-hidden"
       >
         <div
-          id="animal-stats-screen"
+          id="wild-animal-stats"
           className="screen-content scrollable animal-stats flex"
         >
           {/* web: left side; mobile: top */}

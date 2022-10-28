@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { VideosYouMightLikeDesktop } from "./desktop";
-import { VideosYouMightLikeMobile } from "./mobile";
-import "./videos-you-might-like.css";
+import { VideosDesktop } from "./desktop";
+import { VideosMobile } from "./mobile";
+import "./videos.css";
 import useIsMobile from "../../hooks/is-mobile";
 
-export function VideosYouMightLike() {
+export function Videos() {
   const isMobile = useIsMobile();
 
   const [playingVideoId, setPlayingVideoId] = useState(null);
@@ -24,7 +24,7 @@ export function VideosYouMightLike() {
   };
 
   return isMobile ? (
-    <VideosYouMightLikeMobile
+    <VideosMobile
       className="md:hidden"
       playingVideoId={playingVideoId}
       onPlay={(videoId) => setPlayingVideoId(videoId)}
@@ -32,7 +32,7 @@ export function VideosYouMightLike() {
       onNavigate={stop}
     />
   ) : (
-    <VideosYouMightLikeDesktop
+    <VideosDesktop
       className="hidden md:block"
       playingVideoId={playingVideoId}
       onPlay={(videoId) => setPlayingVideoId(videoId)}

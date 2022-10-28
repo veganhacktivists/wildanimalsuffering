@@ -1,28 +1,18 @@
 import { cx } from "../../utils/cx";
-import { translations } from "../../utils/translations";
 import { VerticalScrollbar } from "./vertical-scrollbar";
 import { VideoPreview } from "./video-preview";
 import { videos } from "./videos";
 import { YoutubeVideo } from "./youtube-video";
 
-// FIXME Remove translations for now
-const lang = translations.en;
-
-export function VideosYouMightLikeDesktop({
-  className,
-  playingVideoId,
-  onPlayerReady,
-  onPlay,
-}) {
+export function VideosDesktop({ className, playingVideoId, onReady, onPlay }) {
   return (
     <section
-      id="videos-screen"
-      data-name="Videos"
+      id="videos"
       className={cx("videos screen-content box-border !pb-32", className)}
     >
       <div className="full-screen h-full w-full flex-col">
         <div className="split-screen h-screen-50vh flex w-full flex-col items-center justify-center py-16 text-center">
-          <h1>{lang["videos-you-might-like"]}</h1>
+          <h1>Videos you might like</h1>
         </div>
 
         <div className="mx-8 grid h-full grid-cols-12 gap-8 overflow-hidden p-2 xl:mx-32 2xl:mx-96">
@@ -47,7 +37,12 @@ export function VideosYouMightLikeDesktop({
             )}
 
             <div className="h-1/5 rounded-b-xl bg-khaki p-4 text-lg text-black shadow-[0px_0px_3px_1px_rgba(255,255,255,1)]">
-              {lang["video-caption"]}
+              Wild animal suffering is about harms to the wellbeing of animals
+              living in the wild. This is frequently confused with the ways
+              species, populations of animals, or ecosystems can be affected.
+              These are entities, not individuals who can feel and suffer. In
+              this video, you&apos;ll hear about the meanings of &quot;wild
+              animal suffering&quot; and related terms.
             </div>
           </div>
 
