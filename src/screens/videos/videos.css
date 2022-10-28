@@ -4,3 +4,14 @@
 		url("../../../assets/images/videos-you-might-like/penguins.png") bottom right/auto no-repeat,
 		url("../../../assets/images/videos-you-might-like/sky.jpg") center/cover no-repeat;
 }
+
+/* For Webkit-based browsers (Chrome, Safari and Opera) */
+.scrollbar-hide::-webkit-scrollbar {
+	display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none;  /* Firefox */
+}
