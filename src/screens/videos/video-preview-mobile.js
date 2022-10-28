@@ -44,7 +44,7 @@ export function VideoPreviewMobile({
 
       <div className={playBtnWrapperClassName}>
         <div className="rounded-full bg-slate-900/50">
-          <PlayIcon className={playBtnClassName} />
+          <PlayIcon size="80" className={playBtnClassName} />
         </div>
       </div>
 
