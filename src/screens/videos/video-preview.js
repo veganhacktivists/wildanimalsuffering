@@ -34,11 +34,13 @@ export function VideoPreview({
           titleWrapperClassName
         )}
       >
-        <div className={cx("mt-auto", authorClassName)}>
+        <div className={cx("mt-auto text-white", authorClassName)}>
           {video.author} - {video.duration}
         </div>
 
-        <div className={cx("font-bold", titleClassName)}>{video.title}</div>
+        <div className={cx("font-bold text-white", titleClassName)}>
+          {video.title}
+        </div>
       </div>
     </div>
   );

@@ -26,7 +26,7 @@ export function VideoPreviewMobile({
       <div className="flex flex-row justify-between">
         <div
           className={cx(
-            "rounded-xl bg-slate-900/80 font-bold",
+            "rounded-xl bg-slate-900/80 font-bold text-white",
             authorClassName
           )}
         >
@@ -34,7 +34,7 @@ export function VideoPreviewMobile({
         </div>
         <div
           className={cx(
-            "rounded-xl bg-slate-900/80 text-right",
+            "rounded-xl bg-slate-900/80 text-right text-white",
             durationClassName
           )}
         >
@@ -54,7 +54,9 @@ export function VideoPreviewMobile({
           titleWrapperClassName
         )}
       >
-        <div className={cx("font-bold", titleClassName)}>{video.title}</div>
+        <div className={cx("font-bold text-white", titleClassName)}>
+          {video.title}
+        </div>
       </div>
     </div>
   );
