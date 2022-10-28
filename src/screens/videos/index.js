@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { VideosDesktop } from "./desktop";
 import { VideosMobile } from "./mobile";
-import "./videos.css";
 import useIsMobile from "../../hooks/is-mobile";
+import "./videos.css";
 
 export function Videos() {
   const isMobile = useIsMobile();
@@ -33,7 +33,7 @@ export function Videos() {
     />
   ) : (
     <VideosDesktop
-      className="hidden md:block"
+      className="hidden md:flex"
       playingVideoId={playingVideoId}
       onPlay={(videoId) => setPlayingVideoId(videoId)}
       onPlayerReady={play}

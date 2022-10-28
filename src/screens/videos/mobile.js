@@ -5,9 +5,6 @@ import { VideoPreviewMobile } from "./video-preview-mobile";
 import { videos } from "./videos";
 import { YoutubeVideo } from "./youtube-video";
 
-// FIXME Remove translations for now
-const lang = translations.en;
-
 export function VideosMobile({
   className,
   playingVideoId,
@@ -31,22 +28,22 @@ export function VideosMobile({
   return (
     <section
       id="videos"
-      className={cx("videos screen-content box-border", className)}
+      className={cx("videos screen-content box-border py-24", className)}
     >
-      <div className="full-screen h-full w-full flex-col">
-        <div className="split-screen h-screen-20vh flex w-full flex-col items-center justify-center text-center">
-          <h1>Videos you might like</h1>
-        </div>
+      <div className="relative mx-auto flex w-full max-w-7xl grow flex-col px-10">
+        <h2 className="text-center font-brand text-4xl text-white">
+          Videos you might like
+        </h2>
 
-        <div className="h-2/3">
-          <div className="flex h-full flex-row overflow-x-auto">
+        <div className="grow">
+          <div className="scrollbar-hide flex flex-row items-stretch overflow-x-auto">
             {videos.map((video) => (
               <div
                 key={video.id}
-                className="h-full shrink-0 basis-full p-5"
+                className="flex shrink-0 basis-full flex-col p-5"
                 ref={(el) => (videosRef.current[video.id] = el)}
               >
-                <div className="h-2/3">
+                <div className="grow">
                   {playingVideoId === video.id ? (
                     <YoutubeVideo
                       videoId={video.id}
@@ -74,7 +71,7 @@ export function VideosMobile({
                   />
                 </div>
 
-                <div className="h-1/3 rounded-b-3xl bg-white p-8 text-[14px] text-black">
+                <div className="rounded-b-3xl bg-white p-8 text-[14px]">
                   Wild animal suffering is about harms to the wellbeing of
                   animals living in the wild. This is frequently confused with
                   the ways species, populations of animals, or ecosystems can be
@@ -87,7 +84,7 @@ export function VideosMobile({
         </div>
 
         <DotNavigation
-          className="mx-5 mt-20"
+          className="mx-5 mb-5"
           items={videos.map((video) => video.id)}
           activeItem={visibleVideoId}
           onNavigate={(videoId) => {
