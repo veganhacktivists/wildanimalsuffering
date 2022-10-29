@@ -41,6 +41,8 @@ module.exports = {
         },
         primary: {
           DEFAULT: "#d8b36d",
+          light: "#E8D1A7",
+          lighter: "#F3E8D3",
         },
         gray: {
           700: "#3F3E3E",
