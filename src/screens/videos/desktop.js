@@ -24,8 +24,8 @@ export function VideosDesktop({
             Videos you might like
           </h2>
 
-          <div className="mx-8 grid grow grid-cols-12 gap-8 overflow-hidden p-2 xl:mx-32">
-            <div className="col-span-8 flex flex-col">
+          <div className="grid grow grid-cols-12 gap-8 overflow-hidden p-2">
+            <div className="col-span-8 flex flex-col xl:col-span-9">
               {playingVideoId !== null ? (
                 <YoutubeVideo
                   videoId={playingVideoId}
@@ -54,7 +54,7 @@ export function VideosDesktop({
               </div>
             </div>
 
-            <VerticalScrollbar className="col-span-4">
+            <VerticalScrollbar className="col-span-4 xl:col-span-3">
               {videos.map((video) => (
                 <VideoPreview
                   key={video.id}
