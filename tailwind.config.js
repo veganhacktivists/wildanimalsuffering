@@ -47,6 +47,9 @@ module.exports = {
         gray: {
           700: "#3F3E3E",
         },
+        black: {
+          DEFAULT: "#1A3439",
+        },
       },
       backgroundImage: {
         abyss: "url('/public/images/scale-of-suffering/abyss.jpg')",
