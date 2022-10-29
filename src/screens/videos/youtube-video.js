@@ -5,7 +5,7 @@ export function YoutubeVideo({ videoId, onReady, className }) {
     <YouTube
       videoId={videoId}
       className={className}
-      iframeClassName="yt-iframe relative z-10 w-full h-full rounded-t-xl"
+      iframeClassName="yt-iframe relative z-30 w-full h-full rounded-t-xl"
       opts={{
         height: null,
         width: null,
