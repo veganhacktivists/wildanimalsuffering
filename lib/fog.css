@@ -52,14 +52,14 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
  */
 #foglayer_01 .image01,
 #foglayer_01 .image02 {
-  background: url("../../../../assets/images/background-effect/fog1.png") center
+  background: url("../assets/images/background-effect/fog1.png") center
     center/cover no-repeat transparent;
 }
 #foglayer_02 .image01,
 #foglayer_02 .image02,
 #foglayer_03 .image01,
 #foglayer_03 .image02 {
-  background: url("../../../../assets/images/background-effect/fog2.png") center
+  background: url("../assets/images/background-effect/fog2.png") center
     center/cover no-repeat transparent;
 }
 

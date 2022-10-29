@@ -1,4 +1,4 @@
-import "../../lib/falling-leaves.css";
+import "../../lib/leaves.css";
 
 export function LeavesEffect() {
   return (
