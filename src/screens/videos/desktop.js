@@ -13,8 +13,6 @@ export function VideosDesktop({
 }) {
   return (
     <>
-      <BackgroundEffect type="videos-screen" />
-
       <section
         id="videos"
         className={cx("videos relative min-h-screen flex-col py-24", className)}
@@ -72,6 +70,8 @@ export function VideosDesktop({
           </div>
         </div>
       </section>
+
+      <BackgroundEffect type="videos-screen" />
     </>
   );
 }
