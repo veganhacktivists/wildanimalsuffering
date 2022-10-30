@@ -47,10 +47,7 @@ export function VideosMobile({
                   {playingVideoId === video.id ? (
                     <YoutubeVideo
                       videoId={video.id}
-                      className={cx(
-                        "h-full rounded-t-3xl",
-                        video.id !== playingVideoId && "hidden"
-                      )}
+                      className="h-full rounded-t-3xl"
                       onReady={onPlayerReady}
                     />
                   ) : null}
