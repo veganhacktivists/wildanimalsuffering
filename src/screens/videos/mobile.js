@@ -36,7 +36,7 @@ export function VideosMobile({
         </h2>
 
         <div className="grow">
-          <div className="scrollbar-hide flex flex-row items-stretch overflow-x-auto">
+          <div className="flex flex-row items-stretch overflow-x-auto scrollbar-none">
             {videos.map((video) => (
               <div
                 key={video.id}

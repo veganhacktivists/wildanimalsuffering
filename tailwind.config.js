@@ -1,4 +1,5 @@
 const radixPlugin = require("./lib/tailwindcss-radix-plugin");
+const scrollbarPlugin = require("tailwind-scrollbar");
 
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx,css}"],
@@ -59,5 +60,5 @@ module.exports = {
       },
     },
   },
-  plugins: [radixPlugin()],
+  plugins: [radixPlugin(), scrollbarPlugin()],
 };
