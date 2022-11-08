@@ -54,7 +54,7 @@ module.exports = {
         "savanna-md": "url('/public/images/introduction/savanna-md.jpg')",
       },
       fontFamily: {
-        sans: ["Noto Serif", "sans-serif"],
+        sans: ["Poppins", "sans-serif"],
         brand: ["The Bold Font"],
       },
     },
