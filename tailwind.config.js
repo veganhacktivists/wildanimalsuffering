@@ -52,6 +52,13 @@ module.exports = {
         sand: "url('/public/images/types-of-suffering/sand-bg-color.jpg')",
         savanna: "url('/public/images/introduction/savanna.jpg')",
         "savanna-md": "url('/public/images/introduction/savanna-md.jpg')",
+        "resource-section": "url('/public/images/other-resources/section.png')",
+        "resource-section-active":
+          "url('/public/images/other-resources/section-active.png')",
+        "resource-section-flipped":
+          "url('/public/images/other-resources/section-flipped.png')",
+        "resource-section-active-flipped":
+          "url('/public/images/other-resources/section-active-flipped.png')",
       },
       fontFamily: {
         sans: ["Poppins", "sans-serif"],
