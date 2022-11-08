@@ -3,7 +3,7 @@ import { DotIcon } from "../../components/dot-icon";
 
 export function DotNavigation({ className, items, activeItem, onNavigate }) {
   return (
-    <div className={cx("flex justify-between", className)}>
+    <div className={cx("flex justify-around", className)}>
       {items.map((item) => (
         <span
           key={item}
