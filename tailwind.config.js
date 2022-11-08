@@ -64,6 +64,10 @@ module.exports = {
         sans: ["Poppins", "sans-serif"],
         brand: ["The Bold Font"],
       },
+      aspectRatio: {
+        "4/5": "4 / 5",
+        "4/3": "4 / 3",
+      },
     },
   },
   plugins: [radixPlugin()],
