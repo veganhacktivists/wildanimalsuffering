@@ -1,15 +1,20 @@
 import { Scrollbar } from "react-scrollbars-custom";
+import { cx } from "../../utils/cx";
 
-export function VerticalScrollbar({ children, className }) {
+export function VerticalScrollbar({ children, className, contentClassName }) {
   return (
     <Scrollbar
-      className={className}
+      className={cx("!h-auto grow", className)}
       noScrollX
       contentProps={{
         renderer: (props) => {
           const { elementRef, ...restProps } = props;
           return (
-            <div {...restProps} ref={elementRef} className="!space-y-6 !p-2" />
+            <div
+              {...restProps}
+              ref={elementRef}
+              className={cx("!px-2", contentClassName)}
+            />
           );
         },
       }}
