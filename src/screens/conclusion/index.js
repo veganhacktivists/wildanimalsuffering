@@ -4,8 +4,8 @@ export function Conclusion() {
   return (
     <section id="conclusion" className="together-we-can">
       <div className="full-screen bears h-full w-full flex-col justify-between">
-        <div className="h-screen-50vh py-30 flex w-[100%] flex-col pt-36 pl-28 text-white lg:w-[75%] 2xl:w-[50%]">
-          <h2 className="mb-4 font-brand text-5xl">
+        <div className="h-screen-50vh py-30 flex w-[100%] max-w-3xl flex-col pt-36 pl-28 text-white lg:w-[75%] 2xl:w-[50%]">
+          <h2 className="mb-4  font-brand text-5xl leading-relaxed">
             Together, we can make life better for wild animals.
           </h2>
           <p className="font-lg font-sans">
