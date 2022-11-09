@@ -31,9 +31,7 @@ export function Conclusion() {
             you choose to take it.
           </p>
           <br />
-          <h3 className="mt-10 text-[40px] uppercase text-primary">
-            thank you
-          </h3>
+          <h3 className="mt-10 font-brand text-4xl text-primary">Thank you.</h3>
         </div>
         <div className="lighten-strip flex flex-row justify-evenly p-5">
           <div className="flex flex-row">
