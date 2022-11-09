@@ -2,11 +2,13 @@ import "./conclusion.css";
 
 export function Conclusion() {
   return (
-    <section id="conclusion" className="together-we-can screen-content">
+    <section id="conclusion" className="together-we-can">
       <div className="full-screen bears h-full w-full flex-col justify-between">
-        <div className="h-screen-50vh flex w-[100%] flex-col self-start py-16 pr-10 lg:w-[75%] 2xl:w-[50%]">
-          <h2>Together, we can make life better for wild animals.</h2>
-          <p>
+        <div className="h-screen-50vh py-30 flex w-[100%] flex-col pt-36 pl-28 text-white lg:w-[75%] 2xl:w-[50%]">
+          <h2 className="mb-4 text-[56px]">
+            Together, we can make life better for wild animals.
+          </h2>
+          <p className="font-lg font-sans">
             In recent years, there has been growing moral concern for animals.
             Thankfully, it is now rare to find a person who feels indifferent
             towards animal suffering. We know suffering feels bad to us. But we
@@ -19,7 +21,7 @@ export function Conclusion() {
             It matters to them. And it should matter to us.
           </p>
           <br />
-          <p>
+          <p className="font-lg font-sans">
             If it matters to you, then we encourage you to join us in our
             mission to make life better for wild animals. There is much to learn
             about the situation of wild animals. This page is just an
@@ -29,7 +31,9 @@ export function Conclusion() {
             you choose to take it.
           </p>
           <br />
-          <h3 className="orange">thank you</h3>
+          <h3 className="mt-10 text-[40px] uppercase text-primary">
+            thank you
+          </h3>
         </div>
         <div className="lighten-strip flex flex-row justify-evenly p-5">
           <div className="flex flex-row">
