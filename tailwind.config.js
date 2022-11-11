@@ -37,7 +37,7 @@ module.exports = {
         },
         khaki: "#c7d3d0",
         blue: {
-          200: "#85c5c8",
+          DEFAULT: "#85c5c8",
         },
         primary: {
           DEFAULT: "#d8b36d",
@@ -45,7 +45,7 @@ module.exports = {
           lighter: "#F3E8D3",
         },
         gray: {
-          700: "#3F3E3E",
+          DEFAULT: "#3F3E3E",
         },
         black: {
           DEFAULT: "#1A3439",
