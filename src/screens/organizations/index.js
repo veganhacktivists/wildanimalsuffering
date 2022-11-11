@@ -1,13 +1,13 @@
 import { organizations } from "./organizations";
-import "./organizations.css";
 
 const Organizations = () => {
   return (
-    <section
-      id="organizations"
-      className="organizations relative min-h-screen py-24"
-    >
-      <div className="relative mx-auto flex w-full max-w-7xl flex-col space-y-16 px-10 text-white md:px-32 lg:px-10">
+    <section id="organizations" className="organizations relative min-h-screen">
+      <div className="absolute h-screen w-screen bg-mud bg-cover bg-center bg-no-repeat"></div>
+      <div className="absolute h-screen w-screen bg-tree-and-owl bg-contain bg-left bg-no-repeat"></div>
+      <div className="absolute h-screen w-screen bg-frog bg-right-bottom bg-no-repeat"></div>
+
+      <div className="relative mx-auto flex w-full max-w-7xl flex-col space-y-16 px-10 py-24 text-white md:px-32 lg:px-10">
         <h2 className="text-center font-brand text-4xl">
           Organizations working on wild animal suffering
         </h2>
