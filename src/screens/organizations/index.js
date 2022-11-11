@@ -13,9 +13,9 @@ const Organizations = () => {
         </h2>
 
         <div className="grid gap-y-12 lg:mx-8 lg:grid-cols-2 lg:gap-x-48 lg:gap-y-16 xl:mx-24">
-          {organizations.map((organization, key) => (
+          {organizations.map((organization) => (
             <div
-              key={key}
+              key={organization.name}
               className="flex flex-col items-center justify-center gap-x-5 text-white lg:flex-row lg:items-start"
             >
               <img
