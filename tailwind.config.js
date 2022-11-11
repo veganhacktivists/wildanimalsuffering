@@ -54,9 +54,12 @@ module.exports = {
       backgroundImage: {
         abyss: "url('/public/images/scale-of-suffering/abyss.jpg')",
         "dirt-road": "url('/public/images/population-dynamics/dirt-road.jpg')",
+        frog: "url('/public/images/organizations/frog.png')",
+        mud: "url('/public/images/organizations/mud-bg-color.jpg')",
         sand: "url('/public/images/types-of-suffering/sand-bg-color.jpg')",
         savanna: "url('/public/images/introduction/savanna.jpg')",
         "savanna-md": "url('/public/images/introduction/savanna-md.jpg')",
+        "tree-and-owl": "url('/public/images/organizations/tree-and-owl.png')",
       },
       fontFamily: {
         sans: ["Noto Serif", "sans-serif"],
