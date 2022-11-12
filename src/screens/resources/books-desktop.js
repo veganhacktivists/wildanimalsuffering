@@ -1,4 +1,4 @@
-import { VerticalScrollbar } from "../videos/vertical-scrollbar";
+import { VerticalScrollbar } from "../../components/vertical-scrollbar";
 import { books } from "./resources";
 
 export function BooksDesktop({ className }) {
@@ -33,7 +33,7 @@ export function BooksDesktop({ className }) {
 
             <div className="mt-auto flex gap-4">
               <a
-                className="rounded-full bg-brown px-5 py-1 font-bold uppercase text-white"
+                className="bg-brown rounded-full px-5 py-1 font-bold uppercase text-white"
                 href={book.websiteUrl}
                 target="_blank"
                 rel="noreferrer"
@@ -42,7 +42,7 @@ export function BooksDesktop({ className }) {
               </a>
 
               <a
-                className="rounded-full bg-brown px-5 py-1 font-bold uppercase text-white"
+                className="bg-brown rounded-full px-5 py-1 font-bold uppercase text-white"
                 href={book.eBookUrl}
                 target="_blank"
                 rel="noreferrer"
@@ -51,7 +51,7 @@ export function BooksDesktop({ className }) {
               </a>
 
               <a
-                className="rounded-full bg-brown px-5 py-1 font-bold uppercase text-white"
+                className="bg-brown rounded-full px-5 py-1 font-bold uppercase text-white"
                 href={book.amazonUrl}
                 target="_blank"
                 rel="noreferrer"

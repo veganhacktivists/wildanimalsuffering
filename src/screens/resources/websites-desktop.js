@@ -1,4 +1,4 @@
-import { VerticalScrollbar } from "../videos/vertical-scrollbar";
+import { VerticalScrollbar } from "../../components/vertical-scrollbar";
 import { websites } from "./resources";
 
 export function WebsitesDesktop({ className }) {
@@ -29,7 +29,7 @@ export function WebsitesDesktop({ className }) {
                 {website.title}
               </a>
               <a
-                className="ml-auto rounded-full bg-brown px-5 py-1 font-bold uppercase text-white"
+                className="bg-brown ml-auto rounded-full px-5 py-1 font-bold uppercase text-white"
                 href={website.url}
                 target="_blank"
                 rel="noreferrer"

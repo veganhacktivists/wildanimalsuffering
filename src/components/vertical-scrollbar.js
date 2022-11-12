@@ -1,5 +1,5 @@
 import { Scrollbar } from "react-scrollbars-custom";
-import { cx } from "../../utils/cx";
+import { cx } from "../utils/cx";
 
 export function VerticalScrollbar({ children, className, contentClassName }) {
   return (

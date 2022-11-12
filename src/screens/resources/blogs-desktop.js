@@ -1,4 +1,4 @@
-import { VerticalScrollbar } from "../videos/vertical-scrollbar";
+import { VerticalScrollbar } from "../../components/vertical-scrollbar";
 import { blogs } from "./resources";
 import { cx } from "../../utils/cx";
 
