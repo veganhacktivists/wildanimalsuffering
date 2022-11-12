@@ -9,10 +9,17 @@ import { BlogsMobile } from "./blogs-mobile";
 import { WebsitesDesktop } from "./websites-desktop";
 import { PodcastsDesktop } from "./podcasts-desktop";
 
-const categories = ["blogs", "books", "websites", "podcasts"];
+const Categories = {
+  BLOGS: "blogs",
+  BOOKS: "books",
+  WEBSITES: "websites",
+  PODCASTS: "podcasts",
+};
+
+const DEFAULT_CATEGORY = Categories.BLOGS;
 
 export function Resources() {
-  const [currentCategory, setCurrentCategory] = useState("blogs");
+  const [currentCategory, setCurrentCategory] = useState(DEFAULT_CATEGORY);
 
   return (
     <section
@@ -26,7 +33,7 @@ export function Resources() {
 
         <div className="flex w-full grow flex-col gap-6 lg:flex-row lg:gap-12 lg:py-8">
           <div className="grid grid-cols-2 gap-0 lg:block lg:space-y-6">
-            {categories.map((category) => (
+            {Object.values(Categories).map((category) => (
               <a
                 key={category}
                 className={cx(
@@ -45,52 +52,72 @@ export function Resources() {
 
           <div
             className={
-              currentCategory === "blogs" ? "hidden grow lg:flex" : "hidden"
+              currentCategory === Categories.BLOGS
+                ? "hidden grow lg:flex"
+                : "hidden"
             }
           >
             <BlogsDesktop />
           </div>
 
-          <div className={currentCategory === "blogs" ? "lg:hidden" : "hidden"}>
+          <div
+            className={
+              currentCategory === Categories.BLOGS ? "lg:hidden" : "hidden"
+            }
+          >
             <BlogsMobile />
           </div>
 
           <div
             className={
-              currentCategory === "books" ? "hidden grow lg:flex" : "hidden"
+              currentCategory === Categories.BOOKS
+                ? "hidden grow lg:flex"
+                : "hidden"
             }
           >
             <BooksDesktop />
           </div>
 
-          <div className={currentCategory === "books" ? "lg:hidden" : "hidden"}>
+          <div
+            className={
+              currentCategory === Categories.BOOKS ? "lg:hidden" : "hidden"
+            }
+          >
             <BooksMobile />
           </div>
 
           <div
             className={
-              currentCategory === "websites" ? "hidden grow lg:flex" : "hidden"
+              currentCategory === Categories.WEBSITES
+                ? "hidden grow lg:flex"
+                : "hidden"
             }
           >
             <WebsitesDesktop />
           </div>
 
           <div
-            className={currentCategory === "websites" ? "lg:hidden" : "hidden"}
+            className={
+              currentCategory === Categories.WEBSITES ? "lg:hidden" : "hidden"
+            }
           >
             <WebsitesMobile />
           </div>
 
           <div
             className={
-              currentCategory === "podcasts" ? "hidden grow lg:flex" : "hidden"
+              currentCategory === Categories.PODCASTS
+                ? "hidden grow lg:flex"
+                : "hidden"
             }
           >
             <PodcastsDesktop />
           </div>
 
           <div
-            className={currentCategory === "podcasts" ? "lg:hidden" : "hidden"}
+            className={
+              currentCategory === Categories.PODCASTS ? "lg:hidden" : "hidden"
+            }
           >
             <PodcastsMobile />
           </div>
