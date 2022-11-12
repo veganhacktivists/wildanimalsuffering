@@ -1,21 +1,15 @@
 import { podcasts } from "./resources";
-import { DotNavigation } from "../videos/dot-navigation";
+import { DotNavigation, scrollIntoView } from "../../components/dot-navigation";
 import { cx } from "../../utils/cx";
-import { videos } from "../videos/videos";
 import { useRef, useState } from "react";
 
 export function PodcastsMobile({ className }) {
-  const [visiblePodcastKey, setVisiblePodcastKey] = useState(videos[0].id);
+  const [visiblePodcastKey, setVisiblePodcastKey] = useState(podcasts[0].key);
   const podcastsRef = useRef({});
 
   const scrollTo = (podcastKey) => {
     setVisiblePodcastKey(podcastKey);
-
-    podcastsRef.current[podcastKey].scrollIntoView({
-      behavior: "smooth",
-      block: "nearest",
-      inline: "center",
-    });
+    scrollIntoView(podcastsRef.current[podcastKey]);
   };
 
   return (
@@ -47,7 +41,7 @@ export function PodcastsMobile({ className }) {
 
               <div className="mt-auto flex justify-center gap-4">
                 <a
-                  className="rounded-full bg-brown-lighter px-5 py-1 font-bold uppercase text-white"
+                  className="bg-brown-lighter rounded-full px-5 py-1 font-bold uppercase text-white"
                   href={podcast.listenUrl}
                   target="_blank"
                   rel="noreferrer"
@@ -56,7 +50,7 @@ export function PodcastsMobile({ className }) {
                 </a>
 
                 <a
-                  className="rounded-full bg-brown px-5 py-1 font-bold uppercase text-white"
+                  className="bg-brown rounded-full px-5 py-1 font-bold uppercase text-white"
                   href={podcast.websiteUrl}
                   target="_blank"
                   rel="noreferrer"
@@ -65,7 +59,7 @@ export function PodcastsMobile({ className }) {
                 </a>
 
                 <a
-                  className="rounded-full bg-brown px-5 py-1 font-bold uppercase text-white"
+                  className="bg-brown rounded-full px-5 py-1 font-bold uppercase text-white"
                   href={podcast.donateUrl}
                   target="_blank"
                   rel="noreferrer"

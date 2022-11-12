@@ -1,21 +1,15 @@
 import { books } from "./resources";
-import { DotNavigation } from "../videos/dot-navigation";
+import { DotNavigation, scrollIntoView } from "../../components/dot-navigation";
 import { cx } from "../../utils/cx";
-import { videos } from "../videos/videos";
 import { useRef, useState } from "react";
 
 export function BooksMobile({ className }) {
-  const [visibleBookKey, setVisibleBookKey] = useState(videos[0].id);
+  const [visibleBookKey, setVisibleBookKey] = useState(books[0].key);
   const booksRef = useRef({});
 
   const scrollTo = (bookKey) => {
     setVisibleBookKey(bookKey);
-
-    booksRef.current[bookKey].scrollIntoView({
-      behavior: "smooth",
-      block: "nearest",
-      inline: "center",
-    });
+    scrollIntoView(booksRef.current[bookKey]);
   };
 
   return (
@@ -47,7 +41,7 @@ export function BooksMobile({ className }) {
 
               <div className="mt-auto flex justify-center gap-4">
                 <a
-                  className="rounded-full bg-brown px-5 py-1 font-bold uppercase text-white"
+                  className="bg-brown rounded-full px-5 py-1 font-bold uppercase text-white"
                   href={book.websiteUrl}
                   target="_blank"
                   rel="noreferrer"
@@ -56,7 +50,7 @@ export function BooksMobile({ className }) {
                 </a>
 
                 <a
-                  className="rounded-full bg-brown px-5 py-1 font-bold uppercase text-white"
+                  className="bg-brown rounded-full px-5 py-1 font-bold uppercase text-white"
                   href={book.amazonUrl}
                   target="_blank"
                   rel="noreferrer"
@@ -65,7 +59,7 @@ export function BooksMobile({ className }) {
                 </a>
 
                 <a
-                  className="rounded-full bg-brown px-5 py-1 font-bold uppercase text-white"
+                  className="bg-brown rounded-full px-5 py-1 font-bold uppercase text-white"
                   href={book.amazonUrl}
                   target="_blank"
                   rel="noreferrer"

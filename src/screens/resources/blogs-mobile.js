@@ -1,21 +1,15 @@
 import { blogs } from "./resources";
-import { DotNavigation } from "../videos/dot-navigation";
+import { DotNavigation, scrollIntoView } from "../../components/dot-navigation";
 import { cx } from "../../utils/cx";
-import { videos } from "../videos/videos";
 import { useRef, useState } from "react";
 
 export function BlogsMobile({ className }) {
-  const [visibleBlogKey, setVisibleBlogKey] = useState(videos[0].id);
+  const [visibleBlogKey, setVisibleBlogKey] = useState(blogs[0].key);
   const blogsRef = useRef({});
 
   const scrollTo = (blogKey) => {
     setVisibleBlogKey(blogKey);
-
-    blogsRef.current[blogKey].scrollIntoView({
-      behavior: "smooth",
-      block: "nearest",
-      inline: "center",
-    });
+    scrollIntoView(blogsRef.current[blogKey]);
   };
 
   return (
@@ -46,7 +40,7 @@ export function BlogsMobile({ className }) {
               <p>{blog.description}</p>
 
               <a
-                className="ml-auto mt-auto rounded-full bg-brown px-5 py-1 font-bold uppercase text-white"
+                className="bg-brown ml-auto mt-auto rounded-full px-5 py-1 font-bold uppercase text-white"
                 href={blog.url}
                 target="_blank"
                 rel="noreferrer"
