@@ -3,13 +3,15 @@ import { blogs } from "./resources";
 import { cx } from "../../utils/cx";
 
 export function BlogsDesktop({ className }) {
+  const mainBlog = blogs[0];
+
   return (
     <div className={cx("grid grow grid-cols-12 gap-12", className)}>
       <div className="col-span-7 flex flex-col">
         <div className="flex grow flex-col">
           <img
             className="h-full rounded-t-xl object-cover"
-            src={`/images/other-resources/blogs/${blogs[0].key}.jpg`}
+            src={`/images/other-resources/blogs/${mainBlog.key}.jpg`}
             alt=""
           />
 
@@ -17,18 +19,18 @@ export function BlogsDesktop({ className }) {
             <div className="flex items-center gap-4">
               <a
                 className="text-xl font-bold"
-                href={blogs[0].url}
+                href={mainBlog.url}
                 target="_blank"
                 rel="noreferrer"
               >
-                {blogs[0].title}
+                {mainBlog.title}
               </a>
 
-              <time>{blogs[0].date.toLocaleDateString("en-US")}</time>
+              <time>{mainBlog.date.toLocaleDateString("en-US")}</time>
 
               <a
-                className="ml-auto whitespace-nowrap rounded-full bg-brown px-5 py-1 font-bold uppercase text-white"
-                href={blogs[0].url}
+                className="bg-brown ml-auto whitespace-nowrap rounded-full px-5 py-1 font-bold uppercase text-white"
+                href={mainBlog.url}
               >
                 Read more
               </a>
