@@ -1,6 +1,12 @@
-import { useState } from "react";
+import { motion, useMotionValue, useTransform } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import { BackgroundEffect } from "../../components/background-effect";
 import { YoutubeVideo } from "./youtube-video";
 import { YoutubeVideoItem } from "./youtube-video-item";
+
+function buildThresholdList(numSteps) {
+  return Array.from({ length: numSteps }).map((_, idx) => (1 / numSteps) * idx);
+}
 
 export const videos = [
   {
@@ -84,10 +90,29 @@ export const videos = [
 ];
 
 export function Videos() {
+  const ref = useRef(null);
   const [activeVideo, setActiveVideo] = useState(videos[0]);
+  const snowfallOpacity = useMotionValue(0);
+
+  // Fade snowfall in and out based on intersection ratio.
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([{ rootBounds, boundingClientRect, intersectionRatio }]) => {
+        const ratio = 1 - rootBounds.height / boundingClientRect.height;
+
+        snowfallOpacity.set(intersectionRatio + intersectionRatio * ratio);
+      },
+      { threshold: buildThresholdList(100) }
+    );
+
+    observer.observe(ref.current);
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section
+      ref={ref}
       id="videos"
       className="relative min-h-screen flex-col bg-sky py-24"
     >
@@ -102,13 +127,17 @@ export function Videos() {
         alt=""
       />
 
+      <motion.div style={{ opacity: snowfallOpacity }}>
+        <BackgroundEffect type="videos-screen" />
+      </motion.div>
+
       <div className="relative mx-auto flex w-full max-w-7xl grow flex-col space-y-10">
         <h2 className="px-8 text-center font-brand text-3xl text-white lg:text-4xl">
           Videos you might like
         </h2>
 
         {/* Mobile only */}
-        <div className="flex snap-x snap-mandatory scroll-px-8 gap-8 overflow-x-scroll px-8 scrollbar-none lg:hidden">
+        <div className="scrollbar-none flex snap-x snap-mandatory scroll-px-8 gap-8 overflow-x-scroll px-8 lg:hidden">
           {videos.map((video) => (
             <div
               key={video.id}
