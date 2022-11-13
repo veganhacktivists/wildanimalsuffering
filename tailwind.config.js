@@ -59,11 +59,22 @@ module.exports = {
         sand: "url('/public/images/types-of-suffering/sand-bg-color.jpg')",
         savanna: "url('/public/images/introduction/savanna.jpg')",
         "savanna-md": "url('/public/images/introduction/savanna-md.jpg')",
+        "resource-section": "url('/public/images/other-resources/section.png')",
+        "resource-section-active":
+          "url('/public/images/other-resources/section-active.png')",
+        "resource-section-flipped":
+          "url('/public/images/other-resources/section-flipped.png')",
+        "resource-section-active-flipped":
+          "url('/public/images/other-resources/section-active-flipped.png')",
         "tree-and-owl": "url('/public/images/organizations/tree-and-owl.png')",
       },
       fontFamily: {
-        sans: ["Noto Serif", "sans-serif"],
+        sans: ["Poppins", "sans-serif"],
         brand: ["The Bold Font"],
+      },
+      aspectRatio: {
+        "4/5": "4 / 5",
+        "4/3": "4 / 3",
       },
     },
   },

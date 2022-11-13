@@ -1,5 +1,5 @@
 import { cx } from "../../utils/cx";
-import { VerticalScrollbar } from "./vertical-scrollbar";
+import { VerticalScrollbar } from "../../components/vertical-scrollbar";
 import { VideoPreview } from "./video-preview";
 import { videos } from "./videos";
 import { YoutubeVideo } from "./youtube-video";

@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { cx } from "../../utils/cx";
-import { DotNavigation } from "./dot-navigation";
+import { DotNavigation } from "../../components/dot-navigation";
 import { VideoPreviewMobile } from "./video-preview-mobile";
 import { videos } from "./videos";
 import { YoutubeVideo } from "./youtube-video";

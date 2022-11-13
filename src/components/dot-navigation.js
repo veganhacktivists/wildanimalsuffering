@@ -1,9 +1,9 @@
-import { cx } from "../../utils/cx";
-import { DotIcon } from "../../components/dot-icon";
+import { cx } from "../utils/cx";
+import { DotIcon } from "./dot-icon";
 
 export function DotNavigation({ className, items, activeItem, onNavigate }) {
   return (
-    <div className={cx("flex justify-between", className)}>
+    <div className={cx("flex justify-around", className)}>
       {items.map((item) => (
         <span
           key={item}
@@ -19,4 +19,12 @@ export function DotNavigation({ className, items, activeItem, onNavigate }) {
       ))}
     </div>
   );
+}
+
+export function scrollIntoView(element) {
+  element.scrollIntoView({
+    behavior: "smooth",
+    block: "nearest",
+    inline: "center",
+  });
 }
