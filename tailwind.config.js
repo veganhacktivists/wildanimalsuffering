@@ -41,29 +41,51 @@ module.exports = {
         },
         khaki: "#c7d3d0",
         blue: {
-          200: "#85c5c8",
+          DEFAULT: "#85c5c8",
         },
         primary: {
           DEFAULT: "#d8b36d",
+          light: "#E8D1A7",
+          lighter: "#F3E8D3",
         },
         gray: {
-          700: "#3F3E3E",
+          DEFAULT: "#3F3E3E",
+        },
+        black: {
+          DEFAULT: "#1A3439",
+        },
+        brown: {
+          DEFAULT: "#5D5445",
+          lighter: "#C79D5E",
         },
       },
       backgroundImage: {
         abyss: "url('/public/images/scale-of-suffering/abyss.jpg')",
         "dirt-road": "url('/public/images/population-dynamics/dirt-road.jpg')",
+        frog: "url('/public/images/organizations/frog.png')",
+        mud: "url('/public/images/organizations/mud-bg-color.jpg')",
         sand: "url('/public/images/types-of-suffering/sand-bg-color.jpg')",
         savanna: "url('/public/images/introduction/savanna.jpg')",
         "savanna-md": "url('/public/images/introduction/savanna-md.jpg')",
         sky: "url('/public/images/videos/sky.jpg')",
+        "resource-section": "url('/public/images/other-resources/section.png')",
+        "resource-section-active":
+          "url('/public/images/other-resources/section-active.png')",
+        "resource-section-flipped":
+          "url('/public/images/other-resources/section-flipped.png')",
+        "resource-section-active-flipped":
+          "url('/public/images/other-resources/section-active-flipped.png')",
+        "tree-and-owl": "url('/public/images/organizations/tree-and-owl.png')",
       },
       fontFamily: {
-        sans: ["Noto Serif", "sans-serif"],
+        sans: ["Poppins", "sans-serif"],
         brand: ["The Bold Font"],
       },
       boxShadow: {
         glow: "0 0 3px 1px #fff",
+      },
+      aspectRatio: {
+        "4/3": "4 / 3",
       },
     },
   },

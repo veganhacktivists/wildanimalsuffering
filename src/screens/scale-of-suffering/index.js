@@ -35,14 +35,14 @@ export function ScaleOfSuffering() {
           <div className="grid h-screen place-items-center">
             <h2 className="flex flex-col font-brand text-5xl leading-tight text-white">
               <span>There are roughly</span>
-              <span className="text-blue-200">8 billion humans</span>
+              <span className="text-blue">8 billion humans</span>
               <span>on planet Earth.</span>
             </h2>
           </div>
           <div className="grid h-screen place-items-center">
             <h2 className="flex flex-col font-brand text-5xl leading-tight text-white">
               <span>For every human, there are roughly</span>
-              <span className="text-blue-200">3-4 farmed animals</span>
+              <span className="text-blue">3-4 farmed animals</span>
               <span>being farmed at any given moment.</span>
             </h2>
           </div>
