@@ -50,6 +50,10 @@ module.exports = {
         black: {
           DEFAULT: "#1A3439",
         },
+        brown: {
+          DEFAULT: "#5D5445",
+          lighter: "#C79D5E",
+        },
       },
       backgroundImage: {
         abyss: "url('/public/images/scale-of-suffering/abyss.jpg')",

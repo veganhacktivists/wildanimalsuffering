@@ -41,7 +41,7 @@ export function BooksMobile({ className }) {
 
               <div className="mt-auto flex justify-center gap-4">
                 <a
-                  className="bg-brown rounded-full px-5 py-1 font-bold uppercase text-white"
+                  className="rounded-full bg-brown px-5 py-1 font-bold uppercase text-white"
                   href={book.websiteUrl}
                   target="_blank"
                   rel="noreferrer"
@@ -50,7 +50,7 @@ export function BooksMobile({ className }) {
                 </a>
 
                 <a
-                  className="bg-brown rounded-full px-5 py-1 font-bold uppercase text-white"
+                  className="rounded-full bg-brown px-5 py-1 font-bold uppercase text-white"
                   href={book.amazonUrl}
                   target="_blank"
                   rel="noreferrer"
@@ -59,7 +59,7 @@ export function BooksMobile({ className }) {
                 </a>
 
                 <a
-                  className="bg-brown rounded-full px-5 py-1 font-bold uppercase text-white"
+                  className="rounded-full bg-brown px-5 py-1 font-bold uppercase text-white"
                   href={book.amazonUrl}
                   target="_blank"
                   rel="noreferrer"

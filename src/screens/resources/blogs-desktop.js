@@ -29,7 +29,7 @@ export function BlogsDesktop({ className }) {
               <time>{mainBlog.date.toLocaleDateString("en-US")}</time>
 
               <a
-                className="bg-brown ml-auto whitespace-nowrap rounded-full px-5 py-1 font-bold uppercase text-white"
+                className="ml-auto whitespace-nowrap rounded-full bg-brown px-5 py-1 font-bold uppercase text-white"
                 href={mainBlog.url}
               >
                 Read more

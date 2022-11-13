@@ -40,7 +40,7 @@ export function BlogsMobile({ className }) {
               <p>{blog.description}</p>
 
               <a
-                className="bg-brown ml-auto mt-auto rounded-full px-5 py-1 font-bold uppercase text-white"
+                className="ml-auto mt-auto rounded-full bg-brown px-5 py-1 font-bold uppercase text-white"
                 href={blog.url}
                 target="_blank"
                 rel="noreferrer"
