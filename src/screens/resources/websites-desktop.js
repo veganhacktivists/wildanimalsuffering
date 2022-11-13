@@ -29,7 +29,7 @@ export function WebsitesDesktop({ className }) {
                 {website.title}
               </a>
               <a
-                className="bg-brown ml-auto rounded-full px-5 py-1 font-bold uppercase text-white"
+                className="ml-auto rounded-full bg-brown px-5 py-1 font-bold uppercase text-white"
                 href={website.url}
                 target="_blank"
                 rel="noreferrer"
