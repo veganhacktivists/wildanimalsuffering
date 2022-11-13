@@ -1,8 +1,10 @@
 const radixPlugin = require("./lib/tailwindcss-radix-plugin");
-const scrollbarPlugin = require("tailwind-scrollbar");
 
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx,css}"],
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
+  content: ["./src/**/*.{js,jsx,ts,tsx,css,html}"],
   theme: {
     extend: {
       animation: {
@@ -29,6 +31,7 @@ module.exports = {
       },
       spacing: {
         18: "4.5rem",
+        "9/10": "90%",
       },
       colors: {
         "menu-front": { dark: "#A29D8B", light: "#ADA999" },
@@ -53,12 +56,16 @@ module.exports = {
         sand: "url('/public/images/types-of-suffering/sand-bg-color.jpg')",
         savanna: "url('/public/images/introduction/savanna.jpg')",
         "savanna-md": "url('/public/images/introduction/savanna-md.jpg')",
+        sky: "url('/public/images/videos/sky.jpg')",
       },
       fontFamily: {
         sans: ["Noto Serif", "sans-serif"],
         brand: ["The Bold Font"],
       },
+      boxShadow: {
+        glow: "0 0 3px 1px #fff",
+      },
     },
   },
-  plugins: [radixPlugin(), scrollbarPlugin()],
+  plugins: [radixPlugin()],
 };
