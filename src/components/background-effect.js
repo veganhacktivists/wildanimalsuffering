@@ -20,7 +20,7 @@ export function BackgroundEffect({ type }) {
   }
 
   return (
-    <div className="pointer-events-none fixed h-screen w-screen">
+    <div className="pointer-events-none fixed inset-0 h-screen w-screen">
       <EffectComponent />
     </div>
   );

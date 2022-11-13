@@ -1,7 +1,10 @@
 const radixPlugin = require("./lib/tailwindcss-radix-plugin");
 
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx,css}"],
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
+  content: ["./src/**/*.{js,jsx,ts,tsx,css,html}"],
   theme: {
     extend: {
       animation: {
@@ -28,6 +31,7 @@ module.exports = {
       },
       spacing: {
         18: "4.5rem",
+        "9/10": "90%",
       },
       colors: {
         "menu-front": { dark: "#A29D8B", light: "#ADA999" },
@@ -63,6 +67,7 @@ module.exports = {
         sand: "url('/public/images/types-of-suffering/sand-bg-color.jpg')",
         savanna: "url('/public/images/introduction/savanna.jpg')",
         "savanna-md": "url('/public/images/introduction/savanna-md.jpg')",
+        sky: "url('/public/images/videos/sky.jpg')",
         "resource-section": "url('/public/images/other-resources/section.png')",
         "resource-section-active":
           "url('/public/images/other-resources/section-active.png')",
@@ -76,8 +81,10 @@ module.exports = {
         sans: ["Poppins", "sans-serif"],
         brand: ["The Bold Font"],
       },
+      boxShadow: {
+        glow: "0 0 3px 1px #fff",
+      },
       aspectRatio: {
-        "4/5": "4 / 5",
         "4/3": "4 / 3",
       },
     },
