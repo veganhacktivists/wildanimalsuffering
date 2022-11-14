@@ -18,9 +18,9 @@ export function DialogItem({ id, title, description }) {
       </RadixDialog.Trigger>
       <RadixDialog.Portal>
         <RadixDialog.Overlay className="fixed inset-0 z-10 h-screen w-screen bg-[#1a3439]/50" />
-        <RadixDialog.Content className="fixed left-1/2 top-1/2 z-10 w-full max-w-4xl -translate-x-1/2 -translate-y-1/2">
-          <div className="max-h-75 relative m-auto grid max-h-screen w-full place-items-center overflow-y-auto rounded-2xl border-4 border-white bg-white bg-sand p-10 md:grid-cols-2">
-            <RadixDialog.Close className="fixed top-4 right-4">
+        <RadixDialog.Content className="fixed bottom-0 z-10 max-h-screen w-full max-w-4xl overflow-y-auto md:left-1/2 md:top-1/2 md:-translate-y-1/2 md:-translate-x-1/2">
+          <div className="max-h-75 relative m-auto grid w-full place-items-center rounded-2xl border-4 border-white bg-white bg-sand bg-cover p-10 md:grid-cols-2">
+            <RadixDialog.Close className="absolute top-4 right-4">
               <CloseIcon className="h-6 w-6" />
             </RadixDialog.Close>
             <img
@@ -33,6 +33,9 @@ export function DialogItem({ id, title, description }) {
                 {title}
               </RadixDialog.Title>
               <RadixDialog.Description>{description}</RadixDialog.Description>
+              <RadixDialog.Close className="rounded-xl bg-primary px-5 py-1 md:hidden">
+                Close
+              </RadixDialog.Close>
             </div>
           </div>
         </RadixDialog.Content>
