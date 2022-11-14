@@ -4,12 +4,6 @@ export function Introduction() {
       id="introduction"
       className="min-h-screen bg-savanna-md bg-cover bg-center py-24"
     >
-      <img
-        className="absolute top-0 right-0 m-10 w-20"
-        src="/images/logo.svg"
-        alt="Logo"
-      />
-
       <div className="mx-auto flex w-full max-w-7xl flex-col px-10">
         <div className="grid grid-cols-2 gap-10">
           <div className="p-12 pr-0">
