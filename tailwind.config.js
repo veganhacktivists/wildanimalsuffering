@@ -83,7 +83,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ["Poppins", "sans-serif"],
-        brand: ["'Baloo Da 2'", "sans-serif"],
+        brand: ["The Bold Font", "sans-serif"],
       },
       boxShadow: {
         glow: "0 0 3px 1px #fff",
