@@ -42,7 +42,7 @@ export function YoutubeVideo({ video }) {
           </button>
         )}
       </div>
-      <p className="bg-white p-5 text-gray-700 lg:bg-white/60">
+      <p className="bg-white/80 p-5 text-gray-700">
         Wild animal suffering is about harms to the wellbeing of animals living
         in the wild. This is frequently confused with the ways species,
         populations of animals, or ecosystems can be affected. These are
