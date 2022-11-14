@@ -4,7 +4,7 @@ export function TypesOfSuffering() {
   return (
     <section
       id="types-of-suffering"
-      className="min-h-screen bg-sand bg-cover bg-center py-24"
+      className="flex min-h-screen items-center bg-sand bg-cover bg-center py-24"
     >
       <div className="mx-auto flex w-full max-w-7xl flex-col space-y-10 px-10">
         <h2 className="flex flex-col text-center font-brand text-4xl text-white">
