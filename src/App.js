@@ -15,15 +15,15 @@ export function App() {
     <>
       <Header />
       <Introduction />
-      {/* <ScaleOfSuffering /> */}
+      <ScaleOfSuffering />
       <TypesOfSuffering />
-      {/* <PopulationDynamics />
+      <PopulationDynamics />
       <Videos />
       <CommonObjections />
       <HowToHelp />
       <Organizations />
       <Resources />
-      <Conclusion /> */}
+      <Conclusion />
     </>
   );
 }
