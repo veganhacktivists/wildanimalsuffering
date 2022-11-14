@@ -42,7 +42,7 @@ export function AccordionItem({ index, label, content, value, ...props }) {
           "radix-state-closed:animate-slide-up radix-state-open:animate-slide-down"
         )}
       >
-        <div className="py-5 pl-18 pr-5">{content}</div>
+        <div className="py-5 px-5 sm:pl-18">{content}</div>
       </RadixAccordion.Content>
     </RadixAccordion.Item>
   );

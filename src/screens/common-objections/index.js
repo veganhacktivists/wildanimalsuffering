@@ -4,13 +4,9 @@ export function CommonObjections() {
   return (
     <section
       id="common-objections"
-      className="relative min-h-screen bg-sand bg-top py-24"
+      className="relative flex min-h-screen bg-sand bg-cover bg-top py-24"
     >
-      <img
-        className="not-sr-only absolute bottom-0 w-full"
-        src="/images/common-objections/grass-and-hedgehog.png"
-        alt=""
-      />
+      <div className="absolute bottom-0 h-full w-full bg-hedgehog bg-right-bottom bg-no-repeat xl:bg-contain" />
       <div className="relative mx-auto flex w-full max-w-7xl flex-col space-y-10 px-10">
         <h2 className="text-center font-brand text-4xl text-white">
           Common objections to helping wild animals
