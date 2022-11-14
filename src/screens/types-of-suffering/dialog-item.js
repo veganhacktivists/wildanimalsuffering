@@ -17,28 +17,29 @@ export function DialogItem({ id, title, description }) {
         </div>
       </RadixDialog.Trigger>
       <RadixDialog.Portal>
-        <RadixDialog.Overlay className="fixed inset-0 z-10 h-screen w-screen bg-[#1a3439]/50" />
-        <RadixDialog.Content className="fixed bottom-0 z-10 max-h-screen w-full max-w-4xl overflow-y-auto md:left-1/2 md:top-1/2 md:-translate-y-1/2 md:-translate-x-1/2">
-          <div className="max-h-75 relative m-auto grid w-full place-items-center rounded-2xl border-4 border-white bg-white bg-sand bg-cover p-10 md:grid-cols-2">
-            <RadixDialog.Close className="absolute top-4 right-4">
-              <CloseIcon className="h-6 w-6" />
-            </RadixDialog.Close>
-            <img
-              src={`/images/types-of-suffering/${id}.png`}
-              alt=""
-              className="w-full max-w-sm"
-            />
-            <div className="flex flex-col space-y-5">
-              <RadixDialog.Title className="font-brand text-2xl font-bold">
-                {title}
-              </RadixDialog.Title>
-              <RadixDialog.Description>{description}</RadixDialog.Description>
-              <RadixDialog.Close className="rounded-xl bg-primary px-5 py-1 md:hidden">
-                Close
+        <RadixDialog.Overlay className="fixed inset-0 z-10 flex h-screen w-screen items-center justify-center bg-[#1a3439]/50">
+          <RadixDialog.Content className="fixed bottom-0 z-10 max-h-screen w-full max-w-4xl overflow-y-auto md:static">
+            <div className="max-h-75 relative m-auto grid w-full place-items-center rounded-2xl border-4 border-white bg-white bg-sand bg-cover p-10 md:grid-cols-2">
+              <RadixDialog.Close className="absolute top-4 right-4">
+                <CloseIcon className="h-6 w-6" />
               </RadixDialog.Close>
+              <img
+                src={`/images/types-of-suffering/${id}.png`}
+                alt=""
+                className="w-full max-w-sm"
+              />
+              <div className="flex flex-col space-y-5">
+                <RadixDialog.Title className="font-brand text-2xl font-bold">
+                  {title}
+                </RadixDialog.Title>
+                <RadixDialog.Description>{description}</RadixDialog.Description>
+                <RadixDialog.Close className="rounded-xl bg-primary px-5 py-1 md:hidden">
+                  Close
+                </RadixDialog.Close>
+              </div>
             </div>
-          </div>
-        </RadixDialog.Content>
+          </RadixDialog.Content>
+        </RadixDialog.Overlay>
       </RadixDialog.Portal>
     </RadixDialog.Root>
   );
