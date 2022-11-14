@@ -2,7 +2,7 @@ export function Introduction() {
   return (
     <section
       id="introduction"
-      className="min-h-screen bg-savanna-md bg-cover bg-center py-24"
+      className="flex min-h-screen items-center bg-savanna-md bg-cover bg-center py-24"
     >
       <div className="mx-auto flex w-full max-w-7xl flex-col px-10">
         <div className="grid grid-cols-2 gap-10">
