@@ -114,7 +114,7 @@ export function Videos() {
     <section
       ref={ref}
       id="videos"
-      className="relative min-h-screen flex-col bg-sky py-24"
+      className="relative flex min-h-screen items-center bg-sky bg-cover lg:items-start lg:py-24"
     >
       <img
         className="not-sr-only absolute right-0 bottom-0 hidden lg:block"
