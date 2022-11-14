@@ -2,11 +2,11 @@ export function Introduction() {
   return (
     <section
       id="introduction"
-      className="bg flex min-h-screen items-end bg-black bg-savanna bg-[length:100%] bg-[center_-100px] bg-no-repeat lg:items-center lg:bg-savanna-md lg:bg-cover lg:bg-center"
+      className="flex min-h-screen items-end bg-black bg-savanna bg-[length:100%] bg-[center_-100px] bg-no-repeat lg:items-center lg:bg-savanna-md lg:bg-cover lg:bg-center"
     >
       <div className="mx-auto flex w-full max-w-7xl flex-col lg:gap-20 xl:gap-0">
         <div className="grid lg:grid-cols-2">
-          <div className="mx-auto p-6 pt-12 pr-0 pb-0 lg:p-12 lg:pr-0">
+          <div className="mx-auto pl-6 pt-12 lg:p-12 lg:pr-0">
             <img
               src="/images/introduction/elephants.png"
               alt="The illustration of a mother elephant and her young"
