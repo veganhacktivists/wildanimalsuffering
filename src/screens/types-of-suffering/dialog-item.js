@@ -18,8 +18,8 @@ export function DialogItem({ id, title, description }) {
       </RadixDialog.Trigger>
       <RadixDialog.Portal>
         <RadixDialog.Overlay className="fixed inset-0 z-10 h-screen w-screen bg-[#1a3439]/50" />
-        <RadixDialog.Content className="fixed inset-0 z-10 flex h-screen w-screen flex-col">
-          <div className="relative m-auto grid w-full max-w-4xl place-items-center rounded-2xl border-4 border-white bg-white bg-sand p-10 md:grid-cols-2">
+        <RadixDialog.Content className="fixed left-1/2 top-1/2 z-10 w-full max-w-4xl -translate-x-1/2 -translate-y-1/2">
+          <div className="relative m-auto grid w-full place-items-center rounded-2xl border-4 border-white bg-white bg-sand p-10 md:grid-cols-2">
             <RadixDialog.Close className="absolute top-4 right-4">
               <CloseIcon className="h-6 w-6" />
             </RadixDialog.Close>
