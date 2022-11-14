@@ -67,6 +67,8 @@ module.exports = {
         sand: "url('/public/images/types-of-suffering/sand-bg-color.jpg')",
         savanna: "url('/public/images/introduction/savanna.jpg')",
         "savanna-md": "url('/public/images/introduction/savanna-md.jpg')",
+        woods: "url('/public/images/conclusion/woods.jpg')",
+        "woods-md": "url('/public/images/conclusion/woods-md.jpg')",
         sky: "url('/public/images/videos/sky.jpg')",
         "resource-section": "url('/public/images/other-resources/section.png')",
         "resource-section-active":
@@ -79,7 +81,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ["Poppins", "sans-serif"],
-        brand: ["The Bold Font"],
+        brand: ["'Baloo Da 2'", "sans-serif"],
       },
       boxShadow: {
         glow: "0 0 3px 1px #fff",
