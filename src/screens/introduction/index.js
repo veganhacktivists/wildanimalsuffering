@@ -41,7 +41,7 @@ export function Introduction() {
             </div>
           </div>
         </div>
-        <div className="mt-[56px]">
+        <div className="mt-14">
           <p className="text-center text-lg font-bold text-white">
             The suffering of wild animals matters. It matters to them, and it
             should matter to us.
