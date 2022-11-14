@@ -7,20 +7,20 @@ export function Conclusion() {
       className="relative min-h-screen bg-woods bg-cover md:bg-woods-md md:bg-center"
     >
       <img
-        className="absolute right-20 top-52 w-96 lg:w-[500px]"
+        className="not-sr-only absolute right-32 top-52 max-w-lg lg:w-full"
         src="/images/conclusion/momma.png"
         alt="Mother bear"
       />
       <img
-        className="absolute bottom-72 right-96 w-[500px]"
+        className="not-sr-only absolute bottom-72 right-96 max-w-lg lg:w-full"
         src="/images/conclusion/pups.png"
         alt="Bear pups"
       />
-      <div className="py-30 flex max-w-3xl flex-col pt-36 pl-28 text-white">
-        <h2 className="z-10 mb-4 font-brand text-5xl leading-relaxed">
+      <div className="py-30 relative flex max-w-3xl flex-col pt-36 pl-28 text-white">
+        <h2 className="mb-4 font-brand text-5xl leading-relaxed">
           Together, we can make life better for wild animals.
         </h2>
-        <p className="font-lg z-10 font-sans">
+        <p className="font-lg">
           In recent years, there has been growing moral concern for animals.
           Thankfully, it is now rare to find a person who feels indifferent
           towards animal suffering. We know suffering feels bad to us. But we
@@ -33,7 +33,7 @@ export function Conclusion() {
           matters to them. And it should matter to us.
         </p>
         <br />
-        <p className="font-lg z-10 font-sans">
+        <p className="font-lg">
           If it matters to you, then we encourage you to join us in our mission
           to make life better for wild animals. There is much to learn about the
           situation of wild animals. This page is just an introduction to the
@@ -44,7 +44,7 @@ export function Conclusion() {
         <br />
         <h3 className="mt-10 font-brand text-4xl text-primary">Thank you.</h3>
       </div>
-      <div className="lighten-strip flex flex-row justify-evenly p-5">
+      <div className="flex flex-row justify-evenly p-5">
         <div className="flex flex-row">
           <PatreonIcon fill="white" />
           <div className="mx-4 flex-col">
@@ -55,7 +55,7 @@ export function Conclusion() {
             </div>
           </div>
         </div>
-        <span className="badge uppercase">Support Us</span>
+        <span className="uppercase">Support Us</span>
       </div>
       <div className="flex flex-row">
         <h5 className="px-20">Credits and sources</h5>
