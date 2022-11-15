@@ -117,7 +117,7 @@ export function Videos() {
       className="relative flex min-h-screen items-center bg-sky bg-cover lg:py-24"
     >
       <img
-        className="not-sr-only pointer-events-none absolute right-0 bottom-0 z-10 hidden lg:block"
+        className="not-sr-only pointer-events-none absolute right-0 bottom-0 z-10 hidden max-h-96 w-[20vw] lg:block"
         src="/images/videos/penguins.png"
         alt=""
       />
