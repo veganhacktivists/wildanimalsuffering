@@ -1,3 +1,5 @@
+import { links } from "../utils/constants";
+
 export function Header() {
   return (
     <header className="absolute left-0 z-10 flex w-full items-start p-10 text-gray">
@@ -6,7 +8,7 @@ export function Header() {
           Illustrations by{" "}
           <a
             className="font-normal underline"
-            href="https://www.instagram.com/katerodmanart/"
+            href={links.kateRodman}
             target="_blank"
             rel="noreferrer"
           >
