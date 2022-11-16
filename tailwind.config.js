@@ -62,9 +62,12 @@ module.exports = {
       backgroundImage: {
         abyss: "url('/public/images/scale-of-suffering/abyss.jpg')",
         "dirt-road": "url('/public/images/population-dynamics/dirt-road.jpg')",
+        "ant-hill": "url('/public/images/how-to-help/ant-hill.png')",
+        forest: "url('/public/images/how-to-help/forest.jpg')",
         frog: "url('/public/images/organizations/frog.png')",
         hedgehog:
           "url('/public/images/common-objections/grass-and-hedgehog.png')",
+        leaves: "url('/public/images/how-to-help/leaves.png')",
         mud: "url('/public/images/organizations/mud-bg-color.jpg')",
         sand: "url('/public/images/types-of-suffering/sand-bg-color.jpg')",
         savanna: "url('/public/images/introduction/savanna.jpg')",
@@ -87,6 +90,7 @@ module.exports = {
       },
       boxShadow: {
         glow: "0 0 3px 1px #fff",
+        "glow-lg": "0 0 10px 1px #fff",
       },
       aspectRatio: {
         "4/3": "4 / 3",
