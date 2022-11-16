@@ -39,17 +39,19 @@ export function Conclusion() {
           opportunity to make a difference. We hope you choose to take it.
         </p>
         <br />
-        <h3 className="mt-10 font-brand text-4xl text-primary">Thank you.</h3>
+        <h3 className="z-10 mt-10 font-brand text-4xl text-primary">
+          Thank you.
+        </h3>
       </div>
 
-      <div className="relative mt-24 flex flex-row justify-evenly bg-white bg-opacity-10 py-10">
+      <div className="relative mt-24 flex flex-row justify-evenly bg-white bg-opacity-10 py-10 px-10">
         <img
           className="not-sr-only absolute right-1/4 top-[-230px] max-w-lg lg:w-full"
           src="/images/conclusion/pups.png"
           alt="Bear pups"
         />
         <div className="flex">
-          <HealthcareIcon />
+          <HealthcareIcon className="my-auto" />
           <div className="ml-8 flex-col">
             <h5 className="mb-2 text-xl font-bold text-white">
               Please consider supporting our work!
@@ -64,7 +66,7 @@ export function Conclusion() {
           href={links.veganHacktivistsSupport}
           target="_blank"
           rel="noreferrer"
-          className="self-center rounded-xl bg-primary px-5 py-1 text-xl font-medium uppercase"
+          className="ml-10 self-center whitespace-nowrap rounded-xl bg-primary px-5 py-1 text-xl font-medium uppercase"
         >
           Support Us
         </a>
