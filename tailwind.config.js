@@ -15,6 +15,69 @@ module.exports = {
         "dialog-hide": "dialog-hide 150ms ease-out",
         "dialog-show": "dialog-show 150ms ease-out",
       },
+      aspectRatio: {
+        "4/3": "4 / 3",
+      },
+      backgroundImage: {
+        abyss: "url('/public/images/scale-of-suffering/abyss.jpg')",
+        "dirt-road": "url('/public/images/population-dynamics/dirt-road.jpg')",
+        "ant-hill": "url('/public/images/how-to-help/ant-hill.png')",
+        forest: "url('/public/images/how-to-help/forest.jpg')",
+        frog: "url('/public/images/organizations/frog.png')",
+        hedgehog:
+          "url('/public/images/common-objections/grass-and-hedgehog.png')",
+        leaves: "url('/public/images/how-to-help/leaves.png')",
+        mud: "url('/public/images/organizations/mud-bg-color.jpg')",
+        sand: "url('/public/images/types-of-suffering/sand-bg-color.jpg')",
+        savanna: "url('/public/images/introduction/savanna.jpg')",
+        "savanna-md": "url('/public/images/introduction/savanna-md.jpg')",
+        woods: "url('/public/images/conclusion/woods.jpg')",
+        "woods-md": "url('/public/images/conclusion/woods-md.jpg')",
+        sky: "url('/public/images/videos/sky.jpg')",
+        "resource-section": "url('/public/images/other-resources/section.png')",
+        "resource-section-active":
+          "url('/public/images/other-resources/section-active.png')",
+        "resource-section-flipped":
+          "url('/public/images/other-resources/section-flipped.png')",
+        "resource-section-active-flipped":
+          "url('/public/images/other-resources/section-active-flipped.png')",
+        "tree-and-birds":
+          "url('/public/images/organizations/tree-and-birds.png')",
+      },
+      boxShadow: {
+        glow: "0 0 3px 1px #fff",
+        "glow-lg": "0 0 10px 1px #fff",
+      },
+      colors: {
+        "menu-front": { dark: "#A29D8B", light: "#ADA999" },
+        "menu-back": {
+          dark: "#9F9F9F",
+          light: "#F4F4F4",
+        },
+        khaki: "#c7d3d0",
+        blue: {
+          DEFAULT: "#85c5c8",
+        },
+        primary: {
+          DEFAULT: "#d8b36d",
+          light: "#E8D1A7",
+          lighter: "#F3E8D3",
+        },
+        gray: {
+          DEFAULT: "#3F3E3E",
+        },
+        black: {
+          DEFAULT: "#1A3439",
+        },
+        brown: {
+          DEFAULT: "#5D5445",
+          lighter: "#C79D5E",
+        },
+      },
+      fontFamily: {
+        sans: ["Poppins", "sans-serif"],
+        brand: ["The Bold Font", "sans-serif"],
+      },
       height: () => ({
         "h-screen/2": "50vh",
         "h-screen/3": "calc(100vh / 3)",
@@ -48,69 +111,6 @@ module.exports = {
       spacing: {
         18: "4.5rem",
         "9/10": "90%",
-      },
-      colors: {
-        "menu-front": { dark: "#A29D8B", light: "#ADA999" },
-        "menu-back": {
-          dark: "#9F9F9F",
-          light: "#F4F4F4",
-        },
-        khaki: "#c7d3d0",
-        blue: {
-          DEFAULT: "#85c5c8",
-        },
-        primary: {
-          DEFAULT: "#d8b36d",
-          light: "#E8D1A7",
-          lighter: "#F3E8D3",
-        },
-        gray: {
-          DEFAULT: "#3F3E3E",
-        },
-        black: {
-          DEFAULT: "#1A3439",
-        },
-        brown: {
-          DEFAULT: "#5D5445",
-          lighter: "#C79D5E",
-        },
-      },
-      backgroundImage: {
-        abyss: "url('/public/images/scale-of-suffering/abyss.jpg')",
-        "dirt-road": "url('/public/images/population-dynamics/dirt-road.jpg')",
-        "ant-hill": "url('/public/images/how-to-help/ant-hill.png')",
-        forest: "url('/public/images/how-to-help/forest.jpg')",
-        frog: "url('/public/images/organizations/frog.png')",
-        hedgehog:
-          "url('/public/images/common-objections/grass-and-hedgehog.png')",
-        leaves: "url('/public/images/how-to-help/leaves.png')",
-        mud: "url('/public/images/organizations/mud-bg-color.jpg')",
-        sand: "url('/public/images/types-of-suffering/sand-bg-color.jpg')",
-        savanna: "url('/public/images/introduction/savanna.jpg')",
-        "savanna-md": "url('/public/images/introduction/savanna-md.jpg')",
-        woods: "url('/public/images/conclusion/woods.jpg')",
-        "woods-md": "url('/public/images/conclusion/woods-md.jpg')",
-        sky: "url('/public/images/videos/sky.jpg')",
-        "resource-section": "url('/public/images/other-resources/section.png')",
-        "resource-section-active":
-          "url('/public/images/other-resources/section-active.png')",
-        "resource-section-flipped":
-          "url('/public/images/other-resources/section-flipped.png')",
-        "resource-section-active-flipped":
-          "url('/public/images/other-resources/section-active-flipped.png')",
-        "tree-and-birds":
-          "url('/public/images/organizations/tree-and-birds.png')",
-      },
-      fontFamily: {
-        sans: ["Poppins", "sans-serif"],
-        brand: ["The Bold Font", "sans-serif"],
-      },
-      boxShadow: {
-        glow: "0 0 3px 1px #fff",
-        "glow-lg": "0 0 10px 1px #fff",
-      },
-      aspectRatio: {
-        "4/3": "4 / 3",
       },
     },
   },
