@@ -1,45 +1,9 @@
-import { cx } from "../../utils/cx";
-
-function Organization({ name, children, iconKey, links }) {
-  return (
-    <div className="flex flex-col items-center justify-center gap-4 rounded-xl bg-white/20 p-6 text-white lg:flex-row lg:items-start lg:bg-transparent xl:gap-5">
-      <img
-        className="aspect-square lg:w-16 xl:w-24"
-        src={`/images/organizations/${iconKey}.png`}
-        alt=""
-      />
-
-      <div className="flex h-full flex-col items-center lg:items-start lg:border-l lg:border-solid lg:border-primary lg:pl-4 xl:pl-5">
-        <h3 className="text-xl font-bold">{name}</h3>
-        <div className="mt-3 flex-1 text-sm leading-relaxed">{children}</div>
-
-        <div className="mt-5 grid w-full grid-cols-2 items-end gap-4 font-bold capitalize text-black lg:block lg:space-x-4">
-          {links.map(([text, url], i) => (
-            <a
-              key={text}
-              href={url}
-              target="_blank"
-              rel="noreferrer"
-              className={cx(
-                "rounded-xl py-1 px-5 text-center",
-                i % 3 === 0 && "bg-primary",
-                i % 3 === 1 && "bg-primary-light",
-                i % 3 === 2 && "col-span-2 bg-primary-lighter"
-              )}
-            >
-              {text}
-            </a>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
+import { Organization } from "./organization";
 
 export function Organizations() {
   return (
     <section
-      id="how-to-help"
+      id="organizations"
       className="relative flex min-h-screen items-center bg-mud bg-cover bg-top py-14 lg:py-24"
     >
       <div className="absolute bottom-0 h-full w-full bg-none bg-[-180px_-20px] bg-no-repeat sm:bg-tree-and-birds lg:max-h-max lg:bg-contain lg:bg-left-top" />
