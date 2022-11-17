@@ -6,13 +6,13 @@ export function Organizations() {
       id="organizations"
       className="relative flex min-h-screen items-center bg-mud bg-cover bg-top py-14 lg:py-24"
     >
-      <div className="absolute bottom-0 h-full w-full bg-none bg-[-180px_-20px] bg-no-repeat sm:bg-tree-and-birds lg:max-h-max lg:bg-contain lg:bg-left-top" />
+      <div className="absolute bottom-0 h-full w-full bg-none bg-[-180px_-20px] bg-no-repeat sm:bg-tree-and-birds lg:bg-contain lg:bg-left-top" />
       <div className="relative mx-auto flex w-full flex-col space-y-14 px-10">
         <h2 className="mx-auto max-w-xl text-center font-brand text-4xl text-white">
           Organizations working on Wild Animal Suffering
         </h2>
 
-        <div className="mx-auto grid max-w-sm gap-12 md:max-w-4xl md:grid-cols-2 xl:max-w-6xl">
+        <div className="mx-auto grid w-full max-w-sm gap-12 md:max-w-5xl md:grid-cols-2 xl:max-w-6xl">
           <Organization
             name="Wild Animal Initiative"
             iconKey="wild-animal-initiative"

@@ -1,14 +1,14 @@
 import { cx } from "../../utils/cx";
 export function Organization({ name, children, iconKey, links }) {
   return (
-    <div className="flex flex-col items-center justify-center gap-4 rounded-xl bg-white/20 p-6 text-white lg:flex-row lg:items-start lg:bg-transparent xl:gap-5">
+    <div className="flex flex-col items-center justify-center gap-4 rounded-xl bg-white/20 p-6 text-white lg:flex-row lg:items-start xl:gap-5">
       <img
         className="aspect-square lg:w-16 xl:w-24"
         src={`/images/organizations/${iconKey}.png`}
         alt=""
       />
 
-      <div className="flex h-full flex-col items-center lg:items-start lg:border-l lg:border-solid lg:border-primary lg:pl-4 xl:pl-5">
+      <div className="flex h-full flex-col items-center lg:items-start">
         <h3 className="text-xl font-bold">{name}</h3>
         <div className="mt-3 flex-1 text-sm leading-relaxed">{children}</div>
 
