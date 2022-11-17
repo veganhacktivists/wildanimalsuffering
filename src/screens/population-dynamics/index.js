@@ -26,7 +26,7 @@ export function PopulationDynamics() {
         alt=""
       />
 
-      <div className="absolute top-1/2 left-1/2 h-[900px] w-[1440px] -translate-x-1/2 -translate-y-[45%] scale-50 sm:-translate-y-[50%] sm:scale-75 md:scale-100">
+      <div className="absolute top-1/2 left-1/2 h-[900px] w-[1440px] -translate-x-1/2 -translate-y-[45%] scale-50 sm:-translate-y-1/2 sm:scale-75 md:scale-100">
         <div className="absolute inset-0 grid h-full w-full grid-cols-10 grid-rows-5">
           <img
             className="col-span-2 col-start-7 row-span-2 row-start-2 -translate-x-8 -translate-y-8"
