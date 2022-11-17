@@ -1,73 +1,79 @@
-import { organizations } from "./organizations";
+import { Organization } from "./organization";
 
-const Organizations = () => {
+export function Organizations() {
   return (
-    <section id="organizations" className="organizations relative min-h-screen">
-      <div className="absolute h-screen w-screen bg-mud bg-cover bg-center bg-no-repeat"></div>
-      <div className="absolute h-screen w-screen bg-tree-and-owl bg-contain bg-left bg-no-repeat"></div>
-      <div className="absolute h-screen w-screen bg-frog bg-right-bottom bg-no-repeat"></div>
-
-      <div className="relative mx-auto flex w-full max-w-7xl flex-col space-y-16 px-10 py-24 text-white md:px-32 lg:px-10">
-        <h2 className="text-center font-brand text-4xl">
-          Organizations working on wild animal suffering
+    <section
+      id="organizations"
+      className="relative flex min-h-screen items-center bg-mud bg-cover bg-top py-14 lg:py-24"
+    >
+      <div className="absolute bottom-0 h-full w-full bg-none bg-[-180px_-20px] bg-no-repeat sm:bg-tree-and-birds lg:max-h-max lg:bg-contain lg:bg-left-top" />
+      <div className="relative mx-auto flex w-full flex-col space-y-14 px-10">
+        <h2 className="mx-auto max-w-xl text-center font-brand text-4xl text-white">
+          Organizations working on Wild Animal Suffering
         </h2>
 
-        <div className="grid gap-y-12 lg:mx-8 lg:grid-cols-2 lg:gap-x-48 lg:gap-y-16 xl:mx-24">
-          {organizations.map((organization) => (
-            <div
-              key={organization.name}
-              className="flex flex-col items-center justify-center gap-x-5 text-white lg:flex-row lg:items-start"
-            >
-              <img
-                className="aspect-square"
-                src={`/images/organizations/${organization.iconKey}.png`}
-                alt=""
-              />
-
-              <div className="flex flex-col items-center lg:items-start lg:border-l lg:border-solid lg:border-primary lg:pl-3">
-                <h3 className="p-2 text-xl font-bold">{organization.name}</h3>
-                <div className="p-2 text-justify text-sm">
-                  {organization.description}
-                </div>
-
-                <div className="mt-5 flex flex-row space-x-5 p-2 font-bold capitalize text-black">
-                  <a
-                    href={organization.links.visit}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="rounded-xl bg-primary px-5 py-1"
-                  >
-                    visit
-                  </a>
-                  <a
-                    href={organization.links.donate}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="rounded-xl bg-primary-light px-5 py-1"
-                  >
-                    donate
-                  </a>
-                  <a
-                    href={organization.links.volunteer}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="rounded-xl bg-primary-lighter px-5 py-1"
-                  >
-                    volunteer
-                  </a>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div className="hidden text-center lg:block">
-          Be sure to check out Wild Animal Welfare Committee and wild animal
-          organization too!
+        <div className="mx-auto grid max-w-sm gap-12 md:max-w-4xl md:grid-cols-2 xl:max-w-6xl">
+          <Organization
+            name="Wild Animal Initiative"
+            iconKey="wild-animal-initiative"
+            links={[
+              ["Visit", "https://www.wildanimalinitiative.org/"],
+              ["Donate", "https://www.wildanimalinitiative.org/donate"],
+              ["Careers", "https://www.wildanimalinitiative.org/career"],
+            ]}
+          >
+            Wild Animal Initiative (WAI) currently operates in the U.S., where
+            they work to strengthen the animal advocacy movement through
+            creating an academic field dedicated to wild animal welfare.
+          </Organization>
+          <Organization
+            name="Animal Ethics"
+            iconKey="animal-ethics"
+            links={[
+              ["Visit", "https://www.animal-ethics.org/"],
+              ["Donate", "https://www.animal-ethics.org/support-us"],
+              ["Volunteer", "https://www.animal-ethics.org/volunteers"],
+            ]}
+          >
+            Animal Ethics aims to achieve a shift in attitudes towards nonhuman
+            animals. Their vision is a world where sentient beings are given
+            full moral consideration.
+          </Organization>
+          <Organization
+            name="Rethink Priorities"
+            iconKey="rethink-priorities"
+            links={[
+              ["Visit", "https://rethinkpriorities.org/"],
+              ["Donate", "https://rethinkpriorities.org/donate"],
+              ["Careers", "https://rethinkpriorities.org/career-opportunities"],
+            ]}
+          >
+            Rethink Priorities is a research organization that conducts critical
+            research to inform policymakers and major foundations about how to
+            best help people and nonhuman animals in both the present and the
+            long-term future.
+          </Organization>
+          <Organization
+            name="Faunalytics"
+            iconKey="faunalytics"
+            links={[
+              ["Visit", "https://faunalytics.org/"],
+              ["Donate", "https://faunalytics.org/donate"],
+              ["Volunteer", "https://faunalytics.org/volunteer"],
+            ]}
+          >
+            Faunalytics' mission is to empower animal advocates with access to
+            research, analysis, strategies, and messages that maximize their
+            effectiveness to reduce animal suffering.
+          </Organization>
         </div>
       </div>
+
+      <img
+        className="not-sr-only pointer-events-none absolute bottom-0 right-0 hidden max-h-96 w-[20vw] lg:block"
+        src="/images/organizations/frog.png"
+        alt=""
+      />
     </section>
   );
-};
-
-export { Organizations };
+}

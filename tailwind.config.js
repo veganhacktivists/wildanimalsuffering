@@ -98,7 +98,8 @@ module.exports = {
           "url('/public/images/other-resources/section-flipped.png')",
         "resource-section-active-flipped":
           "url('/public/images/other-resources/section-active-flipped.png')",
-        "tree-and-owl": "url('/public/images/organizations/tree-and-owl.png')",
+        "tree-and-birds":
+          "url('/public/images/organizations/tree-and-birds.png')",
       },
       fontFamily: {
         sans: ["Poppins", "sans-serif"],
