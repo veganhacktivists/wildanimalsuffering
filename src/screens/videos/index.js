@@ -100,7 +100,9 @@ export function Videos() {
       ([{ rootBounds, boundingClientRect, intersectionRatio }]) => {
         const ratio = 1 - rootBounds.height / boundingClientRect.height;
 
-        snowfallOpacity.set(intersectionRatio + intersectionRatio * ratio);
+        snowfallOpacity.set(
+          (intersectionRatio - 0.5) * 2 + intersectionRatio * ratio
+        );
       },
       { threshold: buildThresholdList(100) }
     );
