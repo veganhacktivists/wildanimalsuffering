@@ -10,6 +10,10 @@ module.exports = {
       animation: {
         "slide-down": "slide-down 150ms ease-in-out",
         "slide-up": "slide-up 150ms ease-in-out",
+        "pop-down": "pop-down 150ms ease-out forwards",
+        "pop-up": "pop-up 150ms ease-out forwards",
+        "dialog-hide": "dialog-hide 150ms ease-out",
+        "dialog-show": "dialog-show 150ms ease-out",
       },
       height: () => ({
         "h-screen/2": "50vh",
@@ -27,6 +31,18 @@ module.exports = {
         "slide-up": {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: 0 },
+        },
+        "pop-down": {
+          from: { opacity: 1, transform: "translateY(-110%)" },
+          to: { opacity: 0, transform: "translateY(0)" },
+        },
+        "pop-up": {
+          from: { opacity: 0, transform: "translateY(0)" },
+          to: { opacity: 1, transform: "translateY(-110%)" },
+        },
+        "dialog-show": {
+          from: { opacity: 0, transform: "translateY(50vh)" },
+          to: { opacity: 1, transform: "translateY(0)" },
         },
       },
       spacing: {
@@ -62,9 +78,12 @@ module.exports = {
       backgroundImage: {
         abyss: "url('/public/images/scale-of-suffering/abyss.jpg')",
         "dirt-road": "url('/public/images/population-dynamics/dirt-road.jpg')",
+        "ant-hill": "url('/public/images/how-to-help/ant-hill.png')",
+        forest: "url('/public/images/how-to-help/forest.jpg')",
         frog: "url('/public/images/organizations/frog.png')",
         hedgehog:
           "url('/public/images/common-objections/grass-and-hedgehog.png')",
+        leaves: "url('/public/images/how-to-help/leaves.png')",
         mud: "url('/public/images/organizations/mud-bg-color.jpg')",
         sand: "url('/public/images/types-of-suffering/sand-bg-color.jpg')",
         savanna: "url('/public/images/introduction/savanna.jpg')",
@@ -87,6 +106,7 @@ module.exports = {
       },
       boxShadow: {
         glow: "0 0 3px 1px #fff",
+        "glow-lg": "0 0 10px 1px #fff",
       },
       aspectRatio: {
         "4/3": "4 / 3",
