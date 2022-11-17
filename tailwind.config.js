@@ -15,65 +15,8 @@ module.exports = {
         "dialog-hide": "dialog-hide 150ms ease-out",
         "dialog-show": "dialog-show 150ms ease-out",
       },
-      height: () => ({
-        "h-screen/2": "50vh",
-        "h-screen/3": "calc(100vh / 3)",
-        "2h-screen/3": "calc(100vh * 2 / 3)",
-        "h-screen/4": "calc(100vh / 4)",
-        "3h-screen/4": "calc(100vh * 3 / 4)",
-        "h-screen/5": "calc(100vh / 5)",
-      }),
-      keyframes: {
-        "slide-down": {
-          from: { height: 0 },
-          to: { height: "var(--radix-accordion-content-height)" },
-        },
-        "slide-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: 0 },
-        },
-        "pop-down": {
-          from: { opacity: 1, transform: "translateY(-110%)" },
-          to: { opacity: 0, transform: "translateY(0)" },
-        },
-        "pop-up": {
-          from: { opacity: 0, transform: "translateY(0)" },
-          to: { opacity: 1, transform: "translateY(-110%)" },
-        },
-        "dialog-show": {
-          from: { opacity: 0, transform: "translateY(50vh)" },
-          to: { opacity: 1, transform: "translateY(0)" },
-        },
-      },
-      spacing: {
-        18: "4.5rem",
-        "9/10": "90%",
-      },
-      colors: {
-        "menu-front": { dark: "#A29D8B", light: "#ADA999" },
-        "menu-back": {
-          dark: "#9F9F9F",
-          light: "#F4F4F4",
-        },
-        khaki: "#c7d3d0",
-        blue: {
-          DEFAULT: "#85c5c8",
-        },
-        primary: {
-          DEFAULT: "#d8b36d",
-          light: "#E8D1A7",
-          lighter: "#F3E8D3",
-        },
-        gray: {
-          DEFAULT: "#3F3E3E",
-        },
-        black: {
-          DEFAULT: "#1A3439",
-        },
-        brown: {
-          DEFAULT: "#5D5445",
-          lighter: "#C79D5E",
-        },
+      aspectRatio: {
+        "4/3": "4 / 3",
       },
       backgroundImage: {
         abyss: "url('/public/images/scale-of-suffering/abyss.jpg')",
@@ -101,16 +44,65 @@ module.exports = {
         "tree-and-birds":
           "url('/public/images/organizations/tree-and-birds.png')",
       },
-      fontFamily: {
-        sans: ["Poppins", "sans-serif"],
-        brand: ["The Bold Font", "sans-serif"],
-      },
       boxShadow: {
         glow: "0 0 3px 1px #fff",
         "glow-lg": "0 0 10px 1px #fff",
       },
-      aspectRatio: {
-        "4/3": "4 / 3",
+      colors: {
+        "menu-front": { dark: "#A29D8B", light: "#ADA999" },
+        "menu-back": {
+          dark: "#9F9F9F",
+          light: "#F4F4F4",
+        },
+        khaki: "#c7d3d0",
+        blue: {
+          DEFAULT: "#85c5c8",
+        },
+        primary: {
+          DEFAULT: "#d8b36d",
+          light: "#E8D1A7",
+          lighter: "#F3E8D3",
+        },
+        gray: {
+          DEFAULT: "#3F3E3E",
+        },
+        black: {
+          DEFAULT: "#1A3439",
+        },
+        brown: {
+          DEFAULT: "#5D5445",
+          lighter: "#C79D5E",
+        },
+      },
+      fontFamily: {
+        sans: ["Poppins", "sans-serif"],
+        brand: ["The Bold Font", "sans-serif"],
+      },
+      keyframes: {
+        "slide-down": {
+          from: { height: 0 },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "slide-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: 0 },
+        },
+        "pop-down": {
+          from: { opacity: 1, transform: "translateY(-110%)" },
+          to: { opacity: 0, transform: "translateY(0)" },
+        },
+        "pop-up": {
+          from: { opacity: 0, transform: "translateY(0)" },
+          to: { opacity: 1, transform: "translateY(-110%)" },
+        },
+        "dialog-show": {
+          from: { opacity: 0, transform: "translateY(50vh)" },
+          to: { opacity: 1, transform: "translateY(0)" },
+        },
+      },
+      spacing: {
+        18: "4.5rem",
+        "9/10": "90%",
       },
     },
   },
