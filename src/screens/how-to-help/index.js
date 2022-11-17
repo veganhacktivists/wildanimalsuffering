@@ -7,7 +7,7 @@ export function HowToHelp() {
       id="how-to-help"
       className="relative flex min-h-screen items-center bg-forest bg-cover bg-top py-14 lg:py-24"
     >
-      <div className="absolute bottom-0 h-full max-h-64 w-full bg-ant-hill bg-cover bg-right-bottom bg-no-repeat md:max-h-max md:bg-contain" />
+      <div className="absolute bottom-0 h-64 w-full bg-ant-hill bg-cover bg-right-bottom bg-no-repeat md:h-full md:bg-contain" />
       <div className="relative mx-auto flex w-full max-w-7xl flex-col space-y-14 px-10">
         <h2 className="text-center font-brand text-3xl text-white lg:text-4xl">
           How can you help?
