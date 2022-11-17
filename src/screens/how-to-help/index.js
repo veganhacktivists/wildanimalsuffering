@@ -24,6 +24,7 @@ export function HowToHelp() {
             href="https://animalcharityevaluators.org/donation-advice/recommended-charities"
             target="_blank"
             step={2}
+            rel="noreferrer"
           >
             Donate to charities
           </ActionButton>
@@ -32,6 +33,7 @@ export function HowToHelp() {
             href="https://mailchi.mp/fd3604316389/waw-starter-kit"
             target="_blank"
             step={3}
+            rel="noreferrer"
           >
             Starter kit signup
           </ActionButton>
@@ -69,7 +71,7 @@ export function HowToHelp() {
       </div>
 
       <img
-        className="not-sr-only absolute left-12 bottom-12 hidden max-h-96 w-[20vw] lg:block"
+        className="not-sr-only pointer-events-none absolute left-12 bottom-12 hidden max-h-96 w-[20vw] lg:block"
         src="/images/how-to-help/mice.png"
         alt=""
       />

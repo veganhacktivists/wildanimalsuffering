@@ -10,6 +10,10 @@ module.exports = {
       animation: {
         "slide-down": "slide-down 150ms ease-in-out",
         "slide-up": "slide-up 150ms ease-in-out",
+        "pop-down": "pop-down 150ms ease-out forwards",
+        "pop-up": "pop-up 150ms ease-out forwards",
+        "dialog-hide": "dialog-hide 150ms ease-out",
+        "dialog-show": "dialog-show 150ms ease-out",
       },
       height: () => ({
         "h-screen/2": "50vh",
@@ -27,6 +31,18 @@ module.exports = {
         "slide-up": {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: 0 },
+        },
+        "pop-down": {
+          from: { opacity: 1, transform: "translateY(-110%)" },
+          to: { opacity: 0, transform: "translateY(0)" },
+        },
+        "pop-up": {
+          from: { opacity: 0, transform: "translateY(0)" },
+          to: { opacity: 1, transform: "translateY(-110%)" },
+        },
+        "dialog-show": {
+          from: { opacity: 0, transform: "translateY(50vh)" },
+          to: { opacity: 1, transform: "translateY(0)" },
         },
       },
       spacing: {

@@ -4,8 +4,6 @@ import { useState } from "react";
 import { CloseIcon } from "../../components/close-icon";
 import { CopyIcon } from "../../components/copy-icon";
 
-import "./raise-awareness.css";
-
 const CopyLinkSection = () => {
   const [open, setOpen] = useState(false);
   const url = "http://wildanimalsuffering.org";
@@ -28,7 +26,7 @@ const CopyLinkSection = () => {
       <RadixToast.Root
         open={open}
         onOpenChange={setOpen}
-        className="link-copied-toast absolute inset-x-0 top-0 w-full text-center text-sm text-brown/80"
+        className="absolute inset-x-0 top-0 w-full text-center text-sm text-brown/80 radix-state-closed:animate-pop-down radix-state-open:animate-pop-up"
       >
         <RadixToast.Description>link copied!</RadixToast.Description>
       </RadixToast.Root>
@@ -42,7 +40,7 @@ export function RaiseAwarenessDialog({ children }) {
       <RadixDialog.Trigger asChild>{children}</RadixDialog.Trigger>
       <RadixDialog.Portal>
         <RadixDialog.Overlay className="fixed inset-0 z-10 flex h-screen w-screen items-center justify-center bg-[#1a3439]/50">
-          <RadixDialog.Content className="fixed bottom-0 z-10 max-h-screen w-full max-w-sm overflow-y-auto text-brown md:static">
+          <RadixDialog.Content className="fixed bottom-0 z-10 max-h-screen w-full overflow-y-auto text-brown radix-state-closed:animate-dialog-hide radix-state-open:animate-dialog-show sm:static sm:max-w-sm">
             <div className="max-h-75 relative m-auto w-full rounded-2xl border-4 border-white bg-white bg-cover px-8 pt-4 pb-8">
               <RadixDialog.Close className="absolute top-4 right-4">
                 <CloseIcon className="h-4 w-4" />
