@@ -78,14 +78,6 @@ module.exports = {
         sans: ["Poppins", "sans-serif"],
         brand: ["The Bold Font", "sans-serif"],
       },
-      height: () => ({
-        "h-screen/2": "50vh",
-        "h-screen/3": "calc(100vh / 3)",
-        "2h-screen/3": "calc(100vh * 2 / 3)",
-        "h-screen/4": "calc(100vh / 4)",
-        "3h-screen/4": "calc(100vh * 3 / 4)",
-        "h-screen/5": "calc(100vh / 5)",
-      }),
       keyframes: {
         "slide-down": {
           from: { height: 0 },
