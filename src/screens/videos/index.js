@@ -100,7 +100,9 @@ export function Videos() {
       ([{ rootBounds, boundingClientRect, intersectionRatio }]) => {
         const ratio = 1 - rootBounds.height / boundingClientRect.height;
 
-        snowfallOpacity.set(intersectionRatio + intersectionRatio * ratio);
+        snowfallOpacity.set(
+          (intersectionRatio - 0.5) * 2 + intersectionRatio * ratio
+        );
       },
       { threshold: buildThresholdList(100) }
     );
@@ -117,21 +119,16 @@ export function Videos() {
       className="relative flex min-h-screen items-center bg-sky bg-cover lg:py-24"
     >
       <img
-        className="not-sr-only pointer-events-none absolute right-0 bottom-0 z-10 hidden max-h-96 w-[20vw] lg:block"
-        src="/images/videos/penguins.png"
-        alt=""
-      />
-      <img
         className="not-sr-only absolute left-0 top-0 hidden lg:block"
         src="/images/videos/iceberg.png"
         alt=""
       />
 
-      <motion.div style={{ opacity: snowfallOpacity }}>
+      <motion.div style={{ opacity: snowfallOpacity }} className="z-10">
         <BackgroundEffect type="videos-screen" />
       </motion.div>
 
-      <div className="relative mx-auto flex w-full max-w-7xl grow flex-col space-y-10">
+      <div className="relative z-10 mx-auto flex w-full max-w-7xl grow flex-col space-y-10">
         <h2 className="px-8 text-center font-brand text-3xl text-white lg:text-4xl">
           Videos you might like
         </h2>
@@ -166,6 +163,11 @@ export function Videos() {
           </div>
         </div>
       </div>
+      <img
+        className="not-sr-only pointer-events-none absolute right-0 bottom-0 z-10 hidden max-h-96 w-[20vw] lg:block"
+        src="/images/videos/penguins.png"
+        alt=""
+      />
     </section>
   );
 }
