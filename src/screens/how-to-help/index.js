@@ -47,6 +47,7 @@ export function HowToHelp() {
               href="https://www.wildanimalinitiative.org/services"
               target="_blank"
               className="underline"
+              rel="noreferrer"
             >
               here
             </a>
@@ -55,6 +56,7 @@ export function HowToHelp() {
               href="https://www.wildanimalinitiative.org/grants"
               target="_blank"
               className="underline"
+              rel="noreferrer"
             >
               Apply for a grant!
             </a>
@@ -64,6 +66,7 @@ export function HowToHelp() {
             href="https://www.wildanimalinitiative.org/services"
             className="inline-block rounded-xl bg-primary px-5 py-1"
             target="_blank"
+            rel="noreferrer"
           >
             View more opportunities
           </a>
