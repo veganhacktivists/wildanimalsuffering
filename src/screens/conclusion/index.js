@@ -1,6 +1,5 @@
 import { HealthcareIcon } from "../../components/healthcare-icon";
 import { links } from "../../utils/constants";
-import { Source, sources } from "./sources";
 
 export function Conclusion() {
   return (
@@ -53,9 +52,9 @@ export function Conclusion() {
         <div className="flex">
           <HealthcareIcon className="my-auto" />
           <div className="ml-8 flex-col">
-            <h5 className="mb-2 text-xl font-bold text-white">
+            <h4 className="mb-2 text-xl font-bold text-white">
               Please consider supporting our work!
-            </h5>
+            </h4>
             <span className="text-md font-light text-white">
               This website would not be possible without your support. Thank
               you!
@@ -72,41 +71,44 @@ export function Conclusion() {
         </a>
       </div>
 
-      <div className="mx-auto flex max-w-screen-2xl justify-evenly p-14">
-        <div className="mr-20 flex flex-col">
-          <div className="flex flex-row text-white">
-            <h5 className="mr-16 w-[170px] min-w-[170px] font-bold">
-              Special thanks
-            </h5>
-            <div className="max-w-3xl leading-relaxed">
-              To our partners and advisors from Wild Animal Initiative, Animal
-              Ethics, Rethinking Priorities, and Jack Hancock for his
-              collaborative role. Kate Rodman for the wonderful illustrations.
-              This website would not have been possible without everyone’s
-              dedication and support!
-            </div>
-          </div>
-          <div className="mt-10 flex flex-row text-white">
-            <h5 className="mr-16 w-[170px] min-w-[170px] font-bold">
-              Credits and sources
-            </h5>
-            <div className="flex flex-col leading-relaxed">
-              {sources.map((source, i) => (
-                <Source
-                  // @ts-ignore
-                  key={source.text}
-                  number={i + 1}
-                  href={source.href}
-                  text={source.text}
-                />
-              ))}
-            </div>
-          </div>
+      <div className="mx-auto flex max-w-screen-2xl p-14">
+        <div className="grid grid-cols-4 gap-10 text-white">
+          <h4 className="text-lg font-bold">Special thanks</h4>
+          <p className="col-span-3 leading-relaxed">
+            To our partners and advisors from Wild Animal Initiative, Animal
+            Ethics, Rethinking Priorities, and Jack Hancock for his
+            collaborative role. Kate Rodman for the wonderful illustrations.
+            This website would not have been possible without everyone’s
+            dedication and support!
+          </p>
+          <h4 className="text-lg font-bold">Credits and sources</h4>
+          <ol className="col-span-3 list-inside list-decimal leading-relaxed">
+            <li>
+              <a
+                className="underline"
+                href="https://reducing-suffering.org/how-many-wild-animals-are-there"
+                rel="noreferrer"
+                target="_blank"
+              >
+                How many wild animals are there?
+              </a>
+            </li>
+            {/* TODO: Replace placeholder text with real sources */}
+            <li>
+              Velit rhoncus pellentesque feugiat aenean tincidunt. Diam
+              tincidunt aliquet mauris lorem.
+            </li>
+            <li>
+              Egestas scelerisque ac risus. Neque nibh tellus elementum
+              vulputate auctor.
+            </li>
+            <li>Arcu amet, sollicitudin gravida gravida platea.</li>
+          </ol>
         </div>
         <img
-          className="my-auto max-h-40"
+          className="my-auto ml-14 max-h-40"
           src="/images/conclusion/vh-logo.png"
-          alt="vegan hacktivists logo"
+          alt="Vegan Hacktivists logo"
         />
       </div>
     </section>
