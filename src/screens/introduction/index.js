@@ -4,6 +4,12 @@ export function Introduction() {
       id="introduction"
       className="flex min-h-screen items-end bg-black bg-savanna bg-[length:100%] bg-[center_-100px] bg-no-repeat lg:items-center lg:bg-savanna-md lg:bg-cover lg:bg-center"
     >
+      <img
+        className="absolute top-0 right-0 m-10 w-20"
+        src="/images/logo-vh.svg"
+        alt="Vegan Hacktivists Logo"
+      />
+
       <div className="mx-auto flex w-full max-w-7xl flex-col lg:gap-20 xl:gap-0">
         <div className="grid lg:grid-cols-2">
           <div className="mx-auto pl-6 pt-12 lg:p-12 lg:pr-0">

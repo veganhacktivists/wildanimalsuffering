@@ -48,7 +48,7 @@ export function RaiseAwarenessDialog({ children }) {
               <div className="flex flex-col space-y-5">
                 <RadixDialog.Title className="flex flex-col items-center gap-4 text-center font-brand text-2xl font-bold">
                   <img
-                    src="/images/logo.svg"
+                    src="/images/logo-was.svg"
                     alt=""
                     className="mx-auto inline-block h-12"
                   />
