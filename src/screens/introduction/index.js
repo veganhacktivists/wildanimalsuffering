@@ -17,7 +17,7 @@ export function Introduction() {
 
       <div className="mx-auto flex w-full max-w-7xl flex-col lg:gap-20 xl:gap-0">
         <div className="grid lg:grid-cols-2">
-          <div className="mx-auto pl-6 pt-12 lg:p-12 lg:pr-0 lg:pb-0">
+          <div className="mx-auto pl-6 pt-12 lg:p-12 lg:pr-0">
             <img
               src="/images/introduction/elephants.png"
               alt="The illustration of a mother elephant and her young"
