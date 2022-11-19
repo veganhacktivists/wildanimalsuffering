@@ -64,7 +64,7 @@ export function HowToHelp() {
 
           <a
             href="https://www.wildanimalinitiative.org/services"
-            className="inline-block rounded-xl bg-primary px-5 py-1"
+            className="inline-block font-medium rounded-xl bg-primary px-5 py-1"
             target="_blank"
             rel="noreferrer"
           >
