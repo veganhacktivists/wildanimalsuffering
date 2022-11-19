@@ -82,7 +82,7 @@ export function Conclusion() {
                 target="_blank"
               >
                 Wild Animal Initiative
-              </a>{" "}
+              </a>
               ,{" "}
               <a
                 className="underline"
@@ -100,7 +100,7 @@ export function Conclusion() {
                 target="_blank"
               >
               Rethink Priorities
-              </a>{" "}
+              </a>
               . Special thanks to{" "}
               <a
                 className="underline"
