@@ -74,9 +74,9 @@ export function Conclusion() {
         <div className="grid grid-cols-4 gap-10 text-white">
           <h4 className="text-lg font-bold">Special thanks</h4>
           <p className="col-span-3 leading-relaxed">
-            To our partners and advisors from Wild Animal Initiative, Animal
-            Ethics, Rethinking Priorities, and Jack Hancock for his
-            collaborative role. Kate Rodman for the wonderful illustrations.
+            To our friends and advisors from Wild Animal Initiative, Animal
+            Ethics, Rethinking Priorities. Special thanks to Jack Hancock for written
+            content and Kate Rodman for the wonderful illustrations.
             This website would not have been possible without everyone’s
             dedication and support!
           </p>
@@ -92,16 +92,116 @@ export function Conclusion() {
                 How many wild animals are there?
               </a>
             </li>
-            {/* TODO: Replace placeholder text with real sources */}
             <li>
-              Velit rhoncus pellentesque feugiat aenean tincidunt. Diam
-              tincidunt aliquet mauris lorem.
+              <a
+                className="underline"
+                href="https://www.animal-ethics.org/malnutrition-thirst-wild-animals/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Malnutrition, hunger and thirst in wild animals
+              </a>
             </li>
             <li>
-              Egestas scelerisque ac risus. Neque nibh tellus elementum
-              vulputate auctor.
+              <a
+                className="underline"
+                href="https://forum.effectivealtruism.org/posts/8qmQr7kiEYFhX9eTR/what-is-wild-animal-suffering"
+                rel="noreferrer"
+                target="_blank"
+              >
+                What is wild animal suffering?
+              </a>
             </li>
-            <li>Arcu amet, sollicitudin gravida gravida platea.</li>
+            <li>
+              <a
+                className="underline"
+                href="https://www.animal-ethics.org/weather-conditions-nonhuman-animals/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Weather conditions and nonhuman animals
+              </a>
+            </li>
+            <li>
+              <a
+                className="underline"
+                href="https://www.animal-ethics.org/rescuing-trapped-animals/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Rescuing trapped and injured animals
+              </a>
+            </li>
+            <li>
+              <a
+                className="underline"
+                href="https://www.animal-ethics.org/interspecific-conflict/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Antagonism in nature: Interspecific conflict
+              </a>
+            </li>
+            <li>
+              <a
+                className="underline"
+                href="https://www.animal-ethics.org/diseases-nature/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Diseases in nature
+              </a>
+            </li>
+            <li>
+              <a
+                className="underline"
+                href="https://www.animal-ethics.org/animals-natural-disasters/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Animals in natural disasters
+              </a>
+            </li>
+            <li>
+              <a
+                className="underline"
+                href="https://www.animal-ethics.org/population-dynamics-animal-suffering/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Population dynamics and animal suffering
+              </a>
+            </li>
+            <li>
+              <a
+                className="underline"
+                href="https://longtermrisk.org/the-importance-of-wild-animal-suffering/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                The Importance of Wild-Animal Suffering
+              </a>
+            </li>
+            <li>
+              <a
+                className="underline"
+                href="https://reducing-suffering.org/efforts-to-help-wild-animals-should-be-effective-not-idealistic/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Efforts to Help Wild Animals Should Be Effective, Not Idealistic
+              </a>
+            </li>
+            <li>
+              <a
+                className="underline"
+                href="https://reducing-suffering.org/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Essays on Reducing Suffering
+              </a>
+            </li>
           </ol>
         </div>
         <img
