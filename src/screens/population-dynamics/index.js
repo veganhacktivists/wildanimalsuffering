@@ -45,12 +45,6 @@ export function PopulationDynamics() {
           />
           <motion.img
             style={{ opacity: chickOpacity }}
-            className="col-start-1 row-start-2 translate-x-20 opacity-50 grayscale"
-            src="/images/population-dynamics/chick.png"
-            alt=""
-          />
-          <motion.img
-            style={{ opacity: chickOpacity }}
             className="col-start-1 row-start-3 translate-y-20 opacity-50 grayscale"
             src="/images/population-dynamics/chick.png"
             alt=""
@@ -91,12 +85,18 @@ export function PopulationDynamics() {
             src="/images/population-dynamics/chick.png"
             alt=""
           />
+          <motion.img
+            style={{ opacity: chickOpacity }}
+            className="col-start-3 row-start-5 translate-x-20 opacity-50 grayscale"
+            src="/images/population-dynamics/chick.png"
+            alt=""
+          />
         </div>
       </div>
 
-      <div className="relative mx-auto flex w-full max-w-2xl flex-1 flex-col space-y-4 px-8 sm:space-y-10">
+      <div className="relative mx-auto flex w-full max-w-7xl flex-1 flex-col space-y-4 px-8 sm:space-y-10">
         <h2 className="font-brand text-4xl text-white">Population Dynamics</h2>
-        <p className="text-lg text-white">
+        <p className="text-lg text-white sm:max-w-sm md:max-w-xl lg:max-w-2xl">
           Wild animals tend to have a lot of children, and for populations to
           remain stable, on average each parent can only have 2 children that
           reach adulthood.{" "}
