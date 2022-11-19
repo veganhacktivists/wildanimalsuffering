@@ -64,7 +64,7 @@ export function Conclusion() {
           href="https://veganhacktivists.org/support"
           target="_blank"
           rel="noreferrer"
-          className="ml-10 self-center whitespace-nowrap rounded-xl bg-primary px-5 py-1 text-xl font-medium uppercase"
+          className="ml-10 self-center whitespace-nowrap rounded-xl bg-primary px-5 py-1 text-l font-medium"
         >
           Support Us
         </a>
