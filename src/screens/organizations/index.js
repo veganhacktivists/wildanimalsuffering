@@ -6,7 +6,7 @@ export function Organizations() {
       id="organizations"
       className="relative flex min-h-screen items-center bg-mud bg-cover bg-top py-14 lg:py-24"
     >
-      <div className="bg-[-180px_-20px] absolute bottom-0 h-full w-full bg-none bg-no-repeat sm:bg-tree-and-birds lg:bg-contain lg:bg-left-top" />
+      <div className="absolute bottom-0 h-full w-full bg-none bg-[-180px_-20px] bg-no-repeat sm:bg-tree-and-birds lg:bg-contain lg:bg-left-top" />
       <div className="relative mx-auto flex w-full flex-col space-y-14 px-10">
         <h2 className="mx-auto max-w-xl text-center font-brand text-4xl text-white">
           Organizations working on Wild Animal Suffering
@@ -78,7 +78,7 @@ export function Organizations() {
               rel="noreferrer"
             >
               Wild Animal Welfare Committee
-            </a>
+            </a>{" "}
             and{" "}
             <a
               href="https://centerforreducingsuffering.org/"
@@ -87,7 +87,7 @@ export function Organizations() {
               rel="noreferrer"
             >
               Center for Reducing Suffering
-            </a>
+            </a>{" "}
             too!
           </p>
         </div>
