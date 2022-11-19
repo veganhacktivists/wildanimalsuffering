@@ -31,19 +31,13 @@ module.exports = {
           "url('/public/images/common-objections/grass-and-hedgehog.png')",
         leaves: "url('/public/images/how-to-help/leaves.png')",
         mud: "url('/public/images/organizations/mud-bg-color.jpg')",
+        resource: "url('/public/images/other-resources/resource-bg.png')",
         sand: "url('/public/images/types-of-suffering/sand-bg-color.jpg')",
         savanna: "url('/public/images/introduction/savanna.jpg')",
         "savanna-md": "url('/public/images/introduction/savanna-md.jpg')",
         woods: "url('/public/images/conclusion/woods.jpg')",
         "woods-md": "url('/public/images/conclusion/woods-md.jpg')",
         sky: "url('/public/images/videos/sky.jpg')",
-        "resource-section": "url('/public/images/other-resources/section.png')",
-        "resource-section-active":
-          "url('/public/images/other-resources/section-active.png')",
-        "resource-section-flipped":
-          "url('/public/images/other-resources/section-flipped.png')",
-        "resource-section-active-flipped":
-          "url('/public/images/other-resources/section-active-flipped.png')",
         "tree-and-birds":
           "url('/public/images/organizations/tree-and-birds.png')",
       },
@@ -74,7 +68,7 @@ module.exports = {
         },
         brown: {
           DEFAULT: "#5d5445",
-          lighter: "#c79d5e",
+          lighter: "#89806e",
         },
       },
       fontFamily: {
