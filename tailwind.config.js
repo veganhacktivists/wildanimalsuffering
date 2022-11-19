@@ -1,5 +1,3 @@
-const radixPlugin = require("./lib/tailwindcss-radix-plugin");
-
 module.exports = {
   future: {
     hoverOnlyWhenSupported: true,
@@ -102,9 +100,13 @@ module.exports = {
       },
       spacing: {
         18: "4.5rem",
+        34: "8.5rem",
         "9/10": "90%",
       },
     },
   },
-  plugins: [radixPlugin()],
+  plugins: [
+    require("@tailwindcss/line-clamp"),
+    require("./lib/tailwindcss-radix-plugin"),
+  ],
 };
