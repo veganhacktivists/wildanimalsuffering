@@ -94,9 +94,9 @@ export function PopulationDynamics() {
         </div>
       </div>
 
-      <div className="relative mx-auto flex w-full max-w-7xl flex-1 flex-col gap-4 px-8 sm:gap-10">
+      <div className="relative mx-auto flex w-full max-w-7xl flex-1 flex-col gap-8 px-8">
         <h2 className="font-brand text-4xl text-white">Population Dynamics</h2>
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-8">
           <p className="text-lg text-white sm:max-w-sm md:max-w-xl lg:max-w-2xl">
             Wild animals tend to have a lot of children, and for populations to
             remain stable, on average each parent can only have 2 children that
