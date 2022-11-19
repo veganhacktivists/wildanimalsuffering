@@ -70,7 +70,7 @@ export function Organizations() {
 
         <div className="mx-auto max-w-xl space-y-14 text-center lg:max-w-2xl">
           <p className="leading-relaxed text-white">
-            Be sure to check out{" "}
+          We also highly recommend checking out{" "}
             <a
               href="https://www.wawcommittee.org/"
               target="_blank"
