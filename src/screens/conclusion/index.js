@@ -74,11 +74,54 @@ export function Conclusion() {
         <div className="grid grid-cols-4 gap-10 text-white">
           <h4 className="text-lg font-bold">Special thanks</h4>
           <p className="col-span-3 leading-relaxed">
-            To our friends and advisors from Wild Animal Initiative, Animal
-            Ethics, Rethinking Priorities. Special thanks to Jack Hancock for written
-            content and Kate Rodman for the wonderful illustrations.
-            This website would not have been possible without everyone’s
-            dedication and support!
+            To our friends and advisors from{" "}
+            <a
+                className="underline"
+                href="https://www.animal-ethics.org/rescuing-trapped-animals/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Wild Animal Initiative
+              </a>{" "}
+              ,{" "}
+              <a
+                className="underline"
+                href="https://www.animal-ethics.org/rescuing-trapped-animals/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Animal Ethics
+              </a>{" "}
+              and{" "}
+              <a
+                className="underline"
+                href="https://www.animal-ethics.org/rescuing-trapped-animals/"
+                rel="noreferrer"
+                target="_blank"
+              >
+              Rethink Priorities
+              </a>{" "}
+              . Special thanks to{" "}
+              <a
+                className="underline"
+                href="https://www.youtube.com/@HumaneHancock"
+                rel="noreferrer"
+                target="_blank"
+              >
+              Jack Hancock
+              </a>{" "}
+              for written content and{" "}
+              <a
+                className="underline"
+                href="hhttps://katerodman.com/"
+                rel="noreferrer"
+                target="_blank"
+              >
+              Kate Rodman
+              </a>{" "}
+              for the wonderful illustrations.
+              This website would not have been possible without everyone’s
+              dedication and support!
           </p>
           <h4 className="text-lg font-bold">Credits and sources</h4>
           <ol className="col-span-3 list-inside list-decimal leading-relaxed">
