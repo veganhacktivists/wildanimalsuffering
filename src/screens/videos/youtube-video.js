@@ -9,7 +9,7 @@ export function YoutubeVideo({ video }) {
   }, [video.id]);
 
   return (
-    <div className="flex w-full transform-cpu flex-col overflow-hidden rounded-2xl bg-slate-900/50">
+    <div className="flex w-full flex-1 transform-cpu flex-col overflow-hidden rounded-2xl bg-slate-900/50">
       <div className="relative aspect-square w-full md:aspect-video">
         {playing ? (
           <iframe
@@ -37,17 +37,18 @@ export function YoutubeVideo({ video }) {
                 <span>{video.author}</span>
                 <span className="text-sm">{video.duration}</span>
               </div>
-              <h3 className="font-brand text-xl font-bold">{video.title}</h3>
+              <h3 className="font-brand text-xl font-bold line-clamp-2">
+                {video.title}
+              </h3>
             </div>
           </button>
         )}
       </div>
-      <p className="bg-white/80 p-5 text-gray-700">
-        Wild animal suffering is about harms to the wellbeing of animals living
-        in the wild. This is frequently confused with the ways species,
-        populations of animals, or ecosystems can be affected. These are
-        entities, not individuals who can feel and suffer.
-      </p>
+      <div className="flex-1 overflow-hidden overflow-ellipsis bg-white/80 p-5 lg:basis-40 xl:basis-34">
+        <p className="text-gray-700 lg:line-clamp-5 xl:line-clamp-4">
+          {video.description}
+        </p>
+      </div>
     </div>
   );
 }

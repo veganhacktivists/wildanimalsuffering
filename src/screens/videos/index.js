@@ -1,4 +1,4 @@
-import { motion, useMotionValue, useTransform } from "framer-motion";
+import { motion, useMotionValue } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { BackgroundEffect } from "../../components/background-effect";
 import { YoutubeVideo } from "./youtube-video";
@@ -13,78 +13,104 @@ export const videos = [
     id: "XjCp6bUp__M",
     author: "Humane Hancock",
     title: "The Vegan Blind Spot",
+    description:
+      "In this 20 minute video, a logical case is presented for reducing the suffering of wild animals. Wild animals suffer as much or more than factory farmed animals and we also have a moral obligation to help them. Strategies for helping wild animals include raising awareness of their suffering and promoting veganism.",
     duration: "19:21",
   },
   {
     id: "1Dp6gObE9eA",
     author: "Animal Ethics",
-    title: "Wild animal suffering: an introduction",
+    title: "Wild Animal Suffering: An Introduction",
+    description:
+      "Suffering often outweighs happiness in the lives of wild animals as a result of malnutrition, disease, human impact, and more. It is possible to reduce wild animal suffering by rescuing and treating sick or injured animals. Humans intervene in nature to reduce our own suffering, and wild animals are owed the same moral consideration.",
     duration: "10:10",
   },
   {
     id: "m9pCbH7BtcI",
     author: "Humane Hancock",
     title: "Vegans And Meat-Eaters Both Make This Mistake",
+    description:
+      "Both vegans and meat-eaters often engage in the appeal to nature fallacy. Our idea of what is natural or unnatural is arbitrary, yet an appeal to nature is often used to justify things we would otherwise view as immoral or unjust, including wild animal suffering.",
     duration: "16:14",
   },
   {
     id: "n3H4UtR_eak",
     author: "Wild Animal Initiative",
-    title: "Wild Animal Welfare",
+    title: "Wild Animal Welfare - Brown University Effective Altruism Seminar",
+    description:
+      "Welfare is the net value of an individual’s subjective experience, which may also be called happiness or wellbeing. Wild animal welfare may be quantified by considering scale (the number of wild animals) and intensity. The Wild Animal Initiative is currently focused on building capacity to advance wild animal welfare.",
     duration: "33:38",
   },
   {
     id: "g-7cLXyMp8E",
     author: "Humane Hancock",
     title: "The Truth About Yellowstone",
+    description:
+      "The reintroduction of wolves to Yellowstone was a romantic story but it was inaccurate. We tend to idealize nature and biodiversity, but nature is indifferent to suffering. Our focus should be the wellbeing of all individuals, whether human or animal, wild or domesticated.",
     duration: "16:59",
   },
   {
     id: "VPzvWKOzWjY",
     author: "Centre for Effective Altruism",
     title: "How evolution can help us understand wild animal welfare",
+    description:
+      "In this 22 minute video, Michelle Graham of the Wild Animal Initiative explains basic concepts of evolutionary biology and how these concepts shape our understanding of wild animal welfare. She fields questions and objections and calls for more research on the subject.",
     duration: "22:56",
   },
   {
     id: "hvDlYnCejHk",
     author: "Humane Hancock",
     title: "How a Vegan World Might Contain MORE Suffering",
+    description:
+      "Humane Hancock discusses the ethical implications of rewilding, replicating ecosystems on other planets, and simulations. Rewilding as practiced today often increases wild animal suffering while space colonization and simulations have potential to increase suffering without due moral consideration.",
     duration: "17:13",
   },
   {
     id: "AzFwOnYPV9U",
     author: "Animal Ethics",
-    title: "Animal ethics and environmental ethics",
+    title: "Animal Athics and Environmental Ethics",
+    description:
+      "Which entities deserve moral consideration? Ecocentrism values the preservation of ecosystems as a whole without regard for the wellbeing of individuals in them, whereas biocentrism values the wellbeing of all living beings. Arguments both for and against ecocentrism and biocentrism are presented.",
     duration: "9:24",
   },
   {
     id: "cp1qpzXe2Yw",
     author: "Humane Hancock",
     title: "How to SOLVE Wild Animal Suffering",
+    description:
+      "In this half hour video, Humane Hancock discusses potential solutions to wild animal suffering. Topics include vaccinations against disease, fertility control to prevent starvation, and genetic engineering. He presents several examples of each method which have already been employed as well as objections to such methods.",
     duration: "29:25",
   },
   {
     id: "1dl_eHonR0w",
     author: "Animal Ethics",
-    title: "Various ways to help wild animals in need",
+    title: "Ways to help wild animals in need",
+    description:
+      "The most common causes of wild animal suffering are starvation, disease, injuries and lack of shelter. Several methods to help wild animals are presented and examples are given, including treatment and prevention of disease, treatment of injuries, caring for orphaned animals and providing suitable shelter and other resources.",
     duration: "11:07",
   },
   {
     id: "_TaFwHa5ZRs",
     author: "Humane Hancock",
     title: "Cosmic Skeptic on Wild Animal Suffering",
+    description:
+      "Humane Hancock sits down with fellow Youtuber Cosmic Skeptic for a long-form conversation on the issue of wild animal suffering. If we have a moral obligation to be vegan, do we also have a moral obligation to help wild animals? Their conversation touches on philosophy, environmentalism and biodiversity, and human overpopulation.",
     duration: "1:12:45",
   },
   {
     id: "K7E6IB9rw6c",
     author: "LSE Philosophy",
     title: "A beginner's guide to wild animal suffering",
+    description:
+      "Oscar Horta, professor of philosophy and one of the founders of Animal Ethics, speaks to the London School of Economics on the topic of wild animal suffering. He discusses current efforts to help wild animals, why it matters, and highlights new areas of research into welfare biology. Raising awareness is a key way to advance the movement.",
     duration: "21.29",
   },
   {
     id: "Cv9ftiEvSpA",
     author: "Humane Hancock",
     title: "Why I Stopped Idolizing David Attenborough",
+    description:
+      "In this 21 minute video, Humane Hancock looks critically at David Attenborough’s work and philosophy. The ecosystems which Attenborough calls “balanced” are in fact fluctuating and arbitrary, and his documentaries minimize the subjective suffering of animals. Attenborough’s work is valuable but flawed in important ways.",
     duration: "21:23",
   },
 ];
@@ -116,7 +142,7 @@ export function Videos() {
     <section
       ref={ref}
       id="videos"
-      className="relative flex min-h-screen items-center bg-sky bg-cover lg:py-24"
+      className="relative flex min-h-screen items-center bg-sky bg-cover py-12 lg:py-24"
     >
       <img
         className="not-sr-only absolute left-0 top-0 hidden lg:block"
