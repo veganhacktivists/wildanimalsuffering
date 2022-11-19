@@ -1,5 +1,4 @@
 import { HealthcareIcon } from "../../components/healthcare-icon";
-import { links } from "../../utils/constants";
 
 export function Conclusion() {
   return (
@@ -62,7 +61,7 @@ export function Conclusion() {
           </div>
         </div>
         <a
-          href={links.veganHacktivistsSupport}
+          href="https://veganhacktivists.org/support"
           target="_blank"
           rel="noreferrer"
           className="ml-10 self-center whitespace-nowrap rounded-xl bg-primary px-5 py-1 text-xl font-medium uppercase"
