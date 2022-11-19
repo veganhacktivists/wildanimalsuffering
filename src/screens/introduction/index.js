@@ -4,7 +4,7 @@ export function Introduction() {
   return (
     <section
       id="introduction"
-      className="flex min-h-screen items-end bg-black bg-savanna bg-[length:100%] bg-[center_-100px] bg-no-repeat lg:items-center lg:bg-savanna-md lg:bg-cover lg:bg-center"
+      className="flex min-h-screen flex-col items-stretch justify-around bg-black bg-savanna bg-[length:100%] bg-[center_-100px] bg-no-repeat lg:items-center lg:bg-savanna-md lg:bg-cover lg:bg-center"
     >
       <a
         className="absolute top-0 right-0 m-10 hidden w-20 opacity-75 hover:opacity-100 md:block"
@@ -51,13 +51,13 @@ export function Introduction() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col items-center space-y-2 bg-black px-10 pb-6 text-center text-lg font-bold text-white lg:bg-transparent">
-          <p>
-            The suffering of wild animals matters. It matters to them, and it
-            should matter to us.
-          </p>
-          <ScrollDownIndicator />
-        </div>
+        <p className="flex flex-col items-center bg-black px-10 text-center text-lg font-bold text-white lg:bg-transparent">
+          The suffering of wild animals matters. It matters to them, and it
+          should matter to us.
+        </p>
+      </div>
+      <div className="flex justify-center bg-black pt-2 pb-6 lg:bg-transparent">
+        <ScrollDownIndicator />
       </div>
     </section>
   );
