@@ -5,8 +5,8 @@ export function Introduction() {
       className="flex min-h-screen items-end bg-black bg-savanna bg-[length:100%] bg-[center_-100px] bg-no-repeat lg:items-center lg:bg-savanna-md lg:bg-cover lg:bg-center"
     >
       <a
-        className="absolute top-0 right-0 m-10 hidden w-20 opacity-75 hover:opacity-100 lg:block"
-        href="https://veganhacktivists.org/"
+        className="absolute top-0 right-0 m-10 hidden w-20 opacity-75 hover:opacity-100 md:block"
+        href="https://veganhacktivists.org"
         target="_blank"
         rel="noreferrer"
       >
