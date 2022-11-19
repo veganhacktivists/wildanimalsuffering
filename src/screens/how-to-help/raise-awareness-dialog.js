@@ -6,7 +6,7 @@ import { CopyIcon } from "../../components/copy-icon";
 
 const CopyLinkSection = () => {
   const [open, setOpen] = useState(false);
-  const url = "http://wildanimalsuffering.org";
+  const url = "https://wildanimalsuffering.org";
 
   return (
     <RadixToast.Provider duration={2000}>
