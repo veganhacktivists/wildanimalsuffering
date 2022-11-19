@@ -67,6 +67,30 @@ export function Organizations() {
             effectiveness to reduce animal suffering.
           </Organization>
         </div>
+
+        <div className="mx-auto max-w-xl space-y-14 text-center lg:max-w-2xl">
+          <p className="leading-relaxed text-white">
+            Be sure to check out{" "}
+            <a
+              href="https://www.wawcommittee.org/"
+              target="_blank"
+              className="underline"
+              rel="noreferrer"
+            >
+              Wild Animal Welfare Committee
+            </a>{" "}
+            and{" "}
+            <a
+              href="https://centerforreducingsuffering.org/"
+              target="_blank"
+              className="underline"
+              rel="noreferrer"
+            >
+              Center for Reducing Suffering
+            </a>{" "}
+            too!
+          </p>
+        </div>
       </div>
 
       <img
