@@ -1,3 +1,5 @@
+import { ScrollDownIndicator } from "../../components/scroll-down-indicator";
+
 export function Introduction() {
   return (
     <section
@@ -15,14 +17,14 @@ export function Introduction() {
 
       <div className="mx-auto flex w-full max-w-7xl flex-col lg:gap-20 xl:gap-0">
         <div className="grid lg:grid-cols-2">
-          <div className="mx-auto pl-6 pt-12 lg:p-12 lg:pr-0">
+          <div className="mx-auto pl-6 pt-12 lg:p-12 lg:pr-0 lg:pb-0">
             <img
               src="/images/introduction/elephants.png"
               alt="The illustration of a mother elephant and her young"
               className="mx-auto w-3/4 md:w-1/2 lg:w-full"
             />
           </div>
-          <div className="bg-gradient-to-b from-transparent via-black to-black lg:bg-none lg:pt-12">
+          <div className="bg-gradient-to-b from-transparent via-black to-black lg:bg-none lg:pt-16">
             <div className="flex flex-col space-y-10 px-10 py-10 lg:py-0">
               <h1 className="flex flex-col space-y-4 text-center font-brand lg:max-w-md lg:text-left">
                 <span className="text-5xl leading-none text-white lg:text-6xl">
@@ -49,10 +51,13 @@ export function Introduction() {
             </div>
           </div>
         </div>
-        <p className="bg-black px-10 pb-10 text-center text-lg font-bold text-white lg:bg-transparent">
-          The suffering of wild animals matters. It matters to them, and it
-          should matter to us.
-        </p>
+        <div className="flex flex-col items-center space-y-2 bg-black px-10 pb-6 text-center text-lg font-bold text-white lg:bg-transparent">
+          <p>
+            The suffering of wild animals matters. It matters to them, and it
+            should matter to us.
+          </p>
+          <ScrollDownIndicator />
+        </div>
       </div>
     </section>
   );

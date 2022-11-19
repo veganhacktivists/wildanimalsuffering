@@ -6,12 +6,17 @@ module.exports = {
   theme: {
     extend: {
       animation: {
+        "arrows-down": "arrows-down 2s infinite",
         "slide-down": "slide-down 150ms ease-in-out",
         "slide-up": "slide-up 150ms ease-in-out",
         "pop-down": "pop-down 150ms ease-out forwards",
         "pop-up": "pop-up 150ms ease-out forwards",
         "dialog-hide": "dialog-hide 150ms ease-out",
         "dialog-show": "dialog-show 150ms ease-out",
+      },
+      animationDelay: {
+        "-400": "-400ms",
+        400: "400ms",
       },
       aspectRatio: {
         "4/3": "4 / 3",
@@ -47,10 +52,10 @@ module.exports = {
         "glow-lg": "0 0 10px 1px #fff",
       },
       colors: {
-        "menu-front": { dark: "#A29D8B", light: "#ADA999" },
+        "menu-front": { dark: "#a29d8b", light: "#ada999" },
         "menu-back": {
-          dark: "#9F9F9F",
-          light: "#F4F4F4",
+          dark: "#9f9f9f",
+          light: "#f4f4f4",
         },
         khaki: "#c7d3d0",
         blue: {
@@ -58,18 +63,18 @@ module.exports = {
         },
         primary: {
           DEFAULT: "#d8b36d",
-          light: "#E8D1A7",
-          lighter: "#F3E8D3",
+          light: "#e8d1a7",
+          lighter: "#f3e8d3",
         },
         gray: {
-          DEFAULT: "#3F3E3E",
+          DEFAULT: "#3f3e3e",
         },
         black: {
-          DEFAULT: "#1A3439",
+          DEFAULT: "#1a3439",
         },
         brown: {
-          DEFAULT: "#5D5445",
-          lighter: "#C79D5E",
+          DEFAULT: "#5d5445",
+          lighter: "#c79d5e",
         },
       },
       fontFamily: {
@@ -97,6 +102,17 @@ module.exports = {
           from: { opacity: 0, transform: "translateY(50vh)" },
           to: { opacity: 1, transform: "translateY(0)" },
         },
+        "arrows-down": {
+          "0%": {
+            opacity: 0,
+            transform: "rotate(45deg) translate(-16px, -16px)",
+          },
+          "50%": { opacity: 1 },
+          "100%": {
+            opacity: 0,
+            transform: "rotate(45deg) translate(16px, 16px)",
+          },
+        },
       },
       spacing: {
         18: "4.5rem",
@@ -107,6 +123,7 @@ module.exports = {
   },
   plugins: [
     require("@tailwindcss/line-clamp"),
+    require("./lib/tailwindcss-animation-delay-plugin"),
     require("./lib/tailwindcss-radix-plugin"),
   ],
 };
