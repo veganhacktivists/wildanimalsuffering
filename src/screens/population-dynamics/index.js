@@ -106,7 +106,7 @@ export function PopulationDynamics() {
           <div>
             <a
               href="https://www.animal-ethics.org/population-dynamics-animal-suffering/"
-              className="rounded-full bg-primary px-14 py-1 text-lg"
+              className="rounded-full bg-primary px-14 font-medium py-1 text-lg"
               target="_blank"
               rel="noreferrer"
             >
