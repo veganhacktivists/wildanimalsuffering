@@ -113,7 +113,7 @@ export function Conclusion() {
               for written content and{" "}
               <a
                 className="underline"
-                href="hhttps://katerodman.com/"
+                href="https://katerodman.com/"
                 rel="noreferrer"
                 target="_blank"
               >
