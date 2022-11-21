@@ -29,9 +29,9 @@ export function Resource({
         <p className="line-clamp-3 lg:line-clamp-none">{children}</p>
       </div>
       <div className="flex flex-col gap-4 px-4 lg:w-56 lg:py-6 lg:pr-6">
-        {links.map(([text, url], i) => (
+        {links.map(([text, url]) => (
           <a
-            key={i}
+            key={url}
             href={url}
             target="_blank"
             rel="noreferrer"

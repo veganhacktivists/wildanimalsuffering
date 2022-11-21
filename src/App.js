@@ -13,17 +13,17 @@ import { Videos } from "./screens/videos";
 export function App() {
   return (
     <>
-      {/* <Header />
+      <Header />
       <Introduction />
       <ScaleOfSuffering />
       <TypesOfSuffering />
-      <PopulationDynamics />*/}
+      <PopulationDynamics />
       <Videos />
-      {/* <CommonObjections />
-      <HowToHelp /> */}
-      {/* <Organizations /> */}
+      <CommonObjections />
+      <HowToHelp />
+      <Organizations />
       <Resources />
-      {/* <Conclusion /> */}
+      <Conclusion />
     </>
   );
 }
