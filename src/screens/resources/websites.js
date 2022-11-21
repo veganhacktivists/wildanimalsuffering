@@ -5,7 +5,6 @@ export function Websites() {
     <>
       <Resource
         thumbnail="/websites/effective-altruism.png"
-        containThumbnail
         title="Effective Altruism"
         links={[
           ["Visit", "https://www.effectivealtruism.org/"],
@@ -37,7 +36,6 @@ export function Websites() {
 
       <Resource
         thumbnail="/websites/animal-charity-evaluators.png"
-        containThumbnail
         title="Animal Charity Evaluators"
         links={[
           ["Visit", "https://animalcharityevaluators.org"],
@@ -52,7 +50,6 @@ export function Websites() {
 
       <Resource
         thumbnail="/websites/center-for-reducing-suffering.png"
-        containThumbnail
         title="Center For Reducing Suffering"
         links={[
           ["Visit", "https://centerforreducingsuffering.org"],
@@ -66,7 +63,6 @@ export function Websites() {
 
       <Resource
         thumbnail="/websites/world-animal-protection.png"
-        containThumbnail
         title="World Animal Protection"
         links={[
           ["Visit", "https://www.worldanimalprotection.us/"],
@@ -83,7 +79,6 @@ export function Websites() {
 
       <Resource
         thumbnail="/websites/faunalytics.webp"
-        containThumbnail
         title="Faunalytics"
         links={[
           ["Visit", "https://faunalytics.org/"],
@@ -100,7 +95,6 @@ export function Websites() {
 
       <Resource
         thumbnail="/websites/80000-hours.png"
-        containThumbnail
         title="80000 Hours"
         links={[
           ["Visit", "https://80000hours.org/"],

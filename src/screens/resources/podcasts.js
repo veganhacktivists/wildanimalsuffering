@@ -5,7 +5,6 @@ export function Podcasts() {
     <>
       <Resource
         thumbnail="podcasts/knowing-animals.jpg"
-        containThumbnail
         title="Reducing Wild Animal Suffering with Kyle Johannsen"
         links={[
           [
@@ -22,7 +21,6 @@ export function Podcasts() {
 
       <Resource
         thumbnail="podcasts/wildness.jpg"
-        containThumbnail
         title="Who cares about wild animals? with Maia Laperle"
         links={[["Listen", "https://www.wildanimalinitiative.org/podcast"]]}
       >
@@ -34,7 +32,6 @@ export function Podcasts() {
 
       <Resource
         thumbnail="podcasts/the-reality-check.jpg"
-        containThumbnail
         title="Brian Tomasik on Wild Animal Suffering"
         links={[["Listen", "https://www.youtube.com/watch?v=ra1l7SDzvBY"]]}
       >
@@ -46,7 +43,6 @@ export function Podcasts() {
 
       <Resource
         thumbnail="podcasts/80000-hours.jpg"
-        containThumbnail
         title="Persis Eskander on wild animal welfare and what, if anything, to do about it"
         links={[
           [
@@ -58,14 +54,10 @@ export function Podcasts() {
         Elephants in chains at travelling circuses; pregnant pigs trapped in
         coffin sized crates at factory farms; deers living in the wild. We
         should welcome the last as a pleasant break from the horror, right?
-        Maybe, but maybe not. While we tend to have a romanticised view of
-        nature, life in the wild includes a range of extremely negative
-        experiences.
       </Resource>
 
       <Resource
         thumbnail="podcasts/philosophy.jpg"
-        containThumbnail
         title="Kyle Johannsen, Wild Animal Ethics: The Moral and Political Problem of Wild Animal Suffering"
         links={[
           [
@@ -76,8 +68,7 @@ export function Podcasts() {
       >
         Many sentient (or possibly sentient) wild animals follow a reproductive
         strategy whereby they have large numbers of offspring, the vast majority
-        of which suffer and die quickly or suffer and die slowly. Either way,
-        there is a huge amount of suffering in the wild.
+        of which suffer and die quickly or suffer and die slowly.
       </Resource>
     </>
   );
