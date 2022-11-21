@@ -1,128 +1,101 @@
-import { useState } from "react";
-import { cx } from "../../utils/cx";
-import { BlogsDesktop } from "./blogs-desktop";
-import { BooksDesktop } from "./books-desktop";
-import { WebsitesMobile } from "./websites-mobile";
-import { PodcastsMobile } from "./podcasts-mobile";
-import { BooksMobile } from "./books-mobile";
-import { BlogsMobile } from "./blogs-mobile";
-import { WebsitesDesktop } from "./websites-desktop";
-import { PodcastsDesktop } from "./podcasts-desktop";
-
-const Categories = {
+import * as RadixTabs from "@radix-ui/react-tabs";
+import { Blogs } from "./blogs";
+import { Books } from "./books";
+import { Podcasts } from "./podcasts";
+import { Websites } from "./websites";
+const ResourceTypes = {
   BLOGS: "blogs",
   BOOKS: "books",
   WEBSITES: "websites",
   PODCASTS: "podcasts",
 };
 
-const DEFAULT_CATEGORY = Categories.BLOGS;
+function Tab({ resourceType, children }) {
+  return (
+    <RadixTabs.Trigger
+      className="w-full rounded-full bg-brown-lighter p-2 text-xl font-medium uppercase text-white hover:bg-brown-lighter/80 radix-state-active:bg-brown"
+      value={resourceType}
+    >
+      {children}
+    </RadixTabs.Trigger>
+  );
+}
+
+function MobileResourceList({ title, children }) {
+  return (
+    <div className="space-y-10 lg:hidden">
+      <h3 className="px-8 text-center font-brand text-3xl text-white">
+        {title}
+      </h3>
+      <div className="scrollbar-none flex snap-x snap-mandatory scroll-px-8 gap-8 overflow-x-scroll px-8">
+        {children}
+      </div>
+    </div>
+  );
+}
+
+function TabContent({ value, children }) {
+  return (
+    <RadixTabs.Content value={value} className="flex flex-col gap-8">
+      {children}
+    </RadixTabs.Content>
+  );
+}
 
 export function Resources() {
-  const [currentCategory, setCurrentCategory] = useState(DEFAULT_CATEGORY);
-
   return (
-    <section
+    <RadixTabs.Root
       id="resources"
-      className="relative flex min-h-screen flex-col bg-sand bg-top py-16 lg:py-24"
+      className="relative flex min-h-screen items-center bg-sand bg-cover py-12 lg:items-start lg:py-24"
+      defaultValue={ResourceTypes.BLOGS}
+      orientation="vertical"
     >
-      <div className=":g:space-y-10 relative flex grow flex-col space-y-4 px-10 pb-8">
-        <h2 className="mx-auto text-center font-brand text-4xl text-white">
+      <div className="relative z-10 mx-auto flex w-full max-w-7xl grow flex-col gap-10">
+        <h2 className="hidden px-8 text-center font-brand text-4xl text-white lg:block">
           Other resources you might like
         </h2>
 
-        <div className="flex w-full grow flex-col gap-6 lg:flex-row lg:gap-12 lg:py-8">
-          <div className="grid grid-cols-2 gap-0 lg:block lg:space-y-6">
-            {Object.values(Categories).map((category) => (
-              <a
-                key={category}
-                className={cx(
-                  "flex h-[80px] w-[240px] items-center justify-center bg-center bg-no-repeat font-brand text-xl text-white odd:ml-[-50px] odd:mr-auto even:mr-[-50px] even:ml-auto lg:text-3xl lg:even:mr-0 lg:even:ml-[-50px]",
-                  category === currentCategory
-                    ? "odd:bg-resource-section-active even:bg-resource-section-active-flipped lg:even:bg-resource-section-active"
-                    : "odd:bg-resource-section even:bg-resource-section-flipped lg:even:bg-resource-section"
-                )}
-                href={`#resources-${category}`}
-                onClick={() => setCurrentCategory(category)}
-              >
-                {category}
-              </a>
-            ))}
-          </div>
+        <MobileResourceList title="Blogs">
+          <Blogs />
+        </MobileResourceList>
+        <MobileResourceList title="Books">
+          <Books />
+        </MobileResourceList>
+        <MobileResourceList title="Websites">
+          <Websites />
+        </MobileResourceList>
+        <MobileResourceList title="Podcasts">
+          <Podcasts />
+        </MobileResourceList>
 
-          <div
-            className={
-              currentCategory === Categories.BLOGS
-                ? "hidden grow lg:flex"
-                : "hidden"
-            }
-          >
-            <BlogsDesktop />
+        <div className="mx-auto hidden w-full max-w-7xl grid-cols-9 gap-8 px-8 lg:grid">
+          <div className="col-span-2">
+            <RadixTabs.List
+              className="flex flex-col gap-4"
+              aria-label="Select a resource type"
+            >
+              <Tab resourceType={ResourceTypes.BLOGS}>Blogs</Tab>
+              <Tab resourceType={ResourceTypes.BOOKS}>Books</Tab>
+              <Tab resourceType={ResourceTypes.WEBSITES}>Websites</Tab>
+              <Tab resourceType={ResourceTypes.PODCASTS}>Podcasts</Tab>
+            </RadixTabs.List>
           </div>
-
-          <div
-            className={
-              currentCategory === Categories.BLOGS ? "lg:hidden" : "hidden"
-            }
-          >
-            <BlogsMobile />
-          </div>
-
-          <div
-            className={
-              currentCategory === Categories.BOOKS
-                ? "hidden grow lg:flex"
-                : "hidden"
-            }
-          >
-            <BooksDesktop />
-          </div>
-
-          <div
-            className={
-              currentCategory === Categories.BOOKS ? "lg:hidden" : "hidden"
-            }
-          >
-            <BooksMobile />
-          </div>
-
-          <div
-            className={
-              currentCategory === Categories.WEBSITES
-                ? "hidden grow lg:flex"
-                : "hidden"
-            }
-          >
-            <WebsitesDesktop />
-          </div>
-
-          <div
-            className={
-              currentCategory === Categories.WEBSITES ? "lg:hidden" : "hidden"
-            }
-          >
-            <WebsitesMobile />
-          </div>
-
-          <div
-            className={
-              currentCategory === Categories.PODCASTS
-                ? "hidden grow lg:flex"
-                : "hidden"
-            }
-          >
-            <PodcastsDesktop />
-          </div>
-
-          <div
-            className={
-              currentCategory === Categories.PODCASTS ? "lg:hidden" : "hidden"
-            }
-          >
-            <PodcastsMobile />
+          <div className="col-span-7">
+            <TabContent value={ResourceTypes.BLOGS}>
+              <Blogs />
+            </TabContent>
+            <TabContent value={ResourceTypes.BOOKS}>
+              <Books />
+            </TabContent>
+            <TabContent value={ResourceTypes.WEBSITES}>
+              <Websites />
+            </TabContent>
+            <TabContent value={ResourceTypes.PODCASTS}>
+              <Podcasts />
+            </TabContent>
           </div>
         </div>
       </div>
-    </section>
+    </RadixTabs.Root>
   );
 }
