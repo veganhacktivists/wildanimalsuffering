@@ -79,9 +79,11 @@ export function Conclusion() {
       </div>
       <div className="mx-auto flex max-w-7xl p-10">
         <div className="grid grid-cols-4 gap-10 text-white">
-          <div className="col-span-4 flex flex-col md:col-span-3">
-            <h4 className="text-lg font-bold">Special thanks</h4>
-            <p className="leading-relaxed">
+          <div className="col-span-4 flex flex-col gap-2 md:col-span-3 lg:flex-row lg:gap-10">
+            <h4 className="w-48 whitespace-nowrap text-lg font-bold">
+              Special thanks
+            </h4>
+            <p className="flex-1 leading-relaxed">
               To our friends and advisors from{" "}
               <a
                 className="underline"
@@ -140,9 +142,9 @@ export function Conclusion() {
             />
           </div>
 
-          <div className="col-span-4 flex flex-col md:col-span-3">
-            <h4 className="text-lg font-bold">Credits and sources</h4>
-            <ol className="list-inside list-decimal leading-relaxed">
+          <div className="col-span-4 flex flex-col gap-2 md:col-span-3 lg:flex-row lg:gap-10">
+            <h4 className="w-48 text-lg font-bold">Credits and sources</h4>
+            <ol className="flex-1 list-inside list-decimal leading-relaxed">
               <li>
                 <a
                   className="underline"
