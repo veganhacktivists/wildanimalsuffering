@@ -81,9 +81,7 @@ export function Books() {
         rehabilitate animals used in medical testing, to homes for farmed
         animals, abandoned pets, and entertainment animals that have outlived
         their “usefulness.” Saving Animals is the first major ethnography to
-        focus on the ethical issues animating the establishment of such places,
-        where animals who have been mistreated or destined for slaughter are
-        allowed to live out their lives simply being animals.
+        focus on the ethical issues animating the establishment of such places.
       </Resource>
       <Resource
         thumbnail="books/saving-ourselves.jpg"
