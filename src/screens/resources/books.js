@@ -81,9 +81,7 @@ export function Books() {
         rehabilitate animals used in medical testing, to homes for farmed
         animals, abandoned pets, and entertainment animals that have outlived
         their “usefulness.” Saving Animals is the first major ethnography to
-        focus on the ethical issues animating the establishment of such places,
-        where animals who have been mistreated or destined for slaughter are
-        allowed to live out their lives simply being animals.
+        focus on the ethical issues animating the establishment of such places.
       </Resource>
       <Resource
         thumbnail="books/saving-ourselves.jpg"
@@ -136,6 +134,31 @@ export function Books() {
         animal welfare and conservation science there exists a space of
         underexamined and unresolved tension: wildness itself. When is it right
         to capture or feed wild animals for the good of their species?
+      </Resource>
+      <Resource
+        thumbnail="books/ufaw.jpg"
+        containThumbnail
+        title="Physiology and Behaviour of Animal Suffering"
+        subtext="Neville G. Gregory"
+        links={[
+          [
+            "Kindle",
+            "https://www.amazon.com/Physiology-Behaviour-Animal-Suffering-Welfare-ebook/dp/B000VHVXKI/",
+          ],
+          [
+            "Paperback",
+            "https://www.amazon.com/Physiology-Behaviour-Suffering-Neville-Gregory/dp/0632064684/",
+          ],
+          [
+            "Digital",
+            "https://www.amazon.co.uk/Physiology-Behaviour-Suffering-Neville-Gregory/dp/0470752491/",
+          ],
+        ]}
+      >
+        Written by an expert in applied welfare aspects of physiology, this book is the first to 
+        address the physiological aspects of suffering in animals. It explores the different 
+        causes of suffering: physical discomfort, thirst and hunger, the responses in the 
+        body that lead to suffering and it offers insight into how suffering can be managed.
       </Resource>
     </>
   );
