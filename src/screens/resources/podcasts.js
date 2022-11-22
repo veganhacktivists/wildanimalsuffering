@@ -42,7 +42,7 @@ export function Podcasts() {
       </Resource>
 
       <Resource
-        thumbnail="podcasts/80000-hours.jpg"
+        thumbnail="podcasts/80000-hours.png"
         title="Persis Eskander on wild animal welfare and what, if anything, to do about it"
         links={[
           [
@@ -57,7 +57,7 @@ export function Podcasts() {
       </Resource>
 
       <Resource
-        thumbnail="podcasts/philosophy.jpg"
+        thumbnail="podcasts/philosophy.png"
         title="Kyle Johannsen, Wild Animal Ethics: The Moral and Political Problem of Wild Animal Suffering"
         links={[
           [
