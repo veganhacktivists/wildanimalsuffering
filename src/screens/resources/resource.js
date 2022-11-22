@@ -44,7 +44,7 @@ export function Resource({
             href={url}
             target="_blank"
             rel="noreferrer"
-            className="block rounded-full bg-brown p-1 text-center text-xl font-medium uppercase text-white hover:bg-brown/80"
+            className="block rounded-full bg-brown p-1 text-center text-lg font-medium text-white hover:bg-brown/80"
           >
             {text}
           </a>
