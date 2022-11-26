@@ -15,7 +15,7 @@ export function TypesOfSuffering() {
           <DialogItem
             id="thirst-and-starvation"
             title="Thirst & starvation"
-            description="Starvation is a common cause of death for animals who survive to old age. Food scarcity is worsened by the simultaneous occurrence of hunger and predation. Thirst is another major contributor to high mortality rates in wild animals. The combination of thirst and starvation accelerates the process of dehydration that culminates in death. Many animals who live in arid conditions continue to eat as a survival strategy because there are some fluids in food. This allows animals to remain alive for longer. Without the availability of water directly or indirectly through food, many animals do not survive harsh climates."
+            description="Animals in the wild are suffering from starvation and dehydration, and it is easy to underestimate this problem. For instance, if an animal is on the verge of starving to death, they will be more susceptible to being caught by predators. We might think that predation is why the animal died, when the root cause of that happening was actually weakness or more risky behaviours due to starvation. When we consider the reproductive strategies and population dynamics of wild animals, it seems that the problem of resource scarcity is likely to be a significant source of suffering."
           />
           <DialogItem
             id="predation"
