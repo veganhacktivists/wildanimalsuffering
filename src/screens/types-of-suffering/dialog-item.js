@@ -1,7 +1,7 @@
 import * as RadixDialog from "@radix-ui/react-dialog";
 import { CloseIcon } from "../../components/close-icon";
 
-export function DialogItem({ id, title, description }) {
+export function DialogItem({ id, title, description, link }) {
   return (
     <RadixDialog.Root>
       <RadixDialog.Trigger className="relative flex w-3/4 cursor-zoom-in flex-col items-center justify-between rounded-md border-white bg-white/40 sm:w-1/3 lg:w-1/4 xl:w-1/5">
@@ -33,8 +33,14 @@ export function DialogItem({ id, title, description }) {
                   {title}
                 </RadixDialog.Title>
                 <RadixDialog.Description>{description}</RadixDialog.Description>
-                <RadixDialog.Close className="rounded-xl bg-primary px-5 py-1 md:hidden">
-                  Close
+                <div>
+                  <a href={`${link}`} 
+                  class="rounded-full bg-primary px-14 font-medium py-1 text-lg" 
+                  target="_blank" 
+                  rel="noreferrer">Learn more</a>
+                </div>
+                <RadixDialog.Close className="underline md:hidden">
+                  Go back
                 </RadixDialog.Close>
               </div>
             </div>
