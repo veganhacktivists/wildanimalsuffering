@@ -39,9 +39,11 @@ export function DialogItem({ id, title, description, link }) {
                   target="_blank" 
                   rel="noreferrer">Learn more</a>
                 </div>
+                <div>
                 <RadixDialog.Close className="underline md:hidden">
                   Go back
                 </RadixDialog.Close>
+                </div>
               </div>
             </div>
           </RadixDialog.Content>
