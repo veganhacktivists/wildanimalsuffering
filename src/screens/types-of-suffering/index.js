@@ -20,7 +20,7 @@ export function TypesOfSuffering() {
           <DialogItem
             id="predation"
             title="Predation"
-            description="In nature, the ecosystemic relations in which one organism benefits by causing harm to another are called “antagonistic relationships.” Antagonistic relationships arise because organisms have conflicting interests. For example, a tick might have an interest in feeding off the blood of a deer because this provides nourishment to the tick and thereby benefits him. This conflicts with the interests of the deer because part of her energy is siphoned off to feed the tick, and this can harm her by weakening her physical condition. The main examples of antagonistic relations are those in which one organism nourishes themself by harming another organism, in particular by parasitism or predation."
+            description="Animals who are preyed upon are killed and eaten in varied ways. Some predators routinely eat the animals alive. Some animals, such as herons and some species of snakes, swallow their prey whole and digest them alive. It’s difficult to estimate the suffering undergone by animals while they are being hunted and killed. It’s important to note that as well as feeling pain when attacked, prey animals may experience psychological distress from living in fear of predators."
           />
           <DialogItem
             id="disease-and-parasitism"
