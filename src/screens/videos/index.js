@@ -110,7 +110,7 @@ export const videos = [
     author: "Humane Hancock",
     title: "Why I Stopped Idolizing David Attenborough",
     description:
-      "In this 21 minute video, Humane Hancock looks critically at David Attenborough’s work and philosophy. The ecosystems which Attenborough calls “balanced” are in fact fluctuating and arbitrary, and his documentaries minimize the subjective suffering of animals. Attenborough’s work is valuable but flawed in important ways.",
+      "In this 21 minute video, Humane Hancock looks critically at David Attenborough’s work and philosophy. The ecosystems which Attenborough calls “perfect” are in fact changing all the time, and his documentaries contribute to our skewed perception of nature and the lives of wild animals.",
     duration: "21:23",
   },
 ];
