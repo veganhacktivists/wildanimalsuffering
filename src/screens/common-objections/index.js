@@ -17,7 +17,7 @@ export function CommonObjections() {
             value="its-not-ours"
             index="01"
             label="It's not our responsibility"
-            content="People sometimes argue that we are not personally responsible for the suffering of wild animals, so we shouldn't be very concerned about it. However, the reason to help them is that they need our help, not because we caused their situation. We can see that this argument would also apply to humans in distant places suffering from natural causes, such as earthquakes or hurricanes. If we think we should help humans in those cases and care about their wellbeing as sentient beings, then it follows that we should help animals living in the wild as well."
+            content="People sometimes argue that we are not responsible for the suffering of wild animals, because we are not causing it. However, the reason to help them is that they need our help, not because we caused their situation. We already agree that we should help humans suffering from diseases like malaria and natural disasters like earthquakes. If we think we should help humans in those cases, despite the fact that we did not cause their suffering, then it seems speciesist to argue that we should ignore wild animal suffering."
           />
           <AccordionItem
             value="we-will-make-it-worse"
