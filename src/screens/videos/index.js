@@ -14,7 +14,7 @@ export const videos = [
     author: "Humane Hancock",
     title: "The Vegan Blind Spot",
     description:
-      "In this 20 minute video, a logical case is presented for reducing the suffering of wild animals. Wild animals suffer as much or more than factory farmed animals and we also have a moral obligation to help them. Strategies for helping wild animals include raising awareness of their suffering and promoting veganism.",
+      "In this 20 minute video, a logical case is presented for reducing the suffering of wild animals. Like farmed animals, wild animals are also in need of our help, but this is an issue that many animal advocates haven’t given much consideration.",
     duration: "19:21",
   },
   {
