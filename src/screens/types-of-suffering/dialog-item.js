@@ -1,15 +1,11 @@
 import * as RadixDialog from "@radix-ui/react-dialog";
 import { CloseIcon } from "../../components/close-icon";
-import { ExpandIcon } from "../../components/expand-icon";
 
 export function DialogItem({ id, title, description, link }) {
   return (
     <RadixDialog.Root>
       <RadixDialog.Trigger className="relative flex w-3/4 cursor-zoom-in flex-col items-center justify-between rounded-md border-white bg-white/40 sm:w-1/3 lg:w-1/4 xl:w-1/5">
         <div className="flex aspect-video w-full">
-          <RadixDialog.Expand className="absolute top-4 right-4">
-            <ExpandIcon className="h-6 w-6" />
-          </RadixDialog.Expand>
           <img
             className="mx-auto h-full bg-center object-contain"
             src={`/images/types-of-suffering/${id}.png`}
