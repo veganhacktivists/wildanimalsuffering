@@ -32,7 +32,7 @@ export function TypesOfSuffering() {
           />
           <DialogItem
             id="harmful-weather-conditions"
-            title="Harmful weather conditions"
+            title="Weather conditions"
             description="Weather, especially temperature, plays a major role in influencing whether animals can survive and be healthy in certain habitats. Fluctuations in temperatures in certain regions can result in the deaths of entire populations. Many animals suffer due to changes in temperature. They may be fine during part of the year but experience great discomfort and hardship during a particularly hot summer or cold winter. In temperate areas - such as large parts of North America, Europe, and Asia - there can be big differences between the minimum and maximum temperatures during the summer and the winter. Animals who don’t hibernate or become dormant in cold weather have to endure large variations in temperature. This may weaken their immune systems and make them more susceptible to illness."
             link="https://www.animal-ethics.org/weather-conditions-nonhuman-animals/"
           />
