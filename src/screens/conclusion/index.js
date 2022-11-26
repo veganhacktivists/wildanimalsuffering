@@ -252,8 +252,7 @@ export function Conclusion() {
                   rel="noreferrer"
                   target="_blank"
                 >
-                  Efforts to Help Wild Animals Should Be Effective, Not
-                  Idealistic
+                  Efforts to Help Wild Animals Should Be Effective
                 </a>
               </li>
               <li>
@@ -264,6 +263,26 @@ export function Conclusion() {
                   target="_blank"
                 >
                   Essays on Reducing Suffering
+                </a>
+              </li>
+              <li>
+                <a
+                  className="underline"
+                  href="https://longtermrisk.org/the-importance-of-wild-animal-suffering/"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  The Importance of Wild-Animal Suffering
+                </a>
+              </li>
+              <li>
+                <a
+                  className="underline"
+                  href="https://reducing-suffering.org/why-vegans-should-care-about-suffering-in-nature/"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  Why Vegans Should Care about Suffering in Nature
                 </a>
               </li>
             </ol>
