@@ -46,7 +46,7 @@ export const videos = [
     author: "Humane Hancock",
     title: "The Truth About Yellowstone",
     description:
-      "The reintroduction of wolves to Yellowstone was a romantic story but it was inaccurate. We tend to idealize nature and biodiversity, but nature is indifferent to suffering. Our focus should be the wellbeing of all individuals, whether human or animal, wild or domesticated.",
+      "The reintroduction of wolves to Yellowstone National Park has been celebrated by many, but did this intervention make the world a better place?",
     duration: "16:59",
   },
   {
