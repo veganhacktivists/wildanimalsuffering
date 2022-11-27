@@ -66,7 +66,7 @@ export function FarmedAnimals() {
                 originX: 0.5,
                 originY: 0.5,
               }}
-              className="col-start-1 row-start-1 w-80 backface-hidden"
+              className="col-start-1 row-start-1 w-80 transform-cpu"
             >
               <img
                 className="h-full w-full"
