@@ -37,7 +37,7 @@ export function DialogItem({ id, title, description, link }) {
                 <RadixDialog.Description>{description}</RadixDialog.Description>
                 <div>
                   <a
-                    href={`${link}`}
+                    href={link}
                     class="rounded-full bg-primary px-14 py-1 text-lg font-medium"
                     target="_blank"
                     rel="noreferrer"
