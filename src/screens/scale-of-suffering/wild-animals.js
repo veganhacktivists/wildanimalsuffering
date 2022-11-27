@@ -73,7 +73,7 @@ export function WildAnimals() {
                 className="font-brand text-[#afcb83]"
                 style={{ opacity: reptilesOpacity, y: reptilesTextY }}
               >
-                10-10,000 reptiles & amphibians
+                10-10,000 reptiles & amph.
               </motion.li>
               <motion.li
                 className="font-brand text-[#c79d5e]"
@@ -94,7 +94,7 @@ export function WildAnimals() {
                   y: terrestrialArTextY,
                 }}
               >
-                600,000 - 7*10⁸ terrestrial ar
+                600,000 - 7*10⁸ terrestrial arth.
               </motion.li>
             </ul>
             <div className="max-w-md space-y-4">
