@@ -1,8 +1,6 @@
 @font-face {
     font-family: 'Asap Condensed';
     font-style: bold;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
     font-weight: 700;
     font-display: swap;
     src: url('./AsapCondensed-Bold.eot'); /* IE9 Compat Modes */
