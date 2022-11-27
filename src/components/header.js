@@ -3,10 +3,8 @@ import { Navigation } from "./navigation";
 export function Header() {
   return (
     <header className="absolute left-0 flex w-full items-start p-10 text-gray">
-      <div className="pr-8">
-        <Navigation />
-      </div>
-      <span className="hidden font-light md:block">
+      <Navigation />
+      <span className="hidden font-light ml-8 md:block">
         Illustrations by{" "}
         <a
           className="font-normal underline"

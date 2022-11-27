@@ -33,7 +33,7 @@ export function Navigation() {
               Suffering
             </div>
             <button
-              className="relative h-20 h-10 w-10 w-10 shrink-0 rounded-full border-2 border-menu-back-dark p-2 p-1"
+              className="relative h-10 w-10 shrink-0 rounded-full border-2 border-menu-back-dark p-2 p-1"
               onClick={() => setOpen(false)}
             >
               <div className="relative h-full w-[90%]">
@@ -42,7 +42,7 @@ export function Navigation() {
               </div>
             </button>
           </div>
-          <div className="flex flex-col justify-start px-8 px-8">
+          <div className="flex flex-col justify-start px-8">
             <NavigationLink name="Introduction" id="introduction" />
             <NavigationLink name="Scale of Suffering" id="scale-of-suffering" />
             <NavigationLink name="Types of Suffering" id="types-of-suffering" />
@@ -57,7 +57,7 @@ export function Navigation() {
             <NavigationLink name="Resources" id="resources" />
             <NavigationLink name="Conclusion" id="conclusion" />
 
-            <div className="border-bg-menu-back-light mt-8 mt-8 flex flex-col border-t pt-8 pb-8">
+            <div className="flex flex-col border-t py-8 mt-8">
               Made with love by{" "}
               <a
                 href="https://www.instagram.com/veganhacktivists"
