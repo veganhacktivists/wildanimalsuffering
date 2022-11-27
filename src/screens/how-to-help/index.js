@@ -15,7 +15,7 @@ export function HowToHelp() {
 
         <div className="mx-auto grid gap-12 text-white md:grid-cols-3 lg:gap-16">
           <RaiseAwarenessDialog>
-            <ActionButton as="button" step={1}>
+            <ActionButton as="button" step={1} subtitle="Click to share">
               Raise awareness
             </ActionButton>
           </RaiseAwarenessDialog>
@@ -25,6 +25,7 @@ export function HowToHelp() {
             target="_blank"
             step={2}
             rel="noreferrer"
+            subtitle="Click to view"
           >
             Donate to charities
           </ActionButton>
@@ -34,6 +35,7 @@ export function HowToHelp() {
             target="_blank"
             step={3}
             rel="noreferrer"
+            subtitle="Click to signup"
           >
             Starter kit signup
           </ActionButton>
@@ -64,7 +66,7 @@ export function HowToHelp() {
 
           <a
             href="https://www.wildanimalinitiative.org/services"
-            className="inline-block text-lg font-medium rounded-xl bg-primary px-5 py-1"
+            className="inline-block rounded-xl bg-primary px-5 py-1 text-lg font-medium"
             target="_blank"
             rel="noreferrer"
           >

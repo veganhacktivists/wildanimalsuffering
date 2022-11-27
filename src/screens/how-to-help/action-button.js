@@ -4,7 +4,7 @@ import { forwardRef } from "react";
  * @type React.ForwardRefExoticComponent<any>
  */
 export const ActionButton = forwardRef(
-  ({ step, children, as: Component = "button", ...props }, ref) => {
+  ({ step, children, subtitle, as: Component = "button", ...props }, ref) => {
     return (
       // @ts-ignore
       <Component
@@ -13,10 +13,11 @@ export const ActionButton = forwardRef(
         {...props}
       >
         <div className="flex h-full w-full flex-col justify-center bg-leaves bg-cover px-4 pt-6">
-          <span className="font-brand text-8xl">{step}</span>
+          <span className="font-brand text-7xl">{step}</span>
           <span className="pl-2 pb-2 font-brand text-2xl uppercase lg:text-3xl">
             {children}
           </span>
+          <span className="pl-2 pb-4">{subtitle}</span>
         </div>
       </Component>
     );
