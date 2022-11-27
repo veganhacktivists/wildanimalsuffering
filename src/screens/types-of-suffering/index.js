@@ -55,7 +55,7 @@ export function TypesOfSuffering() {
             link="https://forum.effectivealtruism.org/posts/8qmQr7kiEYFhX9eTR/what-is-wild-animal-suffering"
           />
         </div>
-        <p className="text-center font-brand text-xl font-bold uppercase text-white">
+        <p className="text-center text-white">
           Click on an item above to learn more.
         </p>
       </div>
