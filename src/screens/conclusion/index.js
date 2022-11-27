@@ -135,11 +135,17 @@ export function Conclusion() {
           </div>
 
           <div className="hidden md:block">
+            <a
+              href="https://veganhacktivists.org/"
+              rel="noreferrer"
+              target="_blank"
+            >
             <img
               className="ml-auto max-h-32"
               src="/images/conclusion/vh-logo.png"
               alt="Vegan Hacktivists logo"
             />
+            </a>
           </div>
 
           <div className="col-span-4 flex flex-col gap-2 md:col-span-3 lg:flex-row lg:gap-10">
