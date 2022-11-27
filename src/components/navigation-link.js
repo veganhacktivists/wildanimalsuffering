@@ -5,9 +5,9 @@ export function NavigationLink({ id, name }) {
     <a
       href={`/#${id}`}
       className={cx(
-        "relative bg-menu-back-light p-16 text-left text-7xl text-menu-front-light",
+        "relative mb-2 bg-menu-back-light p-16 text-left text-menu-front-light",
         "hover:bg-menu-back-light",
-        "md:rounded-xl md:p-0 md:py-4 md:px-8 md:text-xl"
+        "rounded-xl p-0 py-4 px-8"
       )}
     >
       {name}
