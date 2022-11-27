@@ -42,7 +42,7 @@ export function Navigation() {
               </div>
             </button>
           </div>
-          <div className="flex flex-col justify-start px-8 px-8">
+          <div className="flex flex-col justify-start px-8">
             <NavigationLink name="Introduction" id="introduction" />
             <NavigationLink name="Scale of Suffering" id="scale-of-suffering" />
             <NavigationLink name="Types of Suffering" id="types-of-suffering" />
