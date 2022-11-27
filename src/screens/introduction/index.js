@@ -26,7 +26,7 @@ export function Introduction() {
           </div>
           <div className="bg-gradient-to-b from-transparent via-black to-black lg:bg-none lg:pt-16">
             <div className="flex flex-col space-y-10 px-10 py-10 lg:py-0">
-              <h1 className="flex flex-col space-y-4 text-center font-brand lg:max-w-md lg:text-left">
+              <h1 className="flex flex-col space-y-4 text-center font-brand lg:text-left">
                 <span className="text-5xl leading-none text-white lg:text-6xl">
                   Wild Animal Suffering
                 </span>
