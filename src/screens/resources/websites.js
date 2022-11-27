@@ -78,22 +78,6 @@ export function Websites() {
       </Resource>
 
       <Resource
-        thumbnail="/websites/faunalytics.webp"
-        title="Faunalytics"
-        links={[
-          ["Visit", "https://faunalytics.org/"],
-          ["Donate", "https://faunalytics.org/donate"],
-        ]}
-      >
-        Animals need you, and you need data. We conduct essential research,
-        maintain an online research library, and directly support advocates and
-        organizations in their work to save lives. The range of data we offer
-        helps our movement understand how people think about and respond to
-        advocacy, providing advocates with the best strategies to inspire change
-        for animals.
-      </Resource>
-
-      <Resource
         thumbnail="/websites/80000-hours.png"
         title="80000 Hours"
         links={[
