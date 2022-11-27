@@ -3,7 +3,7 @@ import { Navigation } from "./navigation";
 export function Header() {
   return (
     <header className="absolute left-0 flex w-full items-start p-10 text-gray">
-      <div className="pr-8 pt-2">
+      <div className="pr-8">
         <Navigation />
       </div>
       <span className="hidden font-light md:block">

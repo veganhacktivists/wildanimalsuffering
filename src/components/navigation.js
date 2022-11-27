@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { MenuIcon } from "./menu-icon";
 import { NavigationLink } from "./navigation-link";
 
-// FIXME Make sure styling is conform design.
 export function Navigation() {
   const [open, setOpen] = useState(false);
 
@@ -34,7 +33,7 @@ export function Navigation() {
               Suffering
             </div>
             <button
-              className="relative h-20 h-10 w-20 w-10 shrink-0 rounded-full border-2 border-menu-back-dark p-2 p-1"
+              className="relative h-20 h-10 w-10 w-10 shrink-0 rounded-full border-2 border-menu-back-dark p-2 p-1"
               onClick={() => setOpen(false)}
             >
               <div className="relative h-full w-[90%]">
@@ -43,7 +42,7 @@ export function Navigation() {
               </div>
             </button>
           </div>
-          <div className="flex flex-col justify-start px-16 px-8">
+          <div className="flex flex-col justify-start px-8 px-8">
             <NavigationLink name="Introduction" id="introduction" />
             <NavigationLink name="Scale of Suffering" id="scale-of-suffering" />
             <NavigationLink name="Types of Suffering" id="types-of-suffering" />
