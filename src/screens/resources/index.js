@@ -13,7 +13,7 @@ const ResourceTypes = {
 function Tab({ resourceType, children }) {
   return (
     <RadixTabs.Trigger
-      className="w-full rounded-full bg-brown-lighter p-2 text-xl font-medium uppercase text-white hover:bg-brown-lighter/80 radix-state-active:bg-brown"
+      className="w-full rounded-full bg-brown-lighter p-2 text-xl font-medium text-white hover:bg-brown-lighter/80 radix-state-active:bg-brown"
       value={resourceType}
     >
       {children}
