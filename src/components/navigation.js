@@ -43,27 +43,31 @@ export function Navigation() {
                 </div>
               </button>
             </div>
-            <div className="flex flex-col justify-start px-8">
-              <NavigationLink name="Introduction" id="introduction" />
-              <NavigationLink
-                name="Scale of Suffering"
-                id="scale-of-suffering"
-              />
-              <NavigationLink
-                name="Types of Suffering"
-                id="types-of-suffering"
-              />
-              <NavigationLink
-                name="Population Dynamics"
-                id="population-dynamics"
-              />
-              <NavigationLink name="Videos" id="videos" />
-              <NavigationLink name="Common Objections" id="common-objections" />
-              <NavigationLink name="How to Help" id="how-to-help" />
-              <NavigationLink name="Organizations" id="organizations" />
-              <NavigationLink name="Resources" id="resources" />
-              <NavigationLink name="Conclusion" id="conclusion" />
-
+            <div className="flex flex-col px-8">
+              <ul className="flex flex-col space-y-2 ">
+                <NavigationLink name="Introduction" id="introduction" />
+                <NavigationLink
+                  name="Scale of Suffering"
+                  id="scale-of-suffering"
+                />
+                <NavigationLink
+                  name="Types of Suffering"
+                  id="types-of-suffering"
+                />
+                <NavigationLink
+                  name="Population Dynamics"
+                  id="population-dynamics"
+                />
+                <NavigationLink name="Videos" id="videos" />
+                <NavigationLink
+                  name="Common Objections"
+                  id="common-objections"
+                />
+                <NavigationLink name="How to Help" id="how-to-help" />
+                <NavigationLink name="Organizations" id="organizations" />
+                <NavigationLink name="Resources" id="resources" />
+                <NavigationLink name="Conclusion" id="conclusion" />
+              </ul>
               <div className="mt-8 border-t py-8">
                 Made with love by the{" "}
                 <a
