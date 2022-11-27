@@ -1,11 +1,13 @@
 import * as RadixDialog from "@radix-ui/react-dialog";
 import { CloseIcon } from "../../components/close-icon";
+import { ExpandIcon } from "../../components/expand-icon";
 
 export function DialogItem({ id, title, description, link }) {
   return (
     <RadixDialog.Root>
       <RadixDialog.Trigger className="relative flex w-3/4 cursor-zoom-in flex-col items-center justify-between rounded-md border-white bg-white/40 sm:w-1/3 lg:w-1/4 xl:w-1/5">
         <div className="flex aspect-video w-full">
+          <ExpandIcon className="absolute top-4 right-4 h-6 w-6" />
           <img
             className="mx-auto h-full bg-center object-contain"
             src={`/images/types-of-suffering/${id}.png`}
@@ -34,15 +36,19 @@ export function DialogItem({ id, title, description, link }) {
                 </RadixDialog.Title>
                 <RadixDialog.Description>{description}</RadixDialog.Description>
                 <div>
-                  <a href={`${link}`} 
-                  class="rounded-full bg-primary px-14 font-medium py-1 text-lg" 
-                  target="_blank" 
-                  rel="noreferrer">Learn more</a>
+                  <a
+                    href={`${link}`}
+                    class="rounded-full bg-primary px-14 py-1 text-lg font-medium"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Learn more
+                  </a>
                 </div>
                 <div>
-                <RadixDialog.Close className="underline md:hidden">
-                  Go back
-                </RadixDialog.Close>
+                  <RadixDialog.Close className="underline md:hidden">
+                    Go back
+                  </RadixDialog.Close>
                 </div>
               </div>
             </div>
