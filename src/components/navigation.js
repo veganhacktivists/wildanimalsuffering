@@ -57,7 +57,7 @@ export function Navigation() {
             <NavigationLink name="Resources" id="resources" />
             <NavigationLink name="Conclusion" id="conclusion" />
 
-            <div className="border-bg-menu-back-light mt-8 mt-8 flex flex-col border-t pt-8 pb-8">
+            <div className="flex flex-col border-t py-8 mt-8">
               Made with love by{" "}
               <a
                 href="https://www.instagram.com/veganhacktivists"
