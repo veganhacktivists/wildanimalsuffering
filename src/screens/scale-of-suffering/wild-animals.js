@@ -50,19 +50,23 @@ export function WildAnimals() {
     >
       <div className="flex flex-col">
         <div className="flex h-[250vh] flex-col">
-          <div className="sticky top-0 flex h-screen flex-col justify-center space-y-16 py-16 text-white">
+          <div className="sticky top-0 flex h-screen flex-col justify-center space-y-16 py-16 text-lg text-white">
             <p>
               However… in the wild:
               <br />
               <strong>For every human</strong>, there are between:
             </p>
-            <ul className="flex flex-1 flex-col justify-center text-4xl">
+            <ul className="flex flex-1 flex-col justify-center space-y-2 text-4xl">
               <motion.li
                 className="font-brand text-[#b0cbd2]"
                 style={{ opacity: wildBirdsOpacity, y: wildBirdsTextY }}
               >
                 10-50 wild birds
-                <br />
+              </motion.li>
+              <motion.li
+                className="font-brand text-[#b0cbd2]"
+                style={{ opacity: wildBirdsOpacity, y: wildBirdsTextY }}
+              >
                 10-100 wild mammals
               </motion.li>
               <motion.li
