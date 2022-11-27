@@ -119,6 +119,7 @@ module.exports = {
   plugins: [
     require("@tailwindcss/line-clamp"),
     require("./lib/tailwindcss-animation-delay-plugin"),
+    require("./lib/tailwindcss-backface-visibility"),
     require("./lib/tailwindcss-radix-plugin"),
   ],
 };
