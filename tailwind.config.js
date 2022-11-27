@@ -73,7 +73,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ["Poppins", "sans-serif"],
-        brand: ["The Bold Font", "sans-serif"],
+        brand: ["Asap Condensed", "sans-serif"],
       },
       keyframes: {
         "slide-down": {
