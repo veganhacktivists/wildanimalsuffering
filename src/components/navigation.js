@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { MenuIcon } from "./menu-icon";
 import { NavigationLink } from "./navigation-link";
 
+// TODO Replace with something more accessible.
 export function Navigation() {
   const [open, setOpen] = useState(false);
 
@@ -25,49 +26,56 @@ export function Navigation() {
       </button>
 
       {open && (
-        <nav className="absolute left-5 top-5 mr-5 h-auto overflow-auto rounded-xl bg-white text-menu-front-dark">
-          <div className="mp-8 flex justify-between p-8">
-            <div className="font-brand text-2xl uppercase text-menu-front-dark">
-              Wild Animal
-              <br />
-              Suffering
-            </div>
-            <button
-              className="relative h-10 w-10 shrink-0 rounded-full border-2 border-menu-back-dark p-2 p-1"
-              onClick={() => setOpen(false)}
-            >
-              <div className="relative h-full w-[90%]">
-                <div className="absolute left-1/2 h-full w-[10%] rotate-45 bg-menu-back-dark"></div>
-                <div className="absolute left-1/2 h-full w-[10%] -rotate-45 bg-menu-back-dark"></div>
+        <nav className="absolute top-0 left-0 h-auto w-full overflow-auto p-5 sm:max-w-sm">
+          <div className="flex flex-col overflow-auto rounded-xl bg-white text-menu-front-dark">
+            <div className="flex justify-between p-8">
+              <div className="font-brand text-2xl uppercase text-menu-front-dark">
+                Wild Animal Suffering
               </div>
-            </button>
-          </div>
-          <div className="flex flex-col justify-start px-8">
-            <NavigationLink name="Introduction" id="introduction" />
-            <NavigationLink name="Scale of Suffering" id="scale-of-suffering" />
-            <NavigationLink name="Types of Suffering" id="types-of-suffering" />
-            <NavigationLink
-              name="Population Dynamics"
-              id="population-dynamics"
-            />
-            <NavigationLink name="Videos" id="videos" />
-            <NavigationLink name="Common Objections" id="common-objections" />
-            <NavigationLink name="How to Help" id="how-to-help" />
-            <NavigationLink name="Organizations" id="organizations" />
-            <NavigationLink name="Resources" id="resources" />
-            <NavigationLink name="Conclusion" id="conclusion" />
-
-            <div className="flex flex-col border-t py-8 mt-8">
-              Made with love by{" "}
-              <a
-                href="https://www.instagram.com/veganhacktivists"
-                target="_blank"
-                class="underline"
-                rel="noreferrer"
+              <button
+                className="relative h-8 w-8 shrink-0 rounded-full border-2 border-menu-back-dark p-1"
+                onClick={() => setOpen(false)}
               >
-                Vegan Hacktivists
-              </a>
-              .
+                <span className="sr-only">Close menu</span>
+                <div className="relative h-full w-9/10">
+                  <div className="absolute left-1/2 h-full w-1/10 rotate-45 bg-menu-back-dark"></div>
+                  <div className="absolute left-1/2 h-full w-1/10 -rotate-45 bg-menu-back-dark"></div>
+                </div>
+              </button>
+            </div>
+            <div className="flex flex-col justify-start px-8">
+              <NavigationLink name="Introduction" id="introduction" />
+              <NavigationLink
+                name="Scale of Suffering"
+                id="scale-of-suffering"
+              />
+              <NavigationLink
+                name="Types of Suffering"
+                id="types-of-suffering"
+              />
+              <NavigationLink
+                name="Population Dynamics"
+                id="population-dynamics"
+              />
+              <NavigationLink name="Videos" id="videos" />
+              <NavigationLink name="Common Objections" id="common-objections" />
+              <NavigationLink name="How to Help" id="how-to-help" />
+              <NavigationLink name="Organizations" id="organizations" />
+              <NavigationLink name="Resources" id="resources" />
+              <NavigationLink name="Conclusion" id="conclusion" />
+
+              <div className="mt-8 border-t py-8">
+                Made with love by the{" "}
+                <a
+                  className="whitespace-nowrap underline"
+                  href="https://veganhacktivists.org"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Vegan Hacktivists
+                </a>
+                .
+              </div>
             </div>
           </div>
         </nav>
