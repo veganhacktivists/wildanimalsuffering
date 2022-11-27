@@ -34,7 +34,7 @@ export function Introduction() {
                   ...and why it matters
                 </span>
               </h1>
-              <div className="grid gap-10 text-lg text-white md:grid-cols-2">
+              <div className="grid gap-10 text-lg text-white">
                 <p>
                   We tend to idealize nature and the lives of wild animals, but
                   in reality, their lives can be really tough.. They have to
