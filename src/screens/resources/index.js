@@ -1,12 +1,12 @@
 import * as RadixTabs from "@radix-ui/react-tabs";
+import { Websites } from "./websites";
 import { Blogs } from "./blogs";
 import { Books } from "./books";
 import { Podcasts } from "./podcasts";
-import { Websites } from "./websites";
 const ResourceTypes = {
+  WEBSITES: "websites",
   BLOGS: "blogs",
   BOOKS: "books",
-  WEBSITES: "websites",
   PODCASTS: "podcasts",
 };
 
@@ -47,7 +47,7 @@ export function Resources() {
     <RadixTabs.Root
       id="resources"
       className="relative flex min-h-screen items-center bg-sand bg-cover py-12 lg:items-start lg:py-24"
-      defaultValue={ResourceTypes.BLOGS}
+      defaultValue={ResourceTypes.WEBSITES}
       orientation="vertical"
     >
       <div className="relative z-10 mx-auto flex w-full max-w-7xl grow flex-col gap-10">
@@ -55,14 +55,14 @@ export function Resources() {
           Other resources you might like
         </h2>
 
+        <MobileResourceList title="Websites">
+          <Websites />
+        </MobileResourceList>
         <MobileResourceList title="Blogs">
           <Blogs />
         </MobileResourceList>
         <MobileResourceList title="Books">
           <Books />
-        </MobileResourceList>
-        <MobileResourceList title="Websites">
-          <Websites />
         </MobileResourceList>
         <MobileResourceList title="Podcasts">
           <Podcasts />
@@ -74,21 +74,21 @@ export function Resources() {
               className="flex flex-col gap-4"
               aria-label="Select a resource type"
             >
+              <Tab resourceType={ResourceTypes.WEBSITES}>Websites</Tab>
               <Tab resourceType={ResourceTypes.BLOGS}>Blogs</Tab>
               <Tab resourceType={ResourceTypes.BOOKS}>Books</Tab>
-              <Tab resourceType={ResourceTypes.WEBSITES}>Websites</Tab>
               <Tab resourceType={ResourceTypes.PODCASTS}>Podcasts</Tab>
             </RadixTabs.List>
           </div>
           <div className="col-span-7">
+            <TabContent value={ResourceTypes.WEBSITES}>
+              <Websites />
+            </TabContent>
             <TabContent value={ResourceTypes.BLOGS}>
               <Blogs />
             </TabContent>
             <TabContent value={ResourceTypes.BOOKS}>
               <Books />
-            </TabContent>
-            <TabContent value={ResourceTypes.WEBSITES}>
-              <Websites />
             </TabContent>
             <TabContent value={ResourceTypes.PODCASTS}>
               <Podcasts />
