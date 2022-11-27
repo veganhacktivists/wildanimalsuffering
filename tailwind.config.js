@@ -7,12 +7,14 @@ module.exports = {
     extend: {
       animation: {
         "arrows-down": "arrows-down 2s infinite",
-        "slide-down": "slide-down 150ms ease-in-out",
-        "slide-up": "slide-up 150ms ease-in-out",
-        "pop-down": "pop-down 150ms ease-out forwards",
-        "pop-up": "pop-up 150ms ease-out forwards",
         "dialog-hide": "dialog-hide 150ms ease-out",
         "dialog-show": "dialog-show 150ms ease-out",
+        "pop-down": "pop-down 150ms ease-out forwards",
+        "pop-up": "pop-up 150ms ease-out forwards",
+        "slide-bg-right-slow": "slide-bg-right-slow 30s linear infinite",
+        "slide-bg-right-fast": "slide-bg-right-fast 15s linear infinite",
+        "slide-down": "slide-down 150ms ease-in-out",
+        "slide-up": "slide-up 150ms ease-in-out",
       },
       animationDelay: {
         "-400": "-400ms",
@@ -26,6 +28,8 @@ module.exports = {
         "dirt-road": "url('/public/images/population-dynamics/dirt-road.jpg')",
         "ant-hill": "url('/public/images/how-to-help/ant-hill.png')",
         forest: "url('/public/images/how-to-help/forest.jpg')",
+        "fog-1": "url('/public/images/introduction/fog-1.png')",
+        "fog-2": "url('/public/images/introduction/fog-2.png')",
         frog: "url('/public/images/organizations/frog.png')",
         hedgehog:
           "url('/public/images/common-objections/grass-and-hedgehog.png')",
@@ -76,6 +80,22 @@ module.exports = {
         brand: ["The Bold Font", "sans-serif"],
       },
       keyframes: {
+        "slide-bg-right-slow": {
+          from: {
+            backgroundPosition: "0px 0px",
+          },
+          to: {
+            backgroundPosition: "1000px 0px",
+          },
+        },
+        "slide-bg-right-fast": {
+          from: {
+            backgroundPosition: "0px 0px",
+          },
+          to: {
+            backgroundPosition: "1000px 0px",
+          },
+        },
         "slide-down": {
           from: { height: 0 },
           to: { height: "var(--radix-accordion-content-height)" },

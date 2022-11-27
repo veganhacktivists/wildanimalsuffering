@@ -1,13 +1,45 @@
+import { motion, useMotionValue } from "framer-motion";
+import { useEffect, useRef } from "react";
+import { BackgroundEffect } from "../../components/background-effect";
 import { ScrollDownIndicator } from "../../components/scroll-down-indicator";
 
+function buildThresholdList(numSteps) {
+  return Array.from({ length: numSteps }).map((_, idx) => (1 / numSteps) * idx);
+}
+
 export function Introduction() {
+  const ref = useRef(null);
+  const fogOpacity = useMotionValue(0);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([{ rootBounds, boundingClientRect, intersectionRatio }]) => {
+        const ratio = 1 - rootBounds.height / boundingClientRect.height;
+
+        fogOpacity.set(
+          (intersectionRatio - 0.5) * 2 + intersectionRatio * ratio
+        );
+      },
+      { threshold: buildThresholdList(100) }
+    );
+
+    observer.observe(ref.current);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section
+      ref={ref}
       id="introduction"
       className="flex min-h-screen items-end bg-black bg-savanna bg-[length:100%] bg-[center_-100px] bg-no-repeat lg:items-center lg:bg-savanna-md lg:bg-cover lg:bg-center"
     >
+      <motion.div style={{ opacity: fogOpacity }}>
+        <BackgroundEffect type="introduction-screen" />
+      </motion.div>
+
       <a
-        className="absolute top-0 right-0 m-10 hidden w-20 opacity-75 hover:opacity-100 md:block"
+        className="absolute top-0 right-0 z-10 m-10 hidden w-20 opacity-75 hover:opacity-100 md:block"
         href="https://veganhacktivists.org"
         target="_blank"
         rel="noreferrer"
@@ -15,7 +47,7 @@ export function Introduction() {
         <img src="/images/logo-vh.svg" alt="Vegan Hacktivists Logo" />
       </a>
 
-      <div className="mx-auto flex w-full max-w-7xl flex-col lg:gap-20 xl:gap-0">
+      <div className="z-10 mx-auto flex w-full max-w-7xl flex-col lg:gap-20 xl:gap-0">
         <div className="grid lg:grid-cols-2">
           <div className="mx-auto pl-6 pt-12 lg:p-12 lg:pr-0">
             <img

@@ -5,11 +5,11 @@ import { RainfallEffect } from "./rain-effect";
 import { SnowfallEffect } from "./snowfall-effect";
 
 const effectComponents = {
+  "introduction-screen": FogEffect,
   "common-objections-screen": LeavesEffect,
   "even-worse-screen": RainfallEffect,
   "how-you-can-help-screen": FireEffect,
   "videos-screen": SnowfallEffect,
-  "wild-animal-suffering-screen": FogEffect,
 };
 
 export function BackgroundEffect({ type }) {
