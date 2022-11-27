@@ -33,7 +33,7 @@ export function Navigation() {
               Suffering
             </div>
             <button
-              className="relative h-20 h-10 w-10 w-10 shrink-0 rounded-full border-2 border-menu-back-dark p-2 p-1"
+              className="relative h-10 w-10 shrink-0 rounded-full border-2 border-menu-back-dark p-2 p-1"
               onClick={() => setOpen(false)}
             >
               <div className="relative h-full w-[90%]">
