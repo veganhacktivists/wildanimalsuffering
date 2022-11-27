@@ -52,7 +52,7 @@ export function Resources() {
     >
       <div className="relative z-10 mx-auto flex w-full max-w-7xl grow flex-col gap-10">
         <h2 className="hidden px-8 text-center font-brand text-4xl text-white lg:block">
-          Other resources you might like
+          Other Resources You Might Like
         </h2>
 
         <MobileResourceList title="Websites">

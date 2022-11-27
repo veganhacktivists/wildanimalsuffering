@@ -14,7 +14,7 @@ export const ActionButton = forwardRef(
       >
         <div className="flex h-full w-full flex-col justify-center bg-leaves bg-cover px-4 pt-6">
           <span className="font-brand text-7xl">{step}</span>
-          <span className="pl-2 pb-2 font-brand text-2xl uppercase lg:text-3xl">
+          <span className="pl-2 pb-2 font-brand text-2xl lg:text-3xl">
             {children}
           </span>
           <span className="pl-2 pb-4">{subtitle}</span>

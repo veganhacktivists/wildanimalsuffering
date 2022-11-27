@@ -156,7 +156,7 @@ export function Videos() {
 
       <div className="relative z-10 mx-auto flex w-full max-w-7xl grow flex-col space-y-10">
         <h2 className="px-8 text-center font-brand text-3xl text-white lg:text-4xl">
-          Videos you might like
+          Videos You Might Like
         </h2>
 
         {/* Mobile only */}

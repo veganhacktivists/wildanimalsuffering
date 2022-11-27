@@ -8,8 +8,8 @@ export function TypesOfSuffering() {
     >
       <div className="mx-auto flex w-full max-w-7xl flex-col space-y-10 px-10">
         <h2 className="flex flex-col text-center font-brand text-4xl text-white">
-          <span>Even worse,</span>
-          <span>wild animals suffer in terrible ways:</span>
+          <span>Even Worse,</span>
+          <span>Wild Animals Suffer in Terrible Ways:</span>
         </h2>
         <div className="flex flex-wrap justify-center gap-8">
           <DialogItem

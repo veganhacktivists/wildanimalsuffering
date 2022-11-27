@@ -70,7 +70,7 @@ export function Conclusion() {
               href="https://veganhacktivists.org/support"
               target="_blank"
               rel="noreferrer"
-              className="self-center whitespace-nowrap rounded-full bg-primary px-5 py-1 text-xl font-medium uppercase md:text-lg"
+              className="self-center whitespace-nowrap rounded-full bg-primary px-5 py-1 text-xl font-medium md:text-lg"
             >
               Support Us
             </a>
@@ -140,11 +140,11 @@ export function Conclusion() {
               rel="noreferrer"
               target="_blank"
             >
-            <img
-              className="ml-auto max-h-32"
-              src="/images/conclusion/vh-logo.png"
-              alt="Vegan Hacktivists logo"
-            />
+              <img
+                className="ml-auto max-h-32"
+                src="/images/conclusion/vh-logo.png"
+                alt="Vegan Hacktivists logo"
+              />
             </a>
           </div>
 

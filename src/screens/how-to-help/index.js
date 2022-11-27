@@ -10,13 +10,13 @@ export function HowToHelp() {
       <div className="absolute bottom-0 h-64 w-full bg-ant-hill bg-cover bg-right-bottom bg-no-repeat md:h-full md:bg-contain" />
       <div className="relative mx-auto flex w-full max-w-7xl flex-col space-y-14 px-10">
         <h2 className="text-center font-brand text-3xl text-white lg:text-4xl">
-          How can you help?
+          How Can You Help?
         </h2>
 
         <div className="mx-auto grid gap-12 text-white md:grid-cols-3 lg:gap-16">
           <RaiseAwarenessDialog>
             <ActionButton as="button" step={1} subtitle="Click to share">
-              Raise awareness
+              Raise Awareness
             </ActionButton>
           </RaiseAwarenessDialog>
           <ActionButton
@@ -27,7 +27,7 @@ export function HowToHelp() {
             rel="noreferrer"
             subtitle="Click to view"
           >
-            Donate to charities
+            Donate to Charities
           </ActionButton>
           <ActionButton
             as="a"
@@ -37,7 +37,7 @@ export function HowToHelp() {
             rel="noreferrer"
             subtitle="Click to signup"
           >
-            Starter kit signup
+            Starter Kit Signup
           </ActionButton>
         </div>
 

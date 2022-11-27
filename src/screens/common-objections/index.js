@@ -9,7 +9,7 @@ export function CommonObjections() {
       <div className="absolute bottom-0 h-full w-full bg-hedgehog bg-right-bottom bg-no-repeat xl:bg-contain" />
       <div className="relative mx-auto flex w-full max-w-7xl flex-col space-y-10 px-10">
         <h2 className="text-center font-brand text-4xl text-white">
-          Common objections to helping wild animals
+          Common Objections to Helping Wild Animals
         </h2>
 
         <Accordion defaultValue="its-not-ours">
