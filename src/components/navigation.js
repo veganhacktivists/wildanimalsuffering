@@ -65,8 +65,9 @@ export function Navigation() {
                 class="underline"
                 rel="noreferrer"
               >
-                Vegan Hacktivists.
+                Vegan Hacktivists
               </a>
+              .
             </div>
           </div>
         </nav>
