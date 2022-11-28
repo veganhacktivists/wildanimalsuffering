@@ -1,41 +1,21 @@
-import { motion, useMotionValue } from "framer-motion";
-import { useEffect, useRef } from "react";
-import { BackgroundEffect } from "../../components/background-effect";
+import { motion } from "framer-motion";
+import {
+  BackgroundEffect,
+  useBackgroundEffect,
+} from "../../components/background-effect";
 import { ScrollDownIndicator } from "../../components/scroll-down-indicator";
 
-function buildThresholdList(numSteps) {
-  return Array.from({ length: numSteps }).map((_, idx) => (1 / numSteps) * idx);
-}
-
 export function Introduction() {
-  const ref = useRef(null);
-  const fogOpacity = useMotionValue(0);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([{ rootBounds, boundingClientRect, intersectionRatio }]) => {
-        const ratio = 1 - rootBounds.height / boundingClientRect.height;
-
-        fogOpacity.set(
-          (intersectionRatio - 0.5) * 2 + intersectionRatio * ratio
-        );
-      },
-      { threshold: buildThresholdList(100) }
-    );
-
-    observer.observe(ref.current);
-
-    return () => observer.disconnect();
-  }, []);
+  const { screenRef, effectOpacity } = useBackgroundEffect();
 
   return (
     <section
-      ref={ref}
+      ref={screenRef}
       id="introduction"
       className="flex min-h-screen items-end bg-black bg-savanna bg-[length:100%] bg-[center_-100px] bg-no-repeat lg:items-center lg:bg-savanna-md lg:bg-cover lg:bg-center"
     >
-      <motion.div style={{ opacity: fogOpacity }}>
-        <BackgroundEffect type="introduction-screen" />
+      <motion.div style={{ opacity: effectOpacity }}>
+        <BackgroundEffect type="fog" />
       </motion.div>
 
       <a

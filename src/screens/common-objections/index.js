@@ -1,46 +1,26 @@
-import { motion, useMotionValue } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 import { Accordion, AccordionItem } from "../../components/accordion";
-import { BackgroundEffect } from "../../components/background-effect";
-
-function buildThresholdList(numSteps) {
-  return Array.from({ length: numSteps }).map((_, idx) => (1 / numSteps) * idx);
-}
+import {
+  BackgroundEffect,
+  useBackgroundEffect,
+} from "../../components/background-effect";
 
 export function CommonObjections() {
-  const ref = useRef(null);
-  const rainOpacity = useMotionValue(0);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([{ rootBounds, boundingClientRect, intersectionRatio }]) => {
-        const ratio = 1 - rootBounds.height / boundingClientRect.height;
-
-        rainOpacity.set(
-          (intersectionRatio - 0.5) * 2 + intersectionRatio * ratio
-        );
-      },
-      { threshold: buildThresholdList(100) }
-    );
-
-    observer.observe(ref.current);
-
-    return () => observer.disconnect();
-  }, []);
+  const { screenRef, effectOpacity } = useBackgroundEffect();
 
   return (
     <section
       id="common-objections"
       className="relative flex min-h-screen bg-sand bg-cover bg-top py-24"
-      ref={ref}
+      ref={screenRef}
     >
       <div className="absolute bottom-0 h-full w-full bg-hedgehog bg-right-bottom bg-no-repeat xl:bg-contain" />
 
       <motion.div
-        style={{ opacity: rainOpacity }}
+        style={{ opacity: effectOpacity }}
         className="absolute inset-0 z-10"
       >
-        <BackgroundEffect type="common-objections-screen" />
+        <BackgroundEffect type="rain" />
       </motion.div>
 
       <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col space-y-10 px-10">

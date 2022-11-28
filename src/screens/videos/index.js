@@ -1,12 +1,11 @@
-import { motion, useMotionValue } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
-import { BackgroundEffect } from "../../components/background-effect";
+import { motion } from "framer-motion";
+import { useState } from "react";
+import {
+  BackgroundEffect,
+  useBackgroundEffect,
+} from "../../components/background-effect";
 import { YoutubeVideo } from "./youtube-video";
 import { YoutubeVideoItem } from "./youtube-video-item";
-
-function buildThresholdList(numSteps) {
-  return Array.from({ length: numSteps }).map((_, idx) => (1 / numSteps) * idx);
-}
 
 export const videos = [
   {
@@ -116,31 +115,12 @@ export const videos = [
 ];
 
 export function Videos() {
-  const ref = useRef(null);
   const [activeVideo, setActiveVideo] = useState(videos[0]);
-  const snowfallOpacity = useMotionValue(0);
-
-  // Fade snowfall in and out based on intersection ratio.
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([{ rootBounds, boundingClientRect, intersectionRatio }]) => {
-        const ratio = 1 - rootBounds.height / boundingClientRect.height;
-
-        snowfallOpacity.set(
-          (intersectionRatio - 0.5) * 2 + intersectionRatio * ratio
-        );
-      },
-      { threshold: buildThresholdList(100) }
-    );
-
-    observer.observe(ref.current);
-
-    return () => observer.disconnect();
-  }, []);
+  const { screenRef, effectOpacity } = useBackgroundEffect();
 
   return (
     <section
-      ref={ref}
+      ref={screenRef}
       id="videos"
       className="relative flex min-h-screen items-center bg-sky bg-cover py-12 lg:py-24"
     >
@@ -150,8 +130,8 @@ export function Videos() {
         alt=""
       />
 
-      <motion.div style={{ opacity: snowfallOpacity }} className="z-10">
-        <BackgroundEffect type="videos-screen" />
+      <motion.div style={{ opacity: effectOpacity }} className="z-10">
+        <BackgroundEffect type="snow" />
       </motion.div>
 
       <div className="relative z-10 mx-auto flex w-full max-w-7xl grow flex-col space-y-10">

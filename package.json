@@ -54,7 +54,6 @@
     "@radix-ui/react-toast": "^1.1.2",
     "framer-motion": "^7.6.1",
     "mini-css-extract-plugin": "^2.6.1",
-    "particles.js": "^2.0.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-scrollbars-custom": "^4.1.1",

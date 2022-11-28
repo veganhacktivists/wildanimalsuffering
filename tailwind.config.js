@@ -33,6 +33,7 @@ module.exports = {
         frog: "url('/public/images/organizations/frog.png')",
         hedgehog:
           "url('/public/images/common-objections/grass-and-hedgehog.png')",
+        leaf: "url('/public/images/organizations/leaf.png')",
         leaves: "url('/public/images/how-to-help/leaves.png')",
         mud: "url('/public/images/organizations/mud-bg-color.jpg')",
         resource: "url('/public/images/other-resources/resource-bg.png')",
