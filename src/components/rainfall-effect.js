@@ -20,11 +20,11 @@ export function RainfallEffect() {
     setCanvasSize();
 
     if (canvas.getContext) {
-      var ctx = canvas.getContext("2d");
+      const ctx = canvas.getContext("2d");
 
-      var init = [];
-      var maxParts = 200;
-      for (var a = 0; a < maxParts; a++) {
+      const init = [];
+      const maxParts = 200;
+      for (let a = 0; a < maxParts; a++) {
         init.push({
           x: Math.random() * width,
           y: Math.random() * height,
@@ -34,15 +34,15 @@ export function RainfallEffect() {
         });
       }
 
-      var particles = [];
-      for (var b = 0; b < maxParts; b++) {
+      const particles = [];
+      for (let b = 0; b < maxParts; b++) {
         particles[b] = init[b];
       }
 
       const draw = () => {
         ctx.clearRect(0, 0, width, height);
-        for (var c = 0; c < particles.length; c++) {
-          var p = particles[c];
+        for (let c = 0; c < particles.length; c++) {
+          const p = particles[c];
           ctx.beginPath();
           ctx.moveTo(p.x, p.y);
           ctx.lineTo(p.x + p.l * p.xs, p.y + p.l * p.ys);
@@ -55,8 +55,8 @@ export function RainfallEffect() {
       };
 
       const move = () => {
-        for (var b = 0; b < particles.length; b++) {
-          var p = particles[b];
+        for (let b = 0; b < particles.length; b++) {
+          const p = particles[b];
           p.x += p.xs;
           p.y += p.ys;
           if (p.x > width || p.y > height) {

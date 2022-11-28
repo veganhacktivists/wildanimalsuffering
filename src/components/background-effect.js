@@ -2,7 +2,7 @@ import { useMotionValue } from "framer-motion";
 import { useEffect, useRef } from "react";
 import { FogEffect } from "./fog-effect";
 import { LeavesEffect } from "./leaves-effect";
-import { RainfallEffect } from "./rain-effect";
+import { RainfallEffect } from "./rainfall-effect";
 import { SnowfallEffect } from "./snowfall-effect";
 
 const effectComponents = {
