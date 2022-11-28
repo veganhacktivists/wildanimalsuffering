@@ -11,8 +11,8 @@ module.exports = {
         "dialog-show": "dialog-show 150ms ease-out",
         "pop-down": "pop-down 150ms ease-out forwards",
         "pop-up": "pop-up 150ms ease-out forwards",
-        "slide-bg-right-slow": "slide-bg-right-slow 30s linear infinite",
-        "slide-bg-right-fast": "slide-bg-right-fast 15s linear infinite",
+        "slide-bg-right-slow": "slide-bg-right 30s linear infinite",
+        "slide-bg-right-fast": "slide-bg-right 15s linear infinite",
         "slide-down": "slide-down 150ms ease-in-out",
         "slide-up": "slide-up 150ms ease-in-out",
       },
@@ -81,15 +81,7 @@ module.exports = {
         brand: ["The Bold Font", "sans-serif"],
       },
       keyframes: {
-        "slide-bg-right-slow": {
-          from: {
-            backgroundPosition: "0px 0px",
-          },
-          to: {
-            backgroundPosition: "1000px 0px",
-          },
-        },
-        "slide-bg-right-fast": {
+        "slide-bg-right": {
           from: {
             backgroundPosition: "0px 0px",
           },
