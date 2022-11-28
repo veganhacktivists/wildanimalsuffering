@@ -4,7 +4,7 @@ export function Header() {
   return (
     <header className="absolute left-0 flex w-full items-start p-10 text-gray">
       <Navigation />
-      <span className="ml-8 hidden font-light md:block">
+      <span className="ml-8 mt-1 hidden font-light md:block">
         Illustrations by{" "}
         <a
           className="font-normal underline"

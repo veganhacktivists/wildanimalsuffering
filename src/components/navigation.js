@@ -22,7 +22,7 @@ export function Navigation() {
   return (
     <>
       <button className="cursor-pointer" onClick={() => setOpen(true)}>
-        <MenuIcon size={24} className="cursor-pointer" />
+        <MenuIcon size={35} className="cursor-pointer" />
       </button>
 
       {open && (
