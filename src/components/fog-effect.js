@@ -1,20 +1,8 @@
-import "../../lib/fog.css";
-
 export function FogEffect() {
   return (
     <>
-      <div id="foglayer_01" className="fog">
-        <div className="image01"></div>
-        <div className="image02"></div>
-      </div>
-      <div id="foglayer_02" className="fog">
-        <div className="image01"></div>
-        <div className="image02"></div>
-      </div>
-      <div id="foglayer_03" className="fog">
-        <div className="image01"></div>
-        <div className="image02"></div>
-      </div>
+      <div className="absolute inset-0 animate-slide-bg-right-slow bg-fog-1 opacity-50" />
+      <div className="absolute inset-0 animate-slide-bg-right-fast bg-fog-2 opacity-50" />
     </>
   );
 }

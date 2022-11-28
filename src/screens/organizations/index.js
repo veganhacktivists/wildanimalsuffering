@@ -1,13 +1,29 @@
+import { motion } from "framer-motion";
+import {
+  BackgroundEffect,
+  useBackgroundEffect,
+} from "../../components/background-effect";
 import { Organization } from "./organization";
 
 export function Organizations() {
+  const { screenRef, effectOpacity } = useBackgroundEffect();
+
   return (
     <section
       id="organizations"
       className="relative flex min-h-screen items-center bg-mud bg-cover bg-top py-14 lg:py-24"
+      ref={screenRef}
     >
       <div className="absolute bottom-0 h-full w-full bg-none bg-[-180px_-20px] bg-no-repeat sm:bg-tree-and-birds lg:bg-contain lg:bg-left-top" />
-      <div className="relative mx-auto flex w-full flex-col space-y-14 px-10">
+
+      <motion.div
+        style={{ opacity: effectOpacity }}
+        className="absolute inset-0 z-10"
+      >
+        <BackgroundEffect type="leaves" />
+      </motion.div>
+
+      <div className="relative z-10 mx-auto flex w-full flex-col space-y-14 px-10">
         <h2 className="mx-auto max-w-xl text-center font-brand text-4xl text-white">
           Organizations Working on Wild Animal Suffering
         </h2>
