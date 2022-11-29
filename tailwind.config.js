@@ -25,8 +25,9 @@ module.exports = {
       },
       backgroundImage: {
         abyss: "url('/public/images/scale-of-suffering/abyss.jpg')",
-        "dirt-road": "url('/public/images/population-dynamics/dirt-road.jpg')",
         "ant-hill": "url('/public/images/how-to-help/ant-hill.png')",
+        deer: "url('/public/images/types-of-suffering/grass-and-deer.png')",
+        "dirt-road": "url('/public/images/population-dynamics/dirt-road.jpg')",
         forest: "url('/public/images/how-to-help/forest.jpg')",
         "fog-1": "url('/public/images/introduction/fog-1.png')",
         "fog-2": "url('/public/images/introduction/fog-2.png')",

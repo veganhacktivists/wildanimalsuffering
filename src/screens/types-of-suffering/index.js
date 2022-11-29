@@ -4,8 +4,10 @@ export function TypesOfSuffering() {
   return (
     <section
       id="types-of-suffering"
-      className="flex min-h-screen items-center bg-sand bg-cover bg-center py-24"
+      className="relative flex min-h-screen items-center bg-sand bg-cover bg-center py-24"
     >
+      <div className="absolute bottom-0 h-full w-full bg-deer bg-left-bottom bg-no-repeat xl:bg-contain" />
+
       <div className="mx-auto flex w-full max-w-7xl flex-col space-y-10 px-10">
         <h2 className="flex flex-col text-center font-brand text-4xl text-white">
           <span>Even Worse,</span>
@@ -55,7 +57,7 @@ export function TypesOfSuffering() {
             link="https://forum.effectivealtruism.org/posts/8qmQr7kiEYFhX9eTR/what-is-wild-animal-suffering"
           />
         </div>
-        <p className="text-center text-white">
+        <p className="z-10 text-center text-white">
           Click on an item above to learn more.
         </p>
       </div>
