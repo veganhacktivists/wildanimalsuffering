@@ -18,15 +18,6 @@ export function Introduction() {
         <BackgroundEffect type="fog" />
       </motion.div>
 
-      <a
-        className="absolute top-0 right-0 z-10 m-10 hidden w-20 opacity-75 hover:opacity-100 md:block"
-        href="https://veganhacktivists.org"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <img src="/images/logo-vh.svg" alt="Vegan Hacktivists Logo" />
-      </a>
-
       <div className="z-10 mx-auto flex w-full max-w-7xl flex-col lg:mt-18">
         <div className="flex flex-1 flex-col justify-center">
           <div className="grid lg:grid-cols-2">
