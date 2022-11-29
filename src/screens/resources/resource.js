@@ -16,7 +16,7 @@ export function Resource({
           backgroundImage: `url(/images/other-resources/${thumbnail})`,
         }}
       >
-        <div className="grid h-full w-full place-items-center backdrop-blur-xl">
+        <div className="grid h-full w-full place-items-center rounded-2xl backdrop-blur-xl">
           <img
             src={`/images/other-resources/${thumbnail}`}
             alt=""
