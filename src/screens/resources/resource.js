@@ -21,7 +21,7 @@ export function Resource({
             src={`/images/other-resources/${thumbnail}`}
             alt=""
             className={cx(
-              "aspect-square h-full w-full md:aspect-video lg:aspect-square lg:w-56",
+              "aspect-square h-full w-full rounded-2xl md:aspect-video lg:aspect-square lg:w-56",
               containThumbnail
                 ? "object-contain lg:h-4/5"
                 : "object-cover md:object-contain lg:object-cover"
