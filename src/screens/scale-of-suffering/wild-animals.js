@@ -22,6 +22,11 @@ export function WildAnimals() {
   const reptilesTextY = useTransform(scrollYProgress, reptilesPos, [100, 0]);
   const fishOpacity = useTransform(scrollYProgress, fishPos, [0, 1]);
   const fishTextY = useTransform(scrollYProgress, fishPos, [100, 0]);
+  const fishLabelOpacity = useTransform(
+    scrollYProgress,
+    [...fishPos, ...earthWormsPos],
+    [0, 1, 0.5, 0]
+  );
   const earthWormsOpacity = useTransform(
     scrollYProgress,
     earthWormsPos,
@@ -31,6 +36,11 @@ export function WildAnimals() {
     scrollYProgress,
     earthWormsPos,
     [100, 0]
+  );
+  const earthWormsLabelOpacity = useTransform(
+    scrollYProgress,
+    [...earthWormsPos, ...terrestrialArPos],
+    [0, 1, 0.5, 0]
   );
   const terrestrialArOpacity = useTransform(
     scrollYProgress,
@@ -64,7 +74,7 @@ export function WildAnimals() {
                 10-50 wild birds
               </motion.li>
               <motion.li
-                className="font-brand text-[#b0cbd2]"
+                className="font-brand text-[#85c5c8]"
                 style={{ opacity: wildBirdsOpacity, y: wildBirdsTextY }}
               >
                 10-100 wild mammals
@@ -137,6 +147,25 @@ export function WildAnimals() {
               style={{ opacity: terrestrialArOpacity }}
               className="col-start-1 row-start-1"
               src="/images/scale-of-suffering/chart-terrestrial-ar.png"
+              alt=""
+            />
+
+            <motion.img
+              style={{ opacity: fishLabelOpacity }}
+              className="col-start-1 row-start-2 max-h-[10vh]"
+              src="/images/scale-of-suffering/chart-fish-labels.png"
+              alt=""
+            />
+            <motion.img
+              style={{ opacity: earthWormsLabelOpacity }}
+              className="col-start-1 row-start-2 max-h-[10vh]"
+              src="/images/scale-of-suffering/chart-earth-worms-labels.png"
+              alt=""
+            />
+            <motion.img
+              style={{ opacity: terrestrialArOpacity }}
+              className="col-start-1 row-start-2 max-h-[10vh]"
+              src="/images/scale-of-suffering/chart-terrestrial-ar-labels.png"
               alt=""
             />
           </div>
