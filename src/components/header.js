@@ -2,7 +2,7 @@ import { Navigation } from "./navigation";
 
 export function Header() {
   return (
-    <header className="absolute left-0 flex w-full items-start p-10 text-gray">
+    <header className="absolute left-0 flex w-full items-start p-10 text-gray md:text-white">
       <Navigation />
       <span className="ml-8 mt-1 hidden font-light md:block">
         Illustrations by{" "}
@@ -15,7 +15,6 @@ export function Header() {
           Kate Rodman
         </a>
       </span>
-      {/* <SearchIcon size={23} /> */}
     </header>
   );
 }
