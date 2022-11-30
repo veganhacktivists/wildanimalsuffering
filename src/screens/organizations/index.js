@@ -94,6 +94,15 @@ export function Organizations() {
               rel="noreferrer"
             >
               Wild Animal Welfare Committee
+            </a>
+            ,{" "}
+            <a
+              href="https://longtermrisk.org/"
+              target="_blank"
+              className="underline"
+              rel="noreferrer"
+            >
+              Center on Long-Term Risk
             </a>{" "}
             and{" "}
             <a
