@@ -55,7 +55,7 @@ export function Introduction() {
               </div>
             </div>
           </div>
-          <p className="flex flex-col items-center bg-black px-10 text-center text-lg font-bold text-white lg:bg-transparent">
+          <p className="flex flex-col rounded-lg bg-black px-10 text-left text-lg text-white lg:self-center lg:bg-white/10 lg:p-3 lg:pl-8 lg:pr-8 lg:text-center">
             The suffering of wild animals matters. It matters to them, and it
             should matter to us.
           </p>
