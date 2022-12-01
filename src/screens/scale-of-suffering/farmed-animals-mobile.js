@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 
 const screen = 1 / 2;
 
@@ -33,10 +33,10 @@ export function FarmedAnimalsMobile() {
               <span className="text-blue">8 billion humans</span>
               <span>on planet Earth.</span>
             </p>
-            <p className="flex flex-col justify-center">
-              <span>For every human, there are roughly</span>
-              <span className="text-blue">3-4 farmed animals</span>
-              <span>being farmed at any given moment.</span>
+            <p className="mx-auto max-w-md">
+              For every human, there are roughly{" "}
+              <span className="text-blue">3-4 farmed animals </span> being
+              farmed at any given moment.
             </p>
           </div>
         </motion.div>

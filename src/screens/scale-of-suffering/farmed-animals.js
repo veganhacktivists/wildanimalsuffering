@@ -31,10 +31,10 @@ export function FarmedAnimals() {
           </p>
         </div>
         <div className="grid h-screen place-items-center">
-          <p className="flex flex-col font-brand text-5xl leading-tight text-white">
-            <span>For every human, there are roughly</span>
-            <span className="text-blue">3-4 farmed animals</span>
-            <span>being farmed at any given moment.</span>
+          <p className="mx-auto max-w-lg font-brand text-5xl leading-tight text-white">
+            For every human, there are roughly{" "}
+            <span className="text-blue">3-4 farmed animals</span> being farmed
+            at any given moment.
           </p>
         </div>
       </div>
