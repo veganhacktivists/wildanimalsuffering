@@ -38,7 +38,7 @@ export function DialogItem({ id, title, description, link }) {
                 <div>
                   <a
                     href={link}
-                    class="rounded-full bg-primary px-14 py-1 text-lg font-medium"
+                    className="rounded-full bg-primary px-14 py-1 text-lg font-medium"
                     target="_blank"
                     rel="noreferrer"
                   >
