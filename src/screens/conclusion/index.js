@@ -291,6 +291,26 @@ export function Conclusion() {
                   Why Vegans Should Care about Suffering in Nature
                 </a>
               </li>
+              <li>
+                <a
+                  className="underline"
+                  href="https://handwiki.org/wiki/Philosophy:Wild_animal_suffering"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  Wild Animal Suffering on HandWiki
+                </a>
+              </li>
+              <li>
+                <a
+                  className="underline"
+                  href="https://stijnbruers.wordpress.com/2022/10/21/wild-animal-suffering-infographic/"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  Wild Animal Suffering Infographic (by Stijn Bruers)
+                </a>
+              </li>
             </ol>
           </div>
         </div>
