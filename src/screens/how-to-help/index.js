@@ -31,13 +31,13 @@ export function HowToHelp() {
           </ActionButton>
           <ActionButton
             as="a"
-            href="https://mailchi.mp/fd3604316389/waw-starter-kit"
+            href="https://www.wildanimalinitiative.org/subscribe"
             target="_blank"
             step={3}
             rel="noreferrer"
-            subtitle="Click to signup"
+            subtitle="Click to subscribe"
           >
-            Starter Kit Signup
+            Newsletter Signup
           </ActionButton>
         </div>
 
