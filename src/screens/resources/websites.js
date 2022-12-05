@@ -78,6 +78,20 @@ export function Websites() {
       </Resource>
 
       <Resource
+        thumbnail="/websites/animal-advocacy-careers.png"
+        title="Animal Advocacy Careers"
+        links={[
+          ["Visit", "https://www.animaladvocacycareers.org/"],
+          ["Donate", "https://www.animaladvocacycareers.org/donate"],
+        ]}
+      >
+        Animal Advocacy Careers (AAC) is an organisation that seeks to address
+        the career and talent bottlenecks in the animal advocacy movement,
+        especially the farmed animal movement. We provide careers services for
+        individuals at all levels of experience with animal advocacy.
+      </Resource>
+
+      <Resource
         thumbnail="/websites/80000-hours.png"
         title="80000 Hours"
         links={[
