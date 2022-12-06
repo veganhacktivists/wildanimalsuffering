@@ -9,8 +9,11 @@ import { Resources } from "./screens/resources";
 import { ScaleOfSuffering } from "./screens/scale-of-suffering";
 import { TypesOfSuffering } from "./screens/types-of-suffering";
 import { Videos } from "./screens/videos";
+import { useVisitorStats } from "./utils/use-visitor-stats";
 
 export function App() {
+  useVisitorStats();
+
   return (
     <>
       <Header />
