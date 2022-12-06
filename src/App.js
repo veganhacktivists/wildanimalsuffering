@@ -12,7 +12,7 @@ import { Videos } from "./screens/videos";
 import { useVisitorStats } from "./utils/use-visitor-stats";
 
 export function App() {
-  useVisitorStats();
+  const visitors = useVisitorStats();
 
   return (
     <>
@@ -26,7 +26,7 @@ export function App() {
       <HowToHelp />
       <Organizations />
       <Resources />
-      <Conclusion />
+      <Conclusion visitors={visitors} />
     </>
   );
 }
