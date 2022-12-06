@@ -1,6 +1,9 @@
 import { HealthcareIcon } from "../../components/healthcare-icon";
+import { formatOrdinals } from "../../utils/number-format";
 
-export function Conclusion() {
+export function Conclusion({ visitors }) {
+  const visitorsFormatted = formatOrdinals(visitors);
+
   return (
     <section
       id="conclusion"
@@ -30,9 +33,9 @@ export function Conclusion() {
             know that suffering feels bad for a pig, a chicken or a fish.
             Suffering feels bad for anyone who feels it, regardless of their
             species or their location. When you put yourselves into the
-            perspective of the one who suffers, it doesn't matter whether they
-            are in a house, a farm, or a forest. Their suffering matters. It
-            matters to them. And it should matter to us.
+            perspective of the one who suffers, it doesn&apos;t matter whether
+            they are in a house, a farm, or a forest. Their suffering matters.
+            It matters to them. And it should matter to us.
           </p>
           <br />
           <p className="font-lg z-10">
@@ -130,7 +133,7 @@ export function Conclusion() {
                 Kate Rodman
               </a>{" "}
               for the wonderful illustrations. This website would not have been
-              possible without everyone's dedication and support!
+              possible without everyone&apos;s dedication and support!
             </p>
           </div>
 
@@ -313,6 +316,16 @@ export function Conclusion() {
               </li>
             </ol>
           </div>
+          {visitors > 0 && (
+            <div className="col-span-4 flex flex-col gap-2 md:col-span-3 lg:flex-row lg:gap-10">
+              <h4 className="w-48 whitespace-nowrap text-lg font-bold">
+                Thank you!
+              </h4>
+              <p className="flex-1 leading-relaxed">
+                You&apos;re our {visitorsFormatted} visitor, thanks for reading!
+              </p>
+            </div>
+          )}
         </div>
       </div>
     </section>
