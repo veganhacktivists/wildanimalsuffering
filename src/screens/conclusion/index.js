@@ -1,6 +1,44 @@
 import { HealthcareIcon } from "../../components/healthcare-icon";
 
+function ordinal(n) {
+  // Get the last digit of the number
+  const lastDigit = n % 10;
+
+  // Check if the number is between 11 and 13, which require the "th" suffix
+  if (n >= 11 && n <= 13) {
+    return n + "th";
+  }
+
+  // Check the last digit of the number and return the appropriate suffix
+  switch (lastDigit) {
+    case 1:
+      return n + "st";
+    case 2:
+      return n + "nd";
+    case 3:
+      return n + "rd";
+    default:
+      return n + "th";
+  }
+}
+
 export function Conclusion() {
+  // URL of the visitor data
+  const dataUrl = "https://wildanimalsuffering-stats.vercel.app/stats";
+
+  // Use the fetch() function to retrieve the data from the URL
+  fetch(dataUrl)
+    // Parse the response as JSON
+    .then((response) => response.json())
+    // Destructure the "visitors" value from the first item in the data array
+    .then(([{ visitors }]) => {
+      // Get the HTML element with the id "visitors-count"
+      const element = document.getElementById("visitors-count");
+
+      // Set the element's innerHTML to the value of "visitors"
+      element.innerHTML = ordinal(visitors);
+    });
+
   return (
     <section
       id="conclusion"
@@ -312,6 +350,15 @@ export function Conclusion() {
                 </a>
               </li>
             </ol>
+          </div>
+          <div className="col-span-4 flex flex-col gap-2 md:col-span-3 lg:flex-row lg:gap-10">
+            <h4 className="w-48 whitespace-nowrap text-lg font-bold">
+              Thank you!
+            </h4>
+            <p className="flex-1 leading-relaxed">
+              You're our <span id="visitors-count"></span> visitor, thanks for
+              reading!
+            </p>
           </div>
         </div>
       </div>
