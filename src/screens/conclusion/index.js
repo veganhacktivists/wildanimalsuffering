@@ -307,7 +307,7 @@ export function Conclusion({ visitors }) {
                   rel="noreferrer"
                   target="_blank"
                 >
-                  Wild Animal Suffering Infographic (by Stijn Bruers)
+                  Wild Animal Suffering Infographic by Stijn Bruers
                 </a>
               </li>
             </ol>
