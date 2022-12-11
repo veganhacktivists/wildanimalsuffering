@@ -26,26 +26,22 @@ export function Conclusion({ visitors }) {
             Together, we can make life better for wild animals.
           </h2>
           <p className="font-lg">
-            In recent years, there has been growing moral concern for animals.
-            Thankfully, it is now rare to find a person who feels indifferent
-            towards animal suffering. We know suffering feels bad to us. But we
-            also know that suffering feels bad for a dog or a cat. And we also
-            know that suffering feels bad for a pig, a chicken or a fish.
-            Suffering feels bad for anyone who feels it, regardless of their
-            species or their location. When you put yourselves into the
-            perspective of the one who suffers, it doesn&apos;t matter whether
-            they are in a house, a farm, or a forest. Their suffering matters.
-            It matters to them. And it should matter to us.
+            The increasing moral concern for animals in recent years is a
+            welcome development. It is becoming increasingly rare to find
+            individuals who are indifferent to animal suffering. We understand
+            that suffering is a negative experience for any individual who
+            experiences it, regardless of their species or location, whether
+            they are in a house, farm, or forest. Their suffering matters. It
+            matters to them. And it should matter to us.
           </p>
           <br />
           <p className="font-lg z-10">
-            If it matters to you, then we encourage you to join us in our
-            mission to make life better for wild animals. There is much to learn
-            about the situation of wild animals. This page is just an
-            introduction to the issue. In truth, it is very sad that so many
-            animals are desperately in need of help right now. But luckily,
-            humans like you have the opportunity to make a difference. We hope
-            you choose to take it.
+            If you care about wild animals, we encourage you to join our mission
+            to improve their lives. There is a lot to learn about the conditions
+            that wild animals face. This page is just a brief overview of the
+            issue. The reality is that many animals are in desperate need of
+            help, and people like you have the power to make a difference. We
+            hope you will choose to take action and help us in our efforts.
           </p>
           <br />
           <h3 className="z-10 mt-10 font-brand text-4xl text-primary">

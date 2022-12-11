@@ -98,15 +98,15 @@ export function PopulationDynamics() {
         <h2 className="font-brand text-4xl text-white">Population Dynamics</h2>
         <div className="flex flex-col gap-8">
           <p className="text-lg text-white sm:max-w-sm md:max-w-xl lg:max-w-2xl">
-            Wild animals tend to have a lot of children, and for populations to
-            remain stable, on average each parent can only have 2 children that
-            reach adulthood.{" "}
-            <strong>This means that most animals die young.</strong>
+            Wild animals often have many children, but for their populations to
+            remain stable, on average each parent can only have two offspring
+            that reach adulthood.{" "}
+            <strong>This means that the majority of animals die young.</strong>
           </p>
           <div>
             <a
               href="https://www.animal-ethics.org/population-dynamics-animal-suffering/"
-              className="rounded-full bg-primary px-14 font-medium py-1 text-lg"
+              className="rounded-full bg-primary px-14 py-1 text-lg font-medium"
               target="_blank"
               rel="noreferrer"
             >

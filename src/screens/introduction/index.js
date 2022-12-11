@@ -40,24 +40,28 @@ export function Introduction() {
                 </h1>
                 <div className="grid gap-10 text-lg text-white lg:pb-10">
                   <p>
-                    We tend to idealize nature and the lives of wild animals,
-                    but in reality, their lives can be really tough.. They have
-                    to deal with harsh weather conditions, hunger, thirst,
-                    disease, violence from other animals and more.
+                    When thinking about nature and the lives of wild animals, we
+                    often picture dolphins swimming in the ocean or elephants
+                    and lions roaming in the savannah. In other words, we mostly
+                    picture large adult animals living lives characterized by
+                    freedom. However, this rose-tinted view of nature
+                    doesn&apos;t even come close to representing the lives of
+                    most wild animals.
                   </p>
                   <p>
-                    When we suffer, we seek relief. For animals, their suffering
-                    doesn&apos;t become any less unpleasant because they live in
-                    the wild, and pain feels the same for them, regardless of
-                    whether or not humans are the cause of it.
+                    In reality, the life of most wild animals is characterized
+                    not by freedom, but by struggle. They must constantly deal
+                    with harsh weather, starvation, disease, and injuries, and
+                    much like a dog or a human would suffer in their position,
+                    they suffer as well.
                   </p>
                 </div>
               </div>
             </div>
           </div>
           <p className="flex flex-col rounded-lg bg-black px-10 text-left text-lg text-white lg:self-center lg:bg-white/10 lg:p-3 lg:pl-8 lg:pr-8 lg:text-center">
-            The suffering of wild animals matters. It matters to them, and it
-            should matter to us.
+            The following is an overview of wild animal suffering, why it
+            matters, and what we can do to help.
           </p>
         </div>
 
