@@ -42,18 +42,17 @@ export function Introduction() {
                   <p>
                     When thinking about nature and the lives of wild animals, we
                     often picture dolphins swimming in the ocean or elephants
-                    and lions roaming in the savannah. In other words, we mostly
-                    picture large adult animals living lives characterized by
-                    freedom. However, this rose-tinted view of nature
-                    doesn&apos;t even come close to representing the lives of
-                    most wild animals.
+                    and lions roaming in the savannah. We mostly picture large
+                    adult animals living lives characterized by freedom.
+                    However, this rose-tinted view of nature doesn&apos;t even
+                    come close to representing the lives of most wild animals.
                   </p>
                   <p>
                     In reality, the life of most wild animals is characterized
-                    not by freedom, but by struggle. They must constantly deal
-                    with harsh weather, starvation, disease, and injuries, and
-                    much like a dog or a human would suffer in their position,
-                    they suffer as well.
+                    not by freedom, but by struggle. They constantly deal with
+                    harsh weather, starvation, disease, and injuries, and much
+                    like a dog or a human would suffer in their position, they
+                    suffer as well.
                   </p>
                 </div>
               </div>
