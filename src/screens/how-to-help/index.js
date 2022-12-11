@@ -15,7 +15,7 @@ export function HowToHelp() {
 
         <div className="mx-auto grid gap-12 text-white md:grid-cols-3 lg:gap-16">
           <RaiseAwarenessDialog>
-            <ActionButton as="button" step={1} subtitle="Click to share">
+            <ActionButton as="button" step={1} subtitle="Share this page">
               Raise Awareness
             </ActionButton>
           </RaiseAwarenessDialog>
@@ -25,7 +25,7 @@ export function HowToHelp() {
             target="_blank"
             step={2}
             rel="noreferrer"
-            subtitle="Click to view"
+            subtitle="View charities"
           >
             Donate to Charities
           </ActionButton>
@@ -35,7 +35,7 @@ export function HowToHelp() {
             target="_blank"
             step={3}
             rel="noreferrer"
-            subtitle="Click to subscribe"
+            subtitle="Subscribe here"
           >
             Newsletter Signup
           </ActionButton>
