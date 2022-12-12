@@ -118,8 +118,8 @@ export function Blogs() {
           ],
         ]}
       >
-        The most emotionally difficult moment in Michelle Graham's life was when
-        five snakes in her lab died. She had started a doctoral program studying
+        The most emotionally difficult moment in Mal Graham's life was when five
+        snakes in her lab died. They had started a doctoral program studying
         jumping and flying snakes. There are several species of snakes that not
         only live in trees but can leap from one to the next.
       </Resource>
