@@ -48,7 +48,7 @@ export function Organizations() {
             links={[
               ["Visit", "https://www.animal-ethics.org/"],
               ["Donate", "https://www.animal-ethics.org/support-us"],
-              ["Volunteer", "https://www.animal-ethics.org/volunteers"],
+              ["Volunteer", "https://www.animal-ethics.org/volunteer/"],
             ]}
           >
             Animal Ethics aims to achieve a shift in attitudes towards nonhuman
