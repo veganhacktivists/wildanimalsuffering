@@ -53,7 +53,7 @@ export const videos = [
     author: "Centre for Effective Altruism",
     title: "How evolution can help us understand wild animal welfare",
     description:
-      "In this 22 minute video, Michelle Graham of the Wild Animal Initiative explains basic concepts of evolutionary biology and how these concepts shape our understanding of wild animal welfare. She fields questions and objections and calls for more research on the subject.",
+      "In this 22 minute video, Mal Graham of the Wild Animal Initiative explains basic concepts of evolutionary biology and how these concepts shape our understanding of wild animal welfare. They field questions and objections and call for more research on the subject.",
     duration: "22:56",
   },
   {
