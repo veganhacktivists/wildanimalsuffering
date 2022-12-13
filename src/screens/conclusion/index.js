@@ -7,11 +7,11 @@ export function Conclusion({ visitors }) {
   return (
     <section
       id="conclusion"
-      className="relative min-h-screen bg-woods bg-cover md:bg-woods-md md:bg-center"
+      className="relative min-h-screen overflow-hidden bg-woods bg-cover md:bg-woods-md md:bg-center"
     >
       <div className="mx-auto max-w-7xl px-10">
         <img
-          className="not-sr-only absolute right-32 top-52 max-w-lg lg:w-full"
+          className="not-sr-only absolute top-52 max-w-lg md:right-32 lg:w-full"
           src="/images/conclusion/momma.png"
           alt="Mother bear"
         />
@@ -22,7 +22,7 @@ export function Conclusion({ visitors }) {
           alt="Bear pups"
         />
         <div className="py-30 relative flex max-w-3xl flex-col pt-36 text-white">
-          <h2 className="mb-4 font-brand text-5xl leading-relaxed">
+          <h2 className="mb-4 font-brand text-5xl leading-snug">
             Together, we can make life better for wild animals.
           </h2>
           <p className="font-lg">
