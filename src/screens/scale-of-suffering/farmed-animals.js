@@ -30,14 +30,14 @@ export function FarmedAnimals() {
             <span>on planet Earth.</span>
           </p>
         </div>
-        <div className="h-screen place-items-center">
+        <div className="flex h-screen flex-col justify-center">
           <p className="mx-auto max-w-lg font-brand text-5xl leading-tight text-white">
             For every human, there are roughly{" "}
             <span className="text-blue">3-4 farmed animals</span> being farmed
             at any given moment.
           </p>
           <p className="mx-auto max-w-lg space-y-16 pt-6 text-lg text-white">
-            ...and that&apos;s not even counting farmed fish, which is estimated
+            …and that&apos;s not even counting farmed fish, which is estimated
             to be around 10-13 per person.
           </p>
         </div>
