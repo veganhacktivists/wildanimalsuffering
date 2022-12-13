@@ -136,7 +136,7 @@ export function WildAnimalsMobile() {
             />
           </div>
           <p className="flex flex-1 items-end p-4 text-white md:text-xl">
-            …in the existence at any moment.
+            …in existence at any moment.
           </p>
         </div>
       </div>

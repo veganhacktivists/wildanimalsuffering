@@ -108,7 +108,7 @@ export function WildAnimals() {
               </motion.li>
             </ul>
             <div className="max-w-md space-y-4">
-              <p>…in the existence at any moment.</p>
+              <p>…in existence at any moment.</p>
               <p>
                 This means that the vast majority of individuals are wild
                 animals. The scale is truly mind boggling.
