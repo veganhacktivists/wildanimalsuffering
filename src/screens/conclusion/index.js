@@ -310,6 +310,26 @@ export function Conclusion({ visitors }) {
                   Wild Animal Suffering Infographic by Stijn Bruers
                 </a>
               </li>
+              <li>
+                <a
+                  className="underline"
+                  href="https://rethinkpriorities.org/publications/estimates-of-global-captive-vertebrate-numbers"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  Estimates of global captive vertebrate numbers
+                </a>
+              </li>
+              <li>
+                <a
+                  className="underline"
+                  href="https://www.openphilanthropy.org/research/fish-the-forgotten-farm-animal/"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  Fish: The Forgotten Farm Animal
+                </a>
+              </li>
             </ol>
           </div>
           {visitors > 0 && (
