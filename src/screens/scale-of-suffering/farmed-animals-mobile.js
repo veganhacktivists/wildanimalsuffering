@@ -28,7 +28,7 @@ export function FarmedAnimalsMobile() {
       <div className="sticky top-0 flex min-h-screen w-screen flex-col justify-center overflow-hidden">
         <motion.div className="relative" style={{ left: textTranslate }}>
           <div className="grid w-[200vw] grid-cols-2 text-center font-brand text-3xl leading-tight text-white">
-            <p className="flex flex-col justify-center">
+            <p className="flex flex-col justify-center ">
               <span>There are roughly</span>
               <span className="text-blue">8 billion humans</span>
               <span>on planet Earth.</span>
@@ -37,6 +37,10 @@ export function FarmedAnimalsMobile() {
               For every human, there are roughly{" "}
               <span className="text-blue">3-4 farmed animals </span> being
               farmed at any given moment.
+              <p className="mx-auto max-w-lg space-y-16 pt-6 text-lg text-white">
+                ...and that&apos;s not even counting farmed fish, which is
+                estimated to be around 10-13 per person.
+              </p>
             </p>
           </div>
         </motion.div>
