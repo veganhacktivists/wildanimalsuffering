@@ -1,5 +1,6 @@
 import { Asap_Condensed, Poppins } from "@next/font/google";
 import type { AppProps } from "next/app";
+import Head from "next/head";
 import { Header } from "../components/header";
 import "../styles/globals.css";
 
@@ -24,6 +25,11 @@ export default function App({ Component, pageProps }: AppProps) {
           --font-poppins: ${poppins.style.fontFamily};
         }
       `}</style>
+      <Head>
+        <title>
+          Wild Animal Suffering — The scale, the problem, and why it matters
+        </title>
+      </Head>
       <Header />
       <main>
         <Component {...pageProps} />
