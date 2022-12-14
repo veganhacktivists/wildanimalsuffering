@@ -15,7 +15,7 @@ export function YoutubeVideo({ video }) {
           <iframe
             className="absolute inset-0 h-full w-full rounded-t-xl"
             src={`https://www.youtube.com/embed/${video.id}?autoplay=1`}
-            frameBorder={0}
+            allow="autoplay"
             allowFullScreen
           ></iframe>
         ) : (
