@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .font-brand {
+    letter-spacing: 1.5px;
+  }
+}
+
+@layer components {
+  .scrollbar-custom::-webkit-scrollbar {
+    height: 5px;
+    width: 5px;
+    background: #fff3;
+    -webkit-border-radius: 1ex;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-thumb {
+    background: #fff;
+    -webkit-border-radius: 1ex;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-corner {
+    background: #fff3;
+  }
+}
+
+@layer utilities {
+  .scrollbar-none {
+    scrollbar-width: none;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+}
