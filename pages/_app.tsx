@@ -26,6 +26,7 @@ export default function App({ Component, pageProps }: AppProps) {
         }
       `}</style>
       <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>
           Wild Animal Suffering — The scale, the problem, and why it matters
         </title>

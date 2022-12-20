@@ -2,12 +2,10 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
 
-import duckImage from "./images/duck.png";
-import chickImage from "./images/chick.png";
-import topLeftGrassImage from "./images/top-left-grass.png";
 import bottomRightGrassImage from "./images/bottom-right-grass.png";
-
-const MotionImage = motion(Image);
+import chickImage from "./images/chick.png";
+import duckImage from "./images/duck.png";
+import topLeftGrassImage from "./images/top-left-grass.png";
 
 export function PopulationDynamics() {
   const scrollRef = useRef(null);
@@ -47,54 +45,54 @@ export function PopulationDynamics() {
             src={chickImage}
             alt=""
           />
-          <MotionImage
+          <motion.div
             style={{ opacity: chickOpacity }}
             className="col-start-1 row-start-3 translate-y-20 opacity-50 grayscale"
-            src={chickImage}
-            alt=""
-          />
-          <MotionImage
+          >
+            <Image src={chickImage} alt="" />
+          </motion.div>
+          <motion.div
             style={{ opacity: chickOpacity }}
             className="col-start-2 row-start-3 translate-x-20 opacity-50 grayscale"
-            src={chickImage}
-            alt=""
-          />
-          <MotionImage
+          >
+            <Image src={chickImage} alt="" />
+          </motion.div>
+          <motion.div
             style={{ opacity: chickOpacity }}
             className="col-start-2 row-start-5 translate-x-10 opacity-50 grayscale"
-            src={chickImage}
-            alt=""
-          />
-          <MotionImage
+          >
+            <Image src={chickImage} alt="" />
+          </motion.div>
+          <motion.div
             style={{ opacity: chickOpacity }}
             className="col-start-3 row-start-3 translate-x-20 translate-y-20 opacity-50 grayscale"
-            src={chickImage}
-            alt=""
-          />
-          <MotionImage
+          >
+            <Image src={chickImage} alt="" />
+          </motion.div>
+          <motion.div
             style={{ opacity: chickOpacity }}
             className="col-start-3 row-start-4 -translate-x-20 opacity-50 grayscale"
-            src={chickImage}
-            alt=""
-          />
-          <MotionImage
+          >
+            <Image src={chickImage} alt="" />
+          </motion.div>
+          <motion.div
             style={{ opacity: chickOpacity }}
             className="col-start-4 row-start-4 translate-y-5 opacity-50 grayscale"
-            src={chickImage}
-            alt=""
-          />
-          <MotionImage
+          >
+            <Image src={chickImage} alt="" />
+          </motion.div>
+          <motion.div
             style={{ opacity: chickOpacity }}
             className="col-start-5 row-start-5 -translate-y-20 opacity-50 grayscale"
-            src={chickImage}
-            alt=""
-          />
-          <MotionImage
+          >
+            <Image src={chickImage} alt="" />
+          </motion.div>
+          <motion.div
             style={{ opacity: chickOpacity }}
             className="col-start-3 row-start-5 translate-x-20 opacity-50 grayscale"
-            src={chickImage}
-            alt=""
-          />
+          >
+            <Image src={chickImage} alt="" />
+          </motion.div>
         </div>
       </div>
 

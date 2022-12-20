@@ -7,7 +7,6 @@ import farmedAnimalsImage from "./images/farmed-animals.png";
 import humanImage from "./images/human.png";
 
 const screen = 1 / 2;
-const MotionImage = motion(Image);
 
 export function FarmedAnimalsMobile() {
   const scrollRef = useRef(null);
@@ -54,24 +53,26 @@ export function FarmedAnimalsMobile() {
         </motion.div>
 
         <div className="mx-auto mt-10 grid max-w-lg">
-          <div className="col-start-1 row-start-1 grid place-items-center">
-            <MotionImage
-              style={{
-                opacity: earthOpacity,
-              }}
+          <motion.div
+            className="col-start-1 row-start-1 grid place-items-center"
+            style={{ opacity: earthOpacity }}
+          >
+            <Image
               className="col-start-1 row-start-1 max-h-[40vh]"
               src={earthImage}
               alt=""
             />
-          </div>
-          <div className="col-start-1 row-start-1 grid place-items-center">
-            <MotionImage
-              style={{ opacity: humanOpacity }}
+          </motion.div>
+          <motion.div
+            className="col-start-1 row-start-1 grid place-items-center"
+            style={{ opacity: humanOpacity }}
+          >
+            <Image
               className="col-start-1 row-start-1 max-h-[30vh]"
               src={humanImage}
               alt=""
             />
-          </div>
+          </motion.div>
           <div className="col-start-1 row-start-1 grid place-items-center">
             <motion.div
               style={{

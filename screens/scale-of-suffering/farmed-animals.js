@@ -7,7 +7,6 @@ import farmedAnimalsImage from "./images/farmed-animals.png";
 import humanImage from "./images/human.png";
 
 const screen = 1 / 2;
-const MotionImage = motion(Image);
 
 export function FarmedAnimals() {
   const scrollRef = useRef(null);
@@ -51,22 +50,26 @@ export function FarmedAnimals() {
 
       <div className="sticky top-0 grid h-screen place-items-center">
         <div className="grid">
-          <div className="col-start-1 row-start-1 grid place-items-center">
-            <MotionImage
-              style={{ opacity: earthOpacity }}
+          <motion.div
+            className="col-start-1 row-start-1 grid place-items-center"
+            style={{ opacity: earthOpacity }}
+          >
+            <Image
               className="col-start-1 row-start-1"
               src={earthImage}
               alt=""
             />
-          </div>
-          <div className="col-start-1 row-start-1 grid place-items-center">
-            <MotionImage
-              style={{ opacity: humanOpacity }}
+          </motion.div>
+          <motion.div
+            className="col-start-1 row-start-1 grid place-items-center"
+            style={{ opacity: humanOpacity }}
+          >
+            <Image
               className="col-start-1 row-start-1 w-44"
               src={humanImage}
               alt=""
             />
-          </div>
+          </motion.div>
           <div className="col-start-1 row-start-1 grid place-items-center">
             <motion.div
               style={{

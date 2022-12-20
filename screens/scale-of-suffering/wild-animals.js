@@ -12,7 +12,6 @@ import chartTerrestrialArImage from "./images/chart-terrestrial-ar.png";
 import chartWildAnimalsImage from "./images/chart-wild-animals.png";
 
 const screen = 1 / 2.5;
-const MotionImage = motion(Image);
 
 const wildBirdsPos = [0, 0];
 const reptilesPos = [0.5 * screen, 0.7 * screen];
@@ -136,49 +135,49 @@ export function WildAnimals() {
               src={chartWildAnimalsImage}
               alt=""
             />
-            <MotionImage
+            <motion.div
               style={{ opacity: reptilesOpacity }}
               className="col-start-1 row-start-1"
-              src={chartReptilesImage}
-              alt=""
-            />
-            <MotionImage
+            >
+              <Image src={chartReptilesImage} alt="" />
+            </motion.div>
+            <motion.div
               style={{ opacity: fishOpacity }}
               className="col-start-1 row-start-1"
-              src={chartFishImage}
-              alt=""
-            />
-            <MotionImage
+            >
+              <Image src={chartFishImage} alt="" />
+            </motion.div>
+            <motion.div
               style={{ opacity: earthWormsOpacity }}
               className="col-start-1 row-start-1"
-              src={chartEarthWormsImage}
-              alt=""
-            />
-            <MotionImage
+            >
+              <Image src={chartEarthWormsImage} alt="" />
+            </motion.div>
+            <motion.div
               style={{ opacity: terrestrialArOpacity }}
               className="col-start-1 row-start-1"
-              src={chartTerrestrialArImage}
-              alt=""
-            />
+            >
+              <Image src={chartTerrestrialArImage} alt="" />
+            </motion.div>
 
-            <MotionImage
+            <motion.div
               style={{ opacity: fishLabelOpacity }}
               className="col-start-1 row-start-2 max-h-[10vh]"
-              src={chartFishLabelsImage}
-              alt=""
-            />
-            <MotionImage
+            >
+              <Image src={chartFishLabelsImage} alt="" />
+            </motion.div>
+            <motion.div
               style={{ opacity: earthWormsLabelOpacity }}
               className="col-start-1 row-start-2 max-h-[10vh]"
-              src={chartEarthWormsLabelsImage}
-              alt=""
-            />
-            <MotionImage
+            >
+              <Image src={chartEarthWormsLabelsImage} alt="" />
+            </motion.div>
+            <motion.div
               style={{ opacity: terrestrialArOpacity }}
               className="col-start-1 row-start-2 max-h-[10vh]"
-              src={chartTerrestrialArLabelsImage}
-              alt=""
-            />
+            >
+              <Image src={chartTerrestrialArLabelsImage} alt="" />
+            </motion.div>
           </div>
         </div>
       </div>
