@@ -4,39 +4,39 @@ import { useState } from "react";
 import {
   BackgroundEffect,
   useBackgroundEffect,
-} from "../../components/background-effect";
+} from "~/components/background-effect";
 import { YoutubeVideo } from "./youtube-video";
 import { YoutubeVideoItem } from "./youtube-video-item";
 
 import icebergImage from "./images/iceberg.png";
 import penguinsImage from "./images/penguins.png";
 
-import smallThumbnailXjCp6bUpM from "./images/thumbnail-XjCp6bUp__M-small.jpeg";
-import smallThumbnail1Dp6gObE9eA from "./images/thumbnail-1Dp6gObE9eA-small.jpeg";
-import smallThumbnailM9pCbH7BtcI from "./images/thumbnail-m9pCbH7BtcI-small.jpeg";
-import smallThumbnailN3H4UtREak from "./images/thumbnail-n3H4UtR_eak-small.jpeg";
-import smallThumbnailG_7cLXyMp8E from "./images/thumbnail-g-7cLXyMp8E-small.jpeg";
-import smallThumbnailVPzvWkOzWjY from "./images/thumbnail-VPzvWKOzWjY-small.jpeg";
-import smallThumbnailHvDlYnCejHk from "./images/thumbnail-hvDlYnCejHk-small.jpeg";
-import smallThumbnailAzFwOnYpv9U from "./images/thumbnail-AzFwOnYPV9U-small.jpeg";
-import smallThumbnailCp1qpzXe2Yw from "./images/thumbnail-cp1qpzXe2Yw-small.jpeg";
-import smallThumbnail1dlEHonR0w from "./images/thumbnail-1dl_eHonR0w-small.jpeg";
-import smallThumbnailTaFwHa5ZRs from "./images/thumbnail-_TaFwHa5ZRs-small.jpeg";
-import smallThumbnailK7E6Ib9rw6c from "./images/thumbnail-K7E6IB9rw6c-small.jpeg";
-import smallThumbnailCv9ftiEvSpA from "./images/thumbnail-Cv9ftiEvSpA-small.jpeg";
-import mediumThumbnailXjCp6bUpM from "./images/thumbnail-XjCp6bUp__M-medium.jpeg";
-import mediumThumbnail1Dp6gObE9eA from "./images/thumbnail-1Dp6gObE9eA-medium.jpeg";
-import mediumThumbnailM9pCbH7BtcI from "./images/thumbnail-m9pCbH7BtcI-medium.jpeg";
-import mediumThumbnailN3H4UtREak from "./images/thumbnail-n3H4UtR_eak-medium.jpeg";
-import mediumThumbnailG_7cLXyMp8E from "./images/thumbnail-g-7cLXyMp8E-medium.jpeg";
-import mediumThumbnailVPzvWkOzWjY from "./images/thumbnail-VPzvWKOzWjY-medium.jpeg";
-import mediumThumbnailHvDlYnCejHk from "./images/thumbnail-hvDlYnCejHk-medium.jpeg";
-import mediumThumbnailAzFwOnYpv9U from "./images/thumbnail-AzFwOnYPV9U-medium.jpeg";
-import mediumThumbnailCp1qpzXe2Yw from "./images/thumbnail-cp1qpzXe2Yw-medium.jpeg";
 import mediumThumbnail1dlEHonR0w from "./images/thumbnail-1dl_eHonR0w-medium.jpeg";
-import mediumThumbnailTaFwHa5ZRs from "./images/thumbnail-_TaFwHa5ZRs-medium.jpeg";
-import mediumThumbnailK7E6Ib9rw6c from "./images/thumbnail-K7E6IB9rw6c-medium.jpeg";
+import smallThumbnail1dlEHonR0w from "./images/thumbnail-1dl_eHonR0w-small.jpeg";
+import mediumThumbnail1Dp6gObE9eA from "./images/thumbnail-1Dp6gObE9eA-medium.jpeg";
+import smallThumbnail1Dp6gObE9eA from "./images/thumbnail-1Dp6gObE9eA-small.jpeg";
+import mediumThumbnailAzFwOnYpv9U from "./images/thumbnail-AzFwOnYPV9U-medium.jpeg";
+import smallThumbnailAzFwOnYpv9U from "./images/thumbnail-AzFwOnYPV9U-small.jpeg";
+import mediumThumbnailCp1qpzXe2Yw from "./images/thumbnail-cp1qpzXe2Yw-medium.jpeg";
+import smallThumbnailCp1qpzXe2Yw from "./images/thumbnail-cp1qpzXe2Yw-small.jpeg";
 import mediumThumbnailCv9ftiEvSpA from "./images/thumbnail-Cv9ftiEvSpA-medium.jpeg";
+import smallThumbnailCv9ftiEvSpA from "./images/thumbnail-Cv9ftiEvSpA-small.jpeg";
+import mediumThumbnailG_7cLXyMp8E from "./images/thumbnail-g-7cLXyMp8E-medium.jpeg";
+import smallThumbnailG_7cLXyMp8E from "./images/thumbnail-g-7cLXyMp8E-small.jpeg";
+import mediumThumbnailHvDlYnCejHk from "./images/thumbnail-hvDlYnCejHk-medium.jpeg";
+import smallThumbnailHvDlYnCejHk from "./images/thumbnail-hvDlYnCejHk-small.jpeg";
+import mediumThumbnailK7E6Ib9rw6c from "./images/thumbnail-K7E6IB9rw6c-medium.jpeg";
+import smallThumbnailK7E6Ib9rw6c from "./images/thumbnail-K7E6IB9rw6c-small.jpeg";
+import mediumThumbnailM9pCbH7BtcI from "./images/thumbnail-m9pCbH7BtcI-medium.jpeg";
+import smallThumbnailM9pCbH7BtcI from "./images/thumbnail-m9pCbH7BtcI-small.jpeg";
+import mediumThumbnailN3H4UtREak from "./images/thumbnail-n3H4UtR_eak-medium.jpeg";
+import smallThumbnailN3H4UtREak from "./images/thumbnail-n3H4UtR_eak-small.jpeg";
+import mediumThumbnailVPzvWkOzWjY from "./images/thumbnail-VPzvWKOzWjY-medium.jpeg";
+import smallThumbnailVPzvWkOzWjY from "./images/thumbnail-VPzvWKOzWjY-small.jpeg";
+import mediumThumbnailXjCp6bUpM from "./images/thumbnail-XjCp6bUp__M-medium.jpeg";
+import smallThumbnailXjCp6bUpM from "./images/thumbnail-XjCp6bUp__M-small.jpeg";
+import mediumThumbnailTaFwHa5ZRs from "./images/thumbnail-_TaFwHa5ZRs-medium.jpeg";
+import smallThumbnailTaFwHa5ZRs from "./images/thumbnail-_TaFwHa5ZRs-small.jpeg";
 
 export const videos = [
   {

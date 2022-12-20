@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { PlayIcon } from "../../components/play-icon";
+import { PlayIcon } from "~/components/play-icon";
 
 export function YoutubeVideo({ video }) {
   const [playing, setPlaying] = useState(false);

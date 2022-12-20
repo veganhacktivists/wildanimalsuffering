@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import { Accordion, AccordionItem } from "../../components/accordion";
+import { Accordion, AccordionItem } from "~/components/accordion";
 import {
   BackgroundEffect,
   useBackgroundEffect,
-} from "../../components/background-effect";
+} from "~/components/background-effect";
 
 export function CommonObjections() {
   const { screenRef, effectOpacity } = useBackgroundEffect();

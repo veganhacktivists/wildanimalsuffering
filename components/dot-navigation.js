@@ -1,5 +1,5 @@
-import { cx } from "../utils/cx";
-import { DotIcon } from "./dot-icon";
+import { cx } from "~/utils/cx";
+import { DotIcon } from "~/components/dot-icon";
 
 export function DotNavigation({ className, items, activeItem, onNavigate }) {
   return (

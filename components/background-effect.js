@@ -1,9 +1,9 @@
 import { useMotionValue } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import { FogEffect } from "./fog-effect";
-import { LeavesEffect } from "./leaves-effect";
-import { RainfallEffect } from "./rainfall-effect";
-import { SnowfallEffect } from "./snowfall-effect";
+import { FogEffect } from "~/components/fog-effect";
+import { LeavesEffect } from "~/components/leaves-effect";
+import { RainfallEffect } from "~/components/rainfall-effect";
+import { SnowfallEffect } from "~/components/snowfall-effect";
 
 const effectComponents = {
   fog: FogEffect,

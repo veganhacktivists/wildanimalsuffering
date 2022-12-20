@@ -1,6 +1,6 @@
 import * as RadixAccordion from "@radix-ui/react-accordion";
-import { cx } from "../utils/cx";
-import { ArrowIcon } from "./arrow-icon";
+import { ArrowIcon } from "~/components/arrow-icon";
+import { cx } from "~/utils/cx";
 
 export function Accordion({ children, ...props }) {
   return (

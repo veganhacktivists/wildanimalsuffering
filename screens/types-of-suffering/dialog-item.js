@@ -1,7 +1,7 @@
 import * as RadixDialog from "@radix-ui/react-dialog";
 import Image from "next/image";
-import { CloseIcon } from "../../components/close-icon";
-import { ExpandIcon } from "../../components/expand-icon";
+import { CloseIcon } from "~/components/close-icon";
+import { ExpandIcon } from "~/components/expand-icon";
 
 export function DialogItem({ imageUrl, title, description, link }) {
   return (

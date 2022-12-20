@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Navigation } from "./navigation";
+import { Navigation } from "~/components/navigation";
 
 export function Header() {
   return (

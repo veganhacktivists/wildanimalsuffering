@@ -3,8 +3,8 @@ import Image from "next/image";
 import {
   BackgroundEffect,
   useBackgroundEffect,
-} from "../../components/background-effect";
-import { ScrollDownIndicator } from "../../components/scroll-down-indicator";
+} from "~/components/background-effect";
+import { ScrollDownIndicator } from "~/components/scroll-down-indicator";
 
 import elephantsImage from "./images/elephants.png";
 

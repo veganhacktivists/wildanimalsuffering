@@ -1,8 +1,8 @@
 import { Asap_Condensed, Poppins } from "@next/font/google";
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import { Header } from "../components/header";
-import "../styles/globals.css";
+import { Header } from "~/components/header";
+import "~/styles/globals.css";
 
 // Fonts
 const asapCondensed = Asap_Condensed({

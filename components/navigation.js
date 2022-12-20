@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { MenuIcon } from "./menu-icon";
-import { NavigationLink } from "./navigation-link";
+import { MenuIcon } from "~/components/menu-icon";
+import { NavigationLink } from "~/components/navigation-link";
 
 // TODO Replace with something more accessible.
 export function Navigation() {

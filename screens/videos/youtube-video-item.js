@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { cx } from "../../utils/cx";
+import { cx } from "~/utils/cx";
 
 export function YoutubeVideoItem({ active = false, video, ...props }) {
   return (

@@ -1,9 +1,9 @@
 import * as RadixDialog from "@radix-ui/react-dialog";
 import * as RadixToast from "@radix-ui/react-toast";
 import { useState } from "react";
-import { CloseIcon } from "../../components/close-icon";
-import { CopyIcon } from "../../components/copy-icon";
-import { LogoWas } from "../../components/logo-was";
+import { CloseIcon } from "~/components/close-icon";
+import { CopyIcon } from "~/components/copy-icon";
+import { LogoWas } from "~/components/logo-was";
 
 const CopyLinkSection = () => {
   const [open, setOpen] = useState(false);

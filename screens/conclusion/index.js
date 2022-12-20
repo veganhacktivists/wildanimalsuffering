@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { HealthcareIcon } from "../../components/healthcare-icon";
-import { formatOrdinals } from "../../utils/number-format";
+import { HealthcareIcon } from "~/components/healthcare-icon";
+import { formatOrdinals } from "~/utils/number-format";
 
 import mommaImage from "./images/momma.png";
 import pupsImage from "./images/pups.png";

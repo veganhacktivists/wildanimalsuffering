@@ -3,7 +3,7 @@ import Image from "next/image";
 import {
   BackgroundEffect,
   useBackgroundEffect,
-} from "../../components/background-effect";
+} from "~/components/background-effect";
 import { Organization } from "./organization";
 
 import animalEthicsImage from "./images/animal-ethics.png";
