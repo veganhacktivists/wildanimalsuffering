@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { cx } from "~/utils/cx";
 
 export function YoutubeVideoItem({ active = false, video, ...props }) {
@@ -10,7 +9,7 @@ export function YoutubeVideoItem({ active = false, video, ...props }) {
       )}
       {...props}
     >
-      <Image
+      <img
         className="absolute inset-0 h-full w-full rounded-xl object-cover"
         src={video.thumbnails.small}
         alt=""

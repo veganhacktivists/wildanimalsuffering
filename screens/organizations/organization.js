@@ -1,10 +1,9 @@
-import Image from "next/image";
 import { cx } from "~/utils/cx";
 
 export function Organization({ name, children, imageUrl, links }) {
   return (
     <div className="flex flex-col items-center justify-center gap-4 rounded-xl bg-white/20 p-6 text-white lg:flex-row lg:items-start xl:gap-5">
-      <Image className="aspect-square lg:w-16 xl:w-24" src={imageUrl} alt="" />
+      <img className="aspect-square lg:w-16 xl:w-24" src={imageUrl} alt="" />
 
       <div className="flex h-full flex-col items-center lg:items-start">
         <h3 className="text-xl font-bold">{name}</h3>

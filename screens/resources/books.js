@@ -11,7 +11,7 @@ export function Books() {
   return (
     <>
       <Resource
-        imageUrl={ethicsImage}
+        imageUrl={ethicsImage.src}
         containThumbnail
         title="Wild Animal Ethics"
         subtext="Kyle Johannsen"
@@ -38,7 +38,7 @@ export function Books() {
         obligation to assist wild animals should be understood.
       </Resource>
       <Resource
-        imageUrl={makingAStandImage}
+        imageUrl={makingAStandImage.src}
         containThumbnail
         title="Making a Stand for Animals"
         subtext="Oscar Horta"
@@ -64,7 +64,7 @@ export function Books() {
         overlooked a very important one: speciesism.
       </Resource>
       <Resource
-        imageUrl={savingAnimalsImage}
+        imageUrl={savingAnimalsImage.src}
         containThumbnail
         title="Saving Animals"
         subtext="Elan Abrell"
@@ -91,7 +91,7 @@ export function Books() {
         focus on the ethical issues animating the establishment of such places.
       </Resource>
       <Resource
-        imageUrl={savingOurselvesImage}
+        imageUrl={savingOurselvesImage.src}
         containThumbnail
         title="Saving Animals, Saving Ourselves"
         subtext="Jeff Sebo"
@@ -117,7 +117,7 @@ export function Books() {
         biodiversity loss, ecosystem collapse, and nonhuman suffering.
       </Resource>
       <Resource
-        imageUrl={wildSoulsImage}
+        imageUrl={wildSoulsImage.src}
         containThumbnail
         title="Wild Souls"
         subtext="Emma Marris"
@@ -143,7 +143,7 @@ export function Books() {
         to capture or feed wild animals for the good of their species?
       </Resource>
       <Resource
-        imageUrl={ufawImage}
+        imageUrl={ufawImage.src}
         containThumbnail
         title="Physiology and Behaviour of Animal Suffering"
         subtext="Neville G. Gregory"

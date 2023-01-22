@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { useState } from "react";
 import {
   BackgroundEffect,
@@ -42,8 +41,8 @@ export const videos = [
   {
     id: "XjCp6bUp__M",
     thumbnails: {
-      small: smallThumbnailXjCp6bUpM,
-      medium: mediumThumbnailXjCp6bUpM,
+      small: smallThumbnailXjCp6bUpM.src,
+      medium: mediumThumbnailXjCp6bUpM.src,
     },
     author: "Humane Hancock",
     title: "The Vegan Blind Spot",
@@ -54,8 +53,8 @@ export const videos = [
   {
     id: "1Dp6gObE9eA",
     thumbnails: {
-      small: smallThumbnail1Dp6gObE9eA,
-      medium: mediumThumbnail1Dp6gObE9eA,
+      small: smallThumbnail1Dp6gObE9eA.src,
+      medium: mediumThumbnail1Dp6gObE9eA.src,
     },
     author: "Animal Ethics",
     title: "Wild Animal Suffering: An Introduction",
@@ -66,8 +65,8 @@ export const videos = [
   {
     id: "m9pCbH7BtcI",
     thumbnails: {
-      small: smallThumbnailM9pCbH7BtcI,
-      medium: mediumThumbnailM9pCbH7BtcI,
+      small: smallThumbnailM9pCbH7BtcI.src,
+      medium: mediumThumbnailM9pCbH7BtcI.src,
     },
     author: "Humane Hancock",
     title: "Vegans And Meat-Eaters Both Make This Mistake",
@@ -78,8 +77,8 @@ export const videos = [
   {
     id: "n3H4UtR_eak",
     thumbnails: {
-      small: smallThumbnailN3H4UtREak,
-      medium: mediumThumbnailN3H4UtREak,
+      small: smallThumbnailN3H4UtREak.src,
+      medium: mediumThumbnailN3H4UtREak.src,
     },
     author: "Wild Animal Initiative",
     title: "Wild Animal Welfare - Brown University Effective Altruism Seminar",
@@ -90,8 +89,8 @@ export const videos = [
   {
     id: "g-7cLXyMp8E",
     thumbnails: {
-      small: smallThumbnailG_7cLXyMp8E,
-      medium: mediumThumbnailG_7cLXyMp8E,
+      small: smallThumbnailG_7cLXyMp8E.src,
+      medium: mediumThumbnailG_7cLXyMp8E.src,
     },
     author: "Humane Hancock",
     title: "The Truth About Yellowstone",
@@ -102,8 +101,8 @@ export const videos = [
   {
     id: "VPzvWKOzWjY",
     thumbnails: {
-      small: smallThumbnailVPzvWkOzWjY,
-      medium: mediumThumbnailVPzvWkOzWjY,
+      small: smallThumbnailVPzvWkOzWjY.src,
+      medium: mediumThumbnailVPzvWkOzWjY.src,
     },
     author: "Centre for Effective Altruism",
     title: "How evolution can help us understand wild animal welfare",
@@ -114,8 +113,8 @@ export const videos = [
   {
     id: "hvDlYnCejHk",
     thumbnails: {
-      small: smallThumbnailHvDlYnCejHk,
-      medium: mediumThumbnailHvDlYnCejHk,
+      small: smallThumbnailHvDlYnCejHk.src,
+      medium: mediumThumbnailHvDlYnCejHk.src,
     },
     author: "Humane Hancock",
     title: "How a Vegan World Might Contain MORE Suffering",
@@ -126,8 +125,8 @@ export const videos = [
   {
     id: "AzFwOnYPV9U",
     thumbnails: {
-      small: smallThumbnailAzFwOnYpv9U,
-      medium: mediumThumbnailAzFwOnYpv9U,
+      small: smallThumbnailAzFwOnYpv9U.src,
+      medium: mediumThumbnailAzFwOnYpv9U.src,
     },
     author: "Animal Ethics",
     title: "Animal Athics and Environmental Ethics",
@@ -138,8 +137,8 @@ export const videos = [
   {
     id: "cp1qpzXe2Yw",
     thumbnails: {
-      small: smallThumbnailCp1qpzXe2Yw,
-      medium: mediumThumbnailCp1qpzXe2Yw,
+      small: smallThumbnailCp1qpzXe2Yw.src,
+      medium: mediumThumbnailCp1qpzXe2Yw.src,
     },
     author: "Humane Hancock",
     title: "How to SOLVE Wild Animal Suffering",
@@ -150,8 +149,8 @@ export const videos = [
   {
     id: "1dl_eHonR0w",
     thumbnails: {
-      small: smallThumbnail1dlEHonR0w,
-      medium: mediumThumbnail1dlEHonR0w,
+      small: smallThumbnail1dlEHonR0w.src,
+      medium: mediumThumbnail1dlEHonR0w.src,
     },
     author: "Animal Ethics",
     title: "Ways to help wild animals in need",
@@ -162,8 +161,8 @@ export const videos = [
   {
     id: "_TaFwHa5ZRs",
     thumbnails: {
-      small: smallThumbnailTaFwHa5ZRs,
-      medium: mediumThumbnailTaFwHa5ZRs,
+      small: smallThumbnailTaFwHa5ZRs.src,
+      medium: mediumThumbnailTaFwHa5ZRs.src,
     },
     author: "Humane Hancock",
     title: "Cosmic Skeptic on Wild Animal Suffering",
@@ -174,8 +173,8 @@ export const videos = [
   {
     id: "K7E6IB9rw6c",
     thumbnails: {
-      small: smallThumbnailK7E6Ib9rw6c,
-      medium: mediumThumbnailK7E6Ib9rw6c,
+      small: smallThumbnailK7E6Ib9rw6c.src,
+      medium: mediumThumbnailK7E6Ib9rw6c.src,
     },
     author: "LSE Philosophy",
     title: "A beginner's guide to wild animal suffering",
@@ -186,8 +185,8 @@ export const videos = [
   {
     id: "Cv9ftiEvSpA",
     thumbnails: {
-      small: smallThumbnailCv9ftiEvSpA,
-      medium: mediumThumbnailCv9ftiEvSpA,
+      small: smallThumbnailCv9ftiEvSpA.src,
+      medium: mediumThumbnailCv9ftiEvSpA.src,
     },
     author: "Humane Hancock",
     title: "Why I Stopped Idolizing David Attenborough",
@@ -207,9 +206,9 @@ export function Videos() {
       id="videos"
       className="relative flex min-h-screen items-center bg-sky bg-cover py-12 lg:py-24"
     >
-      <Image
+      <img
         className="not-sr-only absolute left-0 top-0 hidden w-full max-w-md lg:block"
-        src={icebergImage}
+        src={icebergImage.src}
         alt=""
       />
 
@@ -252,9 +251,9 @@ export function Videos() {
           </div>
         </div>
       </div>
-      <Image
+      <img
         className="not-sr-only pointer-events-none absolute right-0 bottom-0 z-10 hidden max-h-96 w-[20vw] lg:block"
-        src={penguinsImage}
+        src={penguinsImage.src}
         alt=""
       />
     </section>

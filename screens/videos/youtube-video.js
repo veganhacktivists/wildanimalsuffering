@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { useEffect, useState } from "react";
 import { PlayIcon } from "~/components/play-icon";
 
@@ -23,7 +22,7 @@ export function YoutubeVideo({ video }) {
             className="group absolute inset-0 flex h-full w-full flex-col"
             onClick={() => setPlaying(true)}
           >
-            <Image
+            <img
               className="absolute inset-0 h-full w-full object-cover"
               src={video.thumbnails.medium}
               alt=""

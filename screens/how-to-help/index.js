@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { ActionButton } from "./action-button";
 import { RaiseAwarenessDialog } from "./raise-awareness-dialog";
 
@@ -78,9 +77,9 @@ export function HowToHelp() {
         </div>
       </div>
 
-      <Image
+      <img
         className="not-sr-only pointer-events-none absolute left-12 bottom-12 hidden max-h-96 w-[20vw] lg:block"
-        src={miceImage}
+        src={miceImage.src}
         alt=""
       />
     </section>

@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import Image from "next/image";
 import {
   BackgroundEffect,
   useBackgroundEffect,
@@ -25,11 +24,10 @@ export function Introduction() {
         <div className="flex flex-1 flex-col justify-center">
           <div className="grid lg:grid-cols-2">
             <div className="flex items-center pl-6 pt-12 lg:pl-12 lg:pr-0">
-              <Image
-                src={elephantsImage}
+              <img
+                src={elephantsImage.src}
                 alt="The illustration of a mother elephant and her young"
-                className="w-3/4 md:w-1/2 lg:w-full"
-                priority
+                className="mx-auto w-3/4 md:w-1/2 lg:w-full"
               />
             </div>
             <div className="bg-gradient-to-b from-transparent via-black to-black lg:bg-none lg:pt-16">

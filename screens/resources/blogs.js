@@ -13,7 +13,7 @@ export function Blogs() {
   return (
     <>
       <Resource
-        imageUrl={waysToReduceImage}
+        imageUrl={waysToReduceImage.src}
         title="Ways To Reduce Wild Animal Suffering"
         links={[
           [
@@ -28,7 +28,7 @@ export function Blogs() {
         contentious; it&apos;s also extremely complex.
       </Resource>
       <Resource
-        imageUrl={potentialSolutionsImage}
+        imageUrl={potentialSolutionsImage.src}
         title="Wild Animal Suffering: Potential Solutions From CRISPR"
         links={[
           [
@@ -43,7 +43,7 @@ export function Blogs() {
         are relatively uncontroversial practices.
       </Resource>
       <Resource
-        imageUrl={relevanceImage}
+        imageUrl={relevanceImage.src}
         title="The Relevance of Wild Animal Suffering"
         links={[
           [
@@ -58,7 +58,7 @@ export function Blogs() {
         images of animals being neglected and abused.
       </Resource>
       <Resource
-        imageUrl={humanityImpactImage}
+        imageUrl={humanityImpactImage.src}
         title="Humanity's Impact on Wild-Animal Suffering"
         links={[
           [
@@ -74,7 +74,7 @@ export function Blogs() {
         being eaten alive.
       </Resource>
       <Resource
-        imageUrl={importanceImage}
+        imageUrl={importanceImage.src}
         title="The Importance of Wild-Animal Suffering"
         links={[
           [
@@ -89,7 +89,7 @@ export function Blogs() {
         suffering that occurs in the natural environment.
       </Resource>
       <Resource
-        imageUrl={whyItMattersImage}
+        imageUrl={whyItMattersImage.src}
         title="Why wild animal suffering matters"
         links={[
           [
@@ -104,7 +104,7 @@ export function Blogs() {
         deal with the reality of constant threat of tremendous suffering.
       </Resource>
       <Resource
-        imageUrl={wildfiresImage}
+        imageUrl={wildfiresImage.src}
         title="Wildfires And Animal Protection: Towards Better Intervention Strategies"
         links={[
           [
@@ -118,7 +118,7 @@ export function Blogs() {
         physiological and behavioral changes.
       </Resource>
       <Resource
-        imageUrl={wildFrontierImage}
+        imageUrl={wildFrontierImage.src}
         title="The Wild Frontier of Animal Welfare"
         links={[
           [

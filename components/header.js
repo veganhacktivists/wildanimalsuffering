@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Navigation } from "~/components/navigation";
 
 export function Header() {
@@ -24,7 +23,7 @@ export function Header() {
         target="_blank"
         rel="noreferrer"
       >
-        <Image
+        <img
           width={80}
           height={80}
           src="/images/logo-vh.svg"

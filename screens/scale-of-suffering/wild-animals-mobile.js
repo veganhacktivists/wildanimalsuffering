@@ -96,54 +96,54 @@ export function WildAnimalsMobile() {
 
           <div className="grid place-items-center px-4 pb-4">
             <div className="col-start-1 row-start-1 grid place-items-center">
-              <Image
+              <img
                 className="col-start-1 row-start-1 max-h-[40vh]"
-                src={chartWildAnimalsImage}
+                src={chartWildAnimalsImage.src}
                 alt=""
               />
-              <motion.div
+              <motion.img
                 style={{ opacity: reptilesOpacity }}
                 className="col-start-1 row-start-1 max-h-[40vh]"
-              >
-                <Image src={chartReptilesImage} alt="" />
-              </motion.div>
-              <motion.div
+                src={chartReptilesImage.src}
+                alt=""
+              />
+              <motion.img
                 style={{ opacity: fishOpacity }}
                 className="col-start-1 row-start-1 max-h-[40vh]"
-              >
-                <Image src={chartFishImage} alt="" />
-              </motion.div>
-              <motion.div
+                src={chartFishImage.src}
+                alt=""
+              />
+              <motion.img
                 style={{ opacity: earthWormsOpacity }}
                 className="col-start-1 row-start-1 max-h-[40vh]"
-              >
-                <Image src={chartEarthWormsImage} alt="" />
-              </motion.div>
-              <motion.div
+                src={chartEarthWormsImage.src}
+                alt=""
+              />
+              <motion.img
                 style={{ opacity: terrestrialArOpacity }}
                 className="col-start-1 row-start-1 max-h-[40vh]"
-              >
-                <Image src={chartTerrestrialArImage} alt="" />
-              </motion.div>
+                src={chartTerrestrialArImage.src}
+                alt=""
+              />
             </div>
-            <motion.div
+            <motion.img
               style={{ opacity: fishLabelOpacity }}
               className="col-start-1 row-start-2 max-h-[10vh]"
-            >
-              <Image src={chartFishLabelsImage} alt="" />
-            </motion.div>
-            <motion.div
+              src={chartFishLabelsImage.src}
+              alt=""
+            />
+            <motion.img
               style={{ opacity: earthWormsLabelOpacity }}
               className="col-start-1 row-start-2 max-h-[10vh]"
-            >
-              <Image src={chartEarthWormsLabelsImage} alt="" />
-            </motion.div>
-            <motion.div
+              src={chartEarthWormsLabelsImage.src}
+              alt=""
+            />
+            <motion.img
               style={{ opacity: terrestrialArOpacity }}
               className="col-start-1 row-start-2 max-h-[10vh]"
-            >
-              <Image src={chartTerrestrialArLabelsImage} alt="" />
-            </motion.div>
+              src={chartTerrestrialArLabelsImage.src}
+              alt=""
+            />
           </div>
           <p className="flex flex-1 items-end p-4 text-white md:text-xl">
             …in existence at any moment.

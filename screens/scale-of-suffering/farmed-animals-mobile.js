@@ -1,5 +1,4 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import Image from "next/image";
 import { useRef } from "react";
 
 import earthImage from "./images/earth.png";
@@ -57,9 +56,9 @@ export function FarmedAnimalsMobile() {
             className="col-start-1 row-start-1 grid place-items-center"
             style={{ opacity: earthOpacity }}
           >
-            <Image
+            <img
               className="col-start-1 row-start-1 max-h-[40vh]"
-              src={earthImage}
+              src={earthImage.src}
               alt=""
             />
           </motion.div>
@@ -67,9 +66,9 @@ export function FarmedAnimalsMobile() {
             className="col-start-1 row-start-1 grid place-items-center"
             style={{ opacity: humanOpacity }}
           >
-            <Image
+            <img
               className="col-start-1 row-start-1 max-h-[30vh]"
-              src={humanImage}
+              src={humanImage.src}
               alt=""
             />
           </motion.div>
@@ -82,7 +81,11 @@ export function FarmedAnimalsMobile() {
               }}
               className="col-start-1 row-start-1 transform-cpu"
             >
-              <Image className="max-h-[30vh]" src={farmedAnimalsImage} alt="" />
+              <img
+                className="max-h-[30vh]"
+                src={farmedAnimalsImage.src}
+                alt=""
+              />
             </motion.div>
           </div>
         </div>

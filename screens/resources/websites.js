@@ -12,7 +12,7 @@ export function Websites() {
   return (
     <>
       <Resource
-        imageUrl={effectiveAltruismImage}
+        imageUrl={effectiveAltruismImage.src}
         title="Effective Altruism"
         links={[
           ["Visit", "https://www.effectivealtruism.org/"],
@@ -30,7 +30,7 @@ export function Websites() {
       </Resource>
 
       <Resource
-        imageUrl={reducingSufferingImage}
+        imageUrl={reducingSufferingImage.src}
         title="Reducing Suffering"
         links={[
           ["Visit", "https://reducing-suffering.org/"],
@@ -43,7 +43,7 @@ export function Websites() {
       </Resource>
 
       <Resource
-        imageUrl={animalCharityEvaluatorsImage}
+        imageUrl={animalCharityEvaluatorsImage.src}
         title="Animal Charity Evaluators"
         links={[
           ["Visit", "https://animalcharityevaluators.org"],
@@ -57,7 +57,7 @@ export function Websites() {
       </Resource>
 
       <Resource
-        imageUrl={centerForReducingSufferingImage}
+        imageUrl={centerForReducingSufferingImage.src}
         title="Center For Reducing Suffering"
         links={[
           ["Visit", "https://centerforreducingsuffering.org"],
@@ -70,7 +70,7 @@ export function Websites() {
       </Resource>
 
       <Resource
-        imageUrl={worldAnimalProtectionImage}
+        imageUrl={worldAnimalProtectionImage.src}
         title="World Animal Protection"
         links={[
           ["Visit", "https://www.worldanimalprotection.us/"],
@@ -87,7 +87,7 @@ export function Websites() {
       </Resource>
 
       <Resource
-        imageUrl={animalAdvocacyCareersImage}
+        imageUrl={animalAdvocacyCareersImage.src}
         title="Animal Advocacy Careers"
         links={[
           ["Visit", "https://www.animaladvocacycareers.org/"],
@@ -101,7 +101,7 @@ export function Websites() {
       </Resource>
 
       <Resource
-        imageUrl={eightyThousandHoursImage}
+        imageUrl={eightyThousandHoursImage.src}
         title="80000 Hours"
         links={[
           ["Visit", "https://80000hours.org/"],

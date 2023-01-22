@@ -1,5 +1,4 @@
 import * as RadixDialog from "@radix-ui/react-dialog";
-import Image from "next/image";
 import { CloseIcon } from "~/components/close-icon";
 import { ExpandIcon } from "~/components/expand-icon";
 
@@ -9,7 +8,7 @@ export function DialogItem({ imageUrl, title, description, link }) {
       <RadixDialog.Trigger className="relative flex w-3/4 cursor-zoom-in flex-col items-center justify-between rounded-md border-white bg-white/40 sm:w-1/3 lg:w-1/4 xl:w-1/5">
         <div className="flex aspect-video w-full">
           <ExpandIcon className="absolute top-4 right-4 h-5 w-5" />
-          <Image
+          <img
             className="mx-auto h-full bg-center object-contain"
             src={imageUrl}
             alt=""
@@ -26,7 +25,7 @@ export function DialogItem({ imageUrl, title, description, link }) {
               <RadixDialog.Close className="absolute top-4 right-4">
                 <CloseIcon className="h-6 w-6" />
               </RadixDialog.Close>
-              <Image src={imageUrl} alt="" className="w-full max-w-sm" />
+              <img src={imageUrl} alt="" className="w-full max-w-sm" />
               <div className="flex flex-col space-y-5">
                 <RadixDialog.Title className="font-brand text-2xl font-bold">
                   {title}

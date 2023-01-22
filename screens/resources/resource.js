@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { cx } from "~/utils/cx";
 
 export function Resource({
@@ -14,11 +13,11 @@ export function Resource({
       <div
         className="bg-cover lg:hidden xl:grid"
         style={{
-          backgroundImage: `url(${imageUrl.src})`,
+          backgroundImage: `url(${imageUrl})`,
         }}
       >
         <div className="grid h-full w-full place-items-center rounded-l-2xl backdrop-blur-xl">
-          <Image
+          <img
             src={imageUrl}
             alt=""
             className={cx(

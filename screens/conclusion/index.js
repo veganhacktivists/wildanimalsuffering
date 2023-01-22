@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { HealthcareIcon } from "~/components/healthcare-icon";
 import { formatOrdinals } from "~/utils/number-format";
 
@@ -15,15 +14,15 @@ export function Conclusion({ visitors }) {
       className="relative min-h-screen overflow-hidden bg-woods bg-cover md:bg-woods-md md:bg-center"
     >
       <div className="mx-auto max-w-7xl px-10">
-        <Image
+        <img
           className="not-sr-only absolute top-52 max-w-lg md:right-32 lg:w-full"
-          src={mommaImage}
+          src={mommaImage.src}
           alt="Mother bear"
         />
 
-        <Image
+        <img
           className="not-sr-only absolute right-1/4 top-[600px] max-w-lg lg:w-full"
-          src={pupsImage}
+          src={pupsImage.src}
           alt="Bear pups"
         />
         <div className="py-30 relative flex max-w-3xl flex-col pt-36 text-white">
@@ -145,9 +144,9 @@ export function Conclusion({ visitors }) {
               target="_blank"
               className="flex justify-end"
             >
-              <Image
+              <img
                 height={128}
-                src={logoImage}
+                src={logoImage.src}
                 alt="Vegan Hacktivists logo"
               />
             </a>

@@ -10,7 +10,7 @@ export function Podcasts() {
   return (
     <>
       <Resource
-        imageUrl={knowingAnimalsImage}
+        imageUrl={knowingAnimalsImage.src}
         title="Reducing Wild Animal Suffering with Kyle Johannsen"
         links={[
           [
@@ -26,7 +26,7 @@ export function Podcasts() {
       </Resource>
 
       <Resource
-        imageUrl={wildnessImage}
+        imageUrl={wildnessImage.src}
         title="Who cares about wild animals? with Maia Laperle"
         links={[["Listen", "https://www.wildanimalinitiative.org/podcast"]]}
       >
@@ -37,7 +37,7 @@ export function Podcasts() {
       </Resource>
 
       <Resource
-        imageUrl={theRealityCheckImage}
+        imageUrl={theRealityCheckImage.src}
         title="Brian Tomasik on Wild Animal Suffering"
         links={[["Listen", "https://www.youtube.com/watch?v=ra1l7SDzvBY"]]}
       >
@@ -48,7 +48,7 @@ export function Podcasts() {
       </Resource>
 
       <Resource
-        imageUrl={eightyThousandHoursImage}
+        imageUrl={eightyThousandHoursImage.src}
         title="Persis Eskander on wild animal welfare and what, if anything, to do about it"
         links={[
           [
@@ -63,7 +63,7 @@ export function Podcasts() {
       </Resource>
 
       <Resource
-        imageUrl={philosophyImage}
+        imageUrl={philosophyImage.src}
         title="Kyle Johannsen, Wild Animal Ethics: The Moral and Political Problem of Wild Animal Suffering"
         links={[
           [

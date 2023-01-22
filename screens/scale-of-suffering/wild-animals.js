@@ -1,5 +1,4 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import Image from "next/image";
 import { useRef } from "react";
 
 import chartEarthWormsLabelsImage from "./images/chart-earth-worms-labels.png";
@@ -130,53 +129,53 @@ export function WildAnimals() {
       <div className="sticky top-0 grid h-screen place-items-center">
         <div className="grid p-4">
           <div className="col-start-1 row-start-1 grid place-items-center">
-            <Image
+            <img
               className="col-start-1 row-start-1"
-              src={chartWildAnimalsImage}
+              src={chartWildAnimalsImage.src}
               alt=""
             />
             <motion.div
               style={{ opacity: reptilesOpacity }}
               className="col-start-1 row-start-1"
             >
-              <Image src={chartReptilesImage} alt="" />
+              <img src={chartReptilesImage.src} alt="" />
             </motion.div>
             <motion.div
               style={{ opacity: fishOpacity }}
               className="col-start-1 row-start-1"
             >
-              <Image src={chartFishImage} alt="" />
+              <img src={chartFishImage.src} alt="" />
             </motion.div>
             <motion.div
               style={{ opacity: earthWormsOpacity }}
               className="col-start-1 row-start-1"
             >
-              <Image src={chartEarthWormsImage} alt="" />
+              <img src={chartEarthWormsImage.src} alt="" />
             </motion.div>
             <motion.div
               style={{ opacity: terrestrialArOpacity }}
               className="col-start-1 row-start-1"
             >
-              <Image src={chartTerrestrialArImage} alt="" />
+              <img src={chartTerrestrialArImage.src} alt="" />
             </motion.div>
 
             <motion.div
               style={{ opacity: fishLabelOpacity }}
               className="col-start-1 row-start-2 max-h-[10vh]"
             >
-              <Image src={chartFishLabelsImage} alt="" />
+              <img src={chartFishLabelsImage.src} alt="" />
             </motion.div>
             <motion.div
               style={{ opacity: earthWormsLabelOpacity }}
               className="col-start-1 row-start-2 max-h-[10vh]"
             >
-              <Image src={chartEarthWormsLabelsImage} alt="" />
+              <img src={chartEarthWormsLabelsImage.src} alt="" />
             </motion.div>
             <motion.div
               style={{ opacity: terrestrialArOpacity }}
               className="col-start-1 row-start-2 max-h-[10vh]"
             >
-              <Image src={chartTerrestrialArLabelsImage} alt="" />
+              <img src={chartTerrestrialArLabelsImage.src} alt="" />
             </motion.div>
           </div>
         </div>

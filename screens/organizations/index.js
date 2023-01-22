@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import Image from "next/image";
 import {
   BackgroundEffect,
   useBackgroundEffect,
@@ -38,7 +37,7 @@ export function Organizations() {
         <div className="mx-auto grid w-full max-w-sm gap-12 md:max-w-5xl md:grid-cols-2 xl:max-w-6xl">
           <Organization
             name="Wild Animal Initiative"
-            imageUrl={wildAnimalInitiativeImage}
+            imageUrl={wildAnimalInitiativeImage.src}
             links={[
               ["Visit", "https://www.wildanimalinitiative.org/"],
               ["Donate", "https://www.wildanimalinitiative.org/donate"],
@@ -51,7 +50,7 @@ export function Organizations() {
           </Organization>
           <Organization
             name="Animal Ethics"
-            imageUrl={animalEthicsImage}
+            imageUrl={animalEthicsImage.src}
             links={[
               ["Visit", "https://www.animal-ethics.org/"],
               ["Donate", "https://www.animal-ethics.org/support-us"],
@@ -64,7 +63,7 @@ export function Organizations() {
           </Organization>
           <Organization
             name="Rethink Priorities"
-            imageUrl={rethinkPrioritiesImage}
+            imageUrl={rethinkPrioritiesImage.src}
             links={[
               ["Visit", "https://rethinkpriorities.org/"],
               ["Donate", "https://rethinkpriorities.org/donate"],
@@ -78,7 +77,7 @@ export function Organizations() {
           </Organization>
           <Organization
             name="Faunalytics"
-            imageUrl={faunalyticsImage}
+            imageUrl={faunalyticsImage.src}
             links={[
               ["Visit", "https://faunalytics.org/"],
               ["Donate", "https://faunalytics.org/donate"],
@@ -125,9 +124,9 @@ export function Organizations() {
         </div>
       </div>
 
-      <Image
+      <img
         className="not-sr-only pointer-events-none absolute bottom-0 right-0 hidden max-h-96 w-[20vw] lg:block"
-        src={frogImage}
+        src={frogImage.src}
         alt=""
       />
     </section>
