@@ -1,8 +1,15 @@
+const { fontFamily } = require("tailwindcss/defaultTheme");
+
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   future: {
     hoverOnlyWhenSupported: true,
   },
-  content: ["./src/**/*.{js,jsx,ts,tsx,css,html}"],
+  content: [
+    "./components/**/*.{js,ts,jsx,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./screens/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     extend: {
       animation: {
@@ -24,28 +31,26 @@ module.exports = {
         "4/3": "4 / 3",
       },
       backgroundImage: {
-        abyss: "url('/public/images/scale-of-suffering/abyss.jpg')",
-        "ant-hill": "url('/public/images/how-to-help/ant-hill.png')",
-        deer: "url('/public/images/types-of-suffering/grass-and-deer.png')",
-        "dirt-road": "url('/public/images/population-dynamics/dirt-road.jpg')",
-        forest: "url('/public/images/how-to-help/forest.jpg')",
-        "fog-1": "url('/public/images/introduction/fog-1.png')",
-        "fog-2": "url('/public/images/introduction/fog-2.png')",
-        frog: "url('/public/images/organizations/frog.png')",
-        hedgehog:
-          "url('/public/images/common-objections/grass-and-hedgehog.png')",
-        leaf: "url('/public/images/organizations/leaf.png')",
-        leaves: "url('/public/images/how-to-help/leaves.png')",
-        mud: "url('/public/images/organizations/mud-bg-color.jpg')",
-        resource: "url('/public/images/other-resources/resource-bg.png')",
-        sand: "url('/public/images/types-of-suffering/sand-bg-color.jpg')",
-        savanna: "url('/public/images/introduction/savanna.jpg')",
-        "savanna-md": "url('/public/images/introduction/savanna-md.jpg')",
-        woods: "url('/public/images/conclusion/woods.jpg')",
-        "woods-md": "url('/public/images/conclusion/woods-md.jpg')",
-        sky: "url('/public/images/videos/sky.jpg')",
-        "tree-and-birds":
-          "url('/public/images/organizations/tree-and-birds.png')",
+        abyss: "url('/images/abyss.jpg')",
+        "ant-hill": "url('/images/ant-hill.png')",
+        deer: "url('/images/grass-and-deer.png')",
+        "dirt-road": "url('/images/dirt-road.jpg')",
+        forest: "url('/images/forest.jpg')",
+        "fog-2": "url('/images/fog-2.png')",
+        "fog-1": "url('/images/fog-1.png')",
+        frog: "url('/images/frog.png')",
+        hedgehog: "url('/images/grass-and-hedgehog.png')",
+        leaf: "url('/images/leaf.png')",
+        leaves: "url('/images/leaves.png')",
+        mud: "url('/images/mud-bg-color.jpg')",
+        resource: "url('/images/resource-bg.png')",
+        sand: "url('/images/sand-bg-color.jpg')",
+        savanna: "url('/images/savanna.jpg')",
+        "savanna-md": "url('/images/savanna-md.jpg')",
+        woods: "url('/images/woods.jpg')",
+        "woods-md": "url('/images/woods-md.jpg')",
+        sky: "url('/images/sky.jpg')",
+        "tree-and-birds": "url('/images/tree-and-birds.png')",
       },
       boxShadow: {
         glow: "0 0 3px 1px #fff",
@@ -78,16 +83,16 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: ["Poppins", "sans-serif"],
-        brand: ["Asap Condensed", "sans-serif"],
+        sans: ["var(--font-poppins)", ...fontFamily.sans],
+        brand: ["var(--font-asap-condensed)", ...fontFamily.sans],
       },
       keyframes: {
         "slide-bg-right": {
           from: {
-            backgroundPosition: "0px 0px",
+            backgroundPosition: "0 0",
           },
           to: {
-            backgroundPosition: "1000px 0px",
+            backgroundPosition: "1000px 0",
           },
         },
         "slide-down": {
@@ -132,6 +137,7 @@ module.exports = {
   },
   plugins: [
     require("@tailwindcss/line-clamp"),
+    require("tailwind-scrollbar"),
     require("./lib/tailwindcss-animation-delay-plugin"),
     require("./lib/tailwindcss-radix-plugin"),
   ],
