@@ -1,3 +1,6 @@
+import { GetStaticProps } from "next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { Header } from "~/components/header";
 import { CommonObjections } from "~/screens/common-objections";
 import { Conclusion } from "~/screens/conclusion";
 import { HowToHelp } from "~/screens/how-to-help";
@@ -15,16 +18,27 @@ export default function Home() {
 
   return (
     <>
-      <Introduction />
-      <ScaleOfSuffering />
-      <TypesOfSuffering />
-      <PopulationDynamics />
-      <Videos />
-      <CommonObjections />
-      <HowToHelp />
-      <Organizations />
-      <Resources />
-      <Conclusion visitors={visitors} />
+      <Header />
+      <main>
+        <Introduction />
+        <ScaleOfSuffering />
+        <TypesOfSuffering />
+        <PopulationDynamics />
+        <Videos />
+        <CommonObjections />
+        <HowToHelp />
+        <Organizations />
+        <Resources />
+        <Conclusion visitors={visitors} />
+      </main>
     </>
   );
 }
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale ?? "en", ["common"])),
+    },
+  };
+};

@@ -1,8 +1,12 @@
-import { Html, Head, Main, NextScript } from "next/document";
+import { DocumentProps, Head, Html, Main, NextScript } from "next/document";
+import i18nextConfig from "../next-i18next.config";
 
-export default function Document() {
+export default function Document(props: DocumentProps) {
+  const currentLocale =
+    props.__NEXT_DATA__.locale ?? i18nextConfig.i18n.defaultLocale;
+
   return (
-    <Html lang="en" className="scroll-smooth">
+    <Html lang={currentLocale} className="scroll-smooth">
       <Head>
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />

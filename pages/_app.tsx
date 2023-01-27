@@ -1,7 +1,7 @@
 import { Asap_Condensed, Poppins } from "@next/font/google";
+import { appWithTranslation } from "next-i18next";
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import { Header } from "~/components/header";
 import "~/styles/globals.css";
 
 // Fonts
@@ -16,7 +16,7 @@ const poppins = Poppins({
   weight: ["300", "400", "500", "700", "900"],
 });
 
-export default function App({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <style jsx global>{`
@@ -31,10 +31,9 @@ export default function App({ Component, pageProps }: AppProps) {
           Wild Animal Suffering — The scale, the problem, and why it matters
         </title>
       </Head>
-      <Header />
-      <main>
-        <Component {...pageProps} />
-      </main>
+      <Component {...pageProps} />
     </>
   );
 }
+
+export default appWithTranslation(App);
