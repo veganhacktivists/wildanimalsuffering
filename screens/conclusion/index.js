@@ -1,4 +1,4 @@
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "react-i18next";
 import { HealthcareIcon } from "~/components/healthcare-icon";
 import { formatOrdinals } from "~/utils/number-format";
 
@@ -7,7 +7,7 @@ import pupsImage from "./images/pups.png";
 import logoImage from "./images/vh-logo.png";
 
 export function Conclusion({ visitors }) {
-  const { t } = useTranslation("common");
+  const { t } = useTranslation();
   const visitorsFormatted = formatOrdinals(visitors);
 
   return (

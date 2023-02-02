@@ -1,8 +1,8 @@
 import { Asap_Condensed, Poppins } from "@next/font/google";
-import { appWithTranslation } from "next-i18next";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import "~/styles/globals.css";
+import i18n from "../i18n";
 
 // Fonts
 const asapCondensed = Asap_Condensed({
@@ -16,7 +16,9 @@ const poppins = Poppins({
   weight: ["300", "400", "500", "700", "900"],
 });
 
-function App({ Component, pageProps }: AppProps) {
+export default function App({ Component, pageProps }: AppProps) {
+  i18n.changeLanguage(pageProps.locale ?? "en");
+
   return (
     <>
       <style jsx global>{`
@@ -35,5 +37,3 @@ function App({ Component, pageProps }: AppProps) {
     </>
   );
 }
-
-export default appWithTranslation(App);

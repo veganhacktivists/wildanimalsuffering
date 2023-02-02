@@ -1,8 +1,8 @@
-import { Trans, useTranslation } from "next-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import { Navigation } from "~/components/navigation";
 
 export function Header() {
-  const { t } = useTranslation("common");
+  const { t } = useTranslation();
 
   return (
     <header className="absolute left-0 z-20 flex w-full items-center gap-8 p-10 text-gray md:text-white">

@@ -24,7 +24,6 @@
     "framer-motion": "^7.10.3",
     "i18next": "^22.4.9",
     "next": "13.0.7",
-    "next-i18next": "^13.0.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-i18next": "^12.1.4",
