@@ -1,8 +1,10 @@
-import { Html, Head, Main, NextScript } from "next/document";
+import { DocumentProps, Head, Html, Main, NextScript } from "next/document";
 
-export default function Document() {
+export default function Document(props: DocumentProps) {
+  const currentLocale = props.__NEXT_DATA__.props.pageProps.locale ?? "en";
+
   return (
-    <Html lang="en" className="scroll-smooth">
+    <Html lang={currentLocale} className="scroll-smooth">
       <Head>
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />

@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { HealthcareIcon } from "~/components/healthcare-icon";
 import { formatOrdinals } from "~/utils/number-format";
 
@@ -6,6 +7,7 @@ import pupsImage from "./images/pups.png";
 import logoImage from "./images/vh-logo.png";
 
 export function Conclusion({ visitors }) {
+  const { t } = useTranslation();
   const visitorsFormatted = formatOrdinals(visitors);
 
   return (
@@ -340,7 +342,7 @@ export function Conclusion({ visitors }) {
           {visitors > 0 && (
             <div className="col-span-4 flex flex-col gap-2 md:col-span-3 lg:flex-row lg:gap-10">
               <h4 className="w-48 whitespace-nowrap text-lg font-bold">
-                Thank you!
+                {t("conclusion.thanks")}
               </h4>
               <p className="flex-1 leading-relaxed">
                 You&apos;re our {visitorsFormatted} visitor, thanks for reading!
