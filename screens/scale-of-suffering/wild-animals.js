@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { Trans, useTranslation } from "react-i18next";
 
 import chartEarthWormsLabelsImage from "./images/chart-earth-worms-labels.png";
 import chartEarthWormsImage from "./images/chart-earth-worms.png";
@@ -19,6 +20,7 @@ const earthWormsPos = [1.5 * screen, 1.7 * screen];
 const terrestrialArPos = [2 * screen, 2.5 * screen];
 
 export function WildAnimals() {
+  const { t } = useTranslation();
   const scrollRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: scrollRef,
@@ -71,40 +73,42 @@ export function WildAnimals() {
         <div className="flex h-[250vh] flex-col">
           <div className="sticky top-0 flex h-screen flex-col justify-center space-y-16 py-16 text-lg text-white">
             <p>
-              However… in the wild:
-              <br />
-              <strong>For every human</strong>, there are between:
+              <Trans t={t} i18nKey="scale_of_suffering.in_the_wild">
+                However… in the wild:
+                <br />
+                <strong>For every human</strong>, there are between:
+              </Trans>
             </p>
             <ul className="flex flex-1 flex-col justify-center space-y-2 text-4xl">
               <motion.li
                 className="font-brand text-[#b0cbd2]"
                 style={{ opacity: wildBirdsOpacity, y: wildBirdsTextY }}
               >
-                10-50 wild birds
+                {t("scale_of_suffering.wild_birds")}
               </motion.li>
               <motion.li
                 className="font-brand text-[#85c5c8]"
                 style={{ opacity: wildBirdsOpacity, y: wildBirdsTextY }}
               >
-                10-100 wild mammals
+                {t("scale_of_suffering.wild_mammals")}
               </motion.li>
               <motion.li
                 className="font-brand text-[#afcb83]"
                 style={{ opacity: reptilesOpacity, y: reptilesTextY }}
               >
-                10-10,000 reptiles
+                {t("scale_of_suffering.reptiles_and_amphibians")}
               </motion.li>
               <motion.li
                 className="font-brand text-[#c79d5e]"
                 style={{ opacity: fishOpacity, y: fishTextY }}
               >
-                1,000 - 100,000 fish
+                {t("scale_of_suffering.fish")}
               </motion.li>
               <motion.li
                 className="font-brand text-[#d68a9c]"
                 style={{ opacity: earthWormsOpacity, y: earthWormsTextY }}
               >
-                10,000 - 10⁶ earthworms
+                {t("scale_of_suffering.earthworms")}
               </motion.li>
               <motion.li
                 className="font-brand text-[#a89cf6]"
@@ -113,15 +117,12 @@ export function WildAnimals() {
                   y: terrestrialArTextY,
                 }}
               >
-                600,000 - 7*10⁸ insects
+                {t("scale_of_suffering.insects")}
               </motion.li>
             </ul>
             <div className="max-w-md space-y-4">
-              <p>…in existence at any moment.</p>
-              <p>
-                This means that the vast majority of individuals are wild
-                animals. The scale is truly mind boggling.
-              </p>
+              <p>{t("scale_of_suffering.in_existence")}</p>
+              <p>{t("scale_of_suffering.conclusion")}</p>
             </div>
           </div>
         </div>

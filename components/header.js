@@ -36,7 +36,7 @@ export function Header() {
           width={80}
           height={80}
           src="/images/logo-vh.svg"
-          alt="Vegan Hacktivists Logo"
+          alt={t("common.logo.alt")}
         />
       </a>
     </header>

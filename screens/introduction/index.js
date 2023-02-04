@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Trans, useTranslation } from "react-i18next";
 import {
   BackgroundEffect,
   useBackgroundEffect,
@@ -8,12 +9,13 @@ import { ScrollDownIndicator } from "~/components/scroll-down-indicator";
 import elephantsImage from "./images/elephants.png";
 
 export function Introduction() {
+  const { t } = useTranslation();
   const { screenRef, effectOpacity } = useBackgroundEffect();
 
   return (
     <section
       ref={screenRef}
-      id="introduction"
+      id={t("introduction.id")}
       className="flex min-h-screen items-end bg-black bg-savanna bg-[length:100%] bg-[center_-100px] bg-no-repeat md:bg-[center_-50vw] lg:items-stretch lg:bg-savanna-md lg:bg-cover lg:bg-center"
     >
       <motion.div style={{ opacity: effectOpacity }}>
@@ -34,35 +36,37 @@ export function Introduction() {
               <div className="flex flex-col space-y-10 px-10 py-10 lg:py-0">
                 <h1 className="flex flex-col space-y-4 text-center font-brand lg:text-left">
                   <span className="text-5xl leading-none text-white lg:text-6xl">
-                    Wild Animal Suffering
+                    {t("common.name")}
                   </span>
                   <span className="text-2xl text-primary lg:text-3xl">
-                    ...and why it matters
+                    {t("introduction.tagline")}
                   </span>
                 </h1>
                 <div className="grid gap-10 text-lg text-white lg:pb-10">
-                  <p>
-                    When thinking about nature and the lives of wild animals, we
-                    often picture dolphins swimming in the ocean or elephants
-                    and lions roaming in the savannah. We mostly picture large
-                    adult animals living lives characterized by freedom.
-                    However, this rose-tinted view of nature doesn&apos;t even
-                    come close to representing the lives of most wild animals.
-                  </p>
-                  <p>
-                    In reality, the life of most wild animals is characterized
-                    not by freedom, but by struggle. They constantly deal with
-                    harsh weather, starvation, disease, and injuries, and much
-                    like a dog or a human would suffer in their position, they
-                    suffer as well.
-                  </p>
+                  <Trans t={t} i18nKey="introduction.copy">
+                    <p>
+                      When thinking about nature and the lives of wild animals,
+                      we often picture dolphins swimming in the ocean or
+                      elephants and lions roaming in the savannah. We mostly
+                      picture large adult animals living lives characterized by
+                      freedom. However, this rose-tinted view of nature
+                      doesn&apos;t even come close to representing the lives of
+                      most wild animals.
+                    </p>
+                    <p>
+                      In reality, the life of most wild animals is characterized
+                      not by freedom, but by struggle. They constantly deal with
+                      harsh weather, starvation, disease, and injuries, and much
+                      like a dog or a human would suffer in their position, they
+                      suffer as well.
+                    </p>
+                  </Trans>
                 </div>
               </div>
             </div>
           </div>
           <p className="flex flex-col rounded-lg bg-black px-10 text-left text-lg text-white lg:self-center lg:bg-white/10 lg:p-3 lg:pl-8 lg:pr-8 lg:text-center">
-            The following is an overview of wild animal suffering, why it
-            matters, and what we can do to help.
+            {t("introduction.overview")}
           </p>
         </div>
 
