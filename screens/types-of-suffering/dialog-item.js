@@ -1,8 +1,11 @@
 import * as RadixDialog from "@radix-ui/react-dialog";
+import { useTranslation } from "react-i18next";
 import { CloseIcon } from "~/components/close-icon";
 import { ExpandIcon } from "~/components/expand-icon";
 
 export function DialogItem({ imageUrl, title, description, link }) {
+  const { t } = useTranslation();
+
   return (
     <RadixDialog.Root>
       <RadixDialog.Trigger className="relative flex w-3/4 cursor-zoom-in flex-col items-center justify-between rounded-md border-white bg-white/40 sm:w-1/3 lg:w-1/4 xl:w-1/5">
@@ -38,12 +41,12 @@ export function DialogItem({ imageUrl, title, description, link }) {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Learn more
+                    {t("types_of_suffering.dialog_learn_more")}
                   </a>
                 </div>
                 <div>
                   <RadixDialog.Close className="underline md:hidden">
-                    Go back
+                    {t("types_of_suffering.dialog_go_back")}
                   </RadixDialog.Close>
                 </div>
               </div>
