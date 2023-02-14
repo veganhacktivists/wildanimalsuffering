@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { Trans, useTranslation } from "react-i18next";
 
 import bottomRightGrassImage from "./images/bottom-right-grass.png";
 import chickImage from "./images/chick.png";
@@ -7,6 +8,7 @@ import duckImage from "./images/duck.png";
 import topLeftGrassImage from "./images/top-left-grass.png";
 
 export function PopulationDynamics() {
+  const { t } = useTranslation();
   const scrollRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: scrollRef,
@@ -100,13 +102,19 @@ export function PopulationDynamics() {
       </div>
 
       <div className="relative mx-auto flex w-full max-w-7xl flex-1 flex-col gap-8 px-8">
-        <h2 className="font-brand text-4xl text-white">Population Dynamics</h2>
+        <h2 className="font-brand text-4xl text-white">
+          {t("population_dynamics.name")}
+        </h2>
         <div className="flex flex-col gap-8">
           <p className="text-lg text-white sm:max-w-sm md:max-w-xl lg:max-w-2xl">
-            Wild animals often have many children, but for their populations to
-            remain stable, on average each parent can only have two offspring
-            that reach adulthood.{" "}
-            <strong>This means that the majority of animals die young.</strong>
+            <Trans t={t} i18nKey="population_dynamics.description">
+              Wild animals often have many children, but for their populations
+              to remain stable, on average each parent can only have two
+              offspring that reach adulthood.
+              <strong>
+                This means that the majority of animals die young.
+              </strong>
+            </Trans>
           </p>
           <div>
             <a
@@ -115,7 +123,7 @@ export function PopulationDynamics() {
               target="_blank"
               rel="noreferrer"
             >
-              Learn more
+              {t("population_dynamics.learn_more")}
             </a>
           </div>
         </div>
