@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { Resource } from "./resource";
 
 import humanityImpactImage from "./images/blogs/humanity-impact.jpg";
@@ -10,127 +11,105 @@ import wildFrontierImage from "./images/blogs/wild-frontier.webp";
 import wildfiresImage from "./images/blogs/wildfires.jpg";
 
 export function Blogs() {
+  const { t } = useTranslation();
+
   return (
     <>
       <Resource
         imageUrl={waysToReduceImage.src}
-        title="Ways To Reduce Wild Animal Suffering"
+        title={t("resources.blogs.ways_to_reduce.title")}
         links={[
           [
-            "Read",
+            t("resources.blogs.cta"),
             "https://givingcompass.org/article/ways-to-reduce-wild-animal-suffering/",
           ],
         ]}
       >
-        If we hope to help the approximately trillions of vertebrates and
-        quintillions of invertebrates in the wild, we need to be prepared for a
-        long, uphill path to success. Wild animal suffering (WAS) is not just
-        contentious; it&apos;s also extremely complex.
+        {t("resources.blogs.ways_to_reduce.description")}
       </Resource>
       <Resource
         imageUrl={potentialSolutionsImage.src}
-        title="Wild Animal Suffering: Potential Solutions From CRISPR"
+        title={t("resources.blogs.potential_solutions.title")}
         links={[
           [
-            "Read",
+            t("resources.blogs.cta"),
             "https://faunalytics.org/wild-animal-suffering-potential-solutions-from-crispr/",
           ],
         ]}
       >
-        Most animal activists have no problem with intervention in nature in
-        order to prevent or reduce harm caused by humans. Breeding programs to
-        help species&apos; recovery from poaching or habitat loss, for example,
-        are relatively uncontroversial practices.
+        {t("resources.blogs.potential_solutions.description")}
       </Resource>
       <Resource
         imageUrl={relevanceImage.src}
-        title="The Relevance of Wild Animal Suffering"
+        title={t("resources.blogs.relevance.title")}
         links={[
           [
-            "Read",
+            t("resources.blogs.cta"),
             "https://centerforreducingsuffering.org/sentience-politics-series-introduction/the-relevance-of-wild-animal-suffering/",
           ],
         ]}
       >
-        Society has become increasingly aware of the suffering that nonhuman
-        animals experience at the hands of humans. Many are aware of the
-        shocking realities of factory farming, or have seen terrible videos and
-        images of animals being neglected and abused.
+        {t("resources.blogs.relevance.description")}
       </Resource>
       <Resource
         imageUrl={humanityImpactImage.src}
-        title="Humanity's Impact on Wild-Animal Suffering"
+        title={t("resources.blogs.humanity_impact.title")}
         links={[
           [
-            "Read",
+            t("resources.blogs.cta"),
             "https://effectivethesis.org/humanitys-impact-wild-animal-suffering/",
           ],
         ]}
       >
-        There is a chance that right now many trillions or quintillions of wild
-        animals are experiencing lives that include terrible suffering. For many
-        animals the threat of predation is nearly constant, which, in more
-        brutal terms, is the prospect of experiencing the horror and pain of
-        being eaten alive.
+        {t("resources.blogs.humanity_impact.description")}
       </Resource>
       <Resource
         imageUrl={importanceImage.src}
-        title="The Importance of Wild-Animal Suffering"
+        title={t("resources.blogs.importance.title")}
         links={[
           [
-            "Read",
+            t("resources.blogs.cta"),
             "https://longtermrisk.org/the-importance-of-wild-animal-suffering/",
           ],
         ]}
       >
-        The number of wild animals vastly exceeds that of animals on factory
-        farms, in laboratories, or kept as pets. Therefore, animal advocates
-        should consider focusing their efforts to raise concern about the
-        suffering that occurs in the natural environment.
+        {t("resources.blogs.importance.description")}
       </Resource>
       <Resource
         imageUrl={whyItMattersImage.src}
-        title="Why wild animal suffering matters"
+        title={t("resources.blogs.why_it_matters.title")}
         links={[
           [
-            "Read",
+            t("resources.blogs.cta"),
             "https://www.animal-ethics.org/wild-animal-suffering-matters/",
           ],
         ]}
       >
-        Many people have a rosy view of the wild. Some think nonhuman animals
-        live in some kind of paradise in the wild. However, animals living in
-        nature have lives that are far from idyllic, and most of them have to
-        deal with the reality of constant threat of tremendous suffering.
+        {t("resources.blogs.why_it_matters.description")}
       </Resource>
       <Resource
         imageUrl={wildfiresImage.src}
-        title="Wildfires And Animal Protection: Towards Better Intervention Strategies"
+        title={t("resources.blogs.wildfires.title")}
         links={[
           [
-            "Read",
+            t("resources.blogs.cta"),
             "https://faunalytics.org/wildfires-and-animal-protection-towards-better-intervention-strategies/",
           ],
         ]}
       >
-        Beyond the human suffering caused by fires, they also impact countless
-        wild animals by causing distress, injuries, and a wide range of
-        physiological and behavioral changes.
+        {t("resources.blogs.wildfires.description")}
       </Resource>
       <Resource
         imageUrl={wildFrontierImage.src}
-        title="The Wild Frontier of Animal Welfare"
+        title={t("resources.blogs.wild_frontier.title")}
         links={[
           [
-            "Read",
+            t("resources.blogs.cta"),
             "https://www.vox.com/the-highlight/22325435/animal-welfare-wild-animals-movement",
           ],
         ]}
       >
-        The most emotionally difficult moment in Mal Graham&apos;s life was when
-        five snakes in her lab died. They had started a doctoral program
-        studying jumping and flying snakes. There are several species of snakes
-        that not only live in trees but can leap from one to the next.
+        {t("resources.blogs.wild_frontier.description")}
       </Resource>
     </>
   );

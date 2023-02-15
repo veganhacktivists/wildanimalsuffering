@@ -1,8 +1,9 @@
 import * as RadixTabs from "@radix-ui/react-tabs";
-import { Websites } from "./websites";
+import { useTranslation } from "react-i18next";
 import { Blogs } from "./blogs";
 import { Books } from "./books";
 import { Podcasts } from "./podcasts";
+import { Websites } from "./websites";
 
 const ResourceTypes = {
   WEBSITES: "websites",
@@ -28,7 +29,7 @@ function MobileResourceList({ title, children }) {
       <h3 className="px-8 text-center font-brand text-3xl text-white">
         {title}
       </h3>
-      <div className="scrollbar-none flex snap-x snap-mandatory scroll-px-8 gap-8 overflow-x-scroll px-8">
+      <div className="flex snap-x snap-mandatory scroll-px-8 gap-8 overflow-x-scroll px-8 scrollbar-none">
         {children}
       </div>
     </div>
@@ -44,9 +45,11 @@ function TabContent({ value, children }) {
 }
 
 export function Resources() {
+  const { t } = useTranslation();
+
   return (
     <RadixTabs.Root
-      id="resources"
+      id={t("resources.id")}
       className="relative flex min-h-screen items-center bg-sand bg-cover py-12 lg:items-start lg:py-24"
       defaultValue={ResourceTypes.WEBSITES}
       orientation="vertical"
