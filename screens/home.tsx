@@ -10,8 +10,13 @@ import { ScaleOfSuffering } from "~/screens/scale-of-suffering";
 import { TypesOfSuffering } from "~/screens/types-of-suffering";
 import { Videos } from "~/screens/videos";
 import { useVisitorStats } from "~/utils/use-visitor-stats";
+import type { resources } from "../i18n";
 
-export default function Home() {
+type Props = {
+  locale?: keyof typeof resources;
+};
+
+export default function Home({ locale }: Props) {
   const visitors = useVisitorStats();
 
   return (
@@ -27,7 +32,7 @@ export default function Home() {
         <HowToHelp />
         <Organizations />
         <Resources />
-        <Conclusion visitors={visitors} />
+        <Conclusion locale={locale} visitors={visitors} />
       </main>
     </>
   );

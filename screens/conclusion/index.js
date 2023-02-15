@@ -1,4 +1,4 @@
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import { HealthcareIcon } from "~/components/healthcare-icon";
 import { formatOrdinals } from "~/utils/number-format";
 
@@ -6,53 +6,54 @@ import mommaImage from "./images/momma.png";
 import pupsImage from "./images/pups.png";
 import logoImage from "./images/vh-logo.png";
 
-export function Conclusion({ visitors }) {
+export function Conclusion({ locale, visitors }) {
   const { t } = useTranslation();
-  const visitorsFormatted = formatOrdinals(visitors);
+  const visitorsFormatted = formatOrdinals({ n: visitors, t, locale });
 
   return (
     <section
-      id="conclusion"
+      id={t("conclusion.id")}
       className="relative min-h-screen overflow-hidden bg-woods bg-cover md:bg-woods-md md:bg-center"
     >
       <div className="mx-auto max-w-7xl px-10">
         <img
           className="not-sr-only absolute top-52 max-w-lg md:right-32 lg:w-full"
           src={mommaImage.src}
-          alt="Mother bear"
+          alt=""
         />
 
         <img
           className="not-sr-only absolute right-1/4 top-[600px] max-w-lg lg:w-full"
           src={pupsImage.src}
-          alt="Bear pups"
+          alt=""
         />
         <div className="py-30 relative flex max-w-3xl flex-col pt-36 text-white">
           <h2 className="mb-4 font-brand text-5xl leading-snug">
-            Together, we can make life better for wild animals.
+            {t("conclusion.heading")}
           </h2>
-          <p className="font-lg">
-            The increasing moral concern for animals in recent years is a
-            welcome development. It is becoming increasingly rare to find
-            individuals who are indifferent to animal suffering. We understand
-            that suffering is a negative experience for any individual who
-            experiences it, regardless of their species or location, whether
-            they are in a house, farm, or forest. Their suffering matters. It
-            matters to them. And it should matter to us.
+          <Trans t={t} i18nKey="conclusion.text">
+            <p className="font-lg">
+              The increasing moral concern for animals in recent years is a
+              welcome development. It is becoming increasingly rare to find
+              individuals who are indifferent to animal suffering. We understand
+              that suffering is a negative experience for any individual who
+              experiences it, regardless of their species or location, whether
+              they are in a house, farm, or forest. Their suffering matters. It
+              matters to them. And it should matter to us.
+            </p>
+            <p className="font-lg z-10 mt-6">
+              If you care about wild animals, we encourage you to join our
+              mission to improve their lives. There is a lot to learn about the
+              conditions that wild animals face. This page is just a brief
+              overview of the issue. The reality is that many animals are in
+              desperate need of help, and people like you have the power to make
+              a difference. We hope you will choose to take action and help us
+              in our efforts.
+            </p>
+          </Trans>
+          <p className="z-10 mt-10 font-brand text-4xl text-primary">
+            {t("conclusion.thank_you")}
           </p>
-          <br />
-          <p className="font-lg z-10">
-            If you care about wild animals, we encourage you to join our mission
-            to improve their lives. There is a lot to learn about the conditions
-            that wild animals face. This page is just a brief overview of the
-            issue. The reality is that many animals are in desperate need of
-            help, and people like you have the power to make a difference. We
-            hope you will choose to take action and help us in our efforts.
-          </p>
-          <br />
-          <h3 className="z-10 mt-10 font-brand text-4xl text-primary">
-            Thank you.
-          </h3>
         </div>
       </div>
 
@@ -63,12 +64,11 @@ export function Conclusion({ visitors }) {
               <HealthcareIcon className="my-auto" />
               <div className="text-center md:text-left">
                 <h4 className="mb-4 text-xl font-bold text-white md:mb-4">
-                  Please consider supporting our work!
+                  {t("conclusion.support.heading")}
                 </h4>
-                <span className="text-md font-light text-white">
-                  This website would not be possible without your support. Thank
-                  you!
-                </span>
+                <p className="text-md font-light text-white">
+                  {t("conclusion.support.description")}
+                </p>
               </div>
             </div>
             <a
@@ -77,7 +77,7 @@ export function Conclusion({ visitors }) {
               rel="noreferrer"
               className="self-center whitespace-nowrap rounded-full bg-primary px-5 py-1 text-xl font-medium md:text-lg"
             >
-              Support Us
+              {t("conclusion.support.cta")}
             </a>
           </div>
         </div>
@@ -86,56 +86,58 @@ export function Conclusion({ visitors }) {
         <div className="grid grid-cols-4 gap-10 text-white">
           <div className="col-span-4 flex flex-col gap-2 md:col-span-3 lg:flex-row lg:gap-10">
             <h4 className="w-48 whitespace-nowrap text-lg font-bold">
-              Special thanks
+              {t("conclusion.special_thanks.label")}
             </h4>
             <p className="flex-1 leading-relaxed">
-              To our friends and advisors from{" "}
-              <a
-                className="underline"
-                href="https://www.animal-ethics.org/rescuing-trapped-animals/"
-                rel="noreferrer"
-                target="_blank"
-              >
-                Wild Animal Initiative
-              </a>
-              ,{" "}
-              <a
-                className="underline"
-                href="https://www.animal-ethics.org/rescuing-trapped-animals/"
-                rel="noreferrer"
-                target="_blank"
-              >
-                Animal Ethics
-              </a>{" "}
-              and{" "}
-              <a
-                className="underline"
-                href="https://www.animal-ethics.org/rescuing-trapped-animals/"
-                rel="noreferrer"
-                target="_blank"
-              >
-                Rethink Priorities
-              </a>
-              . Special thanks to{" "}
-              <a
-                className="underline"
-                href="https://www.youtube.com/@HumaneHancock"
-                rel="noreferrer"
-                target="_blank"
-              >
-                Jack Hancock
-              </a>{" "}
-              for written content and{" "}
-              <a
-                className="underline"
-                href="https://katerodman.com/"
-                rel="noreferrer"
-                target="_blank"
-              >
-                Kate Rodman
-              </a>{" "}
-              for the wonderful illustrations. This website would not have been
-              possible without everyone&apos;s dedication and support!
+              <Trans t={t} i18nKey="conclusion.special_thanks.description">
+                To our friends and advisors from{" "}
+                <a
+                  className="underline"
+                  href="https://www.animal-ethics.org/rescuing-trapped-animals/"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  Wild Animal Initiative
+                </a>
+                ,{" "}
+                <a
+                  className="underline"
+                  href="https://www.animal-ethics.org/rescuing-trapped-animals/"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  Animal Ethics
+                </a>{" "}
+                and{" "}
+                <a
+                  className="underline"
+                  href="https://www.animal-ethics.org/rescuing-trapped-animals/"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  Rethink Priorities
+                </a>
+                . Special thanks to{" "}
+                <a
+                  className="underline"
+                  href="https://www.youtube.com/@HumaneHancock"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  Jack Hancock
+                </a>{" "}
+                for written content and{" "}
+                <a
+                  className="underline"
+                  href="https://katerodman.com/"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  Kate Rodman
+                </a>{" "}
+                for the wonderful illustrations. This website would not have
+                been possible without everyone&apos;s dedication and support!
+              </Trans>
             </p>
           </div>
 
@@ -149,13 +151,15 @@ export function Conclusion({ visitors }) {
               <img
                 height={128}
                 src={logoImage.src}
-                alt="Vegan Hacktivists logo"
+                alt={t("common.logo.alt")}
               />
             </a>
           </div>
 
           <div className="col-span-4 flex flex-col gap-2 md:col-span-3 lg:flex-row lg:gap-10">
-            <h4 className="w-48 text-lg font-bold">Credits and sources</h4>
+            <h4 className="w-48 text-lg font-bold">
+              {t("conclusion.credits.label")}
+            </h4>
             <ol className="flex-1 list-inside list-decimal leading-relaxed">
               <li>
                 <a
@@ -164,7 +168,7 @@ export function Conclusion({ visitors }) {
                   rel="noreferrer"
                   target="_blank"
                 >
-                  How many wild animals are there?
+                  {t("conclusion.credits.how_many_wild_animals.label")}
                 </a>
               </li>
               <li>
@@ -174,7 +178,7 @@ export function Conclusion({ visitors }) {
                   rel="noreferrer"
                   target="_blank"
                 >
-                  Malnutrition, hunger and thirst in wild animals
+                  {t("conclusion.credits.malnutrition.label")}
                 </a>
               </li>
               <li>
@@ -184,7 +188,7 @@ export function Conclusion({ visitors }) {
                   rel="noreferrer"
                   target="_blank"
                 >
-                  What is wild animal suffering?
+                  {t("conclusion.credits.what_is_was.label")}
                 </a>
               </li>
               <li>
@@ -194,7 +198,7 @@ export function Conclusion({ visitors }) {
                   rel="noreferrer"
                   target="_blank"
                 >
-                  Weather conditions and nonhuman animals
+                  {t("conclusion.credits.weather_conditions.label")}
                 </a>
               </li>
               <li>
@@ -204,7 +208,7 @@ export function Conclusion({ visitors }) {
                   rel="noreferrer"
                   target="_blank"
                 >
-                  Rescuing trapped and injured animals
+                  {t("conclusion.credits.rescuing.label")}
                 </a>
               </li>
               <li>
@@ -214,7 +218,7 @@ export function Conclusion({ visitors }) {
                   rel="noreferrer"
                   target="_blank"
                 >
-                  Antagonism in nature: Interspecific conflict
+                  {t("conclusion.credits.antagonism.label")}
                 </a>
               </li>
               <li>
@@ -224,7 +228,7 @@ export function Conclusion({ visitors }) {
                   rel="noreferrer"
                   target="_blank"
                 >
-                  Diseases in nature
+                  {t("conclusion.credits.diseases.label")}
                 </a>
               </li>
               <li>
@@ -234,7 +238,7 @@ export function Conclusion({ visitors }) {
                   rel="noreferrer"
                   target="_blank"
                 >
-                  Animals in natural disasters
+                  {t("conclusion.credits.natural_disasters.label")}
                 </a>
               </li>
               <li>
@@ -244,7 +248,7 @@ export function Conclusion({ visitors }) {
                   rel="noreferrer"
                   target="_blank"
                 >
-                  Population dynamics and animal suffering
+                  {t("conclusion.credits.population_dynamics.label")}
                 </a>
               </li>
               <li>
@@ -254,7 +258,7 @@ export function Conclusion({ visitors }) {
                   rel="noreferrer"
                   target="_blank"
                 >
-                  The Importance of Wild-Animal Suffering
+                  {t("conclusion.credits.importance.label")}
                 </a>
               </li>
               <li>
@@ -264,7 +268,7 @@ export function Conclusion({ visitors }) {
                   rel="noreferrer"
                   target="_blank"
                 >
-                  Efforts to Help Wild Animals Should Be Effective
+                  {t("conclusion.credits.efforts.label")}
                 </a>
               </li>
               <li>
@@ -274,17 +278,7 @@ export function Conclusion({ visitors }) {
                   rel="noreferrer"
                   target="_blank"
                 >
-                  Essays on Reducing Suffering
-                </a>
-              </li>
-              <li>
-                <a
-                  className="underline"
-                  href="https://longtermrisk.org/the-importance-of-wild-animal-suffering/"
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  The Importance of Wild-Animal Suffering
+                  {t("conclusion.credits.essays.label")}
                 </a>
               </li>
               <li>
@@ -294,7 +288,7 @@ export function Conclusion({ visitors }) {
                   rel="noreferrer"
                   target="_blank"
                 >
-                  Why Vegans Should Care about Suffering in Nature
+                  {t("conclusion.credits.why_care.label")}
                 </a>
               </li>
               <li>
@@ -304,7 +298,7 @@ export function Conclusion({ visitors }) {
                   rel="noreferrer"
                   target="_blank"
                 >
-                  Wild Animal Suffering on HandWiki
+                  {t("conclusion.credits.handwiki.label")}
                 </a>
               </li>
               <li>
@@ -314,7 +308,7 @@ export function Conclusion({ visitors }) {
                   rel="noreferrer"
                   target="_blank"
                 >
-                  Wild Animal Suffering Infographic by Stijn Bruers
+                  {t("conclusion.credits.infographic.label")}
                 </a>
               </li>
               <li>
@@ -324,7 +318,7 @@ export function Conclusion({ visitors }) {
                   rel="noreferrer"
                   target="_blank"
                 >
-                  Estimates of global captive vertebrate numbers
+                  {t("conclusion.credits.vertebrate.label")}
                 </a>
               </li>
               <li>
@@ -334,7 +328,7 @@ export function Conclusion({ visitors }) {
                   rel="noreferrer"
                   target="_blank"
                 >
-                  Fish: The Forgotten Farm Animal
+                  {t("conclusion.credits.fish.label")}
                 </a>
               </li>
             </ol>
@@ -342,10 +336,10 @@ export function Conclusion({ visitors }) {
           {visitors > 0 && (
             <div className="col-span-4 flex flex-col gap-2 md:col-span-3 lg:flex-row lg:gap-10">
               <h4 className="w-48 whitespace-nowrap text-lg font-bold">
-                {t("conclusion.thanks")}
+                {t("conclusion.stats.label")}
               </h4>
               <p className="flex-1 leading-relaxed">
-                You&apos;re our {visitorsFormatted} visitor, thanks for reading!
+                {t("conclusion.stats.description", { visitorsFormatted })}
               </p>
             </div>
           )}
