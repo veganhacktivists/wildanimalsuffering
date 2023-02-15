@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Trans, useTranslation } from "react-i18next";
 import {
   BackgroundEffect,
   useBackgroundEffect,
@@ -12,11 +13,12 @@ import rethinkPrioritiesImage from "./images/rethink-priorities.png";
 import wildAnimalInitiativeImage from "./images/wild-animal-initiative.png";
 
 export function Organizations() {
+  const { t } = useTranslation();
   const { screenRef, effectOpacity } = useBackgroundEffect();
 
   return (
     <section
-      id="organizations"
+      id={t("organizations.id")}
       className="relative flex min-h-screen items-center bg-mud bg-cover bg-top py-14 lg:py-24"
       ref={screenRef}
     >
@@ -31,7 +33,7 @@ export function Organizations() {
 
       <div className="relative z-10 mx-auto flex w-full flex-col space-y-14 px-10">
         <h2 className="mx-auto max-w-xl text-center font-brand text-4xl text-white">
-          Organizations Working on Wild Animal Suffering
+          {t("organizations.heading")}
         </h2>
 
         <div className="mx-auto grid w-full max-w-sm gap-12 md:max-w-5xl md:grid-cols-2 xl:max-w-6xl">
@@ -44,9 +46,7 @@ export function Organizations() {
               ["Careers", "https://www.wildanimalinitiative.org/career"],
             ]}
           >
-            Wild Animal Initiative (WAI) currently operates in the U.S., where
-            they work to strengthen the animal advocacy movement through
-            creating an academic field dedicated to wild animal welfare.
+            {t("organizations.wild_animal_initiative.description")}
           </Organization>
           <Organization
             name="Animal Ethics"
@@ -57,9 +57,7 @@ export function Organizations() {
               ["Volunteer", "https://www.animal-ethics.org/volunteer/"],
             ]}
           >
-            Animal Ethics aims to achieve a shift in attitudes towards nonhuman
-            animals. Their vision is a world where sentient beings are given
-            full moral consideration.
+            {t("organizations.animal_ethics.description")}
           </Organization>
           <Organization
             name="Rethink Priorities"
@@ -70,10 +68,7 @@ export function Organizations() {
               ["Careers", "https://rethinkpriorities.org/career-opportunities"],
             ]}
           >
-            Rethink Priorities is a research organization that conducts critical
-            research to inform policymakers and major foundations about how to
-            best help people and nonhuman animals in both the present and the
-            long-term future.
+            {t("organizations.rethink_priorities.description")}
           </Organization>
           <Organization
             name="Faunalytics"
@@ -84,42 +79,42 @@ export function Organizations() {
               ["Volunteer", "https://faunalytics.org/volunteer"],
             ]}
           >
-            Faunalytics&apos; mission is to empower animal advocates with access
-            to research, analysis, strategies, and messages that maximize their
-            effectiveness to reduce animal suffering.
+            {t("organizations.faunalytics.description")}
           </Organization>
         </div>
 
         <div className="mx-auto max-w-xl space-y-14 text-center lg:max-w-2xl">
           <p className="leading-relaxed text-white">
-            We also highly recommend checking out{" "}
-            <a
-              href="https://www.wawcommittee.org/"
-              target="_blank"
-              className="underline"
-              rel="noreferrer"
-            >
-              Wild Animal Welfare Committee
-            </a>
-            ,{" "}
-            <a
-              href="https://longtermrisk.org/"
-              target="_blank"
-              className="underline"
-              rel="noreferrer"
-            >
-              Center on Long-Term Risk
-            </a>{" "}
-            and{" "}
-            <a
-              href="https://centerforreducingsuffering.org/"
-              target="_blank"
-              className="underline"
-              rel="noreferrer"
-            >
-              Center for Reducing Suffering
-            </a>{" "}
-            too!
+            <Trans t={t} i18nKey="organizations.description">
+              We also highly recommend checking out{" "}
+              <a
+                href="https://www.wawcommittee.org/"
+                target="_blank"
+                className="underline"
+                rel="noreferrer"
+              >
+                Wild Animal Welfare Committee
+              </a>
+              ,{" "}
+              <a
+                href="https://longtermrisk.org/"
+                target="_blank"
+                className="underline"
+                rel="noreferrer"
+              >
+                Center on Long-Term Risk
+              </a>{" "}
+              and{" "}
+              <a
+                href="https://centerforreducingsuffering.org/"
+                target="_blank"
+                className="underline"
+                rel="noreferrer"
+              >
+                Center for Reducing Suffering
+              </a>{" "}
+              too!
+            </Trans>
           </p>
         </div>
       </div>
