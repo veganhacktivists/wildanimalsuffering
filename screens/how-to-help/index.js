@@ -2,23 +2,30 @@ import { ActionButton } from "./action-button";
 import { RaiseAwarenessDialog } from "./raise-awareness-dialog";
 
 import miceImage from "./images/mice.png";
+import { Trans, useTranslation } from "react-i18next";
 
 export function HowToHelp() {
+  const { t } = useTranslation();
+
   return (
     <section
-      id="how-to-help"
+      id={t("how_to_help.id")}
       className="relative flex min-h-screen items-center bg-forest bg-cover bg-top py-14 lg:py-24"
     >
       <div className="absolute bottom-0 h-64 w-full bg-ant-hill bg-cover bg-right-bottom bg-no-repeat md:h-full md:bg-contain" />
       <div className="relative mx-auto flex w-full max-w-7xl flex-col space-y-14 px-10">
         <h2 className="text-center font-brand text-3xl text-white lg:text-4xl">
-          How Can You Help?
+          {t("how_to_help.heading")}
         </h2>
 
         <div className="mx-auto grid gap-12 text-white md:grid-cols-3 lg:gap-16">
           <RaiseAwarenessDialog>
-            <ActionButton as="button" step={1} subtitle="Share this page">
-              Raise Awareness
+            <ActionButton
+              as="button"
+              step={1}
+              subtitle={t("how_to_help.awareness.subtitle")}
+            >
+              {t("how_to_help.awareness.title")}
             </ActionButton>
           </RaiseAwarenessDialog>
           <ActionButton
@@ -27,9 +34,9 @@ export function HowToHelp() {
             target="_blank"
             step={2}
             rel="noreferrer"
-            subtitle="View charities"
+            subtitle={t("how_to_help.donate.subtitle")}
           >
-            Donate to Charities
+            {t("how_to_help.donate.title")}
           </ActionButton>
           <ActionButton
             as="a"
@@ -37,33 +44,35 @@ export function HowToHelp() {
             target="_blank"
             step={3}
             rel="noreferrer"
-            subtitle="Subscribe here"
+            subtitle={t("how_to_help.newsletter.subtitle")}
           >
-            Newsletter Signup
+            {t("how_to_help.newsletter.title")}
           </ActionButton>
         </div>
 
         <div className="mx-auto max-w-xl space-y-14 text-center lg:max-w-2xl">
           <p className="leading-relaxed text-white">
-            In addition to the above, you can find career opportunies, get
-            career advice, and join a community{" "}
-            <a
-              href="https://www.wildanimalinitiative.org/services"
-              target="_blank"
-              className="underline"
-              rel="noreferrer"
-            >
-              here
-            </a>
-            . Are you a researcher?{" "}
-            <a
-              href="https://www.wildanimalinitiative.org/grants"
-              target="_blank"
-              className="underline"
-              rel="noreferrer"
-            >
-              Apply for a grant!
-            </a>
+            <Trans t={t} i18nKey="how_to_help.description">
+              In addition to the above, you can find career opportunities, get
+              career advice, and join a community
+              <a
+                href="https://www.wildanimalinitiative.org/services"
+                target="_blank"
+                className="underline"
+                rel="noreferrer"
+              >
+                here
+              </a>
+              . Are you a researcher?
+              <a
+                href="https://www.wildanimalinitiative.org/grants"
+                target="_blank"
+                className="underline"
+                rel="noreferrer"
+              >
+                Apply for a grant!
+              </a>
+            </Trans>
           </p>
 
           <a
@@ -72,7 +81,7 @@ export function HowToHelp() {
             target="_blank"
             rel="noreferrer"
           >
-            View more opportunities
+            {t("how_to_help.more_opportunities")}
           </a>
         </div>
       </div>
