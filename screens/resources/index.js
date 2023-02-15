@@ -56,19 +56,19 @@ export function Resources() {
     >
       <div className="relative z-10 mx-auto flex w-full max-w-7xl grow flex-col gap-10">
         <h2 className="hidden px-8 text-center font-brand text-4xl text-white lg:block">
-          Other Resources You Might Like
+          {t("resources.heading")}
         </h2>
 
-        <MobileResourceList title="Websites">
+        <MobileResourceList title={t("resources.websites.name")}>
           <Websites />
         </MobileResourceList>
-        <MobileResourceList title="Blogs">
+        <MobileResourceList title={t("resources.blogs.name")}>
           <Blogs />
         </MobileResourceList>
-        <MobileResourceList title="Books">
+        <MobileResourceList title={t("resources.books.name")}>
           <Books />
         </MobileResourceList>
-        <MobileResourceList title="Podcasts">
+        <MobileResourceList title={t("resources.podcasts.name")}>
           <Podcasts />
         </MobileResourceList>
 
@@ -76,12 +76,20 @@ export function Resources() {
           <div className="col-span-2">
             <RadixTabs.List
               className="flex flex-col gap-4"
-              aria-label="Select a resource type"
+              aria-label={t("resources.blogs.select_resource_type")}
             >
-              <Tab resourceType={ResourceTypes.WEBSITES}>Websites</Tab>
-              <Tab resourceType={ResourceTypes.BLOGS}>Blogs</Tab>
-              <Tab resourceType={ResourceTypes.BOOKS}>Books</Tab>
-              <Tab resourceType={ResourceTypes.PODCASTS}>Podcasts</Tab>
+              <Tab resourceType={ResourceTypes.WEBSITES}>
+                {t("resources.websites.name")}
+              </Tab>
+              <Tab resourceType={ResourceTypes.BLOGS}>
+                {t("resources.blogs.name")}
+              </Tab>
+              <Tab resourceType={ResourceTypes.BOOKS}>
+                {t("resources.books.name")}
+              </Tab>
+              <Tab resourceType={ResourceTypes.PODCASTS}>
+                {t("resources.podcasts.name")}
+              </Tab>
             </RadixTabs.List>
           </div>
           <div className="col-span-7">
