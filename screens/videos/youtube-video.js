@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { PlayIcon } from "~/components/play-icon";
 
 export function YoutubeVideo({ video }) {
+  const { t } = useTranslation();
   const [playing, setPlaying] = useState(false);
 
   useEffect(() => {
@@ -37,7 +39,7 @@ export function YoutubeVideo({ video }) {
                 <span className="text-sm">{video.duration}</span>
               </div>
               <h3 className="font-brand text-xl font-bold line-clamp-2">
-                {video.title}
+                {t(`videos.${video.id}.title`)}
               </h3>
             </div>
           </button>
@@ -45,7 +47,7 @@ export function YoutubeVideo({ video }) {
       </div>
       <div className="flex-1 overflow-hidden overflow-ellipsis bg-white/80 p-5 lg:basis-40 xl:basis-34">
         <p className="text-gray-700 lg:line-clamp-5 xl:line-clamp-4">
-          {video.description}
+          {t(`videos.${video.id}.description`)}
         </p>
       </div>
     </div>
