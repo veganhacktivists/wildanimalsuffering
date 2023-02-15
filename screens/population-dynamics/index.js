@@ -18,7 +18,7 @@ export function PopulationDynamics() {
 
   return (
     <section
-      id="population-dynamics"
+      id={t("population_dynamics.id")}
       ref={scrollRef}
       className="relative flex min-h-screen flex-col overflow-hidden bg-dirt-road bg-cover bg-center py-16 sm:py-24"
     >
