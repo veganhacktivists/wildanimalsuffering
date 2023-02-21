@@ -107,7 +107,7 @@ export function PopulationDynamics() {
         </h2>
         <div className="flex flex-col gap-8">
           <p className="text-lg text-white sm:max-w-sm md:max-w-xl lg:max-w-2xl">
-            <Trans t={t} i18nKey="population_dynamics.description">
+            <Trans i18nKey="population_dynamics.description">
               Wild animals often have many children, but for their populations
               to remain stable, on average each parent can only have two
               offspring that reach adulthood.

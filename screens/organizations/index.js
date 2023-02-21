@@ -85,7 +85,7 @@ export function Organizations() {
 
         <div className="mx-auto max-w-xl space-y-14 text-center lg:max-w-2xl">
           <p className="leading-relaxed text-white">
-            <Trans t={t} i18nKey="organizations.description">
+            <Trans i18nKey="organizations.description">
               We also highly recommend checking out{" "}
               <a
                 href="https://www.wawcommittee.org/"

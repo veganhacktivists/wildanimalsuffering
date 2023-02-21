@@ -70,7 +70,7 @@ export function WildAnimalsMobile() {
         <div className="sticky top-0 flex min-h-screen w-screen flex-col justify-center overflow-hidden">
           <div className="flex-1 text-white md:text-xl">
             <p className="px-4 pt-4">
-              <Trans t={t} i18nKey="scale_of_suffering.in_the_wild">
+              <Trans i18nKey="scale_of_suffering.in_the_wild">
                 However… in the wild:
                 <br />
                 <strong>For every human</strong>, there are between:

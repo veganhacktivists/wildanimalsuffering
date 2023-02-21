@@ -35,7 +35,7 @@ export function FarmedAnimalsMobile() {
         <motion.div className="relative" style={{ left: textTranslate }}>
           <div className="grid w-[200vw] grid-cols-2 text-center text-3xl leading-tight text-white">
             <p className="flex flex-col justify-center font-brand">
-              <Trans t={t} i18nKey="scale_of_suffering.humans">
+              <Trans i18nKey="scale_of_suffering.humans">
                 <span>There are roughly</span>
                 <span className="text-blue">8 billion humans</span>
                 <span>on planet Earth.</span>
@@ -43,7 +43,7 @@ export function FarmedAnimalsMobile() {
             </p>
             <div>
               <p className="mx-auto max-w-md font-brand">
-                <Trans t={t} i18nKey="scale_of_suffering.farmed_animals">
+                <Trans i18nKey="scale_of_suffering.farmed_animals">
                   <span>For every human, there are roughly </span>
                   <span className="text-blue">3-4 farmed animals </span>
                   <span>being farmed at any given moment.</span>

@@ -21,7 +21,7 @@ export function TypesOfSuffering() {
 
       <div className="mx-auto flex w-full max-w-7xl flex-col space-y-10 px-10">
         <h2 className="flex flex-col text-center font-brand text-4xl text-white">
-          <Trans t={t} i18nKey="types_of_suffering.heading">
+          <Trans i18nKey="types_of_suffering.heading">
             <span>Even Worse,</span>
             <span>Wild Animals Suffer in Terrible Ways:</span>
           </Trans>

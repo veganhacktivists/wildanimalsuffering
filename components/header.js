@@ -9,11 +9,7 @@ export function Header() {
       <Navigation />
 
       <span className="hidden font-light md:block">
-        <Trans
-          t={t}
-          i18nKey="header.credits"
-          className="hidden font-light md:block"
-        >
+        <Trans i18nKey="header.credits" className="hidden font-light md:block">
           Illustrations by{" "}
           <a
             className="font-normal underline"

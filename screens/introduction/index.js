@@ -43,7 +43,7 @@ export function Introduction() {
                   </span>
                 </h1>
                 <div className="grid gap-10 text-lg text-white lg:pb-10">
-                  <Trans t={t} i18nKey="introduction.copy">
+                  <Trans i18nKey="introduction.copy">
                     <p>
                       When thinking about nature and the lives of wild animals,
                       we often picture dolphins swimming in the ocean or

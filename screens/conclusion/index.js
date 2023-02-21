@@ -31,7 +31,7 @@ export function Conclusion({ locale, visitors }) {
           <h2 className="mb-4 font-brand text-5xl leading-snug">
             {t("conclusion.heading")}
           </h2>
-          <Trans t={t} i18nKey="conclusion.text">
+          <Trans i18nKey="conclusion.text">
             <p className="font-lg">
               The increasing moral concern for animals in recent years is a
               welcome development. It is becoming increasingly rare to find
@@ -89,7 +89,7 @@ export function Conclusion({ locale, visitors }) {
               {t("conclusion.special_thanks.label")}
             </h4>
             <p className="flex-1 leading-relaxed">
-              <Trans t={t} i18nKey="conclusion.special_thanks.description">
+              <Trans i18nKey="conclusion.special_thanks.description">
                 To our friends and advisors from{" "}
                 <a
                   className="underline"

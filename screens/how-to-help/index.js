@@ -52,7 +52,7 @@ export function HowToHelp() {
 
         <div className="mx-auto max-w-xl space-y-14 text-center lg:max-w-2xl">
           <p className="leading-relaxed text-white">
-            <Trans t={t} i18nKey="how_to_help.description">
+            <Trans i18nKey="how_to_help.description">
               In addition to the above, you can find career opportunities, get
               career advice, and join a community
               <a

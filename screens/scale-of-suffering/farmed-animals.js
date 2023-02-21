@@ -31,7 +31,7 @@ export function FarmedAnimals() {
       <div>
         <div className="grid h-screen place-items-center">
           <p className="flex flex-col font-brand text-5xl leading-tight text-white">
-            <Trans t={t} i18nKey="scale_of_suffering.humans">
+            <Trans i18nKey="scale_of_suffering.humans">
               <span>There are roughly</span>
               <span className="text-blue">8 billion humans</span>
               <span>on planet Earth.</span>
@@ -40,7 +40,7 @@ export function FarmedAnimals() {
         </div>
         <div className="flex h-screen flex-col justify-center">
           <p className="mx-auto max-w-lg font-brand text-5xl leading-tight text-white">
-            <Trans t={t} i18nKey="scale_of_suffering.farmed_animals">
+            <Trans i18nKey="scale_of_suffering.farmed_animals">
               <span>For every human, there are roughly</span>
               <span className="text-blue">3-4 farmed animals</span>
               <span>being farmed at any given moment.</span>

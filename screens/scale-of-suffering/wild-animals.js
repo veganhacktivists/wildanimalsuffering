@@ -73,7 +73,7 @@ export function WildAnimals() {
         <div className="flex h-[250vh] flex-col">
           <div className="sticky top-0 flex h-screen flex-col justify-center space-y-16 py-16 text-lg text-white">
             <p>
-              <Trans t={t} i18nKey="scale_of_suffering.in_the_wild">
+              <Trans i18nKey="scale_of_suffering.in_the_wild">
                 However… in the wild:
                 <br />
                 <strong>For every human</strong>, there are between:

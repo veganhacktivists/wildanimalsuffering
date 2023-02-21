@@ -87,7 +87,7 @@ export function Navigation() {
                 />
               </ul>
               <div className="mt-8 border-t py-8">
-                <Trans t={t} i18nKey="navigation.made_with_love">
+                <Trans i18nKey="navigation.made_with_love">
                   Made with love by the{" "}
                   <a
                     className="whitespace-nowrap underline"
