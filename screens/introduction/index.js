@@ -43,24 +43,11 @@ export function Introduction() {
                   </span>
                 </h1>
                 <div className="grid gap-10 text-lg text-white lg:pb-10">
-                  <Trans i18nKey="introduction.copy">
-                    <p>
-                      When thinking about nature and the lives of wild animals,
-                      we often picture dolphins swimming in the ocean or
-                      elephants and lions roaming in the savannah. We mostly
-                      picture large adult animals living lives characterized by
-                      freedom. However, this rose-tinted view of nature
-                      doesn&apos;t even come close to representing the lives of
-                      most wild animals.
-                    </p>
-                    <p>
-                      In reality, the life of most wild animals is characterized
-                      not by freedom, but by struggle. They constantly deal with
-                      harsh weather, starvation, disease, and injuries, and much
-                      like a dog or a human would suffer in their position, they
-                      suffer as well.
-                    </p>
-                  </Trans>
+                  {t("introduction.copy", { returnObjects: true }).map(
+                    (value) => (
+                      <p key={value}>{value}</p>
+                    )
+                  )}
                 </div>
               </div>
             </div>
