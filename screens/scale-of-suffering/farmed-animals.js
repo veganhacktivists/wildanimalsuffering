@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { Trans, useTranslation } from "react-i18next";
 
 import earthImage from "./images/earth.png";
 import farmedAnimalsImage from "./images/farmed-animals.png";
@@ -8,6 +9,7 @@ import humanImage from "./images/human.png";
 const screen = 1 / 2;
 
 export function FarmedAnimals() {
+  const { t } = useTranslation();
   const scrollRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: scrollRef,
@@ -29,20 +31,23 @@ export function FarmedAnimals() {
       <div>
         <div className="grid h-screen place-items-center">
           <p className="flex flex-col font-brand text-5xl leading-tight text-white">
-            <span>There are roughly</span>
-            <span className="text-blue">8 billion humans</span>
-            <span>on planet Earth.</span>
+            <Trans i18nKey="scale_of_suffering.humans">
+              <span>There are roughly</span>
+              <span className="text-blue">8 billion humans</span>
+              <span>on planet Earth.</span>
+            </Trans>
           </p>
         </div>
         <div className="flex h-screen flex-col justify-center">
           <p className="mx-auto max-w-lg font-brand text-5xl leading-tight text-white">
-            For every human, there are roughly{" "}
-            <span className="text-blue">3-4 farmed animals</span> being farmed
-            at any given moment.
+            <Trans i18nKey="scale_of_suffering.farmed_animals">
+              <span>For every human, there are roughly</span>
+              <span className="text-blue">3-4 farmed animals</span>
+              <span>being farmed at any given moment.</span>
+            </Trans>
           </p>
           <p className="mx-auto max-w-lg space-y-16 pt-6 text-lg text-white">
-            …and that&apos;s not even counting farmed fish, which is estimated
-            to be around 10-13 per person.
+            {t("scale_of_suffering.farmed_fish")}
           </p>
         </div>
       </div>

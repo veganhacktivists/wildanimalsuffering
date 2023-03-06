@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { Resource } from "./resource";
 
 import eightyThousandHoursImage from "./images/websites/80000-hours.png";
@@ -9,110 +10,124 @@ import reducingSufferingImage from "./images/websites/reducing-suffering.jpg";
 import worldAnimalProtectionImage from "./images/websites/world-animal-protection.png";
 
 export function Websites() {
+  const { t } = useTranslation();
+
   return (
     <>
       <Resource
         imageUrl={effectiveAltruismImage.src}
-        title="Effective Altruism"
+        title={t("resources.websites.effective_altruism.title")}
         links={[
-          ["Visit", "https://www.effectivealtruism.org/"],
           [
-            "Donate",
+            t("resources.websites.cta.visit"),
+            "https://www.effectivealtruism.org/",
+          ],
+          [
+            t("resources.websites.cta.donate"),
             "https://www.givingwhatwecan.org/funds/effective-altruism-funds",
           ],
         ]}
       >
-        Effective altruism is a project that aims to find the best ways to help
-        others, and put them into practice. It&apos;s both a research field,
-        which aims to identify the world&apos;s most pressing problems and the
-        best solutions to them, and a practical community that aims to use those
-        findings to do good.
+        {t("resources.websites.effective_altruism.description")}
       </Resource>
 
       <Resource
         imageUrl={reducingSufferingImage.src}
-        title="Reducing Suffering"
+        title={t("resources.websites.reducing_suffering.title")}
         links={[
-          ["Visit", "https://reducing-suffering.org/"],
-          ["Donate", "https://reducing-suffering.org/donation-recommendations"],
+          [
+            t("resources.websites.cta.visit"),
+            "https://reducing-suffering.org/",
+          ],
+          [
+            t("resources.websites.cta.donate"),
+            "https://reducing-suffering.org/donation-recommendations",
+          ],
         ]}
       >
-        This site contains writings on the topic of reducing suffering,
-        including the suffering of non-human animals and far-future beings. Most
-        content is by Brian Tomasik, though a few pieces are written by others.
+        {t("resources.websites.reducing_suffering.description")}
       </Resource>
 
       <Resource
         imageUrl={animalCharityEvaluatorsImage.src}
-        title="Animal Charity Evaluators"
+        title={t("resources.websites.animal_charity_evaluators.title")}
         links={[
-          ["Visit", "https://animalcharityevaluators.org"],
-          ["Donate", "https://animalcharityevaluators.org/donate"],
+          [
+            t("resources.websites.cta.visit"),
+            "https://animalcharityevaluators.org",
+          ],
+          [
+            t("resources.websites.cta.donate"),
+            "https://animalcharityevaluators.org/donate",
+          ],
         ]}
       >
-        Animal Charity Evaluators began in 2012 under the name Effective Animal
-        Activism (EAA), as a division of the U.K.-based charity 80,000 Hours—an
-        organization dedicated to providing career advice to people who want to
-        be highly impactful in their work.
+        {t("resources.websites.animal_charity_evaluators.description")}
       </Resource>
 
       <Resource
         imageUrl={centerForReducingSufferingImage.src}
-        title="Center For Reducing Suffering"
+        title={t("resources.websites.center_for_reducing_suffering.title")}
         links={[
-          ["Visit", "https://centerforreducingsuffering.org"],
-          ["Donate", "https://centerforreducingsuffering.org/donate"],
+          [
+            t("resources.websites.cta.visit"),
+            "https://centerforreducingsuffering.org",
+          ],
+          [
+            t("resources.websites.cta.donate"),
+            "https://centerforreducingsuffering.org/donate",
+          ],
         ]}
       >
-        The Center for Reducing Suffering (CRS) is a research center that works
-        to create a future with less suffering, with a focus on reducing the
-        most intense suffering.
+        {t("resources.websites.center_for_reducing_suffering.description")}
       </Resource>
 
       <Resource
         imageUrl={worldAnimalProtectionImage.src}
-        title="World Animal Protection"
+        title={t("resources.websites.world_animal_protection.title")}
         links={[
-          ["Visit", "https://www.worldanimalprotection.us/"],
           [
-            "Donate",
+            t("resources.websites.cta.visit"),
+            "https://www.worldanimalprotection.us/",
+          ],
+          [
+            t("resources.websites.cta.donate"),
             "https://secure.worldanimalprotection.us/NN8cva8NRkWWp1lwkeePCg2",
           ],
         ]}
       >
-        &quot;We protect the world&apos;s animals. We always have done, and we
-        always will.&quot; World Animal Protections is working on the ground
-        with local partners for greatest effect, we are active in more than 50
-        countries.
+        {t("resources.websites.world_animal_protection.description")}
       </Resource>
 
       <Resource
         imageUrl={animalAdvocacyCareersImage.src}
-        title="Animal Advocacy Careers"
+        title={t("resources.websites.animal_advocacy_careers.title")}
         links={[
-          ["Visit", "https://www.animaladvocacycareers.org/"],
-          ["Donate", "https://www.animaladvocacycareers.org/donate"],
+          [
+            t("resources.websites.cta.visit"),
+            "https://www.animaladvocacycareers.org/",
+          ],
+          [
+            t("resources.websites.cta.donate"),
+            "https://www.animaladvocacycareers.org/donate",
+          ],
         ]}
       >
-        Animal Advocacy Careers (AAC) is an organisation that seeks to address
-        the career and talent bottlenecks in the animal advocacy movement,
-        especially the farmed animal movement. We provide careers services for
-        individuals at all levels of experience with animal advocacy.
+        {t("resources.websites.animal_advocacy_careers.description")}
       </Resource>
 
       <Resource
         imageUrl={eightyThousandHoursImage.src}
-        title="80000 Hours"
+        title={t("resources.websites.eighty_thousand_hours.title")}
         links={[
-          ["Visit", "https://80000hours.org/"],
-          ["Donate", "https://80000hours.org/support-us/donate"],
+          [t("resources.websites.cta.visit"), "https://80000hours.org/"],
+          [
+            t("resources.websites.cta.donate"),
+            "https://80000hours.org/support-us/donate",
+          ],
         ]}
       >
-        You have about 80,000 working hours in your career: 40 years x 50 weeks
-        x 40 hours. If you want to have a positive impact with your life, your
-        choice of career is probably your best opportunity to do that. That
-        means it&apos;s worth thinking hard about how to use this time most
-        effectively.
+        {t("resources.websites.eighty_thousand_hours.description")}
       </Resource>
     </>
   );

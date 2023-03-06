@@ -1,41 +1,12 @@
 import * as RadixDialog from "@radix-ui/react-dialog";
-import * as RadixToast from "@radix-ui/react-toast";
-import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { CloseIcon } from "~/components/close-icon";
-import { CopyIcon } from "~/components/copy-icon";
 import { LogoWas } from "~/components/logo-was";
-
-const CopyLinkSection = () => {
-  const [open, setOpen] = useState(false);
-  const url = "https://wildanimalsuffering.org";
-
-  return (
-    <RadixToast.Provider duration={2000}>
-      <div className="relative mx-auto flex max-w-full gap-1 rounded-md bg-menu-back-light p-3">
-        <RadixToast.Viewport />
-        <span className="truncate">{url}</span>
-        <button
-          onClick={() => {
-            setOpen(true);
-            navigator.clipboard.writeText(url);
-          }}
-        >
-          <CopyIcon className="h-5" />
-        </button>
-      </div>
-
-      <RadixToast.Root
-        open={open}
-        onOpenChange={setOpen}
-        className="absolute inset-x-0 top-0 w-full text-center text-sm text-brown/80 radix-state-closed:animate-pop-down radix-state-open:animate-pop-up"
-      >
-        <RadixToast.Description>link copied!</RadixToast.Description>
-      </RadixToast.Root>
-    </RadixToast.Provider>
-  );
-};
+import { CopyLinkSection } from "./copy-link-section";
 
 export function RaiseAwarenessDialog({ children }) {
+  const { t } = useTranslation();
+
   return (
     <RadixDialog.Root>
       <RadixDialog.Trigger asChild>{children}</RadixDialog.Trigger>
@@ -51,9 +22,8 @@ export function RaiseAwarenessDialog({ children }) {
                   <div className="mx-auto inline-block aspect-square h-12">
                     <LogoWas />
                   </div>
-                  Share on Social Media
+                  {t("how_to_help.awareness.share")}
                 </RadixDialog.Title>
-
                 <CopyLinkSection />
               </div>
             </div>

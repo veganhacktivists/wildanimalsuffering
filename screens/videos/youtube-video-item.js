@@ -1,6 +1,9 @@
+import { useTranslation } from "react-i18next";
 import { cx } from "~/utils/cx";
 
 export function YoutubeVideoItem({ active = false, video, ...props }) {
+  const { t } = useTranslation();
+
   return (
     <button
       className={cx(
@@ -18,7 +21,7 @@ export function YoutubeVideoItem({ active = false, video, ...props }) {
       <div className="absolute left-0 bottom-0 flex w-full flex-col items-start p-5 text-left text-white">
         <span className="whitespace-nowrap text-xs">{video.author}</span>
         <span className="text-xs font-semibold line-clamp-2 lg:text-sm xl:text-base">
-          {video.title}
+          {t(`videos.${video.id}.title`)}
         </span>
       </div>
     </button>

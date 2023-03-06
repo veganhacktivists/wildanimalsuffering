@@ -9,11 +9,7 @@ export function Header() {
       <Navigation />
 
       <span className="hidden font-light md:block">
-        <Trans
-          t={t}
-          i18nKey="header.credits"
-          className="hidden font-light md:block"
-        >
+        <Trans i18nKey="header.credits" className="hidden font-light md:block">
           Illustrations by{" "}
           <a
             className="font-normal underline"
@@ -36,7 +32,7 @@ export function Header() {
           width={80}
           height={80}
           src="/images/logo-vh.svg"
-          alt="Vegan Hacktivists Logo"
+          alt={t("common.logo.alt")}
         />
       </a>
     </header>
