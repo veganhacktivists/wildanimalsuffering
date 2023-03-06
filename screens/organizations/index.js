@@ -41,10 +41,16 @@ export function Organizations() {
             name="Wild Animal Initiative"
             imageUrl={wildAnimalInitiativeImage.src}
             links={[
-              ["Visit", t("organizations.wild_animal_initiative.urls.website")],
-              ["Donate", t("organizations.wild_animal_initiative.urls.donate")],
               [
-                "Careers",
+                t("organizations.cta.visit"),
+                t("organizations.wild_animal_initiative.urls.website"),
+              ],
+              [
+                t("organizations.cta.donate"),
+                t("organizations.wild_animal_initiative.urls.donate"),
+              ],
+              [
+                t("organizations.cta.careers"),
                 t("organizations.wild_animal_initiative.urls.careers"),
               ],
             ]}
@@ -55,9 +61,18 @@ export function Organizations() {
             name="Animal Ethics"
             imageUrl={animalEthicsImage.src}
             links={[
-              ["Visit", t("organizations.animal_ethics.urls.website")],
-              ["Donate", t("organizations.animal_ethics.urls.donate")],
-              ["Volunteer", t("organizations.animal_ethics.urls.volunteer")],
+              [
+                t("organizations.cta.visit"),
+                t("organizations.animal_ethics.urls.website"),
+              ],
+              [
+                t("organizations.cta.donate"),
+                t("organizations.animal_ethics.urls.donate"),
+              ],
+              [
+                t("organizations.cta.volunteer"),
+                t("organizations.animal_ethics.urls.volunteer"),
+              ],
             ]}
           >
             {t("organizations.animal_ethics.description")}
@@ -66,9 +81,18 @@ export function Organizations() {
             name="Rethink Priorities"
             imageUrl={rethinkPrioritiesImage.src}
             links={[
-              ["Visit", t("organizations.rethink_priorities.urls.website")],
-              ["Donate", t("organizations.rethink_priorities.urls.donate")],
-              ["Careers", t("organizations.rethink_priorities.urls.careers")],
+              [
+                t("organizations.cta.visit"),
+                t("organizations.rethink_priorities.urls.website"),
+              ],
+              [
+                t("organizations.cta.donate"),
+                t("organizations.rethink_priorities.urls.donate"),
+              ],
+              [
+                t("organizations.cta.careers"),
+                t("organizations.rethink_priorities.urls.careers"),
+              ],
             ]}
           >
             {t("organizations.rethink_priorities.description")}
@@ -77,9 +101,18 @@ export function Organizations() {
             name="Faunalytics"
             imageUrl={faunalyticsImage.src}
             links={[
-              ["Visit", t("organizations.faunalytics.urls.website")],
-              ["Donate", t("organizations.faunalytics.urls.donate")],
-              ["Volunteer", t("organizations.faunalytics.urls.volunteer")],
+              [
+                t("organizations.cta.visit"),
+                t("organizations.faunalytics.urls.website"),
+              ],
+              [
+                t("organizations.cta.donate"),
+                t("organizations.faunalytics.urls.donate"),
+              ],
+              [
+                t("organizations.cta.volunteer"),
+                t("organizations.faunalytics.urls.volunteer"),
+              ],
             ]}
           >
             {t("organizations.faunalytics.description")}
