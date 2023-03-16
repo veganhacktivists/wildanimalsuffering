@@ -16,7 +16,7 @@ export function YoutubeVideo({ video }) {
         {playing ? (
           <iframe
             className="absolute inset-0 h-full w-full rounded-t-xl"
-            src={`https://www.youtube.com/embed/${video.id}?autoplay=1`}
+            src={`https://www.youtube.com/embed/${video.videoId}?autoplay=1`}
             allow="autoplay"
           ></iframe>
         ) : (
