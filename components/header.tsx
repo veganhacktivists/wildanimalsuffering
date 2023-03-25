@@ -7,6 +7,9 @@ type Props = {
   locale?: keyof typeof resources;
 };
 
+// Remove this when new languages get added
+const hasMultipleLanguages = false;
+
 export function Header({ locale = "en" }: Props) {
   const { t } = useTranslation();
 
@@ -21,10 +24,12 @@ export function Header({ locale = "en" }: Props) {
     <header className="absolute left-0 z-20 flex w-full items-center gap-8 p-10 text-white">
       <Navigation />
 
-      <Select defaultValue={locale} onChange={onLangChange}>
-        <option value="en">En</option>
-        <option value="fr">Fr</option>
-      </Select>
+      {hasMultipleLanguages && (
+        <Select defaultValue={locale} onChange={onLangChange}>
+          <option value="en">En</option>
+          <option value="fr">Fr</option>
+        </Select>
+      )}
 
       <span className="hidden font-light md:block">
         <Trans i18nKey="header.credits" className="hidden font-light md:block">
