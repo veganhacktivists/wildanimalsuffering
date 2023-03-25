@@ -1,12 +1,30 @@
+import { resources } from "i18n";
 import { Trans, useTranslation } from "react-i18next";
 import { Navigation } from "~/components/navigation";
+import { Select } from "./select";
 
-export function Header() {
+type Props = {
+  locale?: keyof typeof resources;
+};
+
+export function Header({ locale = "en" }: Props) {
   const { t } = useTranslation();
 
+  const onLangChange = (event: React.FormEvent<HTMLSelectElement>) => {
+    if (event.target instanceof HTMLSelectElement) {
+      const { value } = event.target;
+      location.href = value === "en" ? "/" : `/${value}/`;
+    }
+  };
+
   return (
-    <header className="absolute left-0 z-20 flex w-full items-center gap-8 p-10 text-gray md:text-white">
+    <header className="absolute left-0 z-20 flex w-full items-center gap-8 p-10 text-white">
       <Navigation />
+
+      <Select defaultValue={locale} onChange={onLangChange}>
+        <option value="en">En</option>
+        <option value="fr">Fr</option>
+      </Select>
 
       <span className="hidden font-light md:block">
         <Trans i18nKey="header.credits" className="hidden font-light md:block">
