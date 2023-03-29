@@ -21,7 +21,7 @@ export default function Home({ locale }: Props) {
 
   return (
     <>
-      <Header />
+      <Header locale={locale} />
       <main>
         <Introduction />
         <ScaleOfSuffering />

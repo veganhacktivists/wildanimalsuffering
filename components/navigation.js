@@ -23,13 +23,16 @@ export function Navigation() {
 
   return (
     <>
-      <button className="cursor-pointer" onClick={() => setOpen(true)}>
+      <button
+        className="mr-auto cursor-pointer md:mr-0"
+        onClick={() => setOpen(true)}
+      >
         <span className="sr-only">{t("navigation.name")}</span>
         <MenuIcon size={35} className="cursor-pointer" />
       </button>
 
       {open && (
-        <nav className="absolute top-0 left-0 h-auto w-full overflow-auto p-5 sm:max-w-sm">
+        <nav className="absolute top-0 left-0 z-10 h-auto w-full overflow-auto p-5 sm:max-w-sm">
           <div className="flex flex-col overflow-auto rounded-xl bg-white text-menu-front-dark">
             <div className="flex justify-between p-8">
               <div className="font-brand text-2xl uppercase text-menu-front-dark">
