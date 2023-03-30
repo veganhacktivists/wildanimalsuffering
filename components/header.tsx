@@ -22,6 +22,7 @@ export function Header({ locale = "en" }: Props) {
       <Navigation />
 
       <Select defaultValue={locale} onChange={onLangChange}>
+        <option value="de">De</option>
         <option value="en">En</option>
         <option value="fr">Fr</option>
       </Select>
