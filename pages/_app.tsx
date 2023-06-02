@@ -1,4 +1,4 @@
-import { Asap_Condensed, Poppins } from "@next/font/google";
+import { Asap_Condensed, Poppins } from "next/font/google";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import "~/styles/globals.css";

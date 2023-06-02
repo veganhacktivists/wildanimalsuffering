@@ -136,7 +136,6 @@ module.exports = {
     },
   },
   plugins: [
-    require("@tailwindcss/line-clamp"),
     require("tailwind-scrollbar"),
     require("./lib/tailwindcss-animation-delay-plugin"),
     require("./lib/tailwindcss-radix-plugin"),
