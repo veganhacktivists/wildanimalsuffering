@@ -22,9 +22,15 @@ export function Header({ locale = "en" }: Props) {
       <Navigation />
 
       <Select defaultValue={locale} onChange={onLangChange}>
-        <option value="de">De</option>
-        <option value="en">En</option>
-        <option value="fr">Fr</option>
+        <option className="text-black" value="de">
+          De
+        </option>
+        <option className="text-black" value="en">
+          En
+        </option>
+        <option className="text-black" value="fr">
+          Fr
+        </option>
       </Select>
 
       <span className="hidden font-light md:block">
@@ -42,7 +48,7 @@ export function Header({ locale = "en" }: Props) {
       </span>
 
       <a
-        className="absolute top-0 right-0 z-20 m-10 hidden w-20 opacity-75 hover:opacity-100 md:block"
+        className="absolute right-0 top-0 z-20 m-10 hidden w-20 opacity-75 hover:opacity-100 md:block"
         href="https://veganhacktivists.org"
         target="_blank"
         rel="noreferrer"
