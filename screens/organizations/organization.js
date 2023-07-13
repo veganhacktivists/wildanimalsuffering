@@ -17,10 +17,10 @@ export function Organization({ name, children, imageUrl, links }) {
               target="_blank"
               rel="noreferrer"
               className={cx(
-                "rounded-xl py-1 px-5 text-center",
+                "rounded-xl px-5 py-1 text-center",
                 i % 3 === 0 && "bg-primary",
                 i % 3 === 1 && "bg-primary-light",
-                i % 3 === 2 && "col-span-2 bg-primary-lighter"
+                i % 3 === 2 && "col-span-2 bg-primary-lighter",
               )}
             >
               {text}

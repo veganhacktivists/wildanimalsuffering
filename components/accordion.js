@@ -39,10 +39,10 @@ export function AccordionItem({ index, label, content, value, ...props }) {
       <RadixAccordion.Content
         className={cx(
           "overflow-hidden rounded-b-lg border border-white",
-          "radix-state-closed:animate-slide-up radix-state-open:animate-slide-down"
+          "radix-state-closed:animate-slide-up radix-state-open:animate-slide-down",
         )}
       >
-        <div className="py-5 px-5 sm:pl-18">{content}</div>
+        <div className="px-5 py-5 sm:pl-18">{content}</div>
       </RadixAccordion.Content>
     </RadixAccordion.Item>
   );

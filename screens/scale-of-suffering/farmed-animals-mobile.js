@@ -18,7 +18,7 @@ export function FarmedAnimalsMobile() {
   const textTranslate = useTransform(
     scrollYProgress,
     [screen * 0.5, screen * 1.75],
-    ["0vw", "-100vw"]
+    ["0vw", "-100vw"],
   );
 
   const earthOpacity = useTransform(scrollYProgress, [0, screen * 2], [1, 0.3]);
@@ -26,7 +26,7 @@ export function FarmedAnimalsMobile() {
   const animalsOpacity = useTransform(
     scrollYProgress,
     [screen, screen * 2],
-    [0, 1]
+    [0, 1],
   );
 
   return (

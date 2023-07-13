@@ -13,8 +13,8 @@ export function RaiseAwarenessDialog({ children }) {
       <RadixDialog.Portal>
         <RadixDialog.Overlay className="fixed inset-0 z-10 flex h-screen w-screen items-center justify-center bg-[#1a3439]/50">
           <RadixDialog.Content className="fixed bottom-0 z-10 max-h-screen w-full overflow-y-auto text-brown radix-state-closed:animate-dialog-hide radix-state-open:animate-dialog-show sm:static sm:max-w-sm">
-            <div className="max-h-75 relative m-auto w-full rounded-2xl border-4 border-white bg-white bg-cover px-8 pt-4 pb-8">
-              <RadixDialog.Close className="absolute top-4 right-4">
+            <div className="max-h-75 relative m-auto w-full rounded-2xl border-4 border-white bg-white bg-cover px-8 pb-8 pt-4">
+              <RadixDialog.Close className="absolute right-4 top-4">
                 <CloseIcon className="h-4 w-4" />
               </RadixDialog.Close>
               <div className="flex flex-col space-y-5">

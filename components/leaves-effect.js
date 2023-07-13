@@ -118,7 +118,7 @@ class LeafScene {
   _updateLeaf(leaf) {
     const leafWindSpeed = this.options.wind.speed(
       this.timer - this.options.wind.start,
-      leaf.y
+      leaf.y,
     );
 
     const xSpeed = leafWindSpeed + leaf.xSpeedVariation;
@@ -178,7 +178,7 @@ class LeafScene {
           a *
             Math.sin(
               ((2 * Math.PI) / this.options.wind.duration) * t +
-                (3 * Math.PI) / 2
+                (3 * Math.PI) / 2,
             ) +
           a
         );

@@ -228,7 +228,7 @@ export function Videos() {
         </div>
       </div>
       <img
-        className="not-sr-only pointer-events-none absolute right-0 bottom-0 z-10 hidden max-h-96 w-[20vw] lg:block"
+        className="not-sr-only pointer-events-none absolute bottom-0 right-0 z-10 hidden max-h-96 w-[20vw] lg:block"
         src={penguinsImage.src}
         alt=""
       />

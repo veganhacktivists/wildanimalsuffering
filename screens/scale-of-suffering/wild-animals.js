@@ -36,32 +36,32 @@ export function WildAnimals() {
   const fishLabelOpacity = useTransform(
     scrollYProgress,
     [...fishPos, ...earthWormsPos],
-    [0, 1, 0.5, 0]
+    [0, 1, 0.5, 0],
   );
   const earthWormsOpacity = useTransform(
     scrollYProgress,
     earthWormsPos,
-    [0, 1]
+    [0, 1],
   );
   const earthWormsTextY = useTransform(
     scrollYProgress,
     earthWormsPos,
-    [100, 0]
+    [100, 0],
   );
   const earthWormsLabelOpacity = useTransform(
     scrollYProgress,
     [...earthWormsPos, ...terrestrialArPos],
-    [0, 1, 0.5, 0]
+    [0, 1, 0.5, 0],
   );
   const terrestrialArOpacity = useTransform(
     scrollYProgress,
     terrestrialArPos,
-    [0, 1]
+    [0, 1],
   );
   const terrestrialArTextY = useTransform(
     scrollYProgress,
     terrestrialArPos,
-    [100, 0]
+    [100, 0],
   );
 
   return (

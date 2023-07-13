@@ -143,7 +143,7 @@ export function Organizations() {
               and{" "}
               <a
                 href={t(
-                  "organizations.center_for_reducing_suffering.urls.website"
+                  "organizations.center_for_reducing_suffering.urls.website",
                 )}
                 target="_blank"
                 className="underline"
