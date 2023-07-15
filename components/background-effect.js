@@ -26,10 +26,10 @@ export function useBackgroundEffect() {
         const ratio = 1 - rootBounds.height / boundingClientRect.height;
 
         effectOpacity.set(
-          (intersectionRatio - 0.5) * 2 + intersectionRatio * ratio
+          (intersectionRatio - 0.5) * 2 + intersectionRatio * ratio,
         );
       },
-      { threshold: buildThresholdList(100) }
+      { threshold: buildThresholdList(100) },
     );
 
     observer.observe(screenRef.current);

@@ -31,7 +31,7 @@ export function TypesOfSuffering() {
             imageUrl={thirstAndStarvationImage.src}
             title={t("types_of_suffering.thirst_and_starvation.title")}
             description={t(
-              "types_of_suffering.thirst_and_starvation.description"
+              "types_of_suffering.thirst_and_starvation.description",
             )}
             link="https://www.animal-ethics.org/malnutrition-thirst-wild-animals/"
           />
@@ -45,7 +45,7 @@ export function TypesOfSuffering() {
             imageUrl={diseaseAndParasitismImage.src}
             title={t("types_of_suffering.disease_and_parasitism.title")}
             description={t(
-              "types_of_suffering.disease_and_parasitism.description"
+              "types_of_suffering.disease_and_parasitism.description",
             )}
             link="https://www.animal-ethics.org/diseases-nature/"
           />
@@ -53,7 +53,7 @@ export function TypesOfSuffering() {
             imageUrl={harmfulWeatherConditionsImage.src}
             title={t("types_of_suffering.harmful_weather_conditions.title")}
             description={t(
-              "types_of_suffering.harmful_weather_conditions.description"
+              "types_of_suffering.harmful_weather_conditions.description",
             )}
             link="https://www.animal-ethics.org/weather-conditions-nonhuman-animals/"
           />
@@ -73,7 +73,7 @@ export function TypesOfSuffering() {
             imageUrl={anthropogenicHarmsImage.src}
             title={t("types_of_suffering.anthropogenic_harms.title")}
             description={t(
-              "types_of_suffering.anthropogenic_harms.description"
+              "types_of_suffering.anthropogenic_harms.description",
             )}
             link="https://forum.effectivealtruism.org/posts/8qmQr7kiEYFhX9eTR/what-is-wild-animal-suffering"
           />

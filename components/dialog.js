@@ -20,12 +20,12 @@ export const DialogContent = forwardRef(
       ref={forwardedRef}
       {...props}
     >
-      <RadixDialog.Close asChild className="absolute top-4 right-4 h-4 w-4">
+      <RadixDialog.Close asChild className="absolute right-4 top-4 h-4 w-4">
         <span className="bg-logo h-4 w-4"></span>
       </RadixDialog.Close>
       {children}
     </RadixDialog.Content>
-  )
+  ),
 );
 DialogContent.displayName = "DialogContent";
 

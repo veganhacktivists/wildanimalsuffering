@@ -24,13 +24,13 @@ export function Resource({
               "aspect-square h-full w-full rounded-2xl md:aspect-video lg:aspect-square lg:w-56",
               containThumbnail
                 ? "object-contain lg:h-4/5"
-                : "object-cover md:object-contain lg:object-cover"
+                : "object-cover md:object-contain lg:object-cover",
             )}
           />
         </div>
       </div>
       <div className="flex flex-1 flex-col gap-1 overflow-hidden p-4 lg:p-6">
-        <h3 className="text-xl font-bold line-clamp-2 lg:text-2xl lg:line-clamp-none">
+        <h3 className="line-clamp-2 text-xl font-bold lg:line-clamp-none lg:text-2xl">
           {title}
         </h3>
         <span>{subtext}</span>

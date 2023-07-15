@@ -38,7 +38,7 @@ export function YoutubeVideo({ video }) {
                 <span>{video.author}</span>
                 <span className="text-sm">{video.duration}</span>
               </div>
-              <h3 className="font-brand text-xl font-bold line-clamp-2">
+              <h3 className="line-clamp-2 font-brand text-xl font-bold">
                 {t(`videos.${video.id}.title`)}
               </h3>
             </div>

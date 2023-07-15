@@ -5,7 +5,7 @@ import { forwardRef } from "react";
  */
 export const ActionButton = forwardRef(function ActionButton(
   { step, children, subtitle, as: Component = "button", ...props },
-  ref
+  ref,
 ) {
   return (
     <Component
@@ -15,10 +15,10 @@ export const ActionButton = forwardRef(function ActionButton(
     >
       <div className="flex h-full w-full flex-col justify-center bg-leaves bg-cover px-4 pt-6">
         <span className="pl-2 font-brand text-7xl">{step}</span>
-        <span className="pl-2 pb-2 font-brand text-2xl lg:text-3xl">
+        <span className="pb-2 pl-2 font-brand text-2xl lg:text-3xl">
           {children}
         </span>
-        <span className="pl-2 pb-4">{subtitle}</span>
+        <span className="pb-4 pl-2">{subtitle}</span>
       </div>
     </Component>
   );

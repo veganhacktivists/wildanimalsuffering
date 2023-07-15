@@ -31,22 +31,22 @@ export function WildAnimalsMobile() {
   const fishLabelOpacity = useTransform(
     scrollYProgress,
     [...fishPos, ...earthWormsPos],
-    [0, 1, 0.5, 0]
+    [0, 1, 0.5, 0],
   );
   const earthWormsOpacity = useTransform(
     scrollYProgress,
     earthWormsPos,
-    [0, 1]
+    [0, 1],
   );
   const earthWormsLabelOpacity = useTransform(
     scrollYProgress,
     [...earthWormsPos, ...terrestrialArPos],
-    [0, 1, 0.5, 0]
+    [0, 1, 0.5, 0],
   );
   const terrestrialArOpacity = useTransform(
     scrollYProgress,
     terrestrialArPos,
-    [0, 1]
+    [0, 1],
   );
 
   const statTranslate = useTransform(
@@ -61,7 +61,7 @@ export function WildAnimalsMobile() {
       "-300vw",
       "-300vw",
       "-400vw",
-    ]
+    ],
   );
 
   return (

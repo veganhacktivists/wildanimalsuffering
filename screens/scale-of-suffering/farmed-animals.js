@@ -20,7 +20,7 @@ export function FarmedAnimals() {
   const animalsOpacity = useTransform(
     scrollYProgress,
     [screen, screen * 2],
-    [0, 1]
+    [0, 1],
   );
 
   return (

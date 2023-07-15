@@ -46,7 +46,7 @@ export function Introduction() {
                   {t("introduction.copy", { returnObjects: true }).map(
                     (value) => (
                       <p key={value}>{value}</p>
-                    )
+                    ),
                   )}
                 </div>
               </div>
@@ -57,7 +57,7 @@ export function Introduction() {
           </p>
         </div>
 
-        <div className="flex items-end justify-center bg-black pt-6 pb-6 lg:bg-transparent">
+        <div className="flex items-end justify-center bg-black pb-6 pt-6 lg:bg-transparent">
           <ScrollDownIndicator />
         </div>
       </div>
