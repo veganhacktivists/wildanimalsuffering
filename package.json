@@ -15,27 +15,27 @@
     "@radix-ui/react-dialog": "^1.0.4",
     "@radix-ui/react-tabs": "^1.0.4",
     "@radix-ui/react-toast": "^1.1.4",
-    "@types/node": "20.4.2",
-    "@types/react": "18.2.14",
+    "@types/node": "20.5.6",
+    "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
-    "eslint": "8.44.0",
-    "eslint-config-next": "13.4.9",
-    "framer-motion": "^10.12.20",
-    "i18next": "^23.2.11",
-    "next": "13.4.9",
+    "eslint": "8.48.0",
+    "eslint-config-next": "13.4.19",
+    "framer-motion": "^10.16.1",
+    "i18next": "^23.4.6",
+    "next": "13.4.19",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-i18next": "^13.0.2",
+    "react-i18next": "^13.2.0",
     "react-snowfall": "^1.2.1",
-    "typescript": "5.1.6"
+    "typescript": "5.2.2"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.13",
-    "next-export-optimize-images": "^3.0.6",
-    "postcss": "^8.4.25",
-    "prettier": "^3.0.0",
-    "prettier-plugin-tailwindcss": "^0.4.0",
-    "tailwind-scrollbar": "^3.0.4",
-    "tailwindcss": "^3.3.2"
+    "autoprefixer": "^10.4.15",
+    "next-export-optimize-images": "^3.1.0",
+    "postcss": "^8.4.28",
+    "prettier": "^3.0.2",
+    "prettier-plugin-tailwindcss": "^0.5.3",
+    "tailwind-scrollbar": "^3.0.5",
+    "tailwindcss": "^3.3.3"
   }
 }
