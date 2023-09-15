@@ -63,14 +63,23 @@ export function HowToHelp() {
               >
                 here
               </a>
-              . Are you a researcher?
+              . Researcher? Read this 
+              <a
+                href="https://wildanimalsuffering.org/wai-starter-guide.pdf"
+                target="_blank"
+                className="underline"
+                rel="noreferrer"
+              >
+                starter guide
+               </a>
+               , or
               <a
                 href="https://www.wildanimalinitiative.org/grants"
                 target="_blank"
                 className="underline"
                 rel="noreferrer"
               >
-                Apply for a grant!
+                apply for a grant!
               </a>
             </Trans>
           </p>
