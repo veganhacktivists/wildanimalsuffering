@@ -117,7 +117,7 @@
   "how_to_help.donate.subtitle": "View charities",
   "how_to_help.newsletter.title": "Newsletter Signup",
   "how_to_help.newsletter.subtitle": "Subscribe here",
-  "how_to_help.description": "In addition to the above, you can find career opportunities, get career advice, and join a community <1>here</1>. Are you a researcher? <3>Apply for a grant!</3>",
+  "how_to_help.description": "In addition to the above, you can find career opportunities, get career advice, and join a community <community-link>here</community-link>. Researcher? Read this <starter-guide-link>starter guide</starter-guide-link>, or <grants-link>apply for a grant</grants-link>!",
   "how_to_help.more_opportunities": "View more opportunities",
   "organizations.id": "organizations",
   "organizations.name": "Organizations",
