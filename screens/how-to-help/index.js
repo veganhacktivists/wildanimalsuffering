@@ -72,7 +72,7 @@ export function HowToHelp() {
                   />
                 ),
                 "starter-guide-link": (
-                  <a href="/wai-starter-guide.pdf" className="underline" />
+                  <a href="/wai-starter-guide.pdf" target="_blank" className="underline" />
                 ),
               }}
             />
