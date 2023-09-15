@@ -117,7 +117,7 @@
   "how_to_help.donate.subtitle": "Explorer les ONG",
   "how_to_help.newsletter.title": "Inscription à la newsletter",
   "how_to_help.newsletter.subtitle": "Abonnez-vous ici",
-  "how_to_help.description": "En plus de ce qui précède, vous pouvez trouver des opportunités de carrière, obtenir des conseils de carrière et rejoindre une communauté <1>ici</1>. Aêtes-vous un chercheur? <3>Appliquer pour une subvention!</3>",
+  "how_to_help.description": "En plus de ce qui précède, vous pouvez trouver des opportunités de carrière, obtenir des conseils de carrière et rejoindre une communauté <community-link>ici</community-link>. Aêtes-vous un chercheur? <grants-link>Appliquer pour une subvention!</grants-link>",
   "how_to_help.more_opportunities": "Voir plus d'opportunités",
   "organizations.id": "organizations",
   "organizations.name": "Organisations",

@@ -52,36 +52,30 @@ export function HowToHelp() {
 
         <div className="mx-auto max-w-xl space-y-14 text-center lg:max-w-2xl">
           <p className="leading-relaxed text-white">
-            <Trans i18nKey="how_to_help.description">
-              In addition to the above, you can find career opportunities, get
-              career advice, and join a community
-              <a
-                href="https://www.wildanimalinitiative.org/services"
-                target="_blank"
-                className="underline"
-                rel="noreferrer"
-              >
-                here
-              </a>
-              . Researcher? Read this 
-              <a
-                href="https://wildanimalsuffering.org/wai-starter-guide.pdf"
-                target="_blank"
-                className="underline"
-                rel="noreferrer"
-              >
-                starter guide
-               </a>
-               , or
-              <a
-                href="https://www.wildanimalinitiative.org/grants"
-                target="_blank"
-                className="underline"
-                rel="noreferrer"
-              >
-                apply for a grant!
-              </a>
-            </Trans>
+            <Trans
+              i18nKey="how_to_help.description"
+              components={{
+                "community-link": (
+                  <a
+                    href="https://www.wildanimalinitiative.org/services"
+                    target="_blank"
+                    className="underline"
+                    rel="noreferrer"
+                  />
+                ),
+                "grants-link": (
+                  <a
+                    href="https://www.wildanimalinitiative.org/grants"
+                    target="_blank"
+                    className="underline"
+                    rel="noreferrer"
+                  />
+                ),
+                "starter-guide-link": (
+                  <a href="/wai-starter-guide.pdf" className="underline" />
+                ),
+              }}
+            />
           </p>
 
           <a
