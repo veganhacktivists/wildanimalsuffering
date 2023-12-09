@@ -6,6 +6,7 @@ import en from "./lang/en.json";
 import fr from "./lang/fr.json";
 import id from "./lang/id.json";
 import ja from "./lang/ja.json";
+import lt from "./lang/lt.json";
 import nl from "./lang/nl.json";
 
 export const defaultNS = "translation";
@@ -15,6 +16,7 @@ export const resources = {
   fr: { [defaultNS]: fr },
   id: { [defaultNS]: id },
   ja: { [defaultNS]: ja },
+  lt: { [defaultNS]: lt },
   nl: { [defaultNS]: nl },
 } as const;
 
