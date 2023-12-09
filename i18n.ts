@@ -4,12 +4,14 @@ import { initReactI18next } from "react-i18next";
 import de from "./lang/de.json";
 import en from "./lang/en.json";
 import fr from "./lang/fr.json";
+import ja from "./lang/ja.json";
 
 export const defaultNS = "translation";
 export const resources = {
   de: { [defaultNS]: de },
   en: { [defaultNS]: en },
   fr: { [defaultNS]: fr },
+  ja: { [defaultNS]: ja },
 } as const;
 
 i18n.use(initReactI18next).init({
