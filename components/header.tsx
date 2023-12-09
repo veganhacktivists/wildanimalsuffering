@@ -34,6 +34,9 @@ export function Header({ locale = "en" }: Props) {
         <option className="text-black" value="ja">
           Ja
         </option>
+        <option className="text-black" value="nl">
+          Nl
+        </option>
       </Select>
 
       <span className="hidden font-light md:block">
