@@ -1,6 +1,7 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
+import ar from "./lang/ar.json";
 import de from "./lang/de.json";
 import en from "./lang/en.json";
 import es from "./lang/es.json";
@@ -12,6 +13,7 @@ import nl from "./lang/nl.json";
 
 export const defaultNS = "translation";
 export const resources = {
+  ar: { [defaultNS]: ar },
   de: { [defaultNS]: de },
   en: { [defaultNS]: en },
   es: { [defaultNS]: es },
