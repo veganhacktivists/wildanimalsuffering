@@ -12,7 +12,9 @@
   "introduction.id": "introductie",
   "introduction.name": "Introductie",
   "introduction.tagline": "...en waarom het belangrijk is",
-  "introduction.copy": "[\"Bij het nadenken over de natuur en het leven van wilde dieren, stellen we ons vaak dolfijnen voor die in de oceaan zwemmen of olifanten en leeuwen die in de savanne rondzwerven. We beelden ons meestal grote volwassen dieren in die een leven van vrijheid leiden. Deze rooskleurige kijk op de natuur komt echter niet eens in de buurt van hoe het leven van de meeste wilde dieren eruitziet.\", 'In werkelijkheid wordt het leven van de meeste wilde dieren niet gekenmerkt door vrijheid, maar door strijd. Ze hebben constant te maken met zwaar weer, hongersnood, ziekte en verwondingen, en net als een hond of een mens zouden lijden in hun positie, lijden zij ook.\']",
+  "introduction.copy": [
+    "Bij het nadenken over de natuur en het leven van wilde dieren, stellen we ons vaak dolfijnen voor die in de oceaan zwemmen of olifanten en leeuwen die in de savanne rondzwerven. We beelden ons meestal grote volwassen dieren in die een leven van vrijheid leiden. Deze rooskleurige kijk op de natuur komt echter niet eens in de buurt van hoe het leven van de meeste wilde dieren eruitziet.\", 'In werkelijkheid wordt het leven van de meeste wilde dieren niet gekenmerkt door vrijheid, maar door strijd. Ze hebben constant te maken met zwaar weer, hongersnood, ziekte en verwondingen, en net als een hond of een mens zouden lijden in hun positie, lijden zij ook."
+  ],
   "introduction.overview": "Het volgende is een overzicht van het lijden van wilde dieren, waarom het belangrijk is en wat we kunnen doen om te helpen.",
   "scale_of_suffering.id": "schaal-van-lijden",
   "scale_of_suffering.name": "Schaal van Lijden",
