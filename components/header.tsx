@@ -23,31 +23,34 @@ export function Header({ locale = "en" }: Props) {
 
       <Select defaultValue={locale} onChange={onLangChange}>
         <option className="text-black" value="ar">
-          Ar
+          Arabic
         </option>
         <option className="text-black" value="de">
-          De
+          German
         </option>
         <option className="text-black" value="en">
-          En
+          English
         </option>
         <option className="text-black" value="es">
-          Es
+          Spanish
         </option>
         <option className="text-black" value="fr">
-          Fr
+          French
+        </option>
+        <option className="text-black" value="hy">
+          Armenian
         </option>
         <option className="text-black" value="id">
-          Id
+          Indonesian
         </option>
         <option className="text-black" value="ja">
-          Ja
+          Japanese
         </option>
         <option className="text-black" value="lt">
-          Lt
+          Lithuanian
         </option>
         <option className="text-black" value="nl">
-          Nl
+          Netherlands
         </option>
       </Select>
 
