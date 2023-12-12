@@ -11,6 +11,7 @@ import id from "./lang/id.json";
 import ja from "./lang/ja.json";
 import lt from "./lang/lt.json";
 import nl from "./lang/nl.json";
+import tr from "./lang/tr.json";
 
 export const defaultNS = "translation";
 export const resources = {
@@ -24,6 +25,7 @@ export const resources = {
   ja: { [defaultNS]: ja },
   lt: { [defaultNS]: lt },
   nl: { [defaultNS]: nl },
+  tr: { [defaultNS]: tr },
 } as const;
 
 i18n.use(initReactI18next).init({
