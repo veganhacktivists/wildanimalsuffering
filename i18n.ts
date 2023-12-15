@@ -12,6 +12,7 @@ import id from "./lang/id.json";
 import ja from "./lang/ja.json";
 import lt from "./lang/lt.json";
 import nl from "./lang/nl.json";
+import ru from "./lang/ru.json";
 import tr from "./lang/tr.json";
 import zh from "./lang/zh.json";
 
@@ -28,6 +29,7 @@ export const resources = {
   ja: { [defaultNS]: ja },
   lt: { [defaultNS]: lt },
   nl: { [defaultNS]: nl },
+  ru: { [defaultNS]: ru },
   tr: { [defaultNS]: tr },
   zh: { [defaultNS]: zh },
 } as const;
