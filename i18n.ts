@@ -9,6 +9,7 @@ import fr from "./lang/fr.json";
 import hi from "./lang/hi.json";
 import hy from "./lang/hy.json";
 import id from "./lang/id.json";
+import it from "./lang/it.json";
 import ja from "./lang/ja.json";
 import ko from "./lang/ko.json";
 import lt from "./lang/lt.json";
@@ -30,6 +31,7 @@ export const resources = {
   hi: { [defaultNS]: hi },
   hy: { [defaultNS]: hy },
   id: { [defaultNS]: id },
+  it: { [defaultNS]: it },
   ja: { [defaultNS]: ja },
   ko: { [defaultNS]: ko },
   lt: { [defaultNS]: lt },
