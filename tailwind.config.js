@@ -31,7 +31,6 @@ module.exports = {
         "4/3": "4 / 3",
       },
       backgroundImage: {
-        abyss: "url('/images/abyss.jpg')",
         "ant-hill": "url('/images/ant-hill.png')",
         deer: "url('/images/grass-and-deer.png')",
         "dirt-road": "url('/images/dirt-road.jpg')",
