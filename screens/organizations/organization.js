@@ -9,7 +9,7 @@ export function Organization({ name, children, imageUrl, links }) {
         <h3 className="text-xl font-bold">{name}</h3>
         <div className="mt-3 text-sm leading-relaxed">{children}</div>
 
-        <div className="mt-5 flex w-full grid-cols-2 items-end gap-3 font-medium capitalize text-black">
+        <div className="mt-5 grid w-full grid-cols-2 items-end gap-3 font-medium capitalize text-black md:flex">
           {links.map(([text, url], i) => (
             <a
               key={text}

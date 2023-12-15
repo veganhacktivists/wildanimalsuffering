@@ -104,7 +104,7 @@ export function PopulationDynamics() {
         </div>
       </div>
 
-      <div className="relative mx-auto flex w-full max-w-7xl flex-1 flex-col gap-8 px-8 rtl:justify-end">
+      <div className="relative mx-auto flex w-full max-w-7xl flex-1 flex-col gap-8 px-8 md:rtl:justify-end">
         <h2 className="font-brand text-4xl text-white">
           {t("population_dynamics.name")}
         </h2>
