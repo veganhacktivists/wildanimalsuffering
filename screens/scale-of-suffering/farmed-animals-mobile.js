@@ -9,7 +9,7 @@ import humanImage from "./images/human.png";
 const screen = 1 / 2;
 
 export function FarmedAnimalsMobile() {
-  const { t } = useTranslation();
+  const { i18n, t } = useTranslation();
   const scrollRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: scrollRef,
@@ -32,7 +32,13 @@ export function FarmedAnimalsMobile() {
   return (
     <div className="min-h-[200vh]" ref={scrollRef}>
       <div className="sticky top-0 flex min-h-screen w-screen flex-col justify-center overflow-hidden">
-        <motion.div className="relative" style={{ left: textTranslate }}>
+        <motion.div
+          className="relative"
+          style={{
+            left: i18n.dir() === "ltr" ? textTranslate : undefined,
+            right: i18n.dir() === "rtl" ? textTranslate : undefined,
+          }}
+        >
           <div className="grid w-[200vw] grid-cols-2 text-center text-3xl leading-tight text-white">
             <p className="flex flex-col justify-center font-brand">
               <Trans i18nKey="scale_of_suffering.humans">

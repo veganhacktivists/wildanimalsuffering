@@ -34,7 +34,7 @@ export function Introduction() {
             </div>
             <div className="bg-gradient-to-b from-transparent via-black to-black lg:bg-none lg:pt-16">
               <div className="flex flex-col space-y-10 px-10 py-10 lg:py-0">
-                <h1 className="flex flex-col space-y-4 text-center font-brand lg:text-left">
+                <h1 className="flex flex-col space-y-4 text-center font-brand lg:ltr:text-left lg:rtl:text-right">
                   <span className="text-5xl leading-none text-white lg:text-6xl">
                     {t("common.name")}
                   </span>
@@ -52,7 +52,7 @@ export function Introduction() {
               </div>
             </div>
           </div>
-          <p className="flex flex-col rounded-lg bg-black px-10 text-left text-lg text-white lg:self-center lg:bg-white/10 lg:p-3 lg:pl-8 lg:pr-8 lg:text-center">
+          <p className="flex flex-col rounded-lg bg-black px-10 text-lg text-white ltr:text-left rtl:text-right lg:self-center lg:bg-white/10 lg:p-3 lg:pl-8 lg:pr-8 lg:text-center">
             {t("introduction.overview")}
           </p>
         </div>

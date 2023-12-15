@@ -28,7 +28,7 @@ class LeafScene {
     for (let i = 0; i < this.options.numLeaves; i++) {
       const el = document.createElement("div");
       el.className =
-        "absolute top-0 left-0 w-5 h-5 bg-cover bg-leaf [transform-style:preserve-3d] [backface-visibility:visible]";
+        "absolute top-0 ltr:left-0 rtl:right-0 w-5 h-5 bg-cover bg-leaf [transform-style:preserve-3d] [backface-visibility:visible]";
 
       const leaf = {
         el,

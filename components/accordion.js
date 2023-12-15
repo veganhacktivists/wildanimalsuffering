@@ -26,7 +26,7 @@ export function AccordionItem({ index, label, content, value, ...props }) {
           <span className="w-10 font-brand text-lg font-bold text-gray">
             {index}
           </span>
-          <span className="flex-1 text-left">{label}</span>
+          <span className="flex-1 ltr:text-left rtl:text-right">{label}</span>
           <span className="grid h-8 w-8 place-items-center">
             <ArrowIcon
               aria-hidden

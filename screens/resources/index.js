@@ -45,7 +45,7 @@ function TabContent({ value, children }) {
 }
 
 export function Resources() {
-  const { t } = useTranslation();
+  const { i18n, t } = useTranslation();
 
   return (
     <RadixTabs.Root
@@ -72,7 +72,10 @@ export function Resources() {
           <Podcasts />
         </MobileResourceList>
 
-        <div className="mx-auto hidden w-full max-w-7xl grid-cols-9 gap-8 px-8 lg:grid">
+        <div
+          className="mx-auto hidden w-full max-w-7xl grid-cols-9 gap-8 px-8 lg:grid"
+          style={{ direction: i18n.dir() }}
+        >
           <div className="col-span-2">
             <RadixTabs.List
               className="flex flex-col gap-4"

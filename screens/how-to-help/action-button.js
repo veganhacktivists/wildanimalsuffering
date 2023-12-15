@@ -9,7 +9,7 @@ export const ActionButton = forwardRef(function ActionButton(
 ) {
   return (
     <Component
-      className="max-w-56 full aspect-square max-h-56 cursor-pointer overflow-hidden rounded-2xl border border-white/60 bg-white/30 text-left shadow-glow-lg shadow-white/30 transition-transform duration-100 hover:scale-105 hover:shadow-white/50"
+      className="max-w-56 full aspect-square max-h-56 cursor-pointer overflow-hidden rounded-2xl border border-white/60 bg-white/30 shadow-glow-lg shadow-white/30 transition-transform duration-100 hover:scale-105 hover:shadow-white/50 ltr:text-left rtl:text-right"
       ref={ref}
       {...props}
     >

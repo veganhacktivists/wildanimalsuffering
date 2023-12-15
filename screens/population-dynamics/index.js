@@ -33,7 +33,10 @@ export function PopulationDynamics() {
         alt=""
       />
 
-      <div className="absolute left-1/2 top-1/2 h-[900px] w-[1440px] -translate-x-1/2 -translate-y-[45%] scale-50 sm:-translate-y-1/2 sm:scale-75 md:scale-100">
+      <div
+        dir="ltr"
+        className="absolute left-1/2 top-1/2 h-[900px] w-[1440px] -translate-x-1/2 -translate-y-[45%] scale-50 sm:-translate-y-1/2 sm:scale-75 md:scale-100"
+      >
         <div className="absolute inset-0 grid h-full w-full grid-cols-10 grid-rows-5">
           <img
             className="col-span-2 col-start-7 row-span-2 row-start-2 -translate-x-8 -translate-y-8"
@@ -101,7 +104,7 @@ export function PopulationDynamics() {
         </div>
       </div>
 
-      <div className="relative mx-auto flex w-full max-w-7xl flex-1 flex-col gap-8 px-8">
+      <div className="relative mx-auto flex w-full max-w-7xl flex-1 flex-col gap-8 px-8 rtl:justify-end">
         <h2 className="font-brand text-4xl text-white">
           {t("population_dynamics.name")}
         </h2>
