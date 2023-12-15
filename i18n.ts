@@ -13,6 +13,7 @@ import ja from "./lang/ja.json";
 import lt from "./lang/lt.json";
 import nl from "./lang/nl.json";
 import tr from "./lang/tr.json";
+import zh from "./lang/zh.json";
 
 export const defaultNS = "translation";
 export const resources = {
@@ -28,6 +29,7 @@ export const resources = {
   lt: { [defaultNS]: lt },
   nl: { [defaultNS]: nl },
   tr: { [defaultNS]: tr },
+  zh: { [defaultNS]: zh },
 } as const;
 
 i18n.use(initReactI18next).init({

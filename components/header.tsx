@@ -24,6 +24,7 @@ export function Header({ locale = "en" }: Props) {
       <Select defaultValue={locale} onChange={onLangChange}>
         <option className="text-black" value="ar">Arabic</option>
         <option className="text-black" value="hy">Armenian</option>
+        <option className="text-black" value="zh">Chinese</option>
         <option className="text-black" value="nl">Dutch</option>
         <option className="text-black" value="en">English</option>
         <option className="text-black" value="fr">French</option>
