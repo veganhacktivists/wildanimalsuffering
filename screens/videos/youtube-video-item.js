@@ -18,7 +18,7 @@ export function YoutubeVideoItem({ active = false, video, ...props }) {
         alt=""
       />
       <div className="pointer-events-none absolute inset-0 h-full w-full bg-gradient-to-t from-black to-black/0 opacity-60"></div>
-      <div className="absolute bottom-0 left-0 flex w-full flex-col items-start p-5 text-left text-white">
+      <div className="absolute bottom-0 flex w-full flex-col items-start p-5 text-white ltr:left-0 ltr:text-left rtl:right-0 rtl:text-right">
         <span className="whitespace-nowrap text-xs">{video.author}</span>
         <span className="line-clamp-2 text-xs font-semibold lg:text-sm xl:text-base">
           {t(`videos.${video.id}.title`)}

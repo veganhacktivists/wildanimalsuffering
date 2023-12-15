@@ -18,30 +18,70 @@ export function Header({ locale = "en" }: Props) {
   };
 
   return (
-    <header className="absolute left-0 z-20 flex w-full items-center gap-8 p-10 text-white">
+    <header className="absolute z-20 flex w-full items-center gap-8 p-10 text-white ltr:left-0 rtl:right-0">
       <Navigation />
 
       <Select defaultValue={locale} onChange={onLangChange}>
-        <option className="text-black" value="ar">Arabic</option>
-        <option className="text-black" value="hy">Armenian</option>
-        <option className="text-black" value="zh">Chinese</option>
-        <option className="text-black" value="nl">Dutch</option>
-        <option className="text-black" value="en">English</option>
-        <option className="text-black" value="fr">French</option>
-        <option className="text-black" value="de">German</option>
-        <option className="text-black" value="hi">Hindi</option>
-        <option className="text-black" value="id">Indonesian</option>
-        <option className="text-black" value="it">Italian</option>
-        <option className="text-black" value="ja">Japanese</option>
-        <option className="text-black" value="ko">Korean</option>
-        <option className="text-black" value="lt">Lithuanian</option>
-        <option className="text-black" value="pl">Polish</option>
-        <option className="text-black" value="pt">Portuguese</option>
-        <option className="text-black" value="ru">Russian</option>
-        <option className="text-black" value="es">Spanish</option>
-        <option className="text-black" value="th">Thai</option>
-        <option className="text-black" value="tr">Turkish</option>
-        <option className="text-black" value="vi">Vietnamese</option>
+        <option className="text-black" value="ar">
+          Arabic
+        </option>
+        <option className="text-black" value="hy">
+          Armenian
+        </option>
+        <option className="text-black" value="zh">
+          Chinese
+        </option>
+        <option className="text-black" value="nl">
+          Dutch
+        </option>
+        <option className="text-black" value="en">
+          English
+        </option>
+        <option className="text-black" value="fr">
+          French
+        </option>
+        <option className="text-black" value="de">
+          German
+        </option>
+        <option className="text-black" value="hi">
+          Hindi
+        </option>
+        <option className="text-black" value="id">
+          Indonesian
+        </option>
+        <option className="text-black" value="it">
+          Italian
+        </option>
+        <option className="text-black" value="ja">
+          Japanese
+        </option>
+        <option className="text-black" value="ko">
+          Korean
+        </option>
+        <option className="text-black" value="lt">
+          Lithuanian
+        </option>
+        <option className="text-black" value="pl">
+          Polish
+        </option>
+        <option className="text-black" value="pt">
+          Portuguese
+        </option>
+        <option className="text-black" value="ru">
+          Russian
+        </option>
+        <option className="text-black" value="es">
+          Spanish
+        </option>
+        <option className="text-black" value="th">
+          Thai
+        </option>
+        <option className="text-black" value="tr">
+          Turkish
+        </option>
+        <option className="text-black" value="vi">
+          Vietnamese
+        </option>
       </Select>
 
       <span className="hidden font-light md:block">
@@ -59,7 +99,7 @@ export function Header({ locale = "en" }: Props) {
       </span>
 
       <a
-        className="absolute right-0 top-0 z-20 m-10 hidden w-20 opacity-75 hover:opacity-100 md:block"
+        className="absolute top-0 z-20 m-10 hidden w-20 opacity-75 hover:opacity-100 ltr:right-0 rtl:left-0 md:block"
         href="https://veganhacktivists.org"
         target="_blank"
         rel="noreferrer"

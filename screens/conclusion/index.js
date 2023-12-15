@@ -62,7 +62,7 @@ export function Conclusion({ locale, visitors }) {
           <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
             <div className="flex flex-col items-center gap-6 md:flex-row">
               <HealthcareIcon className="my-auto" />
-              <div className="text-center md:text-left">
+              <div className="text-center md:ltr:text-left md:rtl:text-right">
                 <h4 className="mb-4 text-xl font-bold text-white md:mb-4">
                   {t("conclusion.support.heading")}
                 </h4>
@@ -82,7 +82,7 @@ export function Conclusion({ locale, visitors }) {
           </div>
         </div>
       </div>
-      <div className="mx-auto flex max-w-7xl p-10">
+      <div className="relative mx-auto flex max-w-7xl p-10">
         <div className="grid grid-cols-4 gap-10 text-white">
           <div className="col-span-4 flex flex-col gap-2 md:col-span-3 lg:flex-row lg:gap-10">
             <h4 className="w-48 whitespace-nowrap text-lg font-bold">

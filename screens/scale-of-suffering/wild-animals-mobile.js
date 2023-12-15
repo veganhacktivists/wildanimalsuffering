@@ -19,7 +19,7 @@ const earthWormsPos = [1.5 * screen, 1.8 * screen];
 const terrestrialArPos = [2 * screen, 2.3 * screen];
 
 export function WildAnimalsMobile() {
-  const { t } = useTranslation();
+  const { i18n, t } = useTranslation();
   const scrollRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: scrollRef,
@@ -78,7 +78,10 @@ export function WildAnimalsMobile() {
             </p>
             <motion.div
               className="relative mt-2"
-              style={{ left: statTranslate }}
+              style={{
+                left: i18n.dir() === "ltr" ? statTranslate : undefined,
+                right: i18n.dir() === "rtl" ? statTranslate : undefined,
+              }}
             >
               <ul className="grid w-[500vw] grid-cols-5 font-brand text-2xl md:text-3xl">
                 <li className="px-4">

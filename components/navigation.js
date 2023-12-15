@@ -32,7 +32,7 @@ export function Navigation() {
       </button>
 
       {open && (
-        <nav className="absolute left-0 top-0 z-10 h-auto w-full overflow-auto p-5 sm:max-w-sm">
+        <nav className="absolute top-0 z-10 h-auto w-full overflow-auto p-5 ltr:left-0 rtl:right-0 sm:max-w-sm">
           <div className="flex flex-col overflow-auto rounded-xl bg-white text-menu-front-dark">
             <div className="flex justify-between p-8">
               <div className="font-brand text-2xl uppercase text-menu-front-dark">
@@ -44,8 +44,8 @@ export function Navigation() {
               >
                 <span className="sr-only">{t("navigation.close")}</span>
                 <div className="relative h-full w-9/10">
-                  <div className="absolute left-1/2 h-full w-1/10 rotate-45 bg-menu-back-dark"></div>
-                  <div className="absolute left-1/2 h-full w-1/10 -rotate-45 bg-menu-back-dark"></div>
+                  <div className="absolute h-full w-1/10 rotate-45 bg-menu-back-dark ltr:left-1/2 rtl:right-1/2"></div>
+                  <div className="absolute h-full w-1/10 -rotate-45 bg-menu-back-dark ltr:left-1/2 rtl:right-1/2"></div>
                 </div>
               </button>
             </div>

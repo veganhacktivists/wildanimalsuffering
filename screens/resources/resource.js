@@ -29,7 +29,7 @@ export function Resource({
           />
         </div>
       </div>
-      <div className="flex flex-1 flex-col gap-1 overflow-hidden p-4 lg:p-6">
+      <div className="flex flex-1 flex-col gap-1 overflow-hidden p-4 ltr:text-left rtl:text-right lg:p-6">
         <h3 className="line-clamp-2 text-xl font-bold lg:line-clamp-none lg:text-2xl">
           {title}
         </h3>

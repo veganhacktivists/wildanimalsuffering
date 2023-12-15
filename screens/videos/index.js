@@ -183,7 +183,7 @@ export function Videos() {
       className="relative flex min-h-screen items-center bg-sky bg-cover py-12 lg:py-24"
     >
       <img
-        className="not-sr-only absolute left-0 top-0 hidden w-full max-w-md lg:block"
+        className="not-sr-only absolute top-0 hidden w-full max-w-md ltr:left-0 rtl:right-0 lg:block"
         src={icebergImage.src}
         alt=""
       />
