@@ -17,7 +17,7 @@ export function TypesOfSuffering() {
       id={t("types_of_suffering.id")}
       className="relative flex min-h-screen items-center bg-sand bg-cover bg-center py-24"
     >
-      <div className="absolute bottom-0 h-full w-full bg-deer bg-no-repeat ltr:bg-left-bottom rtl:bg-right-bottom xl:bg-contain" />
+      <div className="absolute bottom-0 h-full w-full bg-deer bg-left-bottom bg-no-repeat xl:bg-contain" />
 
       <div className="mx-auto flex w-full max-w-7xl flex-col space-y-10 px-10">
         <h2 className="flex flex-col text-center font-brand text-4xl text-white">

@@ -29,7 +29,7 @@ function MobileResourceList({ title, children }) {
       <h3 className="px-8 text-center font-brand text-3xl text-white">
         {title}
       </h3>
-      <div className="flex snap-x snap-mandatory scroll-px-8 gap-8 overflow-x-scroll px-8 scrollbar-none">
+      <div className="flex snap-x snap-mandatory scroll-px-8 gap-8 overflow-x-scroll px-8 scrollbar-none ltr:flex-row rtl:flex-row-reverse">
         {children}
       </div>
     </div>
