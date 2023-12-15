@@ -94,7 +94,7 @@ export function HowToHelp() {
       </div>
 
       <img
-        className="not-sr-only pointer-events-none absolute bottom-12 hidden max-h-96 w-[20vw] ltr:left-12 rtl:right-12 lg:block"
+        className="not-sr-only pointer-events-none absolute bottom-12 left-12 hidden max-h-96 w-[20vw] lg:block"
         src={miceImage.src}
         alt=""
       />

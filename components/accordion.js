@@ -22,7 +22,7 @@ export function AccordionItem({ index, label, content, value, ...props }) {
       {...props}
     >
       <RadixAccordion.Header className="flex rounded-lg bg-white py-2 transition-all radix-state-open:rounded-b-none">
-        <RadixAccordion.Trigger className="group flex flex-1 items-center space-x-4 px-4">
+        <RadixAccordion.Trigger className="group flex flex-1 items-center gap-x-4 px-4">
           <span className="w-10 font-brand text-lg font-bold text-gray">
             {index}
           </span>

@@ -1,10 +1,12 @@
 import { useEffect, useRef } from "react";
+import { useTranslation } from "react-i18next";
 
 class LeafScene {
-  constructor(el) {
+  constructor(el, dir) {
     this.viewport = el;
     this.world = document.createElement("div");
     this.leaves = [];
+    this.dir = dir;
 
     this.options = {
       numLeaves: 20,
@@ -28,7 +30,7 @@ class LeafScene {
     for (let i = 0; i < this.options.numLeaves; i++) {
       const el = document.createElement("div");
       el.className =
-        "absolute top-0 ltr:left-0 rtl:right-0 w-5 h-5 bg-cover bg-leaf [transform-style:preserve-3d] [backface-visibility:visible]";
+        "absolute inset-0 w-5 h-5 bg-cover bg-leaf [transform-style:preserve-3d] [backface-visibility:visible]";
 
       const leaf = {
         el,
@@ -116,6 +118,7 @@ class LeafScene {
   }
 
   _updateLeaf(leaf) {
+    const direction = this.dir === "rtl" ? -1 : 1;
     const leafWindSpeed = this.options.wind.speed(
       this.timer - this.options.wind.start,
       leaf.y,
@@ -128,7 +131,7 @@ class LeafScene {
 
     let t =
       "translateX( " +
-      leaf.x +
+      leaf.x * direction +
       "px ) translateY( " +
       leaf.y +
       "px ) translateZ( " +
@@ -189,15 +192,16 @@ class LeafScene {
 
 export function LeavesEffect() {
   const ref = useRef(null);
+  const { i18n } = useTranslation();
 
   useEffect(() => {
     if (!ref.current) return;
 
-    const leaves = new LeafScene(ref.current);
+    const leaves = new LeafScene(ref.current, i18n.dir());
 
     leaves.init();
     leaves.render();
-  }, [ref]);
+  }, [i18n, ref]);
 
   return <div ref={ref} className="h-full w-full" />;
 }
