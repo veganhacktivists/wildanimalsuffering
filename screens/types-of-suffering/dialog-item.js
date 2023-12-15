@@ -10,7 +10,7 @@ export function DialogItem({ imageUrl, title, description, link }) {
     <RadixDialog.Root>
       <RadixDialog.Trigger className="relative flex w-3/4 cursor-zoom-in flex-col items-center justify-between rounded-md border-white bg-white/40 sm:w-1/3 lg:w-1/4 xl:w-1/5">
         <div className="flex aspect-video w-full">
-          <ExpandIcon className="absolute right-4 top-4 h-5 w-5" />
+          <ExpandIcon className="absolute top-4 h-5 w-5 ltr:right-4 rtl:left-4" />
           <img
             className="mx-auto h-full bg-center object-contain"
             src={imageUrl}
@@ -25,7 +25,7 @@ export function DialogItem({ imageUrl, title, description, link }) {
         <RadixDialog.Overlay className="fixed inset-0 z-10 flex h-screen w-screen items-center justify-center bg-[#1a3439]/50">
           <RadixDialog.Content className="fixed bottom-0 z-10 max-h-screen w-full max-w-4xl overflow-y-auto md:static">
             <div className="max-h-75 relative m-auto grid w-full place-items-center rounded-2xl border-4 border-white bg-white bg-sand bg-cover p-10 md:grid-cols-2">
-              <RadixDialog.Close className="absolute right-4 top-4">
+              <RadixDialog.Close className="absolute top-4 ltr:right-4 rtl:left-4">
                 <CloseIcon className="h-6 w-6" />
               </RadixDialog.Close>
               <img src={imageUrl} alt="" className="w-full max-w-sm" />

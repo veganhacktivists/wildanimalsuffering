@@ -24,7 +24,7 @@ export function Navigation() {
   return (
     <>
       <button
-        className="mr-auto cursor-pointer md:mr-0"
+        className="cursor-pointer ltr:mr-auto rtl:ml-auto ltr:md:mr-0 rtl:md:ml-0"
         onClick={() => setOpen(true)}
       >
         <span className="sr-only">{t("navigation.name")}</span>

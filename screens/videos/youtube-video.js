@@ -34,7 +34,7 @@ export function YoutubeVideo({ video }) {
               <PlayIcon size={80} />
             </div>
             <div className="relative mt-auto flex flex-col space-y-2 p-5 text-white ltr:text-left rtl:text-right">
-              <div className="space-x-3">
+              <div className="flex items-center gap-x-3">
                 <span>{video.author}</span>
                 <span className="text-sm">{video.duration}</span>
               </div>
