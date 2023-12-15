@@ -14,6 +14,7 @@ import lt from "./lang/lt.json";
 import nl from "./lang/nl.json";
 import pt from "./lang/pt.json";
 import tr from "./lang/tr.json";
+import vi from "./lang/vi.json";
 import zh from "./lang/zh.json";
 
 export const defaultNS = "translation";
@@ -31,6 +32,7 @@ export const resources = {
   nl: { [defaultNS]: nl },
   pt: { [defaultNS]: pt },
   tr: { [defaultNS]: tr },
+  vi: { [defaultNS]: vi },
   zh: { [defaultNS]: zh },
 } as const;
 
