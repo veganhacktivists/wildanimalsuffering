@@ -13,6 +13,7 @@ import ja from "./lang/ja.json";
 import ko from "./lang/ko.json";
 import lt from "./lang/lt.json";
 import nl from "./lang/nl.json";
+import pl from "./lang/pl.json";
 import pt from "./lang/pt.json";
 import ru from "./lang/ru.json";
 import th from "./lang/th.json";
@@ -34,6 +35,7 @@ export const resources = {
   ko: { [defaultNS]: ko },
   lt: { [defaultNS]: lt },
   nl: { [defaultNS]: nl },
+  pl: { [defaultNS]: pl },
   pt: { [defaultNS]: pt },
   ru: { [defaultNS]: ru },
   th: { [defaultNS]: th },
