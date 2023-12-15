@@ -35,6 +35,7 @@ export function Header({ locale = "en" }: Props) {
         <option className="text-black" value="lt">Lithuanian</option>
         <option className="text-black" value="ru">Russian</option>
         <option className="text-black" value="es">Spanish</option>
+        <option className="text-black" value="tr">Thai</option>
         <option className="text-black" value="tr">Turkish</option>
       </Select>
 
