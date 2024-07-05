@@ -37,5 +37,6 @@
     "prettier-plugin-tailwindcss": "^0.5.3",
     "tailwind-scrollbar": "^3.0.5",
     "tailwindcss": "^3.3.3"
-  }
+  },
+  "packageManager": "pnpm@9.3.0+sha1.d4f1da7af76dbdb4ab1a08f6b5add602ffad6fd4"
 }
