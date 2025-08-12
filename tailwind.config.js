@@ -125,6 +125,38 @@ module.exports = {
             transform: "rotate(45deg) translate(16px, 16px)",
           },
         },
+        "fade-in": {
+          from: { opacity: 0 },
+          to: { opacity: 1 },
+        },
+        "fade-out": {
+          from: { opacity: 1 },
+          to: { opacity: 0 },
+        },
+        "dialog-slide-up": {
+          from: { opacity: 0, transform: "translateY(100%)" },
+          to: { opacity: 1, transform: "translateY(0)" },
+        },
+        "dialog-slide-down": {
+          from: { opacity: 1, transform: "translateY(0)" },
+          to: { opacity: 0, transform: "translateY(100%)" },
+        },
+        "dialog-scale-in": {
+          from: { opacity: 0, transform: "scale(0.85) translateY(10px)" },
+          to: { opacity: 1, transform: "scale(1) translateY(0)" },
+        },
+        "dialog-scale-out": {
+          from: { opacity: 1, transform: "scale(1) translateY(0)" },
+          to: { opacity: 0, transform: "scale(0.85) translateY(10px)" },
+        },
+        "image-float": {
+          from: { opacity: 0, transform: "translateY(20px) scale(0.95)" },
+          to: { opacity: 1, transform: "translateY(0) scale(1)" },
+        },
+        "content-slide-in": {
+          from: { opacity: 0, transform: "translateX(20px)" },
+          to: { opacity: 1, transform: "translateX(0)" },
+        },
       },
       spacing: {
         18: "4.5rem",
