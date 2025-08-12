@@ -21,7 +21,7 @@ const CollapsibleSection = ({ sectionNumber, title, children, isOpen, onToggle }
               {title}
             </h3>
           </div>
-          <div className={`transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}>
+          <div className={`transition-transform duration-300 ease-in-out ${isOpen ? 'rotate-180' : ''}`}>
             <svg className="h-8 w-8" viewBox="0 0 15 9" fill="none">
               <path
                 d="M2.09155 2.29578L7.20878 7.57418C7.24613 7.61523 7.29124 7.64795 7.34133 7.67032C7.39142 7.69269 7.44542 7.70423 7.5 7.70423C7.55458 7.70423 7.60859 7.69269 7.65867 7.67032C7.70876 7.64795 7.75388 7.61523 7.79123 7.57418L12.9085 2.29578"
@@ -34,11 +34,17 @@ const CollapsibleSection = ({ sectionNumber, title, children, isOpen, onToggle }
           </div>
         </div>
       </button>
-      {isOpen && (
-        <div className="px-6 pb-6 lg:px-8 lg:pb-8">
-          {children}
-        </div>
-      )}
+                    <div 
+                className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                  isOpen ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'
+                }`}
+              >
+                <div className={`px-6 pb-6 lg:px-8 lg:pb-8 transition-all duration-300 ease-in-out ${
+                  isOpen ? 'translate-y-0' : '-translate-y-2'
+                }`}>
+                  {children}
+                </div>
+              </div>
     </div>
   );
 };
