@@ -67,6 +67,30 @@ export function CommonObjections() {
             label={t("common_objections.factory_farming_first.label")}
             content={t("common_objections.factory_farming_first.content")}
           />
+          <AccordionItem
+            value={t("common_objections.resources_better_spent_on_humans.id")}
+            index="07"
+            label={t("common_objections.resources_better_spent_on_humans.label")}
+            content={t("common_objections.resources_better_spent_on_humans.content")}
+          />
+          <AccordionItem
+            value={t("common_objections.cant_know_whats_good.id")}
+            index="08"
+            label={t("common_objections.cant_know_whats_good.label")}
+            content={t("common_objections.cant_know_whats_good.content")}
+          />
+          <AccordionItem
+            value={t("common_objections.unintended_consequences.id")}
+            index="09"
+            label={t("common_objections.unintended_consequences.label")}
+            content={t("common_objections.unintended_consequences.content")}
+          />
+          <AccordionItem
+            value={t("common_objections.playing_god.id")}
+            index="10"
+            label={t("common_objections.playing_god.label")}
+            content={t("common_objections.playing_god.content")}
+          />
         </Accordion>
       </div>
     </section>
