@@ -91,7 +91,7 @@ export function Navigation() {
               </ul>
               <div className="mt-8 border-t py-8">
                 <Trans i18nKey="navigation.made_with_love">
-                  Made with love by the{" "}
+                  Made with love by{" "}
                   <a
                     className="whitespace-nowrap underline"
                     href="https://veganhacktivists.org"
