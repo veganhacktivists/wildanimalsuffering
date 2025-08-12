@@ -22,6 +22,9 @@ module.exports = {
         "slide-bg-right-fast": "slide-bg-right 15s linear infinite",
         "slide-down": "slide-down 150ms ease-in-out",
         "slide-up": "slide-up 150ms ease-in-out",
+        "tab-fade-in": "tab-fade-in 500ms ease-out",
+        "tab-slide-in-left": "tab-slide-in-left 300ms ease-out",
+        "tab-slide-in-right": "tab-slide-in-right 300ms ease-out",
       },
       animationDelay: {
         "-400": "-400ms",
@@ -154,6 +157,18 @@ module.exports = {
           to: { opacity: 1, transform: "translateY(0) scale(1)" },
         },
         "content-slide-in": {
+          from: { opacity: 0, transform: "translateX(20px)" },
+          to: { opacity: 1, transform: "translateX(0)" },
+        },
+        "tab-fade-in": {
+          from: { opacity: 0, transform: "translateY(5px)" },
+          to: { opacity: 1, transform: "translateY(0)" },
+        },
+        "tab-slide-in-left": {
+          from: { opacity: 0, transform: "translateX(-20px)" },
+          to: { opacity: 1, transform: "translateX(0)" },
+        },
+        "tab-slide-in-right": {
           from: { opacity: 0, transform: "translateX(20px)" },
           to: { opacity: 1, transform: "translateX(0)" },
         },

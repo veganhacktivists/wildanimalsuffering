@@ -9,7 +9,9 @@ export function Resource({
   containThumbnail = false,
 }) {
   return (
-    <div className="flex w-9/10 flex-shrink-0 snap-center flex-col overflow-hidden rounded-2xl border border-white bg-white/50 pb-4 lg:w-auto lg:flex-row lg:pb-0">
+    <div 
+      className="group flex w-9/10 flex-shrink-0 snap-center flex-col overflow-hidden rounded-2xl border border-white bg-white/50 pb-4 transition-all duration-300 hover:shadow-lg hover:bg-white/60 lg:w-auto lg:flex-row lg:pb-0"
+    >
       <div
         className="bg-cover lg:hidden xl:grid"
         style={{
@@ -21,7 +23,7 @@ export function Resource({
             src={imageUrl}
             alt=""
             className={cx(
-              "aspect-square h-full w-full rounded-2xl md:aspect-video lg:aspect-square lg:w-56",
+              "aspect-square h-full w-full rounded-2xl md:aspect-video lg:aspect-square lg:w-56 transition-transform duration-300 group-hover:scale-105",
               containThumbnail
                 ? "object-contain lg:h-4/5"
                 : "object-cover md:object-contain lg:object-cover",
@@ -44,7 +46,7 @@ export function Resource({
             href={url}
             target="_blank"
             rel="noreferrer"
-            className="block rounded-full bg-brown p-1 text-center text-lg font-medium text-white hover:bg-brown/80"
+            className="block rounded-full bg-brown p-1 text-center text-lg font-medium text-white transition-all duration-300 hover:bg-brown/80 hover:scale-105 hover:shadow-md"
           >
             {text}
           </a>

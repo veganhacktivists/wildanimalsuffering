@@ -15,7 +15,7 @@ const ResourceTypes = {
 function Tab({ resourceType, children }) {
   return (
     <RadixTabs.Trigger
-      className="w-full rounded-full bg-brown-lighter p-2 text-xl font-medium text-white hover:bg-brown-lighter/80 radix-state-active:bg-brown"
+      className="w-full rounded-full bg-brown-lighter p-2 text-xl font-medium text-white transition-all duration-500 hover:bg-brown-lighter/80 hover:scale-105 hover:shadow-lg radix-state-active:bg-brown radix-state-active:scale-105 radix-state-active:shadow-lg"
       value={resourceType}
     >
       {children}
@@ -38,7 +38,10 @@ function MobileResourceList({ title, children }) {
 
 function TabContent({ value, children }) {
   return (
-    <RadixTabs.Content value={value} className="flex flex-col gap-8">
+    <RadixTabs.Content 
+      value={value} 
+      className="flex flex-col gap-8 radix-state-active:animate-tab-fade-in"
+    >
       {children}
     </RadixTabs.Content>
   );
@@ -50,7 +53,7 @@ export function Resources() {
   return (
     <RadixTabs.Root
       id={t("resources.id")}
-      className="relative flex min-h-screen items-center bg-sand bg-cover py-12 lg:items-start lg:py-24"
+      className="relative flex min-h-screen items-center bg-sand bg-cover bg-fixed bg-no-repeat py-12 lg:items-start lg:py-24"
       defaultValue={ResourceTypes.WEBSITES}
       orientation="vertical"
     >
