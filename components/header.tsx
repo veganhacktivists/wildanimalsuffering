@@ -89,11 +89,11 @@ export function Header({ locale = "en" }: Props) {
           Illustrations by{" "}
           <a
             className="font-normal underline"
-            href="https://katerodman.com/"
+            href="https://violetstudios.org"
             target="_blank"
             rel="noreferrer"
           >
-            Kate Rodman
+            Violet Studios
           </a>
         </Trans>
       </span>
