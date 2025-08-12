@@ -33,7 +33,7 @@ export function DialogItem({ imageUrl, title, description, link }) {
                 alt="" 
                 className="w-full max-w-sm animate-[image-float_300ms_ease-out_100ms_both]" 
               />
-              <div className="flex flex-col space-y-5 animate-[content-slide-in_300ms_ease-out_200ms_both]">
+              <div className="flex flex-col space-y-5">
                 <RadixDialog.Title className="font-brand text-2xl font-bold">
                   {title}
                 </RadixDialog.Title>
