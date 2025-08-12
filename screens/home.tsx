@@ -5,6 +5,7 @@ import { HowToHelp } from "~/screens/how-to-help";
 import { Introduction } from "~/screens/introduction";
 import { Organizations } from "~/screens/organizations";
 import { PopulationDynamics } from "~/screens/population-dynamics";
+import { ProposedSolutions } from "~/screens/proposed-solutions";
 import { Resources } from "~/screens/resources";
 import { ScaleOfSuffering } from "~/screens/scale-of-suffering";
 import { TypesOfSuffering } from "~/screens/types-of-suffering";
@@ -27,6 +28,7 @@ export default function Home({ locale }: Props) {
         <ScaleOfSuffering />
         <TypesOfSuffering />
         <PopulationDynamics />
+        <ProposedSolutions />
         <Videos />
         <CommonObjections />
         <HowToHelp />

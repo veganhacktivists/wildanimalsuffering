@@ -45,6 +45,7 @@ module.exports = {
         leaf: "url('/images/leaf.png')",
         leaves: "url('/images/leaves.png')",
         mud: "url('/images/mud-bg-color.jpg')",
+        "proposed-solutions": "url('/images/proposed-solutions-bg.jpg')",
         resource: "url('/images/resource-bg.png')",
         sand: "url('/images/sand-bg-color.jpg')",
         savanna: "url('/images/savanna.jpg')",
