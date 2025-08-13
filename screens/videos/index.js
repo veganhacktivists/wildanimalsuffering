@@ -17,8 +17,6 @@ import mediumThumbnailWasIntroduction from "./images/thumbnail-was-introduction-
 import smallThumbnailWasIntroduction from "./images/thumbnail-was-introduction-small.jpeg";
 import mediumThumbnailEnvironmentalEthics from "./images/thumbnail-environmental-ethics-medium.jpeg";
 import smallThumbnailEnvironmentalEthics from "./images/thumbnail-environmental-ethics-small.jpeg";
-import mediumThumbnailWasSolution from "./images/thumbnail-was-solution-medium.jpeg";
-import smallThumbnailWasSolution from "./images/thumbnail-was-solution-small.jpeg";
 import mediumThumbnailDavidAttenborough from "./images/thumbnail-david-attenborough-medium.jpeg";
 import smallThumbnailDavidAttenborough from "./images/thumbnail-david-attenborough-small.jpeg";
 import mediumThumbnailYellowstone from "./images/thumbnail-yellowstone-medium.jpeg";
@@ -39,6 +37,18 @@ import mediumThumbnailCosmicSkeptic from "./images/thumbnail-cosmic-skeptic-medi
 import smallThumbnailCosmicSkeptic from "./images/thumbnail-cosmic-skeptic-small.jpeg";
 
 export const videos = [
+  // Make "How to SOLVE Wild Animal Suffering" the main video (first)
+  {
+    id: "was_solution",
+    videoId: "cp1qpzXe2Yw",
+    thumbnails: {
+      small: "https://i.imgur.com/eKdRzVr.png",
+      medium: "https://i.imgur.com/eKdRzVr.png",
+    },
+    author: "Humane Hancock",
+    duration: "29:25",
+  },
+  // Move previous main video to second
   {
     id: "vegan_blind_spot",
     videoId: "XjCp6bUp__M",
@@ -119,16 +129,7 @@ export const videos = [
     author: "Animal Ethics",
     duration: "9:24",
   },
-  {
-    id: "was_solution",
-    videoId: "cp1qpzXe2Yw",
-    thumbnails: {
-      small: smallThumbnailWasSolution.src,
-      medium: mediumThumbnailWasSolution.src,
-    },
-    author: "Humane Hancock",
-    duration: "29:25",
-  },
+  // was_solution was moved to top; keep list without duplicate
   {
     id: "ways_to_help",
     videoId: "1dl_eHonR0w",
@@ -173,7 +174,9 @@ export const videos = [
 
 export function Videos() {
   const { t } = useTranslation();
-  const [activeVideo, setActiveVideo] = useState(videos[0]);
+  const [activeVideo, setActiveVideo] = useState(
+    videos.find((v) => v.id === "was_solution") ?? videos[0],
+  );
   const { screenRef, effectOpacity } = useBackgroundEffect();
 
   return (

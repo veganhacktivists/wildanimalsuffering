@@ -331,6 +331,16 @@ export function Conclusion({ locale, visitors }) {
                   {t("conclusion.credits.fish.label")}
                 </a>
               </li>
+              <li>
+                <a
+                  className="underline"
+                  href="https://rethinkpriorities.org/research-area/a-landscape-analysis-of-wild-animal-welfare/"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  {t("conclusion.credits.waw_landscape.label")}
+                </a>
+              </li>
             </ol>
           </div>
           {visitors > 0 && (
