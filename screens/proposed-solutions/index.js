@@ -155,7 +155,7 @@ export function ProposedSolutions() {
                     <p className="text-sm text-white/90">
                       You can help by volunteering with local wildlife disease monitoring efforts, or advocating for expanded government funding of wildlife vaccination programs through organizations like{" "}
                       <a
-                        href="https://wda-wildlife.org/"
+                        href="https://wildlifedisease.org/"
                         target="_blank"
                         rel="noreferrer"
                         className="font-semibold text-primary-light underline transition-colors hover:text-primary"
