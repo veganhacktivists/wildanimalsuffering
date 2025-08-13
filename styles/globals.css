@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+
+body {
+  overflow-x: auto;
+}
+
+/* Prevent horizontal scroll when dialog is open */
+body:has([data-state="open"]) {
+  overflow-x: hidden;
+}
+
 @layer components {
   .font-brand {
     letter-spacing: 1.5px;
@@ -9,10 +19,7 @@
 }
 
 @layer components {
-  .scrollbar-custom::-webkit-scrollbar {
-    height: 5px;
-    width: 5px;
-    background: #fff3;
+  .scrollbar-custom::-webkit-scrollbar {NYU's Wild Animal Welfare program conducts interdisciplinary research and education on wild animal welfare issues, exploring ethical and practical approaches to improving wild animal lives.
     -webkit-border-radius: 1ex;
   }
 
