@@ -19,7 +19,7 @@ body:has([data-state="open"]) {
 }
 
 @layer components {
-  .scrollbar-custom::-webkit-scrollbar {NYU's Wild Animal Welfare program conducts interdisciplinary research and education on wild animal welfare issues, exploring ethical and practical approaches to improving wild animal lives.
+  .scrollbar-custom::-webkit-scrollbar {
     -webkit-border-radius: 1ex;
   }
 
