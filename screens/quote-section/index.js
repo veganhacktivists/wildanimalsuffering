@@ -19,7 +19,7 @@ export function QuoteSection() {
                 <path d="M10 8c-3.3 0-6 2.7-6 6v10h10V14h-4c0-1.1.9-2 2-2V8zm12 0c-3.3 0-6 2.7-6 6v10h10V14h-4c0-1.1.9-2 2-2V8z"/>
               </svg>
               <span className="relative z-10 block px-8 py-6 lg:px-12 lg:py-8">
-                Wild animal welfare is way less tractable than many cause areas. But I think that's outweighed by the scale: humanity, factory farmed animals, and other captive animals collectively make up only 0.1% of vertebrates. The other 99.9% of moral patients alive today are wild animals (or more, if you count invertebrates). <a 
+                Wild animal welfare is way less tractable than many cause areas. But I think that's outweighed by the scale: humanity, factory farmed animals, and other captive animals collectively make up only 0.1% of vertebrates. <strong>The other 99.9% of moral patients alive today are wild animals</strong> (or more, if you count invertebrates). <a 
                   href="https://forum.effectivealtruism.org/posts/idhTjyNTsyxobijyJ/wild-animal-initiative-has-urgent-need-for-more-funding-and" 
                   target="_blank" 
                   rel="noreferrer"
