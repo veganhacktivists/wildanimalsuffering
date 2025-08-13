@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
-  overflow-x: hidden;
-}
-
 @layer components {
   .font-brand {
     letter-spacing: 1.5px;
