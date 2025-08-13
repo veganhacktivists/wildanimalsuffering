@@ -150,6 +150,24 @@ export function Organizations() {
                 rel="noreferrer"
               >
                 Center for Reducing Suffering
+              </a>
+              ,{" "}
+              <a
+                href="https://welfarefootprint.org/"
+                target="_blank"
+                className="underline"
+                rel="noreferrer"
+              >
+                Welfare Footprint
+              </a>
+              , and{" "}
+              <a
+                href="https://sites.google.com/nyu.edu/wildanimalwelfare/home"
+                target="_blank"
+                className="underline"
+                rel="noreferrer"
+              >
+                New York University's (NYU) Wild Animal Welfare program
               </a>{" "}
               too!
             </Trans>
