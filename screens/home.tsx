@@ -2,6 +2,7 @@ import { Header } from "~/components/header";
 import { CommonObjections } from "~/screens/common-objections";
 import { Conclusion } from "~/screens/conclusion";
 import { HowToHelp } from "~/screens/how-to-help";
+import { QuoteSection } from "~/screens/quote-section";
 import { Introduction } from "~/screens/introduction";
 import { Organizations } from "~/screens/organizations";
 import { PopulationDynamics } from "~/screens/population-dynamics";
@@ -31,6 +32,7 @@ export default function Home({ locale }: Props) {
         <ProposedSolutions />
         <Videos />
         <CommonObjections />
+        <QuoteSection />
         <HowToHelp />
         <Organizations />
         <Resources />
