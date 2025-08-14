@@ -41,7 +41,7 @@ cause areas. But I think that's outweighed by the scale: humanity, factory farme
                   href="https://www.wildanimalinitiative.org/" 
                   target="_blank" 
                   rel="noreferrer"
-                  className="underline transition-colors hover:text-primary"
+                  className="text-white underline transition-colors hover:text-primary"
                 >
                   Wild Animal Initiative
                 </a>
