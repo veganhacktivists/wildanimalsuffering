@@ -1,4 +1,4 @@
-import { useTranslation } from "react-i18next";
+import { useTranslation, Trans } from "react-i18next";
 import { WindEffect } from "~/components/wind-effect";
 import { useState, useEffect } from "react";
 import { ChevronDownIcon } from "~/components/chevron-down-icon";
@@ -8,9 +8,10 @@ const CollapsibleSection = ({ sectionNumber, title, children, isOpen, onToggle }
     <div className="rounded-2xl border border-white/40 bg-black/30 backdrop-blur-sm overflow-hidden">
       <button
         onClick={onToggle}
-        className={`w-full p-6 lg:p-8 text-left transition-colors focus:outline-none ${
+        className={`w-full text-left transition-colors focus:outline-none ${
           !isOpen ? 'hover:bg-white/10 focus:bg-white/10' : ''
         }`}
+        style={{ padding: '1.2rem' }}
       >
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-4">
@@ -39,9 +40,12 @@ const CollapsibleSection = ({ sectionNumber, title, children, isOpen, onToggle }
                   isOpen ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'
                 }`}
               >
-                <div className={`px-6 pb-6 lg:px-8 lg:pb-8 transition-all duration-300 ease-in-out ${
-                  isOpen ? 'translate-y-0' : '-translate-y-2'
-                }`}>
+                <div 
+                  className={`transition-all duration-300 ease-in-out ${
+                    isOpen ? 'translate-y-0' : '-translate-y-2'
+                  }`}
+                  style={{ padding: '0 1.2rem 1.2rem 1.2rem' }}
+                >
                   {children}
                 </div>
               </div>
@@ -108,7 +112,19 @@ export function ProposedSolutions() {
             <div className="space-y-4 text-white/90">
               <p>{t("proposed_solutions.research.description1")}</p>
               <p>{t("proposed_solutions.research.description2")}</p>
-              <p>{t("proposed_solutions.research.description3")}</p>
+              <p>
+                <Trans
+                  i18nKey="proposed_solutions.research.description3"
+                  components={{
+                    1: <a
+                      href="https://www.wildanimalinitiative.org/grantees"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="font-semibold text-primary-light underline transition-colors hover:text-primary"
+                    />
+                  }}
+                />
+              </p>
               <div className="mt-6 rounded-xl border-2 border-primary/60 bg-black/40 p-4 backdrop-blur-sm">
                 <div className="flex items-start gap-3">
                   <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-sm font-bold text-white">
@@ -117,16 +133,7 @@ export function ProposedSolutions() {
                   <div className="flex-1">
                     <h4 className="mb-2 font-semibold text-primary-light">How You Can Help:</h4>
                     <p className="text-sm text-white/90">
-                      You can help by supporting organizations like{" "}
-                      <a
-                        href="https://www.wildanimalinitiative.org/"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="font-semibold text-primary-light underline transition-colors hover:text-primary"
-                      >
-                        Wild Animal Initiative
-                      </a>{" "}
-                      that fund welfare biology research, or pursuing academic study in ecology, animal behavior, or conservation biology to contribute directly to our understanding of wild animal suffering.
+                      {t("proposed_solutions.research.how_to_help")}
                     </p>
                   </div>
                 </div>
@@ -144,7 +151,6 @@ export function ProposedSolutions() {
               <p>{t("proposed_solutions.disease_control.description1")}</p>
               <p>{t("proposed_solutions.disease_control.description2")}</p>
               <p>{t("proposed_solutions.disease_control.description3")}</p>
-              <p>{t("proposed_solutions.disease_control.description4")}</p>
               <div className="mt-6 rounded-xl border-2 border-primary/60 bg-black/40 p-4 backdrop-blur-sm">
                 <div className="flex items-start gap-3">
                   <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-sm font-bold text-white">
@@ -153,16 +159,7 @@ export function ProposedSolutions() {
                   <div className="flex-1">
                     <h4 className="mb-2 font-semibold text-primary-light">How You Can Help:</h4>
                     <p className="text-sm text-white/90">
-                      You can help by volunteering with local wildlife disease monitoring efforts, or advocating for expanded government funding of wildlife vaccination programs through organizations like{" "}
-                      <a
-                        href="https://wildlifedisease.org/"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="font-semibold text-primary-light underline transition-colors hover:text-primary"
-                      >
-                        Wildlife Disease Association
-                      </a>
-                      .
+                      {t("proposed_solutions.disease_control.how_to_help")}
                     </p>
                   </div>
                 </div>
@@ -188,16 +185,7 @@ export function ProposedSolutions() {
                   <div className="flex-1">
                     <h4 className="mb-2 font-semibold text-primary-light">How You Can Help:</h4>
                     <p className="text-sm text-white/90">
-                      You can help by supporting policy organizations such as{" "}
-                      <a
-                        href="https://animalethics.org/"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="font-semibold text-primary-light underline transition-colors hover:text-primary"
-                      >
-                        Animal Ethics
-                      </a>
-                      , contacting your representatives about wildlife welfare legislation, or getting involved in local environmental policy initiatives.
+                      {t("proposed_solutions.policy_advocacy.how_to_help")}
                     </p>
                   </div>
                 </div>
@@ -207,13 +195,13 @@ export function ProposedSolutions() {
 
           <CollapsibleSection
             sectionNumber={4}
-            title={t("proposed_solutions.artificial_intelligence.title")}
+            title={t("proposed_solutions.spreading_awareness.title")}
             isOpen={openSection === 4}
             onToggle={() => toggleSection(4)}
           >
             <div className="space-y-4 text-white/90">
-              <p>{t("proposed_solutions.artificial_intelligence.description1")}</p>
-              <p>{t("proposed_solutions.artificial_intelligence.description2")}</p>
+              <p>{t("proposed_solutions.spreading_awareness.description1")}</p>
+              <p>{t("proposed_solutions.spreading_awareness.description2")}</p>
               <div className="mt-6 rounded-xl border-2 border-primary/60 bg-black/40 p-4 backdrop-blur-sm">
                 <div className="flex items-start gap-3">
                   <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-sm font-bold text-white">
@@ -222,16 +210,151 @@ export function ProposedSolutions() {
                   <div className="flex-1">
                     <h4 className="mb-2 font-semibold text-primary-light">How You Can Help:</h4>
                     <p className="text-sm text-white/90">
-                      You can help by contributing to citizen science projects that feed data into AI monitoring systems, supporting organizations developing AI for conservation, or if you have technical skills, volunteering with projects that use machine learning for wildlife protection and ecosystem monitoring. Consider exploring career opportunities in AI for social impact through{" "}
-                      <a
-                        href="https://80000hours.org/"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="font-semibold text-primary-light underline transition-colors hover:text-primary"
-                      >
-                        80,000 Hours
-                      </a>
-                      , which provides research-backed career advice for maximizing your positive impact.
+                      <Trans
+                        i18nKey="proposed_solutions.spreading_awareness.how_to_help"
+                        components={{
+                          1: <a
+                            href="https://www.animal-ethics.org/wild-animal-suffering-video-course/"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="font-semibold text-primary-light underline transition-colors hover:text-primary"
+                          />
+                        }}
+                      />
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </CollapsibleSection>
+
+          <CollapsibleSection
+            sectionNumber={5}
+            title={t("proposed_solutions.helping_animals_near_us.title")}
+            isOpen={openSection === 5}
+            onToggle={() => toggleSection(5)}
+          >
+            <div className="space-y-4 text-white/90">
+              <p>{t("proposed_solutions.helping_animals_near_us.description1")}</p>
+              <p>{t("proposed_solutions.helping_animals_near_us.description2")}</p>
+              <div className="mt-6 rounded-xl border-2 border-primary/60 bg-black/40 p-4 backdrop-blur-sm">
+                <div className="flex items-start gap-3">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-sm font-bold text-white">
+                    💡
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="mb-2 font-semibold text-primary-light">How You Can Help:</h4>
+                    <p className="text-sm text-white/90">
+                      <Trans
+                        i18nKey="proposed_solutions.helping_animals_near_us.how_to_help"
+                        components={{
+                          1: <a
+                            href="https://guarinicenter.org/wp-content/uploads/2024/03/Wild-Animal-Welfare-in-Local-Policies-Policy-Brief.pdf"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="font-semibold text-primary-light underline transition-colors hover:text-primary"
+                          />
+                        }}
+                      />
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </CollapsibleSection>
+
+          <CollapsibleSection
+            sectionNumber={6}
+            title={t("proposed_solutions.disaster_relief.title")}
+            isOpen={openSection === 6}
+            onToggle={() => toggleSection(6)}
+          >
+            <div className="space-y-4 text-white/90">
+              <p>{t("proposed_solutions.disaster_relief.description1")}</p>
+              <p>{t("proposed_solutions.disaster_relief.description2")}</p>
+              <div className="mt-6 rounded-xl border-2 border-primary/60 bg-black/40 p-4 backdrop-blur-sm">
+                <div className="flex items-start gap-3">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-sm font-bold text-white">
+                    💡
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="mb-2 font-semibold text-primary-light">How You Can Help:</h4>
+                    <p className="text-sm text-white/90">
+                      {t("proposed_solutions.disaster_relief.how_to_help")}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </CollapsibleSection>
+
+          <CollapsibleSection
+            sectionNumber={7}
+            title={t("proposed_solutions.treating_parasites.title")}
+            isOpen={openSection === 7}
+            onToggle={() => toggleSection(7)}
+          >
+            <div className="space-y-4 text-white/90">
+              <p>{t("proposed_solutions.treating_parasites.description1")}</p>
+              <p>
+                <Trans
+                  i18nKey="proposed_solutions.treating_parasites.description2"
+                  components={{
+                    1: <a
+                      href="https://screwworm.org/"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="font-semibold text-primary-light underline transition-colors hover:text-primary"
+                    />
+                  }}
+                />
+              </p>
+              <p>{t("proposed_solutions.treating_parasites.description3")}</p>
+              <div className="mt-6 rounded-xl border-2 border-primary/60 bg-black/40 p-4 backdrop-blur-sm">
+                <div className="flex items-start gap-3">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-sm font-bold text-white">
+                    💡
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="mb-2 font-semibold text-primary-light">How You Can Help:</h4>
+                    <p className="text-sm text-white/90">
+                      <Trans
+                        i18nKey="proposed_solutions.treating_parasites.how_to_help"
+                        components={{
+                          1: <a
+                            href="https://screwworm.org/"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="font-semibold text-primary-light underline transition-colors hover:text-primary"
+                          />
+                        }}
+                      />
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </CollapsibleSection>
+
+          <CollapsibleSection
+            sectionNumber={8}
+            title={t("proposed_solutions.artificial_intelligence.title")}
+            isOpen={openSection === 8}
+            onToggle={() => toggleSection(8)}
+          >
+            <div className="space-y-4 text-white/90">
+              <p>{t("proposed_solutions.artificial_intelligence.description1")}</p>
+              <p>{t("proposed_solutions.artificial_intelligence.description2")}</p>
+              <p>{t("proposed_solutions.artificial_intelligence.description3")}</p>
+              <div className="mt-6 rounded-xl border-2 border-primary/60 bg-black/40 p-4 backdrop-blur-sm">
+                <div className="flex items-start gap-3">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-sm font-bold text-white">
+                    💡
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="mb-2 font-semibold text-primary-light">How You Can Help:</h4>
+                    <p className="text-sm text-white/90">
+                      {t("proposed_solutions.artificial_intelligence.how_to_help")}
                     </p>
                   </div>
                 </div>
