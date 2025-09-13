@@ -47,8 +47,8 @@ export const videos = [
       small: smallThumbnailNewFeatured.src,
       medium: mediumThumbnailNewFeatured.src,
     },
-    author: "TBD", // Will be updated when we get video details
-    duration: "TBD", // Will be updated when we get video details
+    author: "Humane Hancock",
+    duration: "31:50",
   },
   // Move previous featured video to second position
   {
