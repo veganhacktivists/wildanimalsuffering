@@ -35,9 +35,22 @@ import mediumThumbnailVeganBlindSpot from "./images/thumbnail-vegan-blind-spot-m
 import smallThumbnailVeganBlindSpot from "./images/thumbnail-vegan-blind-spot-small.jpeg";
 import mediumThumbnailCosmicSkeptic from "./images/thumbnail-cosmic-skeptic-medium.jpeg";
 import smallThumbnailCosmicSkeptic from "./images/thumbnail-cosmic-skeptic-small.jpeg";
+import mediumThumbnailNewFeatured from "./images/thumbnail-new-featured-medium.jpeg";
+import smallThumbnailNewFeatured from "./images/thumbnail-new-featured-small.jpeg";
 
 export const videos = [
-  // Make "How to SOLVE Wild Animal Suffering" the main video (first)
+  // New featured video
+  {
+    id: "new_featured_video",
+    videoId: "JnLtSowMhWU",
+    thumbnails: {
+      small: smallThumbnailNewFeatured.src,
+      medium: mediumThumbnailNewFeatured.src,
+    },
+    author: "TBD", // Will be updated when we get video details
+    duration: "TBD", // Will be updated when we get video details
+  },
+  // Move previous featured video to second position
   {
     id: "was_solution",
     videoId: "cp1qpzXe2Yw",
@@ -175,7 +188,7 @@ export const videos = [
 export function Videos() {
   const { t } = useTranslation();
   const [activeVideo, setActiveVideo] = useState(
-    videos.find((v) => v.id === "was_solution") ?? videos[0],
+    videos.find((v) => v.id === "new_featured_video") ?? videos[0],
   );
   const { screenRef, effectOpacity } = useBackgroundEffect();
 
