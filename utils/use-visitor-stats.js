@@ -6,7 +6,7 @@ export function useVisitorStats() {
   async function loadStats() {
     try {
       const res = await fetch(
-        "https://wildanimalsuffering-stats.vercel.app/visitor",
+        "https://visitors.wildanimalsuffering.org",
       );
 
       if (res.ok) {
