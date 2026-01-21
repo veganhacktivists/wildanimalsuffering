@@ -67,6 +67,10 @@ export function Navigation() {
                   id={t("population_dynamics.id")}
                   name={t("population_dynamics.name")}
                 />
+                <NavigationLink
+                  id={t("proposed_solutions.id")}
+                  name={t("proposed_solutions.name")}
+                />
                 <NavigationLink id={t("videos.id")} name={t("videos.name")} />
                 <NavigationLink
                   id={t("common_objections.id")}
