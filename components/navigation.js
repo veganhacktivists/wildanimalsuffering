@@ -32,7 +32,7 @@ export function Navigation() {
       </button>
 
       {open && (
-        <nav className="absolute top-0 z-10 h-auto w-full overflow-auto p-5 ltr:left-0 rtl:right-0 sm:max-w-sm">
+        <nav className="absolute top-0 z-10 h-auto w-full overflow-auto p-5 ltr:left-0 rtl:right-0 sm:max-w-[26rem]">
           <div className="flex flex-col overflow-auto rounded-xl bg-white text-menu-front-dark">
             <div className="flex justify-between p-8">
               <div className="font-brand text-2xl uppercase text-menu-front-dark">
