@@ -29,10 +29,11 @@ export default function App({ Component, pageProps }: AppProps) {
       `}</style>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>
-          Wild Animal Suffering — The scale, the problem, and why it matters
-        </title>
-        <script defer src="https://analytics.veganhacktivists.org/script.js" data-website-id="ccc23fb2-c4bc-4192-bfac-1b765758a52a"></script>
+        <script
+          defer
+          src="https://analytics.veganhacktivists.org/script.js"
+          data-website-id="ccc23fb2-c4bc-4192-bfac-1b765758a52a"
+        ></script>
       </Head>
       <Component {...pageProps} />
     </>

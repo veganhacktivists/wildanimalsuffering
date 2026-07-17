@@ -1,4 +1,5 @@
 import { Header } from "~/components/header";
+import { Seo } from "~/components/seo";
 import { CommonObjections } from "~/screens/common-objections";
 import { Conclusion } from "~/screens/conclusion";
 import { HowToHelp } from "~/screens/how-to-help";
@@ -23,6 +24,7 @@ export default function Home({ locale }: Props) {
 
   return (
     <>
+      <Seo locale={locale} />
       <Header locale={locale} />
       <main>
         <Introduction />
