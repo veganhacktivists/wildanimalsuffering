@@ -199,6 +199,8 @@ export function Videos() {
       className="relative flex min-h-screen items-center bg-sky bg-cover py-12 lg:py-24"
     >
       <img
+        loading="lazy"
+        decoding="async"
         className="not-sr-only absolute left-0 top-0 hidden w-full max-w-md lg:block"
         src={icebergImage.src}
         alt=""
@@ -244,6 +246,8 @@ export function Videos() {
         </div>
       </div>
       <img
+        loading="lazy"
+        decoding="async"
         className="not-sr-only pointer-events-none absolute bottom-0 right-0 z-10 hidden max-h-96 w-[20vw] lg:block"
         src={penguinsImage.src}
         alt=""

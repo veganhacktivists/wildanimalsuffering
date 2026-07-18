@@ -59,6 +59,8 @@ export function FarmedAnimals() {
             style={{ opacity: earthOpacity }}
           >
             <img
+              loading="lazy"
+              decoding="async"
               className="col-start-1 row-start-1"
               src={earthImage.src}
               alt=""
@@ -69,6 +71,8 @@ export function FarmedAnimals() {
             style={{ opacity: humanOpacity }}
           >
             <img
+              loading="lazy"
+              decoding="async"
               className="col-start-1 row-start-1 w-44"
               src={humanImage.src}
               alt=""
@@ -84,6 +88,8 @@ export function FarmedAnimals() {
               className="col-start-1 row-start-1 w-80 transform-cpu"
             >
               <img
+                loading="lazy"
+                decoding="async"
                 className="h-full w-full"
                 src={farmedAnimalsImage.src}
                 alt=""

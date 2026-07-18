@@ -94,6 +94,8 @@ export function HowToHelp() {
       </div>
 
       <img
+        loading="lazy"
+        decoding="async"
         className="not-sr-only pointer-events-none absolute bottom-12 left-12 hidden max-h-96 w-[20vw] lg:block"
         src={miceImage.src}
         alt=""

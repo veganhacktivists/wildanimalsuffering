@@ -247,6 +247,8 @@ export function Organizations() {
       </div>
 
       <img
+        loading="lazy"
+        decoding="async"
         className="not-sr-only pointer-events-none absolute bottom-0 right-0 hidden max-h-96 w-[20vw] lg:block"
         src={frogImage.src}
         alt=""

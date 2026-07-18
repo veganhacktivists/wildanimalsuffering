@@ -25,6 +25,8 @@ export function YoutubeVideo({ video }) {
             onClick={() => setPlaying(true)}
           >
             <img
+              loading="lazy"
+              decoding="async"
               className="absolute inset-0 h-full w-full object-cover"
               src={video.thumbnails.medium}
               alt=""
