@@ -9,7 +9,7 @@ export function formatOrdinals({ n, t, locale = "en" }) {
   ]);
 
   const rule = pluralRules.select(n);
-  const suffix = suffixes.get(rule);
+  const suffix = suffixes.get(rule) ?? suffixes.get("other");
 
   return `${numberFormat.format(n)}${suffix}`;
 }
