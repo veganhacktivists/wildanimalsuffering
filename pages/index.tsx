@@ -48,14 +48,25 @@ export default function En() {
   const router = useRouter();
 
   useEffect(() => {
-    // Check if this is the first visit (no language preference stored)
-    const hasVisited = localStorage.getItem("language-detected");
+    // Storage access throws when the browser blocks it, which would otherwise
+    // take the whole effect down with it.
+    let hasVisited: string | null = null;
+
+    try {
+      hasVisited = localStorage.getItem("language-detected");
+    } catch {
+      return;
+    }
 
     if (!hasVisited) {
       const detectedLang = detectBrowserLanguage();
 
       // Store that we've detected the language
-      localStorage.setItem("language-detected", "true");
+      try {
+        localStorage.setItem("language-detected", "true");
+      } catch {
+        return;
+      }
 
       // If detected language is not English, redirect
       if (detectedLang !== "en") {
