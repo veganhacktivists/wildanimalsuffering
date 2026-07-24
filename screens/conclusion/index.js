@@ -17,12 +17,16 @@ export function Conclusion({ locale, visitors }) {
     >
       <div className="mx-auto max-w-7xl px-10">
         <img
+          loading="lazy"
+          decoding="async"
           className="not-sr-only absolute top-52 max-w-lg md:right-32 lg:w-full"
           src={mommaImage.src}
           alt=""
         />
 
         <img
+          loading="lazy"
+          decoding="async"
           className="not-sr-only absolute right-1/4 top-[600px] max-w-lg lg:w-full"
           src={pupsImage.src}
           alt=""
@@ -149,6 +153,8 @@ export function Conclusion({ locale, visitors }) {
               className="flex justify-end"
             >
               <img
+                loading="lazy"
+                decoding="async"
                 height={128}
                 src={logoImage.src}
                 alt={t("common.logo.alt")}

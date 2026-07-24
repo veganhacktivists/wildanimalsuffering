@@ -68,6 +68,8 @@ export function FarmedAnimalsMobile() {
             style={{ opacity: earthOpacity }}
           >
             <img
+              loading="lazy"
+              decoding="async"
               className="col-start-1 row-start-1 max-h-[40vh]"
               src={earthImage.src}
               alt=""
@@ -78,6 +80,8 @@ export function FarmedAnimalsMobile() {
             style={{ opacity: humanOpacity }}
           >
             <img
+              loading="lazy"
+              decoding="async"
               className="col-start-1 row-start-1 max-h-[30vh]"
               src={humanImage.src}
               alt=""
@@ -93,6 +97,8 @@ export function FarmedAnimalsMobile() {
               className="col-start-1 row-start-1 transform-cpu"
             >
               <img
+                loading="lazy"
+                decoding="async"
                 className="max-h-[30vh]"
                 src={farmedAnimalsImage.src}
                 alt=""

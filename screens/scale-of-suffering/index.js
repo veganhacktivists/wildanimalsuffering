@@ -14,6 +14,8 @@ export function ScaleOfSuffering() {
       className="relative min-h-screen w-full"
     >
       <img
+        loading="lazy"
+        decoding="async"
         src={abyssImage.src}
         alt=""
         className="fixed inset-0 -z-10 block min-h-screen w-full object-cover"

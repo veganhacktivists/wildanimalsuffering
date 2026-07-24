@@ -4,6 +4,7 @@ import { FogEffect } from "~/components/fog-effect";
 import { LeavesEffect } from "~/components/leaves-effect";
 import { RainfallEffect } from "~/components/rainfall-effect";
 import { SnowfallEffect } from "~/components/snowfall-effect";
+import { usePrefersReducedMotion } from "~/utils/use-prefers-reduced-motion";
 
 const effectComponents = {
   fog: FogEffect,
@@ -42,12 +43,13 @@ export function useBackgroundEffect() {
 
 export function BackgroundEffect({ type }) {
   const [isVisible, setIsVisible] = useState(false);
+  const prefersReducedMotion = usePrefersReducedMotion();
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
 
-  if (!isVisible) {
+  if (!isVisible || prefersReducedMotion) {
     return null;
   }
 

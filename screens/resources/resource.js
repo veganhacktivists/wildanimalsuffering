@@ -9,9 +9,7 @@ export function Resource({
   containThumbnail = false,
 }) {
   return (
-    <div 
-      className="group flex w-9/10 flex-shrink-0 snap-center flex-col overflow-hidden rounded-2xl border border-white bg-white/50 pb-4 transition-all duration-300 hover:shadow-lg hover:bg-white/60 lg:w-auto lg:flex-row lg:pb-0"
-    >
+    <div className="group flex w-9/10 flex-shrink-0 snap-center flex-col overflow-hidden rounded-2xl border border-white bg-white/50 pb-4 transition-all duration-300 hover:bg-white/60 hover:shadow-lg lg:w-auto lg:flex-row lg:pb-0">
       <div
         className="bg-cover lg:hidden xl:grid"
         style={{
@@ -20,10 +18,12 @@ export function Resource({
       >
         <div className="grid h-full w-full place-items-center rounded-l-2xl backdrop-blur-xl">
           <img
+            loading="lazy"
+            decoding="async"
             src={imageUrl}
             alt=""
             className={cx(
-              "aspect-square h-full w-full rounded-2xl md:aspect-video lg:aspect-square lg:w-56 transition-transform duration-300 group-hover:scale-105",
+              "aspect-square h-full w-full rounded-2xl transition-transform duration-300 group-hover:scale-105 md:aspect-video lg:aspect-square lg:w-56",
               containThumbnail
                 ? "object-contain lg:h-4/5"
                 : "object-cover md:object-contain lg:object-cover",
@@ -31,7 +31,7 @@ export function Resource({
           />
         </div>
       </div>
-      <div className="flex flex-1 flex-col gap-1 overflow-hidden p-4 ltr:text-left rtl:text-right lg:p-6">
+      <div className="flex flex-1 flex-col gap-1 overflow-hidden p-4 lg:p-6 ltr:text-left rtl:text-right">
         <h3 className="line-clamp-2 text-xl font-bold lg:line-clamp-none lg:text-2xl">
           {title}
         </h3>
@@ -46,7 +46,7 @@ export function Resource({
             href={url}
             target="_blank"
             rel="noreferrer"
-            className="block rounded-full bg-brown p-1 text-center text-lg font-medium text-white transition-all duration-300 hover:bg-brown/80 hover:scale-105 hover:shadow-md"
+            className="block rounded-full bg-brown p-1 text-center text-lg font-medium text-white transition-all duration-300 hover:scale-105 hover:bg-brown/80 hover:shadow-md"
           >
             {text}
           </a>

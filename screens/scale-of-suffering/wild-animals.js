@@ -131,6 +131,8 @@ export function WildAnimals() {
         <div className="grid p-4">
           <div className="col-start-1 row-start-1 grid place-items-center">
             <img
+              loading="lazy"
+              decoding="async"
               className="col-start-1 row-start-1"
               src={chartWildAnimalsImage.src}
               alt=""
@@ -139,44 +141,79 @@ export function WildAnimals() {
               style={{ opacity: reptilesOpacity }}
               className="col-start-1 row-start-1"
             >
-              <img src={chartReptilesImage.src} alt="" />
+              <img
+                loading="lazy"
+                decoding="async"
+                src={chartReptilesImage.src}
+                alt=""
+              />
             </motion.div>
             <motion.div
               style={{ opacity: fishOpacity }}
               className="col-start-1 row-start-1"
             >
-              <img src={chartFishImage.src} alt="" />
+              <img
+                loading="lazy"
+                decoding="async"
+                src={chartFishImage.src}
+                alt=""
+              />
             </motion.div>
             <motion.div
               style={{ opacity: earthWormsOpacity }}
               className="col-start-1 row-start-1"
             >
-              <img src={chartEarthWormsImage.src} alt="" />
+              <img
+                loading="lazy"
+                decoding="async"
+                src={chartEarthWormsImage.src}
+                alt=""
+              />
             </motion.div>
             <motion.div
               style={{ opacity: terrestrialArOpacity }}
               className="col-start-1 row-start-1"
             >
-              <img src={chartTerrestrialArImage.src} alt="" />
+              <img
+                loading="lazy"
+                decoding="async"
+                src={chartTerrestrialArImage.src}
+                alt=""
+              />
             </motion.div>
 
             <motion.div
               style={{ opacity: fishLabelOpacity }}
               className="col-start-1 row-start-2 max-h-[10vh]"
             >
-              <img src={chartFishLabelsImage.src} alt="" />
+              <img
+                loading="lazy"
+                decoding="async"
+                src={chartFishLabelsImage.src}
+                alt=""
+              />
             </motion.div>
             <motion.div
               style={{ opacity: earthWormsLabelOpacity }}
               className="col-start-1 row-start-2 max-h-[10vh]"
             >
-              <img src={chartEarthWormsLabelsImage.src} alt="" />
+              <img
+                loading="lazy"
+                decoding="async"
+                src={chartEarthWormsLabelsImage.src}
+                alt=""
+              />
             </motion.div>
             <motion.div
               style={{ opacity: terrestrialArOpacity }}
               className="col-start-1 row-start-2 max-h-[10vh]"
             >
-              <img src={chartTerrestrialArLabelsImage.src} alt="" />
+              <img
+                loading="lazy"
+                decoding="async"
+                src={chartTerrestrialArLabelsImage.src}
+                alt=""
+              />
             </motion.div>
           </div>
         </div>

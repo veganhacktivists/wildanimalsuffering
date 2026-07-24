@@ -111,6 +111,8 @@ export function WildAnimalsMobile() {
           <div className="grid place-items-center px-4 pb-4">
             <div className="col-start-1 row-start-1 grid place-items-center">
               <img
+                loading="lazy"
+                decoding="async"
                 className="col-start-1 row-start-1 max-h-[40vh]"
                 src={chartWildAnimalsImage.src}
                 alt=""

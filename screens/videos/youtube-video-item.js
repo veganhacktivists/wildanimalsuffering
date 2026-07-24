@@ -13,6 +13,8 @@ export function YoutubeVideoItem({ active = false, video, ...props }) {
       {...props}
     >
       <img
+        loading="lazy"
+        decoding="async"
         className="absolute inset-0 h-full w-full rounded-xl object-cover"
         src={video.thumbnails.small}
         alt=""
