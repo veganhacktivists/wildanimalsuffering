@@ -19,9 +19,10 @@ export function RainfallEffect() {
 
     setCanvasSize();
 
-    if (canvas.getContext) {
-      const ctx = canvas.getContext("2d");
+    let intervalId;
+    const ctx = canvas.getContext ? canvas.getContext("2d") : null;
 
+    if (ctx) {
       const init = [];
       const maxParts = 200;
       for (let a = 0; a < maxParts; a++) {
@@ -66,11 +67,12 @@ export function RainfallEffect() {
         }
       };
 
-      setInterval(draw, 30);
+      intervalId = setInterval(draw, 30);
     }
 
     return () => {
       window.removeEventListener("resize", setCanvasSize);
+      clearInterval(intervalId);
     };
   }, [ref]);
 

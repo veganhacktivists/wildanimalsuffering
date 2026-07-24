@@ -22,9 +22,9 @@ export function WindEffect() {
     window.addEventListener("resize", setCanvasSize);
     setCanvasSize();
 
-    if (canvas.getContext) {
-      const ctx = canvas.getContext("2d");
+    const ctx = canvas.getContext ? canvas.getContext("2d") : null;
 
+    if (ctx) {
       const particles = [];
       const maxParticles = 150;
 
