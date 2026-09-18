@@ -36,7 +36,7 @@
     "@testing-library/user-event": "^14.6.1",
     "@vitejs/plugin-react": "^4.7.0",
     "autoprefixer": "^10.5.4",
-    "eslint": "9.39.5",
+    "eslint": "10.10.0",
     "jsdom": "^29.1.1",
     "next-export-optimize-images": "^4.7.0",
     "postcss": "^8.5.19",
