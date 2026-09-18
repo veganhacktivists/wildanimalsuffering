@@ -37,7 +37,7 @@
     "@vitejs/plugin-react": "^4.7.0",
     "autoprefixer": "^10.5.4",
     "eslint": "9.39.5",
-    "jsdom": "^29.1.1",
+    "jsdom": "^30.0.0",
     "next-export-optimize-images": "^4.7.0",
     "postcss": "^8.5.19",
     "prettier": "^3.9.5",
