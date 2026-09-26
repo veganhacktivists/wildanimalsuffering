@@ -26,9 +26,9 @@ export function QuoteSection() {
               </svg>
               <span className="relative z-10 block px-8 py-6 lg:px-12 lg:py-8">
                 Wild animal welfare is way less tractable than many cause areas.
-                But I think that's outweighed by the scale: humanity, factory
-                farmed animals, and other captive animals collectively make up
-                only 0.1% of vertebrates.{" "}
+                But I think that&apos;s outweighed by the scale: humanity,
+                factory farmed animals, and other captive animals collectively
+                make up only 0.1% of vertebrates.{" "}
                 <b
                   style={{
                     fontWeight: 500,
