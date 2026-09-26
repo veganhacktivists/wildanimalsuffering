@@ -16,7 +16,7 @@ export function Introduction() {
     <section
       ref={screenRef}
       id={t("introduction.id")}
-      className="flex min-h-screen items-end bg-black bg-savanna bg-[length:100%] bg-[center_-100px] bg-no-repeat md:bg-[center_-50vw] lg:items-stretch lg:bg-savanna-md lg:bg-cover lg:bg-center"
+      className="flex min-h-screen items-end bg-black bg-savanna bg-size-[100%] bg-position-[center_-100px] bg-no-repeat md:bg-position-[center_-50vw] lg:items-stretch lg:bg-savanna-md lg:bg-cover lg:bg-center"
     >
       <motion.div style={{ opacity: effectOpacity }}>
         <BackgroundEffect type="fog" />
@@ -32,7 +32,7 @@ export function Introduction() {
                 className="mx-auto w-3/4 md:w-1/2 lg:w-full"
               />
             </div>
-            <div className="bg-gradient-to-b from-transparent via-black to-black lg:bg-none lg:pt-16">
+            <div className="bg-linear-to-b/srgb from-transparent via-black to-black lg:bg-none lg:pt-16">
               <div className="flex flex-col space-y-10 px-10 py-10 lg:py-0">
                 <h1 className="flex flex-col space-y-4 text-center font-brand lg:ltr:text-left lg:rtl:text-right">
                   <span className="text-5xl leading-none text-white lg:text-6xl">

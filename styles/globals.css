@@ -1,38 +1,74 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-html,
-body {
-  overflow-x: clip;
+@config '../tailwind.config.js';
+
+@custom-variant radix-state-open (&[data-state="open"]);
+@custom-variant radix-state-closed (&[data-state="closed"]);
+@custom-variant radix-state-active (&[data-state="active"]);
+@custom-variant group-radix-state-open (.group[data-state="open"] &);
+
+@utility -animation-delay-200 {
+  animation-delay: -200ms;
 }
 
-@layer components {
-  .font-brand {
-    letter-spacing: 1.5px;
+@utility -animation-delay-400 {
+  animation-delay: -400ms;
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
   }
 }
 
-@layer components {
-  .scrollbar-custom::-webkit-scrollbar {
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+@utility font-brand {
+  letter-spacing: 1.5px;
+}
+
+@utility scrollbar-custom {
+  &::-webkit-scrollbar {
     -webkit-border-radius: 1ex;
   }
 
-  .scrollbar-custom::-webkit-scrollbar-thumb {
+  &::-webkit-scrollbar-thumb {
     background: #fff;
     -webkit-border-radius: 1ex;
   }
 
-  .scrollbar-custom::-webkit-scrollbar-corner {
+  &::-webkit-scrollbar-corner {
     background: #fff3;
   }
 }
 
-@layer utilities {
-  .scrollbar-none {
-    scrollbar-width: none;
-  }
-  .scrollbar-none::-webkit-scrollbar {
+@utility scrollbar-none {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
     display: none;
+  }
+}
+
+@layer utilities {
+  html,
+  body {
+    overflow-x: clip;
   }
 }

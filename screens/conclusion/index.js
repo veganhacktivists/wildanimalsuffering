@@ -31,7 +31,7 @@ export function Conclusion({ locale, visitors }) {
           src={pupsImage.src}
           alt=""
         />
-        <div className="py-30 relative flex max-w-3xl flex-col pt-36 text-white">
+        <div className="relative flex max-w-3xl flex-col pt-36 text-white">
           <h2 className="mb-4 font-brand text-5xl leading-snug">
             {t("conclusion.heading")}
           </h2>
@@ -61,7 +61,7 @@ export function Conclusion({ locale, visitors }) {
         </div>
       </div>
 
-      <div className="relative mt-24 flex flex-row justify-evenly bg-white bg-opacity-10 py-10">
+      <div className="relative mt-24 flex flex-row justify-evenly bg-white/10 py-10">
         <div className="mx-auto w-full max-w-7xl px-10">
           <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
             <div className="flex flex-col items-center gap-6 md:flex-row">

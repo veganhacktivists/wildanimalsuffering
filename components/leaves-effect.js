@@ -30,7 +30,7 @@ class LeafScene {
     for (let i = 0; i < this.options.numLeaves; i++) {
       const el = document.createElement("div");
       el.className =
-        "absolute inset-0 w-5 h-5 bg-cover bg-leaf [transform-style:preserve-3d] [backface-visibility:visible]";
+        "absolute inset-0 w-5 h-5 bg-cover bg-leaf transform-3d backface-visible";
 
       const leaf = {
         el,
@@ -57,7 +57,7 @@ class LeafScene {
       this.world.appendChild(leaf.el);
     }
 
-    this.world.className = "absolute inset-0 [transform-style:preserve-3d]";
+    this.world.className = "absolute inset-0 transform-3d";
     this.viewport.appendChild(this.world);
 
     // set perspective
