@@ -100,8 +100,6 @@
   "videos.id": "videos",
   "videos.name": "Videos",
   "videos.heading": "Videos, die Ihnen gefallen könnten",
-  "videos.vegan_blind_spot.title": "Der vegane Blinde Fleck",
-  "videos.vegan_blind_spot.description": "In diesem 20-minütigen Video wird ein logischer Fall für die Verringerung des Leidens von Wildtieren dargelegt. Wie Nutztiere benötigen auch Wildtiere unsere Hilfe, aber dies ist ein Thema, dem viele Tierschützer nicht viel Beachtung schenken.",
   "videos.was_introduction.title": "Leiden wildlebender Tiere: Eine Einführung",
   "videos.was_introduction.description": "Leiden überwiegt oft Glück im Leben wildlebender Tiere aufgrund von Mangelernährung, Krankheit, menschlichem Einfluss und mehr. Es ist möglich, das Leiden von wildlebenden Tieren zu reduzieren, indem kranke oder verletzte Tiere gerettet und behandelt werden. Menschen greifen in die Natur ein, um unser eigenes Leiden zu reduzieren, und wildlebende Tiere haben die gleiche moralische Berücksichtigung verdient.",
   "videos.vegan_mistake.title": "Veganer und Fleischesser machen beide diesen Fehler",
@@ -216,7 +214,6 @@
   "organizations.nyu_wild_animal_welfare.description": "Wir führen interdisziplinäre Forschung und Bildung zu Wildtierwohlfahrtsfragen durch und erkunden ethische und praktische Ansätze zur Verbesserung des Lebens von Wildtieren.",
   "organizations.nyu_wild_animal_welfare.urls.website": "https://sites.google.com/nyu.edu/wildanimalwelfare/home",
   "organizations.nyu_wild_animal_welfare.urls.donate": "https://giving.nyu.edu/",
-  "organizations.nyu_wild_animal_welfare.urls.subscribe": "https://docs.google.com/forms/d/e/1FAIpQLSfJuWMGkoJnq8l_2Q0gxy-duuBgeZgX9ZE4N-2Wgoo_aDKjLw/viewform?usp=header",
   "organizations.animal_charity_evaluators.description": "Durchführung von Forschung zur Findung und Förderung der effektivsten Wege, Tieren zu helfen, da mehr und bessere Forschung zu besseren Ergebnissen für Tiere führen kann.",
   "organizations.animal_charity_evaluators.urls.website": "https://animalcharityevaluators.org/",
   "organizations.animal_charity_evaluators.urls.donate": "https://animalcharityevaluators.org/donate/",
@@ -325,6 +322,5 @@
   "conclusion.stats.label": "Vielen Dank!",
   "conclusion.stats.description": "Du bist unser {{visitorsFormatted}} Besucher, danke fürs Lesen!",
   "organizations.cta.contact": "Kontakt",
-  "organizations.cta.members": "Mitglieder",
-  "organizations.cta.subscribe": "Abo"
+  "organizations.cta.members": "Mitglieder"
 }

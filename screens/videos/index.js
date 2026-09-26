@@ -31,8 +31,6 @@ import mediumThumbnailBrownUniversity from "./images/thumbnail-brown-university-
 import smallThumbnailBrownUniversity from "./images/thumbnail-brown-university-small.jpeg";
 import mediumThumbnailEvolution from "./images/thumbnail-evolution-medium.jpeg";
 import smallThumbnailEvolution from "./images/thumbnail-evolution-small.jpeg";
-import mediumThumbnailVeganBlindSpot from "./images/thumbnail-vegan-blind-spot-medium.jpeg";
-import smallThumbnailVeganBlindSpot from "./images/thumbnail-vegan-blind-spot-small.jpeg";
 import mediumThumbnailCosmicSkeptic from "./images/thumbnail-cosmic-skeptic-medium.jpeg";
 import smallThumbnailCosmicSkeptic from "./images/thumbnail-cosmic-skeptic-small.jpeg";
 import mediumThumbnailNewFeatured from "./images/thumbnail-new-featured-medium.jpeg";
@@ -60,17 +58,6 @@ export const videos = [
     },
     author: "Humane Hancock",
     duration: "29:25",
-  },
-  // Move previous main video to second
-  {
-    id: "vegan_blind_spot",
-    videoId: "XjCp6bUp__M",
-    thumbnails: {
-      small: smallThumbnailVeganBlindSpot.src,
-      medium: mediumThumbnailVeganBlindSpot.src,
-    },
-    author: "Humane Hancock",
-    duration: "19:21",
   },
   {
     id: "was_introduction",
