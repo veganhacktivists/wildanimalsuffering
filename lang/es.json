@@ -100,8 +100,6 @@
   "videos.id": "videos",
   "videos.name": "Videos",
   "videos.heading": "Videos que podrían interesarte",
-  "videos.vegan_blind_spot.title": "El Punto Ciego Vegano",
-  "videos.vegan_blind_spot.description": "En este video de 20 minutos, se presenta un caso lógico para reducir el sufrimiento de los animales salvajes. Al igual que los animales de granja, los animales salvajes también necesitan nuestra ayuda, pero este es un problema que muchos defensores de los animales no han considerado mucho.",
   "videos.was_introduction.title": "Sufrimiento de los Animales Salvajes: Una Introducción",
   "videos.was_introduction.description": "El sufrimiento a menudo supera la felicidad en la vida de los animales salvajes como resultado de la desnutrición, las enfermedades, el impacto humano y más. Es posible reducir el sufrimiento de los animales salvajes al rescatar y tratar a los animales enfermos o heridos. Los humanos intervienen en la naturaleza para reducir su propio sufrimiento, y los animales salvajes merecen la misma consideración moral.",
   "videos.vegan_mistake.title": "Tanto veganos como carnívoros cometen este error",
@@ -216,7 +214,6 @@
   "organizations.nyu_wild_animal_welfare.description": "Realizamos investigación interdisciplinaria y educación sobre temas de bienestar de animales salvajes, explorando enfoques éticos y prácticos para mejorar las vidas de los animales salvajes.",
   "organizations.nyu_wild_animal_welfare.urls.website": "https://sites.google.com/nyu.edu/wildanimalwelfare/home",
   "organizations.nyu_wild_animal_welfare.urls.donate": "https://giving.nyu.edu/",
-  "organizations.nyu_wild_animal_welfare.urls.subscribe": "https://docs.google.com/forms/d/e/1FAIpQLSfJuWMGkoJnq8l_2Q0gxy-duuBgeZgX9ZE4N-2Wgoo_aDKjLw/viewform?usp=header",
   "organizations.animal_charity_evaluators.description": "Realizando investigación para encontrar y promover las formas más efectivas de ayudar a los animales, ya que más y mejor investigación puede llevar a mejores resultados para los animales.",
   "organizations.animal_charity_evaluators.urls.website": "https://animalcharityevaluators.org/",
   "organizations.animal_charity_evaluators.urls.donate": "https://animalcharityevaluators.org/donate/",
@@ -325,6 +322,5 @@
   "conclusion.stats.label": "¡Gracias!",
   "conclusion.stats.description": "Eres nuestro {{visitorsFormatted}} visitante, ¡gracias por leer!",
   "organizations.cta.contact": "Contacto",
-  "organizations.cta.members": "Miembros",
-  "organizations.cta.subscribe": "Suscribirse"
+  "organizations.cta.members": "Miembros"
 }

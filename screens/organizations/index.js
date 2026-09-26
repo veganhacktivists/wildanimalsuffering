@@ -215,10 +215,6 @@ export function Organizations() {
                 t("organizations.cta.donate"),
                 t("organizations.nyu_wild_animal_welfare.urls.donate"),
               ],
-              [
-                t("organizations.cta.subscribe"),
-                t("organizations.nyu_wild_animal_welfare.urls.subscribe"),
-              ],
             ]}
           >
             {t("organizations.nyu_wild_animal_welfare.description")}

@@ -100,8 +100,6 @@
   "videos.id": "videos",
   "videos.name": "Vidéos",
   "videos.heading": "Vidéos que vous pourriez aimer",
-  "videos.vegan_blind_spot.title": "L'Angle Mort Végan",
-  "videos.vegan_blind_spot.description": "Cette vidéo de 20 minutes présente des arguments logiques en faveur de la réduction des souffrances des animaux sauvages. Tout comme les animaux d'élevage, les animaux sauvages ont besoin de notre aide, mais il s'agit d'une question à laquelle de nombreux défenseurs des animaux n'ont pas accordé beaucoup d'attention.",
   "videos.was_introduction.title": "Souffrance animale sauvage : une introduction",
   "videos.was_introduction.description": "Dans la vie des animaux sauvages, la souffrance l'emporte souvent sur le bonheur en raison de la malnutrition, des maladies, de l'impact de l'homme, etc. Il est possible de réduire la souffrance des animaux sauvages en les sauvant et en les soignant lorsqu'ils sont malades ou blessés. Les humains interviennent dans la nature pour réduire leur propre souffrance, et les animaux sauvages méritent la même considération morale.",
   "videos.vegan_mistake.title": "Les végétaliens et les mangeurs de viande font tous deux cette erreur",
@@ -216,7 +214,6 @@
   "organizations.nyu_wild_animal_welfare.description": "Nous menons des recherches interdisciplinaires et de l'éducation sur les questions de bien-être des animaux sauvages, explorant des approches éthiques et pratiques pour améliorer la vie des animaux sauvages.",
   "organizations.nyu_wild_animal_welfare.urls.website": "https://sites.google.com/nyu.edu/wildanimalwelfare/home",
   "organizations.nyu_wild_animal_welfare.urls.donate": "https://giving.nyu.edu/",
-  "organizations.nyu_wild_animal_welfare.urls.subscribe": "https://docs.google.com/forms/d/e/1FAIpQLSfJuWMGkoJnq8l_2Q0gxy-duuBgeZgX9ZE4N-2Wgoo_aDKjLw/viewform?usp=header",
   "organizations.animal_charity_evaluators.description": "Menant des recherches pour trouver et promouvoir les moyens les plus efficaces d'aider les animaux, car plus de recherches et de meilleures recherches peuvent mener à de meilleurs résultats pour les animaux.",
   "organizations.animal_charity_evaluators.urls.website": "https://animalcharityevaluators.org/",
   "organizations.animal_charity_evaluators.urls.donate": "https://animalcharityevaluators.org/donate/",
@@ -325,6 +322,5 @@
   "conclusion.stats.label": "Merci !",
   "conclusion.stats.description": "Tu es notre {{visitorsFormatted}} visiteur, merci d'avoir lu !",
   "organizations.cta.contact": "Contact",
-  "organizations.cta.members": "Membres",
-  "organizations.cta.subscribe": "S'abonner"
+  "organizations.cta.members": "Membres"
 }

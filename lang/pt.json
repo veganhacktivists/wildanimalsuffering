@@ -99,8 +99,6 @@
   "videos.id": "videos",
   "videos.name": "Vídeos",
   "videos.heading": "Vídeos que Você Pode Gostar",
-  "videos.vegan_blind_spot.title": "O Ponto Cego Vegano",
-  "videos.vegan_blind_spot.description": "Neste vídeo de 20 minutos, é apresentado um caso lógico para reduzir o sofrimento dos animais selvagens. Assim como os animais de fazenda, os animais selvagens também precisam de nossa ajuda, mas este é um problema que muitos defensores dos animais não dão muita atenção.",
   "videos.was_introduction.title": "Sofrimento Animal na Natureza: Uma Introdução",
   "videos.was_introduction.description": "O sofrimento muitas vezes supera a felicidade na vida dos animais selvagens devido à desnutrição, doenças, impacto humano e muito mais. É possível reduzir o sofrimento dos animais selvagens resgatando e tratando animais doentes ou feridos. Os humanos intervêm na natureza para reduzir nosso próprio sofrimento, e os animais selvagens merecem a mesma consideração moral.",
   "videos.vegan_mistake.title": "Vegans e Carnívoros Cometem o Mesmo Erro",
@@ -318,12 +316,10 @@
   "organizations.nyu_wild_animal_welfare.description": "Conduzimos pesquisa interdisciplinar e educação sobre questões de bem-estar de animais selvagens, explorando abordagens éticas e práticas para melhorar as vidas dos animais selvagens.",
   "organizations.nyu_wild_animal_welfare.urls.website": "https://sites.google.com/nyu.edu/wildanimalwelfare/home",
   "organizations.nyu_wild_animal_welfare.urls.donate": "https://giving.nyu.edu/",
-  "organizations.nyu_wild_animal_welfare.urls.subscribe": "https://docs.google.com/forms/d/e/1FAIpQLSfJuWMGkoJnq8l_2Q0gxy-duuBgeZgX9ZE4N-2Wgoo_aDKjLw/viewform?usp=header",
   "organizations.animal_charity_evaluators.description": "Conduzir pesquisa para encontrar e promover as formas mais eficazes de ajudar animais, já que mais pesquisa e melhor pesquisa pode levar a melhores resultados para os animais.",
   "organizations.animal_charity_evaluators.urls.website": "https://animalcharityevaluators.org/",
   "organizations.animal_charity_evaluators.urls.donate": "https://animalcharityevaluators.org/donate/",
   "organizations.animal_charity_evaluators.urls.careers": "https://animalcharityevaluators.org/about/our-team/join-our-team/",
   "organizations.cta.contact": "Contato",
-  "organizations.cta.members": "Membros",
-  "organizations.cta.subscribe": "Inscrever-se"
+  "organizations.cta.members": "Membros"
 }
