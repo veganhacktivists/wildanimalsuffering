@@ -3,7 +3,7 @@
   "version": "1.1.0",
   "description": "Wild animal suffering and why it matters",
   "private": true,
-  "license": "MIT",
+  "license": "GPL-3.0-or-later",
   "scripts": {
     "dev": "next dev",
     "build": "next build && next-export-optimize-images",
