@@ -20,7 +20,7 @@
     "@radix-ui/react-dialog": "^1.1.19",
     "@radix-ui/react-tabs": "^1.1.17",
     "@radix-ui/react-toast": "^1.2.19",
-    "@types/node": "24.13.6",
+    "@types/node": "24.19.0",
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",
     "eslint-config-next": "16.3.6",
