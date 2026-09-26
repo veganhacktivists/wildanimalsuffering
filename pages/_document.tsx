@@ -5,7 +5,12 @@ export default function Document(props: DocumentProps) {
   const dir = ["ar"].includes(currentLocale) ? "rtl" : "ltr";
 
   return (
-    <Html lang={currentLocale} className="motion-safe:scroll-smooth" dir={dir}>
+    <Html
+      lang={currentLocale}
+      className="motion-safe:scroll-smooth"
+      dir={dir}
+      data-scroll-behavior="smooth"
+    >
       <Head>
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
