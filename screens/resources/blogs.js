@@ -57,7 +57,7 @@ export function Blogs() {
         links={[
           [
             t("resources.blogs.cta"),
-            "https://effectivethesis.org/humanitys-impact-wild-animal-suffering/",
+            "https://web.archive.org/web/20180319171619/http://effectivethesis.com/humanitys-impact-wild-animal-suffering/",
           ],
         ]}
       >
