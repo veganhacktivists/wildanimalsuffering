@@ -6,7 +6,7 @@
   "license": "GPL-3.0-or-later",
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next-export-optimize-images",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "test": "vitest run",
@@ -38,7 +38,6 @@
     "autoprefixer": "^10.5.4",
     "eslint": "9.39.5",
     "jsdom": "^30.0.0",
-    "next-export-optimize-images": "^4.7.0",
     "postcss": "^8.5.28",
     "prettier": "^3.9.5",
     "prettier-plugin-tailwindcss": "^0.8.0",
