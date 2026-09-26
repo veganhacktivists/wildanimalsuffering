@@ -16,7 +16,7 @@ import nyuWildAnimalWelfareImage from "./images/nyu-wild-animal-welfare.png";
 import rethinkPrioritiesImage from "./images/rethink-priorities.png";
 import welfareFootprintImage from "./images/welfare-footprint.png";
 import wildAnimalInitiativeImage from "./images/wild-animal-initiative.png";
-import wildAnimalWelfareCommitteeImage from "./images/wild-animal-welfare-committee.png";
+import wildAnimalWelfareCommitteeImage from "./images/wild-animal-welfare-committee.jpg";
 
 export function Organizations() {
   const { t } = useTranslation();
@@ -184,7 +184,7 @@ export function Organizations() {
             {t("organizations.center_reducing_suffering.description")}
           </Organization>
           <Organization
-            name="Welfare Footprint"
+            name="Welfare Footprint Institute"
             imageUrl={welfareFootprintImage.src}
             links={[
               [

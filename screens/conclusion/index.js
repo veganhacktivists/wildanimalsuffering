@@ -133,7 +133,7 @@ export function Conclusion({ locale, visitors }) {
                 for written content and{" "}
                 <a
                   className="underline"
-                  href="https://katerodman.com/"
+                  href="https://www.violetstudios.org/about"
                   rel="noreferrer"
                   target="_blank"
                 >
@@ -330,7 +330,7 @@ export function Conclusion({ locale, visitors }) {
               <li>
                 <a
                   className="underline"
-                  href="https://www.openphilanthropy.org/research/fish-the-forgotten-farm-animal/"
+                  href="https://web.archive.org/web/20251027162400/https://www.openphilanthropy.org/research/fish-the-forgotten-farm-animal/"
                   rel="noreferrer"
                   target="_blank"
                 >

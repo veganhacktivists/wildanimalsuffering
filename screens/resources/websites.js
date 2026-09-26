@@ -24,7 +24,7 @@ export function Websites() {
           ],
           [
             t("resources.websites.cta.donate"),
-            "https://www.givingwhatwecan.org/funds/effective-altruism-funds",
+            "https://funds.effectivealtruism.org/",
           ],
         ]}
       >
