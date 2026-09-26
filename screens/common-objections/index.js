@@ -16,7 +16,7 @@ export function CommonObjections() {
       className="relative flex min-h-screen bg-sand bg-cover bg-top py-24"
       ref={screenRef}
     >
-      <div className="absolute bottom-0 h-full w-full bg-hedgehog bg-right-bottom bg-no-repeat xl:bg-contain" />
+      <div className="absolute bottom-0 h-full w-full bg-hedgehog bg-bottom-right bg-no-repeat xl:bg-contain" />
 
       <motion.div
         style={{ opacity: effectOpacity }}

@@ -24,7 +24,7 @@ export function Navigation() {
   return (
     <>
       <button
-        className="flex min-h-11 min-w-11 cursor-pointer items-center ltr:mr-auto ltr:md:mr-0 rtl:ml-auto rtl:md:ml-0"
+        className="flex min-h-11 min-w-11 cursor-pointer items-center ltr:mr-auto md:ltr:mr-0 rtl:ml-auto md:rtl:ml-0"
         onClick={() => setOpen(true)}
       >
         <span className="sr-only">{t("navigation.name")}</span>
@@ -32,7 +32,7 @@ export function Navigation() {
       </button>
 
       {open && (
-        <nav className="absolute top-0 z-10 h-auto w-full overflow-auto p-5 sm:max-w-[26rem] ltr:left-0 rtl:right-0">
+        <nav className="absolute top-0 z-10 h-auto w-full overflow-auto p-5 sm:max-w-104 ltr:left-0 rtl:right-0">
           <div className="flex flex-col overflow-auto rounded-xl bg-white text-menu-front-dark">
             <div className="flex justify-between p-8">
               <div className="font-brand text-2xl uppercase text-menu-front-dark">

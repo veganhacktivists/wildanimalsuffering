@@ -39,7 +39,7 @@ export function PopulationDynamics() {
 
       <div
         dir="ltr"
-        className="absolute left-1/2 top-1/2 h-[900px] w-[1440px] -translate-x-1/2 -translate-y-[45%] scale-50 sm:-translate-y-1/2 sm:scale-75 md:scale-100"
+        className="absolute left-1/2 top-1/2 h-[900px] w-[1440px] -translate-x-1/2 translate-y-[-45%] scale-50 sm:-translate-y-1/2 sm:scale-75 md:scale-100"
       >
         <div className="absolute inset-0 grid h-full w-full grid-cols-10 grid-rows-5">
           <img

@@ -15,7 +15,7 @@ export function QuoteSection() {
       />
       <div className="relative z-10 mx-auto w-full max-w-4xl px-6 py-6 lg:px-8 lg:py-10">
         <div className="text-center">
-          <div className="mx-auto max-w-3xl rounded-2xl border border-white/20 bg-black/40 p-8 backdrop-blur-sm lg:p-12">
+          <div className="mx-auto max-w-3xl rounded-2xl border border-white/20 bg-black/40 p-8 backdrop-blur-xs lg:p-12">
             <blockquote className="relative text-xl text-white/95 lg:text-2xl">
               <svg
                 className="absolute -left-4 -top-4 h-12 w-12 text-primary opacity-80 lg:h-16 lg:w-16"

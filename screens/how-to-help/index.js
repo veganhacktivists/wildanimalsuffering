@@ -12,7 +12,7 @@ export function HowToHelp() {
       id={t("how_to_help.id")}
       className="relative flex min-h-screen items-center bg-forest bg-cover bg-top py-14 lg:py-24"
     >
-      <div className="absolute bottom-0 h-64 w-full bg-ant-hill bg-cover bg-right-bottom bg-no-repeat md:h-full md:bg-contain" />
+      <div className="absolute bottom-0 h-64 w-full bg-ant-hill bg-cover bg-bottom-right bg-no-repeat md:h-full md:bg-contain" />
       <div className="relative mx-auto flex w-full max-w-7xl flex-col space-y-14 px-10">
         <h2 className="text-center font-brand text-3xl text-white lg:text-4xl">
           {t("how_to_help.heading")}

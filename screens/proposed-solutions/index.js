@@ -11,10 +11,10 @@ const CollapsibleSection = ({
   onToggle,
 }) => {
   return (
-    <div className="overflow-hidden rounded-2xl border border-white/40 bg-black/30 backdrop-blur-sm">
+    <div className="overflow-hidden rounded-2xl border border-white/40 bg-black/30 backdrop-blur-xs">
       <button
         onClick={onToggle}
-        className={`w-full text-left transition-colors focus:outline-none ${
+        className={`w-full text-left transition-colors focus:outline-hidden ${
           !isOpen ? "hover:bg-white/10 focus:bg-white/10" : ""
         }`}
         style={{ padding: "1.2rem" }}
@@ -78,8 +78,8 @@ export function ProposedSolutions() {
       <section className="relative flex min-h-screen items-center bg-proposed-solutions bg-cover bg-fixed bg-no-repeat py-12 lg:items-start lg:py-24">
         <div className="relative z-10 mx-auto flex w-full max-w-4xl flex-col gap-12 px-8">
           <div className="text-center">
-            <div className="h-12 animate-pulse rounded bg-white/20"></div>
-            <div className="mt-6 h-6 animate-pulse rounded bg-white/10"></div>
+            <div className="h-12 animate-pulse rounded-sm bg-white/20"></div>
+            <div className="mt-6 h-6 animate-pulse rounded-sm bg-white/10"></div>
           </div>
         </div>
         <div className="pointer-events-none absolute inset-0">
@@ -134,7 +134,7 @@ export function ProposedSolutions() {
                     }}
                   />
                 </p>
-                <div className="mt-6 rounded-xl border-2 border-primary/60 bg-black/40 p-4 backdrop-blur-sm">
+                <div className="rounded-xl border-2 border-primary/60 bg-black/40 p-4 backdrop-blur-xs">
                   <div className="flex items-start gap-3">
                     <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-sm font-bold text-white">
                       💡
@@ -162,7 +162,7 @@ export function ProposedSolutions() {
                 <p>{t("proposed_solutions.disease_control.description1")}</p>
                 <p>{t("proposed_solutions.disease_control.description2")}</p>
                 <p>{t("proposed_solutions.disease_control.description3")}</p>
-                <div className="mt-6 rounded-xl border-2 border-primary/60 bg-black/40 p-4 backdrop-blur-sm">
+                <div className="rounded-xl border-2 border-primary/60 bg-black/40 p-4 backdrop-blur-xs">
                   <div className="flex items-start gap-3">
                     <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-sm font-bold text-white">
                       💡
@@ -190,7 +190,7 @@ export function ProposedSolutions() {
                 <p>{t("proposed_solutions.policy_advocacy.description1")}</p>
                 <p>{t("proposed_solutions.policy_advocacy.description2")}</p>
                 <p>{t("proposed_solutions.policy_advocacy.description3")}</p>
-                <div className="mt-6 rounded-xl border-2 border-primary/60 bg-black/40 p-4 backdrop-blur-sm">
+                <div className="rounded-xl border-2 border-primary/60 bg-black/40 p-4 backdrop-blur-xs">
                   <div className="flex items-start gap-3">
                     <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-sm font-bold text-white">
                       💡
@@ -221,7 +221,7 @@ export function ProposedSolutions() {
                 <p>
                   {t("proposed_solutions.spreading_awareness.description2")}
                 </p>
-                <div className="mt-6 rounded-xl border-2 border-primary/60 bg-black/40 p-4 backdrop-blur-sm">
+                <div className="rounded-xl border-2 border-primary/60 bg-black/40 p-4 backdrop-blur-xs">
                   <div className="flex items-start gap-3">
                     <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-sm font-bold text-white">
                       💡
@@ -264,7 +264,7 @@ export function ProposedSolutions() {
                 <p>
                   {t("proposed_solutions.helping_animals_near_us.description2")}
                 </p>
-                <div className="mt-6 rounded-xl border-2 border-primary/60 bg-black/40 p-4 backdrop-blur-sm">
+                <div className="rounded-xl border-2 border-primary/60 bg-black/40 p-4 backdrop-blur-xs">
                   <div className="flex items-start gap-3">
                     <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-sm font-bold text-white">
                       💡
@@ -303,7 +303,7 @@ export function ProposedSolutions() {
               <div className="space-y-4 text-white/90">
                 <p>{t("proposed_solutions.disaster_relief.description1")}</p>
                 <p>{t("proposed_solutions.disaster_relief.description2")}</p>
-                <div className="mt-6 rounded-xl border-2 border-primary/60 bg-black/40 p-4 backdrop-blur-sm">
+                <div className="rounded-xl border-2 border-primary/60 bg-black/40 p-4 backdrop-blur-xs">
                   <div className="flex items-start gap-3">
                     <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-sm font-bold text-white">
                       💡
@@ -345,7 +345,7 @@ export function ProposedSolutions() {
                   />
                 </p>
                 <p>{t("proposed_solutions.treating_parasites.description3")}</p>
-                <div className="mt-6 rounded-xl border-2 border-primary/60 bg-black/40 p-4 backdrop-blur-sm">
+                <div className="rounded-xl border-2 border-primary/60 bg-black/40 p-4 backdrop-blur-xs">
                   <div className="flex items-start gap-3">
                     <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-sm font-bold text-white">
                       💡
@@ -391,7 +391,7 @@ export function ProposedSolutions() {
                 <p>
                   {t("proposed_solutions.artificial_intelligence.description3")}
                 </p>
-                <div className="mt-6 rounded-xl border-2 border-primary/60 bg-black/40 p-4 backdrop-blur-sm">
+                <div className="rounded-xl border-2 border-primary/60 bg-black/40 p-4 backdrop-blur-xs">
                   <div className="flex items-start gap-3">
                     <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-sm font-bold text-white">
                       💡
@@ -419,7 +419,7 @@ export function ProposedSolutions() {
               decoding="async"
               src="/images/proposed-solutions-bottom-decorative.png"
               alt="Decorative wildlife illustration"
-              className="lg:scale-200 max-h-96 w-auto max-w-full scale-150 opacity-80"
+              className="max-h-96 w-auto max-w-full scale-150 opacity-80"
             />
           </div>
         </div>

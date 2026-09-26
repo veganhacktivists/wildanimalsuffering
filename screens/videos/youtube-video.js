@@ -31,7 +31,7 @@ export function YoutubeVideo({ video }) {
               src={video.thumbnails.medium}
               alt=""
             />
-            <div className="pointer-events-none absolute inset-0 h-full w-full bg-gradient-to-t from-black to-black/0 opacity-60"></div>
+            <div className="pointer-events-none absolute inset-0 h-full w-full bg-linear-to-t/srgb from-black to-black/0 opacity-60"></div>
             <div className="absolute top-1/2 -translate-y-1/2 rounded-full bg-slate-900/50 transition group-hover:scale-110 ltr:left-1/2 ltr:-translate-x-1/2 rtl:right-1/2 rtl:translate-x-1/2">
               <PlayIcon size={80} />
             </div>
@@ -47,7 +47,7 @@ export function YoutubeVideo({ video }) {
           </button>
         )}
       </div>
-      <div className="flex-1 overflow-hidden overflow-ellipsis bg-white/80 p-5 lg:basis-40 xl:basis-34">
+      <div className="flex-1 overflow-hidden text-ellipsis bg-white/80 p-5 lg:basis-40 xl:basis-34">
         <p className="text-gray-700 lg:line-clamp-5 xl:line-clamp-4">
           {t(`videos.${video.id}.description`)}
         </p>

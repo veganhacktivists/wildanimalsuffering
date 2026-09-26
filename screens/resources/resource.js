@@ -9,7 +9,7 @@ export function Resource({
   containThumbnail = false,
 }) {
   return (
-    <div className="group flex w-9/10 flex-shrink-0 snap-center flex-col overflow-hidden rounded-2xl border border-white bg-white/50 pb-4 transition-all duration-300 hover:bg-white/60 hover:shadow-lg lg:w-auto lg:flex-row lg:pb-0">
+    <div className="group flex w-9/10 shrink-0 snap-center flex-col overflow-hidden rounded-2xl border border-white bg-white/50 pb-4 transition-all duration-300 hover:bg-white/60 hover:shadow-lg lg:w-auto lg:flex-row lg:pb-0">
       <div
         className="bg-cover lg:hidden xl:grid"
         style={{

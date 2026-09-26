@@ -2,9 +2,6 @@ const { fontFamily } = require("tailwindcss/defaultTheme");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  future: {
-    hoverOnlyWhenSupported: true,
-  },
   content: [
     "./components/**/*.{js,ts,jsx,tsx}",
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -25,10 +22,6 @@ module.exports = {
         "tab-fade-in": "tab-fade-in 500ms ease-out",
         "tab-slide-in-left": "tab-slide-in-left 300ms ease-out",
         "tab-slide-in-right": "tab-slide-in-right 300ms ease-out",
-      },
-      animationDelay: {
-        "-400": "-400ms",
-        400: "400ms",
       },
       aspectRatio: {
         "4/3": "4 / 3",
@@ -182,9 +175,4 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    require("tailwind-scrollbar"),
-    require("./lib/tailwindcss-animation-delay-plugin"),
-    require("./lib/tailwindcss-radix-plugin"),
-  ],
 };

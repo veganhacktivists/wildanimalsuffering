@@ -210,7 +210,7 @@ export function Videos() {
         <BackgroundEffect type="snow" />
       </motion.div>
 
-      <div className="relative z-10 mx-auto flex w-full max-w-7xl grow flex-col space-y-10">
+      <div className="relative z-10 mx-auto flex w-full max-w-7xl grow flex-col gap-10">
         <h2 className="px-8 text-center font-brand text-3xl text-white lg:text-4xl">
           {t("videos.heading")}
         </h2>
@@ -220,7 +220,7 @@ export function Videos() {
           {videos.map((video) => (
             <div
               key={video.id}
-              className="flex w-9/10 flex-shrink-0 snap-center flex-col"
+              className="flex w-9/10 shrink-0 snap-center flex-col"
             >
               <YoutubeVideo video={video} />
             </div>

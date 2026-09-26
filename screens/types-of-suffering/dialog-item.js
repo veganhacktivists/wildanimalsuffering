@@ -26,7 +26,7 @@ export function DialogItem({ imageUrl, title, description, link }) {
       <RadixDialog.Portal>
         <RadixDialog.Overlay className="fixed inset-0 z-10 flex h-screen w-screen items-center justify-center bg-[#1a3439]/50 radix-state-closed:animate-[fade-out_200ms_ease-in] radix-state-open:animate-[fade-in_200ms_ease-out]">
           <RadixDialog.Content className="fixed bottom-0 z-10 max-h-screen w-full max-w-4xl overflow-y-auto radix-state-closed:animate-[dialog-slide-down_200ms_ease-in] radix-state-open:animate-[dialog-slide-up_300ms_ease-out] md:static md:radix-state-closed:animate-[dialog-scale-out_200ms_ease-in] md:radix-state-open:animate-[dialog-scale-in_300ms_ease-out]">
-            <div className="max-h-75 relative m-auto grid w-full place-items-center rounded-2xl border-4 border-white bg-white bg-sand bg-cover p-10 shadow-2xl md:grid-cols-2">
+            <div className="relative m-auto grid w-full place-items-center rounded-2xl border-4 border-white bg-white bg-sand bg-cover p-10 shadow-2xl md:grid-cols-2">
               <RadixDialog.Close className="absolute top-4 rounded-full p-1 transition-all duration-200 hover:scale-110 hover:bg-white/20 ltr:right-4 rtl:left-4">
                 <CloseIcon className="h-6 w-6 transition-colors duration-200 hover:text-primary" />
               </RadixDialog.Close>
