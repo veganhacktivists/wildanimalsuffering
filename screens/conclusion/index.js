@@ -133,7 +133,7 @@ export function Conclusion({ locale, visitors }) {
                 for written content and{" "}
                 <a
                   className="underline"
-                  href="https://web.archive.org/web/20230930003546/https://katerodman.com/"
+                  href="https://www.violetstudios.org/about"
                   rel="noreferrer"
                   target="_blank"
                 >
