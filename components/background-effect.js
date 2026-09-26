@@ -1,4 +1,4 @@
-import { useMotionValue } from "framer-motion";
+import { useMotionValue } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 import { FogEffect } from "~/components/fog-effect";
 import { LeavesEffect } from "~/components/leaves-effect";
