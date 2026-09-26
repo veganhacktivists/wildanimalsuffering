@@ -1,6 +1,6 @@
 import { fileURLToPath } from "node:url";
 import react from "@vitejs/plugin-react";
-import { type Plugin, transformWithEsbuild } from "vite";
+import { type Plugin, transformWithOxc } from "vite";
 import { defineConfig } from "vitest/config";
 
 const root = fileURLToPath(new URL(".", import.meta.url));
@@ -15,9 +15,9 @@ const jsxInJs: Plugin = {
       return null;
     }
 
-    return transformWithEsbuild(code, id, {
-      loader: "jsx",
-      jsx: "automatic",
+    return transformWithOxc(code, id, {
+      lang: "jsx",
+      jsx: { runtime: "automatic" },
     });
   },
 };
