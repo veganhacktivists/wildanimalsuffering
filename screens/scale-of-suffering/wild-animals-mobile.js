@@ -118,24 +118,32 @@ export function WildAnimalsMobile() {
                 alt=""
               />
               <motion.img
+                loading="lazy"
+                decoding="async"
                 style={{ opacity: reptilesOpacity }}
                 className="col-start-1 row-start-1 max-h-[40vh]"
                 src={chartReptilesImage.src}
                 alt=""
               />
               <motion.img
+                loading="lazy"
+                decoding="async"
                 style={{ opacity: fishOpacity }}
                 className="col-start-1 row-start-1 max-h-[40vh]"
                 src={chartFishImage.src}
                 alt=""
               />
               <motion.img
+                loading="lazy"
+                decoding="async"
                 style={{ opacity: earthWormsOpacity }}
                 className="col-start-1 row-start-1 max-h-[40vh]"
                 src={chartEarthWormsImage.src}
                 alt=""
               />
               <motion.img
+                loading="lazy"
+                decoding="async"
                 style={{ opacity: terrestrialArOpacity }}
                 className="col-start-1 row-start-1 max-h-[40vh]"
                 src={chartTerrestrialArImage.src}
@@ -143,18 +151,24 @@ export function WildAnimalsMobile() {
               />
             </div>
             <motion.img
+              loading="lazy"
+              decoding="async"
               style={{ opacity: fishLabelOpacity }}
               className="col-start-1 row-start-2 max-h-[10vh]"
               src={chartFishLabelsImage.src}
               alt=""
             />
             <motion.img
+              loading="lazy"
+              decoding="async"
               style={{ opacity: earthWormsLabelOpacity }}
               className="col-start-1 row-start-2 max-h-[10vh]"
               src={chartEarthWormsLabelsImage.src}
               alt=""
             />
             <motion.img
+              loading="lazy"
+              decoding="async"
               style={{ opacity: terrestrialArOpacity }}
               className="col-start-1 row-start-2 max-h-[10vh]"
               src={chartTerrestrialArLabelsImage.src}
