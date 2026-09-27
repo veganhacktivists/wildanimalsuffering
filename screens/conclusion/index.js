@@ -97,7 +97,7 @@ export function Conclusion({ locale, visitors }) {
                 To our friends and advisors from{" "}
                 <a
                   className="underline"
-                  href="https://www.animal-ethics.org/rescuing-trapped-animals/"
+                  href="https://www.wildanimalinitiative.org/"
                   rel="noreferrer"
                   target="_blank"
                 >
@@ -106,7 +106,7 @@ export function Conclusion({ locale, visitors }) {
                 ,{" "}
                 <a
                   className="underline"
-                  href="https://www.animal-ethics.org/rescuing-trapped-animals/"
+                  href="https://www.animal-ethics.org/"
                   rel="noreferrer"
                   target="_blank"
                 >
@@ -115,7 +115,7 @@ export function Conclusion({ locale, visitors }) {
                 and{" "}
                 <a
                   className="underline"
-                  href="https://www.animal-ethics.org/rescuing-trapped-animals/"
+                  href="https://rethinkpriorities.org/"
                   rel="noreferrer"
                   target="_blank"
                 >

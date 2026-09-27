@@ -1,5 +1,7 @@
-import { render } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import { beforeEach, describe, expect, it, vi } from "vitest";
+import "../i18n";
+import { Header } from "../components/header";
 import En from "../pages/index";
 
 const replace = vi.fn();
@@ -62,6 +64,25 @@ describe("En (language detection)", () => {
     stubStorage({ getItem: () => "true" });
     stubLanguages(["de-DE"]);
 
+    render(<En />);
+
+    expect(replace).not.toHaveBeenCalled();
+  });
+
+  it("stays on English when a visitor picks it from another language", () => {
+    const stored = new Map<string, string>();
+    stubStorage({
+      getItem: (key) => stored.get(key) ?? null,
+      setItem: (key, value) => {
+        stored.set(key, value);
+      },
+    });
+    stubLanguages(["es-ES"]);
+
+    render(<Header locale="es" />);
+    fireEvent.change(screen.getByRole("combobox"), {
+      target: { value: "en" },
+    });
     render(<En />);
 
     expect(replace).not.toHaveBeenCalled();

@@ -13,6 +13,13 @@ export function Header({ locale = "en" }: Props) {
   const onLangChange = (event: React.FormEvent<HTMLSelectElement>) => {
     if (event.target instanceof HTMLSelectElement) {
       const { value } = event.target;
+
+      // Otherwise the English page takes this for a first visit and sends
+      // the visitor back to their browser's language.
+      try {
+        localStorage.setItem("language-detected", "true");
+      } catch {}
+
       location.href = value === "en" ? "/" : `/${value}/`;
     }
   };
