@@ -6,6 +6,7 @@
 @custom-variant radix-state-closed (&[data-state="closed"]);
 @custom-variant radix-state-active (&[data-state="active"]);
 @custom-variant group-radix-state-open (.group[data-state="open"] &);
+@custom-variant near (&:where([data-near], [data-near] *));
 
 @utility -animation-delay-200 {
   animation-delay: -200ms;

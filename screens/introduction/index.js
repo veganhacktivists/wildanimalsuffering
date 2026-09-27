@@ -6,7 +6,7 @@ import {
 } from "~/components/background-effect";
 import { ScrollDownIndicator } from "~/components/scroll-down-indicator";
 
-import elephantsImage from "./images/elephants.png";
+import elephantsImage from "./images/elephants.webp";
 
 export function Introduction() {
   const { t } = useTranslation();

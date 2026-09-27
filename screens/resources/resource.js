@@ -10,13 +10,15 @@ export function Resource({
 }) {
   return (
     <div className="group flex w-9/10 shrink-0 snap-center flex-col overflow-hidden rounded-2xl border border-white bg-white/50 pb-4 transition-all duration-300 hover:bg-white/60 hover:shadow-lg lg:w-auto lg:flex-row lg:pb-0">
-      <div
-        className="bg-cover lg:hidden xl:grid"
-        style={{
-          backgroundImage: `url(${imageUrl})`,
-        }}
-      >
-        <div className="grid h-full w-full place-items-center rounded-l-2xl backdrop-blur-xl">
+      <div className="relative lg:hidden xl:grid">
+        <img
+          loading="lazy"
+          decoding="async"
+          src={imageUrl}
+          alt=""
+          className="absolute inset-0 h-full w-full object-cover object-top-left"
+        />
+        <div className="relative grid h-full w-full place-items-center rounded-l-2xl backdrop-blur-xl">
           <img
             loading="lazy"
             decoding="async"

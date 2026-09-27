@@ -1,10 +1,10 @@
-import { resources } from "i18n";
+import type { Locale } from "i18n";
 import { Trans, useTranslation } from "react-i18next";
 import { Navigation } from "~/components/navigation";
 import { Select } from "./select";
 
 type Props = {
-  locale?: keyof typeof resources;
+  locale?: Locale;
 };
 
 export function Header({ locale = "en" }: Props) {

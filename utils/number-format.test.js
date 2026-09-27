@@ -62,7 +62,9 @@ describe("formatOrdinals", () => {
     ["zh", 23, "我们的第23位访客"],
   ])(
     "reads as an ordinal in the %s visitor sentence (%i)",
-    (locale, n, expected) => {
+    async (locale, n, expected) => {
+      const { default: messages } = await import(`../lang/${locale}.json`);
+      i18n.addResourceBundle(locale, "translation", messages);
       const t = i18n.getFixedT(locale);
       const visitorsFormatted = formatOrdinals({ n, t, locale });
 

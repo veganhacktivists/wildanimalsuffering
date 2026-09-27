@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import { Header } from "~/components/header";
 import { Seo } from "~/components/seo";
 import { CommonObjections } from "~/screens/common-objections";
@@ -12,21 +13,24 @@ import { Resources } from "~/screens/resources";
 import { ScaleOfSuffering } from "~/screens/scale-of-suffering";
 import { TypesOfSuffering } from "~/screens/types-of-suffering";
 import { Videos } from "~/screens/videos";
+import { useLazyBackgrounds } from "~/utils/use-lazy-backgrounds";
 import { useVisitorStats } from "~/utils/use-visitor-stats";
-import type { resources } from "../i18n";
+import type { Locale } from "../i18n";
 
 type Props = {
-  locale?: keyof typeof resources;
+  locale?: Locale;
 };
 
 export default function Home({ locale }: Props) {
   const visitors = useVisitorStats();
+  const mainRef = useRef<HTMLElement>(null);
+  useLazyBackgrounds(mainRef);
 
   return (
     <>
       <Seo locale={locale} />
       <Header locale={locale} />
-      <main>
+      <main ref={mainRef}>
         <Introduction />
         <ScaleOfSuffering />
         <TypesOfSuffering />

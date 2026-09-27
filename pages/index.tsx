@@ -1,29 +1,7 @@
 import { useEffect } from "react";
 import { useRouter } from "next/router";
+import { locales } from "i18n";
 import Home from "~/screens/home";
-
-const supportedLanguages = [
-  "ar",
-  "de",
-  "en",
-  "es",
-  "fr",
-  "hi",
-  "hy",
-  "id",
-  "it",
-  "ja",
-  "ko",
-  "lt",
-  "nl",
-  "pl",
-  "pt",
-  "ru",
-  "th",
-  "tr",
-  "vi",
-  "zh",
-];
 
 function detectBrowserLanguage(): string {
   if (typeof navigator === "undefined") return "en";
@@ -36,7 +14,7 @@ function detectBrowserLanguage(): string {
     const langCode = lang.split("-")[0].toLowerCase();
 
     // Check if we support this language
-    if (supportedLanguages.includes(langCode)) {
+    if ((locales as readonly string[]).includes(langCode)) {
       return langCode;
     }
   }

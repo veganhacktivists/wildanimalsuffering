@@ -1,8 +1,6 @@
 import Head from "next/head";
 import { useTranslation } from "react-i18next";
-import { resources } from "i18n";
-
-type Locale = keyof typeof resources;
+import { type Locale, locales } from "i18n";
 
 type Props = {
   locale?: Locale;
@@ -10,7 +8,6 @@ type Props = {
 
 const SITE_URL = "https://wildanimalsuffering.org";
 const OG_IMAGE = `${SITE_URL}/images/meta.png`;
-const locales = Object.keys(resources) as Locale[];
 
 const ogLocales: Record<Locale, string> = {
   ar: "ar_SA",

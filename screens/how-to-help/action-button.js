@@ -13,7 +13,7 @@ export const ActionButton = forwardRef(function ActionButton(
       ref={ref}
       {...props}
     >
-      <div className="flex h-full w-full flex-col justify-center bg-leaves bg-cover px-4 pt-6">
+      <div className="flex h-full w-full flex-col justify-center near:bg-leaves bg-cover px-4 pt-6">
         <span className="pl-2 font-brand text-7xl">{step}</span>
         <span className="pb-2 pl-2 font-brand text-2xl lg:text-3xl">
           {children}
