@@ -9,126 +9,100 @@ import effectiveAltruismImage from "./images/websites/effective-altruism.png";
 import reducingSufferingImage from "./images/websites/reducing-suffering.jpg";
 import worldAnimalProtectionImage from "./images/websites/world-animal-protection.png";
 
+const websites = [
+  {
+    id: "effective_altruism",
+    image: effectiveAltruismImage,
+    links: [
+      ["resources.websites.cta.visit", "https://www.effectivealtruism.org/"],
+      ["resources.websites.cta.donate", "https://funds.effectivealtruism.org/"],
+    ],
+  },
+  {
+    id: "reducing_suffering",
+    image: reducingSufferingImage,
+    links: [
+      ["resources.websites.cta.visit", "https://reducing-suffering.org/"],
+      [
+        "resources.websites.cta.donate",
+        "https://reducing-suffering.org/donation-recommendations",
+      ],
+    ],
+  },
+  {
+    id: "animal_charity_evaluators",
+    image: animalCharityEvaluatorsImage,
+    links: [
+      ["resources.websites.cta.visit", "https://animalcharityevaluators.org"],
+      [
+        "resources.websites.cta.donate",
+        "https://animalcharityevaluators.org/donate",
+      ],
+    ],
+  },
+  {
+    id: "center_for_reducing_suffering",
+    image: centerForReducingSufferingImage,
+    links: [
+      [
+        "resources.websites.cta.visit",
+        "https://centerforreducingsuffering.org",
+      ],
+      [
+        "resources.websites.cta.donate",
+        "https://centerforreducingsuffering.org/donate",
+      ],
+    ],
+  },
+  {
+    id: "world_animal_protection",
+    image: worldAnimalProtectionImage,
+    links: [
+      ["resources.websites.cta.visit", "https://www.worldanimalprotection.us/"],
+      [
+        "resources.websites.cta.donate",
+        "https://secure.worldanimalprotection.us/NN8cva8NRkWWp1lwkeePCg2",
+      ],
+    ],
+  },
+  {
+    id: "animal_advocacy_careers",
+    image: animalAdvocacyCareersImage,
+    links: [
+      [
+        "resources.websites.cta.visit",
+        "https://www.animaladvocacycareers.org/",
+      ],
+      [
+        "resources.websites.cta.donate",
+        "https://www.animaladvocacycareers.org/donate",
+      ],
+    ],
+  },
+  {
+    id: "eighty_thousand_hours",
+    image: eightyThousandHoursImage,
+    links: [
+      ["resources.websites.cta.visit", "https://80000hours.org/"],
+      [
+        "resources.websites.cta.donate",
+        "https://80000hours.org/support-us/donate",
+      ],
+    ],
+  },
+];
+
 export function Websites() {
   const { t } = useTranslation();
 
-  return (
-    <>
-      <Resource
-        imageUrl={effectiveAltruismImage.src}
-        title={t("resources.websites.effective_altruism.title")}
-        links={[
-          [
-            t("resources.websites.cta.visit"),
-            "https://www.effectivealtruism.org/",
-          ],
-          [
-            t("resources.websites.cta.donate"),
-            "https://funds.effectivealtruism.org/",
-          ],
-        ]}
-      >
-        {t("resources.websites.effective_altruism.description")}
-      </Resource>
-
-      <Resource
-        imageUrl={reducingSufferingImage.src}
-        title={t("resources.websites.reducing_suffering.title")}
-        links={[
-          [
-            t("resources.websites.cta.visit"),
-            "https://reducing-suffering.org/",
-          ],
-          [
-            t("resources.websites.cta.donate"),
-            "https://reducing-suffering.org/donation-recommendations",
-          ],
-        ]}
-      >
-        {t("resources.websites.reducing_suffering.description")}
-      </Resource>
-
-      <Resource
-        imageUrl={animalCharityEvaluatorsImage.src}
-        title={t("resources.websites.animal_charity_evaluators.title")}
-        links={[
-          [
-            t("resources.websites.cta.visit"),
-            "https://animalcharityevaluators.org",
-          ],
-          [
-            t("resources.websites.cta.donate"),
-            "https://animalcharityevaluators.org/donate",
-          ],
-        ]}
-      >
-        {t("resources.websites.animal_charity_evaluators.description")}
-      </Resource>
-
-      <Resource
-        imageUrl={centerForReducingSufferingImage.src}
-        title={t("resources.websites.center_for_reducing_suffering.title")}
-        links={[
-          [
-            t("resources.websites.cta.visit"),
-            "https://centerforreducingsuffering.org",
-          ],
-          [
-            t("resources.websites.cta.donate"),
-            "https://centerforreducingsuffering.org/donate",
-          ],
-        ]}
-      >
-        {t("resources.websites.center_for_reducing_suffering.description")}
-      </Resource>
-
-      <Resource
-        imageUrl={worldAnimalProtectionImage.src}
-        title={t("resources.websites.world_animal_protection.title")}
-        links={[
-          [
-            t("resources.websites.cta.visit"),
-            "https://www.worldanimalprotection.us/",
-          ],
-          [
-            t("resources.websites.cta.donate"),
-            "https://secure.worldanimalprotection.us/NN8cva8NRkWWp1lwkeePCg2",
-          ],
-        ]}
-      >
-        {t("resources.websites.world_animal_protection.description")}
-      </Resource>
-
-      <Resource
-        imageUrl={animalAdvocacyCareersImage.src}
-        title={t("resources.websites.animal_advocacy_careers.title")}
-        links={[
-          [
-            t("resources.websites.cta.visit"),
-            "https://www.animaladvocacycareers.org/",
-          ],
-          [
-            t("resources.websites.cta.donate"),
-            "https://www.animaladvocacycareers.org/donate",
-          ],
-        ]}
-      >
-        {t("resources.websites.animal_advocacy_careers.description")}
-      </Resource>
-
-      <Resource
-        imageUrl={eightyThousandHoursImage.src}
-        title={t("resources.websites.eighty_thousand_hours.title")}
-        links={[
-          [t("resources.websites.cta.visit"), "https://80000hours.org/"],
-          [
-            t("resources.websites.cta.donate"),
-            "https://80000hours.org/support-us/donate",
-          ],
-        ]}
-      >
-        {t("resources.websites.eighty_thousand_hours.description")}
-      </Resource>
-    </>
-  );
+  return websites.map(({ id, image, links }) => (
+    <Resource
+      key={id}
+      imageUrl={image.src}
+      title={t(`resources.websites.${id}.title`)}
+      links={links.map(([label, url]) => [t(label), url])}
+    >
+      {t(`resources.websites.${id}.description`)}
+    </Resource>
+  ));
 }
