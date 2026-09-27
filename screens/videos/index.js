@@ -160,7 +160,7 @@ export const videos = [
       medium: mediumThumbnailBeginnersGuide.src,
     },
     author: "LSE Philosophy",
-    duration: "21.29",
+    duration: "21:28",
   },
   {
     id: "david_attenborough",
