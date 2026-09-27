@@ -11,7 +11,7 @@ export function Select({ children, ...props }: Props) {
         <ChevronDownIcon />
       </span>
       <select
-        className="min-h-11 appearance-none bg-transparent pl-2 pr-8"
+        className="min-h-11 appearance-none bg-transparent ps-2 pe-8"
         {...props}
       >
         {children}
