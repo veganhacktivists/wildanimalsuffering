@@ -2,7 +2,7 @@ import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 import { Trans, useTranslation } from "react-i18next";
 
-import earthImage from "./images/earth.png";
+import earthImage from "./images/earth.webp";
 import farmedAnimalsImage from "./images/farmed-animals.png";
 import humanImage from "./images/human.png";
 

@@ -417,7 +417,7 @@ export function ProposedSolutions() {
             <img
               loading="lazy"
               decoding="async"
-              src="/images/proposed-solutions-bottom-decorative.png"
+              src="/images/proposed-solutions-bottom-decorative.webp"
               alt="Decorative wildlife illustration"
               className="max-h-96 w-auto max-w-full scale-150 opacity-80"
             />

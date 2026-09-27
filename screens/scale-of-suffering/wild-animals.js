@@ -3,13 +3,13 @@ import { useRef } from "react";
 import { Trans, useTranslation } from "react-i18next";
 
 import chartEarthWormsLabelsImage from "./images/chart-earth-worms-labels.png";
-import chartEarthWormsImage from "./images/chart-earth-worms.png";
+import chartEarthWormsImage from "./images/chart-earth-worms.webp";
 import chartFishLabelsImage from "./images/chart-fish-labels.png";
-import chartFishImage from "./images/chart-fish.png";
-import chartReptilesImage from "./images/chart-reptiles.png";
+import chartFishImage from "./images/chart-fish.webp";
+import chartReptilesImage from "./images/chart-reptiles.webp";
 import chartTerrestrialArLabelsImage from "./images/chart-terrestrial-ar-labels.png";
-import chartTerrestrialArImage from "./images/chart-terrestrial-ar.png";
-import chartWildAnimalsImage from "./images/chart-wild-animals.png";
+import chartTerrestrialArImage from "./images/chart-terrestrial-ar.webp";
+import chartWildAnimalsImage from "./images/chart-wild-animals.webp";
 
 const screen = 1 / 2.5;
 
