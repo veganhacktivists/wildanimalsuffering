@@ -117,7 +117,7 @@ export function WildAnimals() {
                   y: terrestrialArTextY,
                 }}
               >
-                {t("scale_of_suffering.insects")}
+                {t("scale_of_suffering.terrestrial_arthropods")}
               </motion.li>
             </ul>
             <div className="max-w-md space-y-4">
