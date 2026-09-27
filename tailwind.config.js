@@ -15,8 +15,8 @@ module.exports = {
         "dialog-show": "dialog-show 150ms ease-out",
         "pop-down": "pop-down 150ms ease-out forwards",
         "pop-up": "pop-up 150ms ease-out forwards",
-        "slide-bg-right-slow": "slide-bg-right 30s linear infinite",
-        "slide-bg-right-fast": "slide-bg-right 15s linear infinite",
+        "fog-drift-slow": "fog-drift 30s linear infinite",
+        "fog-drift-fast": "fog-drift 15s linear infinite",
         "slide-down": "slide-down 150ms ease-in-out",
         "slide-up": "slide-up 150ms ease-in-out",
         "tab-fade-in": "tab-fade-in 500ms ease-out",
@@ -83,12 +83,12 @@ module.exports = {
         brand: ["var(--font-asap-condensed)", ...fontFamily.sans],
       },
       keyframes: {
-        "slide-bg-right": {
+        "fog-drift": {
           from: {
-            backgroundPosition: "0 0",
+            transform: "translateX(0)",
           },
           to: {
-            backgroundPosition: "1000px 0",
+            transform: "translateX(1000px)",
           },
         },
         "slide-down": {
