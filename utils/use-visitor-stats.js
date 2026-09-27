@@ -11,7 +11,10 @@ export function useVisitorStats() {
 
       if (res.ok) {
         const data = await res.json();
-        setVisitors(data.visitors);
+
+        if (Number.isSafeInteger(data.visitors)) {
+          setVisitors(data.visitors);
+        }
       }
     } catch (err) {
       // Fail silently
