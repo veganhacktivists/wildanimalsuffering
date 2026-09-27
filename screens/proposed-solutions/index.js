@@ -75,7 +75,8 @@ export function ProposedSolutions() {
   // Don't render until translations are ready to avoid hydration mismatch
   if (!ready) {
     return (
-      <section className="relative flex min-h-screen items-center near:bg-proposed-solutions bg-cover bg-fixed bg-no-repeat py-12 lg:items-start lg:py-24">
+      <section className="relative flex min-h-screen items-center py-12 [clip-path:inset(0)] lg:items-start lg:py-24">
+        <div className="fixed inset-0 -z-10 near:bg-proposed-solutions bg-cover bg-no-repeat" />
         <div className="relative z-10 mx-auto flex w-full max-w-4xl flex-col gap-12 px-8">
           <div className="text-center">
             <div className="h-12 animate-pulse rounded-sm bg-white/20"></div>
@@ -97,8 +98,9 @@ export function ProposedSolutions() {
     <>
       <section
         id={t("proposed_solutions.id")}
-        className="relative flex min-h-screen items-center near:bg-proposed-solutions bg-cover bg-fixed bg-no-repeat py-12 lg:items-start lg:py-24"
+        className="relative flex min-h-screen items-center py-12 [clip-path:inset(0)] lg:items-start lg:py-24"
       >
+        <div className="fixed inset-0 -z-10 near:bg-proposed-solutions bg-cover bg-no-repeat" />
         <div className="relative z-10 mx-auto flex w-full max-w-4xl flex-col gap-12 px-8">
           <div className="text-center">
             <h2 className="pt-8 font-brand text-4xl font-bold text-white lg:text-5xl">

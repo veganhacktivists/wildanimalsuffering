@@ -53,10 +53,11 @@ export function Resources() {
   return (
     <RadixTabs.Root
       id={t("resources.id")}
-      className="relative flex min-h-screen items-center near:bg-sand bg-cover bg-fixed bg-no-repeat py-12 lg:items-start lg:py-24"
+      className="relative flex min-h-screen items-center py-12 [clip-path:inset(0)] lg:items-start lg:py-24"
       defaultValue={ResourceTypes.WEBSITES}
       orientation="vertical"
     >
+      <div className="fixed inset-0 -z-10 near:bg-sand bg-cover bg-no-repeat" />
       <div className="relative z-10 mx-auto flex w-full max-w-7xl grow flex-col gap-10">
         <h2 className="hidden px-8 text-center font-brand text-4xl text-white lg:block">
           {t("resources.heading")}
