@@ -20,7 +20,7 @@ import wildAnimalWelfareCommitteeImage from "./images/wild-animal-welfare-commit
 
 export function Organizations() {
   const { t } = useTranslation();
-  const { screenRef, effectOpacity } = useBackgroundEffect();
+  const { screenRef, effectOpacity, onScreen } = useBackgroundEffect();
 
   return (
     <section
@@ -34,7 +34,7 @@ export function Organizations() {
         style={{ opacity: effectOpacity }}
         className="absolute inset-0 z-10"
       >
-        <BackgroundEffect type="leaves" />
+        <BackgroundEffect type="leaves" onScreen={onScreen} />
       </motion.div>
 
       <div className="relative z-10 mx-auto flex w-full flex-col space-y-14 px-10">

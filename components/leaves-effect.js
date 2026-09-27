@@ -63,10 +63,17 @@ class LeafScene {
     // set perspective
     this.world.style.perspective = "400px";
 
-    window.onresize = (event) => {
+    this.onResize = () => {
       this.width = this.viewport.offsetWidth;
       this.height = this.viewport.offsetHeight;
     };
+    window.addEventListener("resize", this.onResize);
+  }
+
+  destroy() {
+    cancelAnimationFrame(this.frame);
+    window.removeEventListener("resize", this.onResize);
+    this.world.remove();
   }
 
   render() {
@@ -77,7 +84,7 @@ class LeafScene {
 
     this.timer++;
 
-    requestAnimationFrame(this.render.bind(this));
+    this.frame = requestAnimationFrame(this.render.bind(this));
   }
 
   _resetLeaf(leaf) {
@@ -201,6 +208,8 @@ export function LeavesEffect() {
 
     leaves.init();
     leaves.render();
+
+    return () => leaves.destroy();
   }, [i18n, ref]);
 
   return <div ref={ref} className="h-full w-full" />;

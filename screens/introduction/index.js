@@ -10,7 +10,7 @@ import elephantsImage from "./images/elephants.png";
 
 export function Introduction() {
   const { t } = useTranslation();
-  const { screenRef, effectOpacity } = useBackgroundEffect();
+  const { screenRef, effectOpacity, onScreen } = useBackgroundEffect();
 
   return (
     <section
@@ -19,7 +19,7 @@ export function Introduction() {
       className="flex min-h-screen items-end bg-black bg-savanna bg-size-[100%] bg-position-[center_-100px] bg-no-repeat md:bg-position-[center_-50vw] lg:items-stretch lg:bg-savanna-md lg:bg-cover lg:bg-center"
     >
       <motion.div style={{ opacity: effectOpacity }}>
-        <BackgroundEffect type="fog" />
+        <BackgroundEffect type="fog" onScreen={onScreen} />
       </motion.div>
 
       <div className="z-10 mx-auto flex w-full max-w-7xl flex-col lg:mt-18">
