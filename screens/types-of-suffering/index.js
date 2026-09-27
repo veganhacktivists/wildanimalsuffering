@@ -15,9 +15,9 @@ export function TypesOfSuffering() {
   return (
     <section
       id={t("types_of_suffering.id")}
-      className="relative flex min-h-screen items-center bg-sand bg-cover bg-center py-24"
+      className="relative flex min-h-screen items-center near:bg-sand bg-cover bg-center py-24"
     >
-      <div className="absolute bottom-0 h-full w-full bg-deer bg-bottom-left bg-no-repeat xl:bg-contain" />
+      <div className="absolute bottom-0 h-full w-full near:bg-deer bg-bottom-left bg-no-repeat xl:bg-contain" />
 
       <div className="mx-auto flex w-full max-w-7xl flex-col space-y-10 px-10">
         <h2 className="flex flex-col text-center font-brand text-4xl text-white">

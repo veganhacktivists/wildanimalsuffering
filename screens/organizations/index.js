@@ -25,10 +25,10 @@ export function Organizations() {
   return (
     <section
       id={t("organizations.id")}
-      className="relative flex min-h-screen items-center bg-mud bg-cover bg-top py-14 lg:py-24"
+      className="relative flex min-h-screen items-center near:bg-mud bg-cover bg-top py-14 lg:py-24"
       ref={screenRef}
     >
-      <div className="absolute bottom-0 h-full w-full bg-none bg-position-[-180px_-20px] bg-no-repeat sm:bg-tree-and-birds lg:bg-contain lg:bg-top-left" />
+      <div className="absolute bottom-0 h-full w-full bg-none bg-position-[-180px_-20px] bg-no-repeat sm:near:bg-tree-and-birds lg:bg-contain lg:bg-top-left" />
 
       <motion.div
         style={{ opacity: effectOpacity }}

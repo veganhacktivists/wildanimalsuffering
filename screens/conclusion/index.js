@@ -13,7 +13,7 @@ export function Conclusion({ locale, visitors }) {
   return (
     <section
       id={t("conclusion.id")}
-      className="relative min-h-screen overflow-hidden bg-woods bg-cover md:bg-woods-md md:bg-center"
+      className="relative min-h-screen overflow-hidden near:bg-woods bg-cover md:near:bg-woods-md md:bg-center"
     >
       <div className="mx-auto max-w-7xl px-10">
         <img

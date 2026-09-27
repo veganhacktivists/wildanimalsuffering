@@ -13,10 +13,10 @@ export function CommonObjections() {
   return (
     <section
       id={t("common_objections.id")}
-      className="relative flex min-h-screen bg-sand bg-cover bg-top py-24"
+      className="relative flex min-h-screen near:bg-sand bg-cover bg-top py-24"
       ref={screenRef}
     >
-      <div className="absolute bottom-0 h-full w-full bg-hedgehog bg-bottom-right bg-no-repeat xl:bg-contain" />
+      <div className="absolute bottom-0 h-full w-full near:bg-hedgehog bg-bottom-right bg-no-repeat xl:bg-contain" />
 
       <motion.div
         style={{ opacity: effectOpacity }}

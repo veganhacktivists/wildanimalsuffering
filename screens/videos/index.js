@@ -183,7 +183,7 @@ export function Videos() {
     <section
       ref={screenRef}
       id={t("videos.id")}
-      className="relative flex min-h-screen items-center bg-sky bg-cover py-12 lg:py-24"
+      className="relative flex min-h-screen items-center near:bg-sky bg-cover py-12 lg:py-24"
     >
       <img
         loading="lazy"
