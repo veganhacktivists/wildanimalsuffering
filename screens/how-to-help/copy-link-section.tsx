@@ -14,9 +14,11 @@ export function CopyLinkSection() {
         <RadixToast.Viewport />
         <span className="truncate">{url}</span>
         <button
-          onClick={() => {
-            setOpen(true);
-            navigator.clipboard.writeText(url);
+          onClick={async () => {
+            try {
+              await navigator.clipboard.writeText(url);
+              setOpen(true);
+            } catch {}
           }}
         >
           <CopyIcon className="h-5" />
