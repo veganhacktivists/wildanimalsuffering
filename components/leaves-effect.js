@@ -88,7 +88,7 @@ class LeafScene {
   }
 
   _resetLeaf(leaf) {
-    // place leaf towards the top left
+    // start along the top, or just past the right edge in the top half
     leaf.x = this.width * 2 - Math.random() * this.width * 1.75;
     leaf.y = -10;
     leaf.z = Math.random() * 200;
@@ -163,8 +163,8 @@ class LeafScene {
   }
 
   _updateWind() {
-    // wind follows a sine curve: asin(b*time + c) + a
-    // where a = wind magnitude as a function of leaf position, b = wind.duration, c = offset
+    // wind follows a sine curve: a*sin(b*time + c) + a
+    // where a = wind magnitude as a function of leaf position, b = 2π / wind.duration, c = offset
     // wind duration should be related to wind magnitude, e.g. higher windspeed means longer gust duration
 
     if (
@@ -179,7 +179,7 @@ class LeafScene {
       const screenHeight = this.height;
 
       this.options.wind.speed = (t, y) => {
-        // should go from full wind speed at the top, to 1/2 speed at the bottom, using leaf Y
+        // should go from full wind speed at the top, to 1/3 speed at the bottom, using leaf Y
         const a =
           ((this.options.wind.magnitude / 2) * (screenHeight - (2 * y) / 3)) /
           screenHeight;
