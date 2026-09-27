@@ -18,6 +18,69 @@ import welfareFootprintImage from "./images/welfare-footprint.png";
 import wildAnimalInitiativeImage from "./images/wild-animal-initiative.png";
 import wildAnimalWelfareCommitteeImage from "./images/wild-animal-welfare-committee.jpg";
 
+const organizations = [
+  {
+    id: "wild_animal_initiative",
+    name: "Wild Animal Initiative",
+    image: wildAnimalInitiativeImage,
+    links: ["visit", "donate", "careers"],
+  },
+  {
+    id: "animal_ethics",
+    name: "Animal Ethics",
+    image: animalEthicsImage,
+    links: ["visit", "donate", "volunteer"],
+  },
+  {
+    id: "rethink_priorities",
+    name: "Rethink Priorities",
+    image: rethinkPrioritiesImage,
+    links: ["visit", "donate", "careers"],
+  },
+  {
+    id: "faunalytics",
+    name: "Faunalytics",
+    image: faunalyticsImage,
+    links: ["visit", "donate", "volunteer"],
+  },
+  {
+    id: "wild_animal_welfare_committee",
+    name: "Wild Animal Welfare Committee",
+    image: wildAnimalWelfareCommitteeImage,
+    links: ["visit", "contact", "members"],
+  },
+  {
+    id: "center_long_term_risk",
+    name: "Center on Long-Term Risk",
+    image: centerLongTermRiskImage,
+    links: ["visit", "donate", "careers"],
+  },
+  {
+    id: "center_reducing_suffering",
+    name: "Center for Reducing Suffering",
+    image: centerReducingSufferingImage,
+    links: ["visit", "donate", "volunteer"],
+  },
+  {
+    id: "welfare_footprint",
+    name: "Welfare Footprint Institute",
+    image: welfareFootprintImage,
+    links: ["visit", "donate", "careers"],
+  },
+  {
+    id: "nyu_wild_animal_welfare",
+    name: "NYU Wild Animal Welfare",
+    image: nyuWildAnimalWelfareImage,
+    links: ["visit", "donate"],
+  },
+  {
+    id: "animal_charity_evaluators",
+    name: "Animal Charity Evaluators",
+    image: animalCharityEvaluatorsImage,
+    links: ["visit", "donate", "careers"],
+  },
+];
+
 export function Organizations() {
   const { t } = useTranslation();
   const { screenRef, effectOpacity } = useBackgroundEffect();
@@ -43,202 +106,21 @@ export function Organizations() {
         </h2>
 
         <div className="mx-auto grid w-full max-w-sm gap-12 md:max-w-5xl md:grid-cols-2">
-          <Organization
-            name="Wild Animal Initiative"
-            imageUrl={wildAnimalInitiativeImage.src}
-            links={[
-              [
-                t("organizations.cta.visit"),
-                t("organizations.wild_animal_initiative.urls.website"),
-              ],
-              [
-                t("organizations.cta.donate"),
-                t("organizations.wild_animal_initiative.urls.donate"),
-              ],
-              [
-                t("organizations.cta.careers"),
-                t("organizations.wild_animal_initiative.urls.careers"),
-              ],
-            ]}
-          >
-            {t("organizations.wild_animal_initiative.description")}
-          </Organization>
-          <Organization
-            name="Animal Ethics"
-            imageUrl={animalEthicsImage.src}
-            links={[
-              [
-                t("organizations.cta.visit"),
-                t("organizations.animal_ethics.urls.website"),
-              ],
-              [
-                t("organizations.cta.donate"),
-                t("organizations.animal_ethics.urls.donate"),
-              ],
-              [
-                t("organizations.cta.volunteer"),
-                t("organizations.animal_ethics.urls.volunteer"),
-              ],
-            ]}
-          >
-            {t("organizations.animal_ethics.description")}
-          </Organization>
-          <Organization
-            name="Rethink Priorities"
-            imageUrl={rethinkPrioritiesImage.src}
-            links={[
-              [
-                t("organizations.cta.visit"),
-                t("organizations.rethink_priorities.urls.website"),
-              ],
-              [
-                t("organizations.cta.donate"),
-                t("organizations.rethink_priorities.urls.donate"),
-              ],
-              [
-                t("organizations.cta.careers"),
-                t("organizations.rethink_priorities.urls.careers"),
-              ],
-            ]}
-          >
-            {t("organizations.rethink_priorities.description")}
-          </Organization>
-          <Organization
-            name="Faunalytics"
-            imageUrl={faunalyticsImage.src}
-            links={[
-              [
-                t("organizations.cta.visit"),
-                t("organizations.faunalytics.urls.website"),
-              ],
-              [
-                t("organizations.cta.donate"),
-                t("organizations.faunalytics.urls.donate"),
-              ],
-              [
-                t("organizations.cta.volunteer"),
-                t("organizations.faunalytics.urls.volunteer"),
-              ],
-            ]}
-          >
-            {t("organizations.faunalytics.description")}
-          </Organization>
-          <Organization
-            name="Wild Animal Welfare Committee"
-            imageUrl={wildAnimalWelfareCommitteeImage.src}
-            links={[
-              [
-                t("organizations.cta.visit"),
-                t("organizations.wild_animal_welfare_committee.urls.website"),
-              ],
-              [
-                t("organizations.cta.contact"),
-                t("organizations.wild_animal_welfare_committee.urls.contact"),
-              ],
-              [
-                t("organizations.cta.members"),
-                t("organizations.wild_animal_welfare_committee.urls.members"),
-              ],
-            ]}
-          >
-            {t("organizations.wild_animal_welfare_committee.description")}
-          </Organization>
-          <Organization
-            name="Center on Long-Term Risk"
-            imageUrl={centerLongTermRiskImage.src}
-            links={[
-              [
-                t("organizations.cta.visit"),
-                t("organizations.center_long_term_risk.urls.website"),
-              ],
-              [
-                t("organizations.cta.donate"),
-                t("organizations.center_long_term_risk.urls.donate"),
-              ],
-              [
-                t("organizations.cta.careers"),
-                t("organizations.center_long_term_risk.urls.careers"),
-              ],
-            ]}
-          >
-            {t("organizations.center_long_term_risk.description")}
-          </Organization>
-          <Organization
-            name="Center for Reducing Suffering"
-            imageUrl={centerReducingSufferingImage.src}
-            links={[
-              [
-                t("organizations.cta.visit"),
-                t("organizations.center_reducing_suffering.urls.website"),
-              ],
-              [
-                t("organizations.cta.donate"),
-                t("organizations.center_reducing_suffering.urls.donate"),
-              ],
-              [
-                t("organizations.cta.volunteer"),
-                t("organizations.center_reducing_suffering.urls.volunteer"),
-              ],
-            ]}
-          >
-            {t("organizations.center_reducing_suffering.description")}
-          </Organization>
-          <Organization
-            name="Welfare Footprint Institute"
-            imageUrl={welfareFootprintImage.src}
-            links={[
-              [
-                t("organizations.cta.visit"),
-                t("organizations.welfare_footprint.urls.website"),
-              ],
-              [
-                t("organizations.cta.donate"),
-                t("organizations.welfare_footprint.urls.donate"),
-              ],
-              [
-                t("organizations.cta.careers"),
-                t("organizations.welfare_footprint.urls.careers"),
-              ],
-            ]}
-          >
-            {t("organizations.welfare_footprint.description")}
-          </Organization>
-          <Organization
-            name="NYU Wild Animal Welfare"
-            imageUrl={nyuWildAnimalWelfareImage.src}
-            links={[
-              [
-                t("organizations.cta.visit"),
-                t("organizations.nyu_wild_animal_welfare.urls.website"),
-              ],
-              [
-                t("organizations.cta.donate"),
-                t("organizations.nyu_wild_animal_welfare.urls.donate"),
-              ],
-            ]}
-          >
-            {t("organizations.nyu_wild_animal_welfare.description")}
-          </Organization>
-          <Organization
-            name="Animal Charity Evaluators"
-            imageUrl={animalCharityEvaluatorsImage.src}
-            links={[
-              [
-                t("organizations.cta.visit"),
-                t("organizations.animal_charity_evaluators.urls.website"),
-              ],
-              [
-                t("organizations.cta.donate"),
-                t("organizations.animal_charity_evaluators.urls.donate"),
-              ],
-              [
-                t("organizations.cta.careers"),
-                t("organizations.animal_charity_evaluators.urls.careers"),
-              ],
-            ]}
-          >
-            {t("organizations.animal_charity_evaluators.description")}
-          </Organization>
+          {organizations.map(({ id, name, image, links }) => (
+            <Organization
+              key={id}
+              name={name}
+              imageUrl={image.src}
+              links={links.map((link) => [
+                t(`organizations.cta.${link}`),
+                t(
+                  `organizations.${id}.urls.${link === "visit" ? "website" : link}`,
+                ),
+              ])}
+            >
+              {t(`organizations.${id}.description`)}
+            </Organization>
+          ))}
         </div>
       </div>
 
