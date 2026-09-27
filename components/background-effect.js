@@ -20,11 +20,14 @@ function buildThresholdList(numSteps) {
 export function useBackgroundEffect() {
   const screenRef = useRef(null);
   const effectOpacity = useMotionValue(0);
+  const [onScreen, setOnScreen] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([{ rootBounds, boundingClientRect, intersectionRatio }]) => {
+      ([{ rootBounds, boundingClientRect, intersectionRatio, isIntersecting }]) => {
         const ratio = 1 - rootBounds.height / boundingClientRect.height;
+
+        setOnScreen(isIntersecting);
 
         effectOpacity.set(
           (intersectionRatio - 0.5) * 2 + intersectionRatio * ratio,
@@ -38,18 +41,13 @@ export function useBackgroundEffect() {
     return () => observer.disconnect();
   }, [effectOpacity]);
 
-  return { screenRef, effectOpacity };
+  return { screenRef, effectOpacity, onScreen };
 }
 
-export function BackgroundEffect({ type }) {
-  const [isVisible, setIsVisible] = useState(false);
+export function BackgroundEffect({ type, onScreen }) {
   const prefersReducedMotion = usePrefersReducedMotion();
 
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
-  if (!isVisible || prefersReducedMotion) {
+  if (!onScreen || prefersReducedMotion) {
     return null;
   }
 

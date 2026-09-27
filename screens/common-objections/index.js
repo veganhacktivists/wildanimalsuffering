@@ -8,7 +8,7 @@ import {
 
 export function CommonObjections() {
   const { t } = useTranslation();
-  const { screenRef, effectOpacity } = useBackgroundEffect();
+  const { screenRef, effectOpacity, onScreen } = useBackgroundEffect();
 
   return (
     <section
@@ -22,7 +22,7 @@ export function CommonObjections() {
         style={{ opacity: effectOpacity }}
         className="absolute inset-0 z-10"
       >
-        <BackgroundEffect type="rain" />
+        <BackgroundEffect type="rain" onScreen={onScreen} />
       </motion.div>
 
       <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col space-y-10 px-10">

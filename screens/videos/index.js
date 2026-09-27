@@ -179,7 +179,7 @@ export function Videos() {
   const [activeVideo, setActiveVideo] = useState(
     videos.find((v) => v.id === "new_featured_video") ?? videos[0],
   );
-  const { screenRef, effectOpacity } = useBackgroundEffect();
+  const { screenRef, effectOpacity, onScreen } = useBackgroundEffect();
 
   return (
     <section
@@ -196,7 +196,7 @@ export function Videos() {
       />
 
       <motion.div style={{ opacity: effectOpacity }} className="z-10">
-        <BackgroundEffect type="snow" />
+        <BackgroundEffect type="snow" onScreen={onScreen} />
       </motion.div>
 
       <div className="relative z-10 mx-auto flex w-full max-w-7xl grow flex-col gap-10">

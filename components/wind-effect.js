@@ -1,13 +1,15 @@
 import { useEffect, useRef } from "react";
+import { useOnScreen } from "~/utils/use-on-screen";
 import { usePrefersReducedMotion } from "~/utils/use-prefers-reduced-motion";
 
 export function WindEffect() {
   const ref = useRef(null);
   const prefersReducedMotion = usePrefersReducedMotion();
+  const onScreen = useOnScreen(ref);
 
   useEffect(() => {
     const canvas = ref.current;
-    if (!canvas || prefersReducedMotion) return;
+    if (!canvas || prefersReducedMotion || !onScreen) return;
 
     let rafId;
 
@@ -105,7 +107,7 @@ export function WindEffect() {
       window.removeEventListener("resize", setCanvasSize);
       cancelAnimationFrame(rafId);
     };
-  }, [prefersReducedMotion]);
+  }, [prefersReducedMotion, onScreen]);
 
   return <canvas ref={ref} className="opacity-60" />;
 }
