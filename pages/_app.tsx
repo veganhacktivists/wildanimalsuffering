@@ -2,7 +2,7 @@ import { Asap_Condensed, Poppins } from "next/font/google";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import "~/styles/globals.css";
-import i18n from "../i18n";
+import i18n, { defaultNS } from "../i18n";
 
 // Fonts
 const asapCondensed = Asap_Condensed({
@@ -17,7 +17,13 @@ const poppins = Poppins({
 });
 
 export default function App({ Component, pageProps }: AppProps) {
-  i18n.changeLanguage(pageProps.locale ?? "en");
+  const locale = pageProps.locale ?? "en";
+
+  if (pageProps.messages && !i18n.hasResourceBundle(locale, defaultNS)) {
+    i18n.addResourceBundle(locale, defaultNS, pageProps.messages);
+  }
+
+  i18n.changeLanguage(locale);
 
   return (
     <>

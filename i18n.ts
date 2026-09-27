@@ -1,49 +1,38 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
-import ar from "./lang/ar.json";
-import de from "./lang/de.json";
 import en from "./lang/en.json";
-import es from "./lang/es.json";
-import fr from "./lang/fr.json";
-import hi from "./lang/hi.json";
-import hy from "./lang/hy.json";
-import id from "./lang/id.json";
-import it from "./lang/it.json";
-import ja from "./lang/ja.json";
-import ko from "./lang/ko.json";
-import lt from "./lang/lt.json";
-import nl from "./lang/nl.json";
-import pl from "./lang/pl.json";
-import pt from "./lang/pt.json";
-import ru from "./lang/ru.json";
-import th from "./lang/th.json";
-import tr from "./lang/tr.json";
-import vi from "./lang/vi.json";
-import zh from "./lang/zh.json";
+
+export const locales = [
+  "ar",
+  "de",
+  "en",
+  "es",
+  "fr",
+  "hi",
+  "hy",
+  "id",
+  "it",
+  "ja",
+  "ko",
+  "lt",
+  "nl",
+  "pl",
+  "pt",
+  "ru",
+  "th",
+  "tr",
+  "vi",
+  "zh",
+] as const;
+
+export type Locale = (typeof locales)[number];
 
 export const defaultNS = "translation";
+
+// Other locales arrive with their page's props, so a page only ships its own.
 export const resources = {
-  ar: { [defaultNS]: ar },
-  de: { [defaultNS]: de },
   en: { [defaultNS]: en },
-  es: { [defaultNS]: es },
-  fr: { [defaultNS]: fr },
-  hi: { [defaultNS]: hi },
-  hy: { [defaultNS]: hy },
-  id: { [defaultNS]: id },
-  it: { [defaultNS]: it },
-  ja: { [defaultNS]: ja },
-  ko: { [defaultNS]: ko },
-  lt: { [defaultNS]: lt },
-  nl: { [defaultNS]: nl },
-  pl: { [defaultNS]: pl },
-  pt: { [defaultNS]: pt },
-  ru: { [defaultNS]: ru },
-  th: { [defaultNS]: th },
-  tr: { [defaultNS]: tr },
-  vi: { [defaultNS]: vi },
-  zh: { [defaultNS]: zh },
 } as const;
 
 i18n.use(initReactI18next).init({

@@ -13,10 +13,10 @@ import { ScaleOfSuffering } from "~/screens/scale-of-suffering";
 import { TypesOfSuffering } from "~/screens/types-of-suffering";
 import { Videos } from "~/screens/videos";
 import { useVisitorStats } from "~/utils/use-visitor-stats";
-import type { resources } from "../i18n";
+import type { Locale } from "../i18n";
 
 type Props = {
-  locale?: keyof typeof resources;
+  locale?: Locale;
 };
 
 export default function Home({ locale }: Props) {
