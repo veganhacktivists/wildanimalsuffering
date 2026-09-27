@@ -7,6 +7,29 @@ type Props = {
   locale?: Locale;
 };
 
+const languages = [
+  ["ar", "Arabic"],
+  ["hy", "Armenian"],
+  ["zh", "Chinese"],
+  ["nl", "Dutch"],
+  ["en", "English"],
+  ["fr", "French"],
+  ["de", "German"],
+  ["hi", "Hindi"],
+  ["id", "Indonesian"],
+  ["it", "Italian"],
+  ["ja", "Japanese"],
+  ["ko", "Korean"],
+  ["lt", "Lithuanian"],
+  ["pl", "Polish"],
+  ["pt", "Portuguese"],
+  ["ru", "Russian"],
+  ["es", "Spanish"],
+  ["th", "Thai"],
+  ["tr", "Turkish"],
+  ["vi", "Vietnamese"],
+];
+
 export function Header({ locale = "en" }: Props) {
   const { t } = useTranslation();
 
@@ -29,66 +52,11 @@ export function Header({ locale = "en" }: Props) {
       <Navigation />
 
       <Select defaultValue={locale} onChange={onLangChange}>
-        <option className="text-black" value="ar">
-          Arabic
-        </option>
-        <option className="text-black" value="hy">
-          Armenian
-        </option>
-        <option className="text-black" value="zh">
-          Chinese
-        </option>
-        <option className="text-black" value="nl">
-          Dutch
-        </option>
-        <option className="text-black" value="en">
-          English
-        </option>
-        <option className="text-black" value="fr">
-          French
-        </option>
-        <option className="text-black" value="de">
-          German
-        </option>
-        <option className="text-black" value="hi">
-          Hindi
-        </option>
-        <option className="text-black" value="id">
-          Indonesian
-        </option>
-        <option className="text-black" value="it">
-          Italian
-        </option>
-        <option className="text-black" value="ja">
-          Japanese
-        </option>
-        <option className="text-black" value="ko">
-          Korean
-        </option>
-        <option className="text-black" value="lt">
-          Lithuanian
-        </option>
-        <option className="text-black" value="pl">
-          Polish
-        </option>
-        <option className="text-black" value="pt">
-          Portuguese
-        </option>
-        <option className="text-black" value="ru">
-          Russian
-        </option>
-        <option className="text-black" value="es">
-          Spanish
-        </option>
-        <option className="text-black" value="th">
-          Thai
-        </option>
-        <option className="text-black" value="tr">
-          Turkish
-        </option>
-        <option className="text-black" value="vi">
-          Vietnamese
-        </option>
+        {languages.map(([value, name]) => (
+          <option key={value} className="text-black" value={value}>
+            {name}
+          </option>
+        ))}
       </Select>
 
       <span className="hidden font-light md:block">

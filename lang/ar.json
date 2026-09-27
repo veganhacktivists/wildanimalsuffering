@@ -219,6 +219,7 @@
   "resources.books.kind.kindle": "كيندل",
   "resources.books.kind.paperback": "غلاف عادي",
   "resources.books.kind.hardcover": "غلاف صلب",
+  "resources.books.kind.audiobook": "كتاب صوتي",
   "resources.books.kind.digital": "رقمي",
   "resources.books.ethics.title": "أخلاق الحيوانات البرية",
   "resources.books.ethics.description": "على الرغم من أن العديد من الأخلاقيين يملكون الحدس بأنه يجب علينا ترك الطبيعة كما هي، إلا أن كايل جوهانسن يُجادل بأن لدينا واجبًا للبحث عن طرق آمنة لتقديم مساعدة على نطاق واسع للحيوانات البرية. باستخدام مفاهيم من الفلسفة الأخلاقية والسياسية لتحليل قضية معاناة الحيوانات البرية (WAS)، يستكشف جوهانسن كيفية فهم التزام جماعي ومؤسسي بمساعدة الحيوانات البرية.",

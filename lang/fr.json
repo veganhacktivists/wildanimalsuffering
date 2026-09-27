@@ -248,6 +248,7 @@
   "resources.books.kind.kindle": "Allumer",
   "resources.books.kind.paperback": "Livre de poche",
   "resources.books.kind.hardcover": "Couverture rigide",
+  "resources.books.kind.audiobook": "Livre audio",
   "resources.books.kind.digital": "Numérique",
   "resources.books.ethics.title": "Éthique animale sauvage",
   "resources.books.ethics.description": "Bien que de nombreux éthiciens aient l'intuition que nous devons laisser la nature tranquille, Kyle Johannsen soutient que nous avons le devoir de rechercher des moyens sûrs de fournir une assistance à grande échelle aux animaux sauvages. En utilisant des concepts de la philosophie morale et politique pour analyser la question de la souffrance des animaux sauvages (WAS), Johannsen explore comment une obligation collective et institutionnelle d'aider les animaux sauvages devrait être comprise.",
