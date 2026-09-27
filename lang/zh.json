@@ -225,6 +225,7 @@
   "resources.books.kind.kindle": "Kindle",
   "resources.books.kind.paperback": "平装",
   "resources.books.kind.hardcover": "精装",
+  "resources.books.kind.audiobook": "有声书",
   "resources.books.kind.digital": "数字",
   "resources.books.ethics.title": "野生动物伦理学",
   "resources.books.ethics.description": "尽管许多伦理学家直觉上认为我们应该让自然保持原样，但Kyle Johannsen认为，我们有责任研究为野生动物提供大规模帮助的安全方法。Johannsen使用道德和政治哲学的概念来分析野生动物痛苦（WAS）的问题，探讨了如何理解集体、制度化的义务来帮助野生动物。",

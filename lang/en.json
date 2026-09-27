@@ -250,6 +250,7 @@
   "resources.books.kind.kindle": "Kindle",
   "resources.books.kind.paperback": "Paperback",
   "resources.books.kind.hardcover": "Hardcover",
+  "resources.books.kind.audiobook": "Audiobook",
   "resources.books.kind.digital": "Digital",
   "resources.books.ethics.title": "Wild Animal Ethics",
   "resources.books.ethics.description": "Though many ethicists have the intuition that we should leave nature alone, Kyle Johannsen argues that we have a duty to research safe ways of providing large-scale assistance to wild animals. Using concepts from moral and political philosophy to analyze the issue of wild animal suffering (WAS), Johannsen explores how a collective, institutional obligation to assist wild animals should be understood.",

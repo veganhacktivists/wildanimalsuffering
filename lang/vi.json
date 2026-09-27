@@ -203,6 +203,7 @@
   "resources.books.kind.kindle": "Kindle",
   "resources.books.kind.paperback": "Bìa mềm",
   "resources.books.kind.hardcover": "Bìa cứng",
+  "resources.books.kind.audiobook": "Sách nói",
   "resources.books.kind.digital": "Sách điện tử",
   "resources.books.ethics.title": "Đạo đức về Động Vật Hoang Dã",
   "resources.books.ethics.description": "Mặc dù nhiều triết học có cảm giác rằng chúng ta nên để tự nhiên tự phát triển, Kyle Johannsen lập luận rằng chúng ta có nhiệm vụ nghiên cứu cách cung cấp sự hỗ trợ quy mô lớn cho động vật hoang dã một cách an toàn. Sử dụng các khái niệm từ triết học đạo đức và chính trị để phân tích vấn đề về sự đau khổ của động vật hoang dã (WAS), Johannsen khám phá cách hiểu về nghĩa vụ tập thể, tổ chức để hỗ trợ động vật hoang dã nên được hiểu như thế nào.",

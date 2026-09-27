@@ -90,7 +90,7 @@ export function Books() {
             "https://www.amazon.com/Saving-Animals-Ourselves-Pandemics-Catastrophes-ebook/dp/B09RKHL8QB",
           ],
           [
-            "Audiobook",
+            t("resources.books.kind.audiobook"),
             "https://www.amazon.com/Saving-Animals-Ourselves-Pandemics-Catastrophes/dp/B0B3G9DYFH/",
           ],
           [

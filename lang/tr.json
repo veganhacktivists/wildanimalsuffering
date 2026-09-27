@@ -204,6 +204,7 @@
   "resources.books.kind.kindle": "Kindle",
   "resources.books.kind.paperback": "Ciltsiz",
   "resources.books.kind.hardcover": "Ciltli",
+  "resources.books.kind.audiobook": "Sesli kitap",
   "resources.books.kind.digital": "Dijital",
   "resources.books.ethics.title": "Vahşi Hayvan Etikleri",
   "resources.books.ethics.description": "Birçok etikçi doğayı olduğu gibi bırakmamız gerektiğini düşünse de, Kyle Johannsen, vahşi hayvanlara büyük ölçekli yardım sağlamanın güvenli yollarını araştırmakla yükümlü olduğumuzu savunuyor. Johannsen, vahşi hayvan acıları (WAS) konusunu incelemek için ahlak ve siyaset felsefesinden kavramlar kullanarak, vahşi hayvanlara yardım etmek için kolektif ve kurumsal bir sorumluluğun nasıl anlaşılması gerektiğini araştırıyor.",
