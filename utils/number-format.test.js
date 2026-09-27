@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+import i18n from "../i18n";
 import en from "../lang/en.json";
 import hindi from "../lang/hi.json";
 import italian from "../lang/it.json";
@@ -45,4 +46,29 @@ describe("formatOrdinals", () => {
       }
     }
   });
+
+  it.each([
+    ["ar", 23, "زائرنا رقم 23،"],
+    ["de", 23, "unser 23. Besucher"],
+    ["hy", 1, "եք 1-ին հաճախորդ"],
+    ["hy", 23, "եք 23-րդ հաճախորդ"],
+    ["id", 23, "pengunjung ke-23,"],
+    ["ja", 23, "あなたは23人目の訪問者"],
+    ["lt", 23, "mūsų 23-asis lankytojas"],
+    ["nl", 23, "onze 23e bezoeker"],
+    ["pl", 23, "Jesteś 23. odwiedzającym"],
+    ["th", 23, "ผู้เยี่ยมชมที่ 23 ขอบคุณ"],
+    ["vi", 23, "thứ 23,"],
+    ["zh", 23, "我们的第23位访客"],
+  ])(
+    "reads as an ordinal in the %s visitor sentence (%i)",
+    (locale, n, expected) => {
+      const t = i18n.getFixedT(locale);
+      const visitorsFormatted = formatOrdinals({ n, t, locale });
+
+      expect(
+        t("conclusion.stats.description", { visitorsFormatted }),
+      ).toContain(expected);
+    },
+  );
 });

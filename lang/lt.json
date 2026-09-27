@@ -4,7 +4,7 @@
   "common.plural_rules.one": "-asis",
   "common.plural_rules.two": "-asis",
   "common.plural_rules.few": "-asis",
-  "common.plural_rules.other": "-ąjį",
+  "common.plural_rules.other": "-asis",
   "header.credits": "Illustracijos: <2>Violet Studios</2>",
   "navigation.name": "Meniu",
   "navigation.close": "Uždaryti meniu",
