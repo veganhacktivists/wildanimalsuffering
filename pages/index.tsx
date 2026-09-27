@@ -28,11 +28,9 @@ const supportedLanguages = [
 function detectBrowserLanguage(): string {
   if (typeof navigator === "undefined") return "en";
 
-  // Get browser languages in order of preference
   const browserLanguages = navigator.languages || [navigator.language];
 
   for (const lang of browserLanguages) {
-    // Extract language code (e.g., 'en-US' -> 'en')
     const langCode = lang.split("-")[0].toLowerCase();
 
     // Check if we support this language
@@ -41,7 +39,7 @@ function detectBrowserLanguage(): string {
     }
   }
 
-  return "en"; // Default fallback
+  return "en";
 }
 
 export default function En() {
@@ -61,14 +59,12 @@ export default function En() {
     if (!hasVisited) {
       const detectedLang = detectBrowserLanguage();
 
-      // Store that we've detected the language
       try {
         localStorage.setItem("language-detected", "true");
       } catch {
         return;
       }
 
-      // If detected language is not English, redirect
       if (detectedLang !== "en") {
         router.replace(`/${detectedLang}/`);
         return;
