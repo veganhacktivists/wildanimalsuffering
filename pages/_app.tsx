@@ -4,7 +4,6 @@ import Head from "next/head";
 import "~/styles/globals.css";
 import i18n, { defaultNS } from "../i18n";
 
-// Fonts
 const asapCondensed = Asap_Condensed({
   subsets: ["latin"],
   variable: "--font-asap-condensed",

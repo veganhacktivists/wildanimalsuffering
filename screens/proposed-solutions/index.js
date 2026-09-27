@@ -63,13 +63,13 @@ const CollapsibleSection = ({
 
 export function ProposedSolutions() {
   const { t, ready } = useTranslation();
-  const [openSection, setOpenSection] = useState(null); // Start with no section open
+  const [openSection, setOpenSection] = useState(null);
   const [isHydrated, setIsHydrated] = useState(false);
 
   // Set first section open after hydration to avoid SSR mismatch
   useEffect(() => {
     setIsHydrated(true);
-    setOpenSection(1); // First section open by default after hydration
+    setOpenSection(1);
   }, []);
 
   // Don't render until translations are ready to avoid hydration mismatch
@@ -414,7 +414,6 @@ export function ProposedSolutions() {
             </CollapsibleSection>
           </div>
 
-          {/* Decorative bottom image with proper padding */}
           <div className="flex justify-center pb-4 pt-12">
             <img
               loading="lazy"

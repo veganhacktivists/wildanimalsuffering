@@ -21,7 +21,6 @@ export function useVisitorStats() {
     }
   }
 
-  // Fetch stats on page load.
   useEffect(() => {
     loadStats();
   }, []);
