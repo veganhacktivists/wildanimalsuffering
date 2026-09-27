@@ -1,4 +1,4 @@
-import { renderHook, waitFor } from "@testing-library/react";
+import { act, renderHook, waitFor } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
 import { useVisitorStats } from "./use-visitor-stats";
 
@@ -50,6 +50,20 @@ describe("useVisitorStats", () => {
     await waitFor(() => expect(fetch).toHaveBeenCalled());
     expect(result.current).toBe(0);
   });
+
+  it.each([Infinity, 12.5, "4321"])(
+    "stays at zero when the count is %s",
+    async (visitors) => {
+      const json = vi.fn(async () => ({ visitors }));
+      mockFetch(async () => ({ ok: true, json }));
+
+      const { result } = renderHook(() => useVisitorStats());
+
+      await waitFor(() => expect(json).toHaveBeenCalled());
+      await act(async () => {});
+      expect(result.current).toBe(0);
+    },
+  );
 
   it("requests the stats endpoint once", async () => {
     const fetch = mockFetch(async () => ({

@@ -1,9 +1,7 @@
-import { useTranslation } from "react-i18next";
+import { Trans } from "react-i18next";
 import abyssImage from "../scale-of-suffering/images/abyss.jpg";
 
 export function QuoteSection() {
-  const { t } = useTranslation();
-
   return (
     <section className="relative flex min-h-[40vh] items-center py-12 lg:py-16">
       <img
@@ -25,27 +23,27 @@ export function QuoteSection() {
                 <path d="M10 8c-3.3 0-6 2.7-6 6v10h10V14h-4c0-1.1.9-2 2-2V8zm12 0c-3.3 0-6 2.7-6 6v10h10V14h-4c0-1.1.9-2 2-2V8z" />
               </svg>
               <span className="relative z-10 block px-8 py-6 lg:px-12 lg:py-8">
-                Wild animal welfare is way less tractable than many cause areas.
-                But I think that&apos;s outweighed by the scale: humanity,
-                factory farmed animals, and other captive animals collectively
-                make up only 0.1% of vertebrates.{" "}
-                <b
-                  style={{
-                    fontWeight: 500,
-                    color: "rgb(232 209 167 / var(--tw-text-opacity, 1))",
+                <Trans
+                  i18nKey="quote.text"
+                  components={{
+                    highlight: (
+                      <b
+                        style={{
+                          fontWeight: 500,
+                          color: "rgb(232 209 167 / var(--tw-text-opacity, 1))",
+                        }}
+                      />
+                    ),
+                    "source-link": (
+                      <a
+                        href="https://forum.effectivealtruism.org/posts/idhTjyNTsyxobijyJ/wild-animal-initiative-has-urgent-need-for-more-funding-and"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-sm text-primary-light/80 transition-colors hover:text-primary-light"
+                      />
+                    ),
                   }}
-                >
-                  The other 99.9% of moral patients alive today are wild animals
-                </b>{" "}
-                (or more, if you count invertebrates).{" "}
-                <a
-                  href="https://forum.effectivealtruism.org/posts/idhTjyNTsyxobijyJ/wild-animal-initiative-has-urgent-need-for-more-funding-and"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-sm text-primary-light/80 transition-colors hover:text-primary-light"
-                >
-                  (source)
-                </a>
+                />
               </span>
               <svg
                 className="absolute -bottom-4 -right-4 h-12 w-12 rotate-180 text-primary opacity-80 lg:h-16 lg:w-16"

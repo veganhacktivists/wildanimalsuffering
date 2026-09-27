@@ -141,7 +141,7 @@ export function ProposedSolutions() {
                     </div>
                     <div className="flex-1">
                       <h4 className="mb-2 font-semibold text-primary-light">
-                        How You Can Help:
+                        {t("how_to_help.heading")}
                       </h4>
                       <p className="text-sm text-white/90">
                         {t("proposed_solutions.research.how_to_help")}
@@ -169,7 +169,7 @@ export function ProposedSolutions() {
                     </div>
                     <div className="flex-1">
                       <h4 className="mb-2 font-semibold text-primary-light">
-                        How You Can Help:
+                        {t("how_to_help.heading")}
                       </h4>
                       <p className="text-sm text-white/90">
                         {t("proposed_solutions.disease_control.how_to_help")}
@@ -197,7 +197,7 @@ export function ProposedSolutions() {
                     </div>
                     <div className="flex-1">
                       <h4 className="mb-2 font-semibold text-primary-light">
-                        How You Can Help:
+                        {t("how_to_help.heading")}
                       </h4>
                       <p className="text-sm text-white/90">
                         {t("proposed_solutions.policy_advocacy.how_to_help")}
@@ -228,7 +228,7 @@ export function ProposedSolutions() {
                     </div>
                     <div className="flex-1">
                       <h4 className="mb-2 font-semibold text-primary-light">
-                        How You Can Help:
+                        {t("how_to_help.heading")}
                       </h4>
                       <p className="text-sm text-white/90">
                         <Trans
@@ -271,7 +271,7 @@ export function ProposedSolutions() {
                     </div>
                     <div className="flex-1">
                       <h4 className="mb-2 font-semibold text-primary-light">
-                        How You Can Help:
+                        {t("how_to_help.heading")}
                       </h4>
                       <p className="text-sm text-white/90">
                         <Trans
@@ -310,7 +310,7 @@ export function ProposedSolutions() {
                     </div>
                     <div className="flex-1">
                       <h4 className="mb-2 font-semibold text-primary-light">
-                        How You Can Help:
+                        {t("how_to_help.heading")}
                       </h4>
                       <p className="text-sm text-white/90">
                         {t("proposed_solutions.disaster_relief.how_to_help")}
@@ -352,7 +352,7 @@ export function ProposedSolutions() {
                     </div>
                     <div className="flex-1">
                       <h4 className="mb-2 font-semibold text-primary-light">
-                        How You Can Help:
+                        {t("how_to_help.heading")}
                       </h4>
                       <p className="text-sm text-white/90">
                         <Trans
@@ -398,7 +398,7 @@ export function ProposedSolutions() {
                     </div>
                     <div className="flex-1">
                       <h4 className="mb-2 font-semibold text-primary-light">
-                        How You Can Help:
+                        {t("how_to_help.heading")}
                       </h4>
                       <p className="text-sm text-white/90">
                         {t(

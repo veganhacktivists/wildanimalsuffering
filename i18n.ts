@@ -50,6 +50,7 @@ i18n.use(initReactI18next).init({
   resources,
   defaultNS,
   lng: "en",
+  fallbackLng: "en",
   interpolation: {
     escapeValue: false,
   },
