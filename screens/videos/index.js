@@ -15,6 +15,8 @@ import mediumThumbnailWaysToHelp from "./images/thumbnail-ways-to-help-medium.jp
 import smallThumbnailWaysToHelp from "./images/thumbnail-ways-to-help-small.jpeg";
 import mediumThumbnailWasIntroduction from "./images/thumbnail-was-introduction-medium.jpeg";
 import smallThumbnailWasIntroduction from "./images/thumbnail-was-introduction-small.jpeg";
+import mediumThumbnailWasSolution from "./images/thumbnail-was-solution-medium.jpeg";
+import smallThumbnailWasSolution from "./images/thumbnail-was-solution-small.jpeg";
 import mediumThumbnailEnvironmentalEthics from "./images/thumbnail-environmental-ethics-medium.jpeg";
 import smallThumbnailEnvironmentalEthics from "./images/thumbnail-environmental-ethics-small.jpeg";
 import mediumThumbnailDavidAttenborough from "./images/thumbnail-david-attenborough-medium.jpeg";
@@ -53,8 +55,8 @@ export const videos = [
     id: "was_solution",
     videoId: "cp1qpzXe2Yw",
     thumbnails: {
-      small: "https://i.imgur.com/eKdRzVr.png",
-      medium: "https://i.imgur.com/eKdRzVr.png",
+      small: smallThumbnailWasSolution.src,
+      medium: mediumThumbnailWasSolution.src,
     },
     author: "Humane Hancock",
     duration: "29:25",
