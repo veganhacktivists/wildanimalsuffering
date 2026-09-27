@@ -37,7 +37,6 @@ import mediumThumbnailNewFeatured from "./images/thumbnail-new-featured-medium.j
 import smallThumbnailNewFeatured from "./images/thumbnail-new-featured-small.jpeg";
 
 export const videos = [
-  // New featured video
   {
     id: "new_featured_video",
     videoId: "JnLtSowMhWU",
@@ -48,7 +47,6 @@ export const videos = [
     author: "Humane Hancock",
     duration: "31:50",
   },
-  // Move previous featured video to second position
   {
     id: "was_solution",
     videoId: "cp1qpzXe2Yw",
@@ -129,7 +127,6 @@ export const videos = [
     author: "Animal Ethics",
     duration: "9:24",
   },
-  // was_solution was moved to top; keep list without duplicate
   {
     id: "ways_to_help",
     videoId: "1dl_eHonR0w",
