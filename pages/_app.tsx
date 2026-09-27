@@ -34,10 +34,13 @@ export default function App({ Component, pageProps }: AppProps) {
       `}</style>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        {/* A copy of analytics.veganhacktivists.org/script.js, so the CSP only
+            has to trust this site's own scripts. */}
         <script
           defer
-          src="https://analytics.veganhacktivists.org/script.js"
+          src="/umami/script.js"
           data-website-id="ccc23fb2-c4bc-4192-bfac-1b765758a52a"
+          data-host-url="https://analytics.veganhacktivists.org"
         ></script>
       </Head>
       <Component {...pageProps} />
