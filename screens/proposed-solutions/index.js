@@ -61,6 +61,26 @@ const CollapsibleSection = ({
   );
 };
 
+const HelpBox = ({ children }) => {
+  const { t } = useTranslation();
+
+  return (
+    <div className="rounded-xl border-2 border-primary/60 bg-black/40 p-4 backdrop-blur-xs">
+      <div className="flex items-start gap-3">
+        <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-sm font-bold text-white">
+          💡
+        </div>
+        <div className="flex-1">
+          <h4 className="mb-2 font-semibold text-primary-light">
+            {t("how_to_help.heading")}
+          </h4>
+          <p className="text-sm text-white/90">{children}</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export function ProposedSolutions() {
   const { t, ready } = useTranslation();
   const [openSection, setOpenSection] = useState(null); // Start with no section open
@@ -134,21 +154,9 @@ export function ProposedSolutions() {
                     }}
                   />
                 </p>
-                <div className="rounded-xl border-2 border-primary/60 bg-black/40 p-4 backdrop-blur-xs">
-                  <div className="flex items-start gap-3">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-sm font-bold text-white">
-                      💡
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="mb-2 font-semibold text-primary-light">
-                        {t("how_to_help.heading")}
-                      </h4>
-                      <p className="text-sm text-white/90">
-                        {t("proposed_solutions.research.how_to_help")}
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                <HelpBox>
+                  {t("proposed_solutions.research.how_to_help")}
+                </HelpBox>
               </div>
             </CollapsibleSection>
 
@@ -162,21 +170,9 @@ export function ProposedSolutions() {
                 <p>{t("proposed_solutions.disease_control.description1")}</p>
                 <p>{t("proposed_solutions.disease_control.description2")}</p>
                 <p>{t("proposed_solutions.disease_control.description3")}</p>
-                <div className="rounded-xl border-2 border-primary/60 bg-black/40 p-4 backdrop-blur-xs">
-                  <div className="flex items-start gap-3">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-sm font-bold text-white">
-                      💡
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="mb-2 font-semibold text-primary-light">
-                        {t("how_to_help.heading")}
-                      </h4>
-                      <p className="text-sm text-white/90">
-                        {t("proposed_solutions.disease_control.how_to_help")}
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                <HelpBox>
+                  {t("proposed_solutions.disease_control.how_to_help")}
+                </HelpBox>
               </div>
             </CollapsibleSection>
 
@@ -190,21 +186,9 @@ export function ProposedSolutions() {
                 <p>{t("proposed_solutions.policy_advocacy.description1")}</p>
                 <p>{t("proposed_solutions.policy_advocacy.description2")}</p>
                 <p>{t("proposed_solutions.policy_advocacy.description3")}</p>
-                <div className="rounded-xl border-2 border-primary/60 bg-black/40 p-4 backdrop-blur-xs">
-                  <div className="flex items-start gap-3">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-sm font-bold text-white">
-                      💡
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="mb-2 font-semibold text-primary-light">
-                        {t("how_to_help.heading")}
-                      </h4>
-                      <p className="text-sm text-white/90">
-                        {t("proposed_solutions.policy_advocacy.how_to_help")}
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                <HelpBox>
+                  {t("proposed_solutions.policy_advocacy.how_to_help")}
+                </HelpBox>
               </div>
             </CollapsibleSection>
 
@@ -221,33 +205,21 @@ export function ProposedSolutions() {
                 <p>
                   {t("proposed_solutions.spreading_awareness.description2")}
                 </p>
-                <div className="rounded-xl border-2 border-primary/60 bg-black/40 p-4 backdrop-blur-xs">
-                  <div className="flex items-start gap-3">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-sm font-bold text-white">
-                      💡
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="mb-2 font-semibold text-primary-light">
-                        {t("how_to_help.heading")}
-                      </h4>
-                      <p className="text-sm text-white/90">
-                        <Trans
-                          i18nKey="proposed_solutions.spreading_awareness.how_to_help"
-                          components={{
-                            1: (
-                              <a
-                                href="https://www.animal-ethics.org/wild-animal-suffering-video-course/"
-                                target="_blank"
-                                rel="noreferrer"
-                                className="font-semibold text-primary-light underline transition-colors hover:text-primary"
-                              />
-                            ),
-                          }}
+                <HelpBox>
+                  <Trans
+                    i18nKey="proposed_solutions.spreading_awareness.how_to_help"
+                    components={{
+                      1: (
+                        <a
+                          href="https://www.animal-ethics.org/wild-animal-suffering-video-course/"
+                          target="_blank"
+                          rel="noreferrer"
+                          className="font-semibold text-primary-light underline transition-colors hover:text-primary"
                         />
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                      ),
+                    }}
+                  />
+                </HelpBox>
               </div>
             </CollapsibleSection>
 
@@ -264,33 +236,21 @@ export function ProposedSolutions() {
                 <p>
                   {t("proposed_solutions.helping_animals_near_us.description2")}
                 </p>
-                <div className="rounded-xl border-2 border-primary/60 bg-black/40 p-4 backdrop-blur-xs">
-                  <div className="flex items-start gap-3">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-sm font-bold text-white">
-                      💡
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="mb-2 font-semibold text-primary-light">
-                        {t("how_to_help.heading")}
-                      </h4>
-                      <p className="text-sm text-white/90">
-                        <Trans
-                          i18nKey="proposed_solutions.helping_animals_near_us.how_to_help"
-                          components={{
-                            1: (
-                              <a
-                                href="https://guarinicenter.org/wp-content/uploads/2024/03/Wild-Animal-Welfare-in-Local-Policies-Policy-Brief.pdf"
-                                target="_blank"
-                                rel="noreferrer"
-                                className="font-semibold text-primary-light underline transition-colors hover:text-primary"
-                              />
-                            ),
-                          }}
+                <HelpBox>
+                  <Trans
+                    i18nKey="proposed_solutions.helping_animals_near_us.how_to_help"
+                    components={{
+                      1: (
+                        <a
+                          href="https://guarinicenter.org/wp-content/uploads/2024/03/Wild-Animal-Welfare-in-Local-Policies-Policy-Brief.pdf"
+                          target="_blank"
+                          rel="noreferrer"
+                          className="font-semibold text-primary-light underline transition-colors hover:text-primary"
                         />
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                      ),
+                    }}
+                  />
+                </HelpBox>
               </div>
             </CollapsibleSection>
 
@@ -303,21 +263,9 @@ export function ProposedSolutions() {
               <div className="space-y-4 text-white/90">
                 <p>{t("proposed_solutions.disaster_relief.description1")}</p>
                 <p>{t("proposed_solutions.disaster_relief.description2")}</p>
-                <div className="rounded-xl border-2 border-primary/60 bg-black/40 p-4 backdrop-blur-xs">
-                  <div className="flex items-start gap-3">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-sm font-bold text-white">
-                      💡
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="mb-2 font-semibold text-primary-light">
-                        {t("how_to_help.heading")}
-                      </h4>
-                      <p className="text-sm text-white/90">
-                        {t("proposed_solutions.disaster_relief.how_to_help")}
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                <HelpBox>
+                  {t("proposed_solutions.disaster_relief.how_to_help")}
+                </HelpBox>
               </div>
             </CollapsibleSection>
 
@@ -345,33 +293,21 @@ export function ProposedSolutions() {
                   />
                 </p>
                 <p>{t("proposed_solutions.treating_parasites.description3")}</p>
-                <div className="rounded-xl border-2 border-primary/60 bg-black/40 p-4 backdrop-blur-xs">
-                  <div className="flex items-start gap-3">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-sm font-bold text-white">
-                      💡
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="mb-2 font-semibold text-primary-light">
-                        {t("how_to_help.heading")}
-                      </h4>
-                      <p className="text-sm text-white/90">
-                        <Trans
-                          i18nKey="proposed_solutions.treating_parasites.how_to_help"
-                          components={{
-                            1: (
-                              <a
-                                href="https://screwworm.org/"
-                                target="_blank"
-                                rel="noreferrer"
-                                className="font-semibold text-primary-light underline transition-colors hover:text-primary"
-                              />
-                            ),
-                          }}
+                <HelpBox>
+                  <Trans
+                    i18nKey="proposed_solutions.treating_parasites.how_to_help"
+                    components={{
+                      1: (
+                        <a
+                          href="https://screwworm.org/"
+                          target="_blank"
+                          rel="noreferrer"
+                          className="font-semibold text-primary-light underline transition-colors hover:text-primary"
                         />
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                      ),
+                    }}
+                  />
+                </HelpBox>
               </div>
             </CollapsibleSection>
 
@@ -391,23 +327,11 @@ export function ProposedSolutions() {
                 <p>
                   {t("proposed_solutions.artificial_intelligence.description3")}
                 </p>
-                <div className="rounded-xl border-2 border-primary/60 bg-black/40 p-4 backdrop-blur-xs">
-                  <div className="flex items-start gap-3">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-sm font-bold text-white">
-                      💡
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="mb-2 font-semibold text-primary-light">
-                        {t("how_to_help.heading")}
-                      </h4>
-                      <p className="text-sm text-white/90">
-                        {t(
-                          "proposed_solutions.artificial_intelligence.how_to_help",
-                        )}
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                <HelpBox>
+                  {t(
+                    "proposed_solutions.artificial_intelligence.how_to_help",
+                  )}
+                </HelpBox>
               </div>
             </CollapsibleSection>
           </div>
