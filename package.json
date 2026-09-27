@@ -6,7 +6,7 @@
   "license": "GPL-3.0-or-later",
   "scripts": {
     "dev": "next dev --webpack",
-    "build": "next build --webpack",
+    "build": "next build --webpack && node scripts/sitemap.mjs",
     "start": "next start",
     "lint": "eslint .",
     "test": "vitest run",
