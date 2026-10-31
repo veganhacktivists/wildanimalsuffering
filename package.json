@@ -20,15 +20,15 @@
     "@radix-ui/react-dialog": "^1.1.19",
     "@radix-ui/react-tabs": "^1.1.17",
     "@radix-ui/react-toast": "^1.2.19",
-    "@types/node": "24.13.6",
+    "@types/node": "24.19.2",
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",
-    "eslint-config-next": "16.3.6",
+    "eslint-config-next": "16.4.3",
     "i18next": "^26.0.0",
     "motion": "^13.4.4",
     "next": "16.3.6",
-    "react": "19.3.0",
-    "react-dom": "19.3.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
     "react-i18next": "^17.0.0",
     "react-snowfall": "^2.4.0",
     "typescript": "5.9.3"
@@ -53,5 +53,5 @@
       "minimatch": "^10.0.0"
     }
   },
-  "packageManager": "pnpm@10.34.5+sha512.a4ee05f2f73658255bd6a89859c065a45c28a57daefae2c893a168ee2b73168c37b91e83e57ea67654ad03f03031746430e8bce38e362e042605fb8abc80192e"
+  "packageManager": "pnpm@10.34.9+sha512.f49b5a8ea0fdedb44bb3c0c1d6575092a53c2950d95b7ad15df11f17974877a2de3a01c07e934e9b28ce716e51c09a94962c7306d09be2e1e4b18a8c8762fd32"
 }
